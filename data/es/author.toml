@@ -1,0 +1,69 @@
+[author]
+  name = "Luis Valverde Ramos"
+  location = "Lima, Perú"
+  description = "Political Scientist | Machine Learning & Causal Inference | Public Policy | Debate"
+
+  profile_image = "/images/profile.jpeg"
+
+  email    = "luis.valverde@pucp.edu.pe"
+  linkedin = "https://www.linkedin.com/in/luisvalverderamos/"
+  linkedin_username = "luisvalverderamos"
+  github   = "https://github.com/LuisEduardoValverdeRamos"
+  github_username = "LuisEduardoValverdeRamos"
+
+# --- Premios y Reconocimientos ---
+[[honors]]
+  institution = "Liga Peruana de Debate Escolar"
+  title = "Campeón Nacional de Debate Interuniversitario (CNDI)"
+  date = "2025"
+
+[[honors]]
+  institution = "Facultad de Ciencias Sociales, PUCP"
+  title = "Primer Puesto — Concurso de Investigación para Estudiantes 2023"
+  date = "2024"
+
+[[honors]]
+  institution = "DARI PUCP — Dirección Académica de Relaciones Institucionales"
+  title = "Beca de Movilidad Estudiantil — Ghent University, Bélgica"
+  date = "2024"
+
+[[honors]]
+  institution = "Campeonato Mundial de Debate Universitario — Madrid"
+  title = "Semifinalista"
+  date = "2022"
+
+[[honors]]
+  institution = "PRONABEC — Programa Beca 18"
+  title = "Beca completa para Ciencia Política en la PUCP"
+  date = "2019 – 2024"
+
+# --- Certificaciones ---
+[[certifications]]
+  title = "Inglés — Dominio profesional pleno"
+  date = "Presente"
+
+[[certifications]]
+  title = "Español — Hablante nativo"
+  date = "Presente"
+
+# --- Voluntariados y Participación en Organizaciones ---
+[[voluntary]]
+  role = "Miembro Activo"
+  organization = "DEJUCA — Organización Juvenil"
+  period = "Jul. 2020 – Actualidad"
+  description = "Miembro activo en la creación, promoción y realización de proyectos sociales enfocados en educación, medio ambiente y participación ciudadana."
+  url = ""
+
+[[voluntary]]
+  role = "Miembro Honorario"
+  organization = "Sociedad de Debate PUCP"
+  period = "May. 2021 – Actualidad"
+  description = "Miembro honorario de la Sociedad de Debate PUCP."
+  url = ""
+
+[[voluntary]]
+  role = "Observador Electoral"
+  organization = "Transparencia"
+  period = "11 abr. 2021 (Primera vuelta) & 6 jun. 2021 (Segunda vuelta)"
+  description = "Observador electoral de las elecciones generales peruanas 2021 (primera y segunda vuelta) por parte de Transparencia."
+  url = ""

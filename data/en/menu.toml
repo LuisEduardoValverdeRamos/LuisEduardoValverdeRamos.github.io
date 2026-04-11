@@ -1,0 +1,23 @@
+# Main menu (used as a fallback if language-specific menus are not fully defined or if not using multilingual features)
+# For multilingual sites, it's generally better to define menus within each language block as shown above.
+[menu]
+  [[menu.main]]
+    name = "About"
+    pageRef = "/about.md"
+    weight = 1
+  [[menu.main]]
+    name = "Experience"
+    pageRef = "/experience"
+    weight = 2
+  [[menu.main]]
+    name = "Projects"
+    pageRef = "/projects"
+    weight = 3
+  [[menu.main]]
+    name = "Blog"
+    pageRef = "/blogs"
+    weight = 4
+  [[menu.main]]
+    name = "Contact Me" # Note: "Contact" is used in language-specific menus above for consistency
+    pageRef = "/contact"
+    weight = 5 

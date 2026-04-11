@@ -1,0 +1,19 @@
+# Fila 1: Programación y ciencia de datos
+row1 = [
+  { icon = "devicon-r-plain colored", name = "R" },
+  { icon = "devicon-python-plain colored", name = "Python" },
+  { icon = "devicon-git-plain colored", name = "Git / GitHub" },
+  { icon = "devicon-latex-plain", name = "LaTeX" },
+  { icon = "devicon-jupyter-plain colored", name = "Jupyter" },
+  { icon = "devicon-pandas-plain colored", name = "Pandas" }
+]
+
+# Fila 2: ML, visualización y productividad
+row2 = [
+  { icon = "devicon-scikitlearn-plain colored", name = "scikit-learn" },
+  { icon = "devicon-matplotlib-plain colored", name = "Matplotlib / ggplot2" },
+  { icon = "devicon-vscode-plain colored", name = "VS Code" },
+  { icon = "devicon-linux-plain", name = "Linux" },
+  { icon = "devicon-google-plain colored", name = "Google Workspace" },
+  { icon = "devicon-microsoftsqlserver-plain", name = "Microsoft Office" }
+]

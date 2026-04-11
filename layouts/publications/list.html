@@ -1,0 +1,79 @@
+{{ define "main" }}
+<div class="w-full md:w-4/5 lg:w-3/5 mx-auto px-14 py-12">
+    <h1 class="text-5xl font-bold mb-12 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+
+    {{ $blogsData := index site.Data .Language.Lang "blogs" }}
+    {{ $all := $blogsData.blogs }}
+
+    {{ $academic := where $all "section" "academic" }}
+    {{ $columns  := where $all "section" "columns"  }}
+
+    {{/* ── Section 1: Academic Publications ─────────────────────────── */}}
+    {{ with $academic }}
+    <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 pb-2 border-b border-gray-700 text-text-primary-light dark:text-text-primary-dark">
+            {{ if eq $.Language.Lang "es" }}Publicaciones Académicas{{ else }}Academic Publications{{ end }}
+        </h2>
+        <div class="space-y-6 max-w-3xl mx-auto">
+            {{ range . }}
+            <div class="pl-4 border-l-2 border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-colors duration-300">
+                <div class="flex items-center gap-3 mb-1">
+                    <span class="text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark border border-border-secondary-light dark:border-border-secondary-dark">
+                        {{ .type }}
+                    </span>
+                    <span class="text-sm text-gray-400">{{ .date }}</span>
+                </div>
+                {{ if .link }}
+                <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="group block">
+                    <h3 class="inline-flex items-start gap-2 text-lg font-semibold text-accent-light dark:text-accent-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-200 mb-1 leading-snug">
+                        {{ .title }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1 opacity-60 group-hover:opacity-100"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    </h3>
+                </a>
+                {{ else }}
+                <h3 class="text-lg font-semibold text-text-primary-light dark:text-text-primary-dark mb-1 leading-snug">{{ .title }}</h3>
+                {{ end }}
+                <p class="text-sm text-gray-400 italic mb-1">{{ .authors }}</p>
+                <p class="text-sm text-gray-500 mb-2">{{ .outlet }}</p>
+                {{ if .summary }}<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">{{ .summary }}</p>{{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    {{/* ── Section 2: Columns ────────────────────────────────────────── */}}
+    {{ with $columns }}
+    <section>
+        <h2 class="text-2xl font-bold mb-6 pb-2 border-b border-gray-700 text-text-primary-light dark:text-text-primary-dark">
+            {{ if eq $.Language.Lang "es" }}Columnas{{ else }}Columns{{ end }}
+        </h2>
+        <div class="space-y-6 max-w-3xl mx-auto">
+            {{ range . }}
+            <div class="pl-4 border-l-2 border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-colors duration-300">
+                <div class="flex items-center gap-3 mb-1">
+                    <span class="text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark border border-border-secondary-light dark:border-border-secondary-dark">
+                        {{ .type }}
+                    </span>
+                    <span class="text-sm text-gray-400">{{ .date }}</span>
+                </div>
+                {{ if .link }}
+                <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="group block">
+                    <h3 class="inline-flex items-start gap-2 text-lg font-semibold text-accent-light dark:text-accent-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-200 mb-1 leading-snug">
+                        {{ .title }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1 opacity-60 group-hover:opacity-100"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    </h3>
+                </a>
+                {{ else }}
+                <h3 class="text-lg font-semibold text-text-primary-light dark:text-text-primary-dark mb-1 leading-snug">{{ .title }}</h3>
+                {{ end }}
+                <p class="text-sm text-gray-400 italic mb-1">{{ .authors }}</p>
+                <p class="text-sm text-gray-500 mb-2">{{ .outlet }}</p>
+                {{ if .summary }}<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">{{ .summary }}</p>{{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,15 @@
+[[media]]
+  type = "Panel"
+  title = "Análisis técnico y voces frescas para las Elecciones 2026 del Perú"
+  outlet = "Colegio de Politólogos del Perú"
+  date = "26 de marzo de 2026"
+  url = "https://www.youtube.com/watch?v=dJxkPe9QxE4"
+  description = "Panel en vivo de análisis del debate presidencial peruano 2026, organizado por el Colegio de Politólogos del Perú."
+
+[[media]]
+  type = "Entrevista"
+  title = "Entrevista sobre las Elecciones 2026"
+  outlet = "Sin Filtros Políticos — Canal 04, Catacaos, Piura"
+  date = "2026"
+  url = "https://www.facebook.com/share/v/1aWJJQNBfL/"
+  description = "Entrevista para el programa político local Sin Filtros Políticos del Canal 04 de Catacaos, Piura, sobre el panorama electoral 2026."

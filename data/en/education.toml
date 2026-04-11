@@ -1,0 +1,32 @@
+[[education]]
+  period = "2019 – 2024"
+  degree = "B.A. in Political Science and Government"
+  institution = "Pontificia Universidad Católica del Perú (PUCP)"
+  location = "Lima, Peru"
+  institution_link = "https://www.pucp.edu.pe"
+  highlights = [
+    "First in cohort (2019–2024).",
+    "Thesis with highest honours on implementation gaps in post-disaster public infrastructure.",
+    "Coursework: Comparative Politics, Research Methods, Public Management, Political Economy."
+  ]
+
+[[education]]
+  period = "2024"
+  degree = "Exchange Programme in Political and Social Sciences"
+  institution = "Ghent University"
+  location = "Ghent, Belgium"
+  institution_link = "https://www.ugent.be"
+  highlights = [
+    "Awarded the DARI PUCP Student Mobility Scholarship.",
+    "Coursework: Quantitative Methods for Social Research, Public Management, Innovation Management, European Policy."
+  ]
+
+[[education]]
+  period = "2016 – 2018"
+  degree = "International Baccalaureate Diploma"
+  institution = "Colegio de Alto Rendimiento (COAR), Amazonas"
+  location = "Amazonas, Peru"
+  institution_link = "https://www.minedu.gob.pe/colegios-de-alto-rendimiento/"
+  highlights = [
+    "Outstanding graduate."
+  ]

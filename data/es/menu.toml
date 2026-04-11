@@ -1,0 +1,21 @@
+[menu]
+  [[menu.main]]
+    name = "Sobre Mí"
+    pageRef = "/about"
+    weight = 1
+  [[menu.main]]
+    name = "Experiencia"
+    pageRef = "/experience"
+    weight = 2
+  [[menu.main]]
+    name = "Proyectos"
+    pageRef = "/projects"
+    weight = 3
+  [[menu.main]]
+    name = "Blog"
+    pageRef = "/blogs"
+    weight = 4
+  [[menu.main]]
+    name = "Contacto"
+    pageRef = "/contact"
+    weight = 5 

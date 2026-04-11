@@ -1,0 +1,91 @@
+# ── ACADEMIC PUBLICATIONS ─────────────────────────────────────────────────────
+
+[[blogs]]
+  section = "academic"
+  type = "Thesis"
+  date = "2025"
+  title = "Disasters and Implementation Gaps: Study of the Educational Infrastructure Reconstruction Process in Piura (July 2020 – January 2023) after the Coastal El Niño Phenomenon"
+  authors = "Valverde, L."
+  outlet = "Undergraduate Thesis — Outstanding Mention · Pontificia Universidad Católica del Perú"
+  summary = "Analyzes the factors explaining implementation gaps in post-disaster educational public works in the Piura region."
+  link = "http://hdl.handle.net/20.500.12404/32370"
+  tags = ["Thesis", "Public Policy", "Disasters", "Peru"]
+
+[[blogs]]
+  section = "academic"
+  type = "Editorial"
+  date = "2023"
+  title = "Climate Emergency and Human Rights: Writing on the Advisory Opinion to the Inter-American Court of Human Rights"
+  authors = "Cabrales, S., Quiroz, S.J., Mamede, T., Barbosa, I. & Valverde, L. (Eds.)"
+  outlet = "Alianza de Clínicas Jurídicas Ambientales de Latinoamérica y el Caribe"
+  summary = "Collective volume co-edited on climate emergency and human rights, submitted to the Inter-American Court of Human Rights."
+  link = "https://alianzadeclinicasambientales.com/wp-content/uploads/2023/12/Informe-O.C.-Emergencia-Climatica-Corte-IDH-Alianza-Clinicas-Juridicas-Ambientales-LAC-IDEHPUCP-y-SPDA-1.pdf"
+  tags = ["Editorial", "Human Rights", "Climate", "IACHR"]
+
+# ── COLUMNS ───────────────────────────────────────────────────────────────────
+
+[[blogs]]
+  section = "columns"
+  type = "Column"
+  date = "October 31, 2023"
+  title = "The Humanitarian Catastrophe of Disappearance in Peru: Challenges for the Search Policy for Missing Persons"
+  authors = "Valverde, L. & Cépeda, M."
+  outlet = "IDEHPUCP — Boletín y Eventos"
+  summary = "Analysis of the institutional and policy challenges surrounding the search for missing persons in Peru, published on the Day of the Dead."
+  link = "https://idehpucp.pucp.edu.pe/boletin-eventos/la-catastrofe-humanitaria-de-la-desaparicion-en-el-peru-retos-para-la-politica-de-busqueda-de-personas-desaparecidas-28811/"
+  tags = ["Column", "Human Rights", "Missing Persons", "Peru"]
+
+[[blogs]]
+  section = "columns"
+  type = "Column"
+  date = "October 3, 2023"
+  title = "New Report of the National Registry of Missing Persons and Burial Sites (RENADE)"
+  authors = "Jave, I. & Valverde, L."
+  outlet = "IDEHPUCP — Boletín y Eventos"
+  summary = "Analytical note on the latest RENADE report and its implications for the search for missing persons and transitional justice in Peru."
+  link = "https://idehpucp.pucp.edu.pe/boletin-eventos/nuevo-reporte-del-registro-nacional-de-personas-desaparecidas-y-sitios-de-entierro-renade-28722/"
+  tags = ["Column", "Transitional Justice", "RENADE", "Peru"]
+
+[[blogs]]
+  section = "columns"
+  type = "Column"
+  date = "September 19, 2023"
+  title = "Climate Change and Human Rights: A Relationship Escalating in the Courts"
+  authors = "Dominguez, A. & Valverde, L."
+  outlet = "IDEHPUCP — Boletín y Eventos"
+  summary = "Analysis of the growing role of international courts in addressing climate change as a human rights issue."
+  link = "https://idehpucp.pucp.edu.pe/boletin-eventos/cambio-climatico-y-derechos-humanos-una-relacion-que-viene-escalando-en-los-tribunales-28642/"
+  tags = ["Column", "Climate Change", "Human Rights", "Courts"]
+
+[[blogs]]
+  section = "columns"
+  type = "Column"
+  date = "August 22, 2023"
+  title = "A Pending Agenda Twenty Years after the CVR Final Report: Notes on the (Non-)Teaching of the Internal Armed Conflict in Peruvian Universities"
+  authors = "Cépeda, M. & Valverde, L."
+  outlet = "IDEHPUCP — Boletín y Eventos"
+  summary = "Reflection on the gaps in teaching about Peru's internal armed conflict in higher education, twenty years after the Truth and Reconciliation Commission's Final Report."
+  link = "https://idehpucp.pucp.edu.pe/boletin-eventos/una-agenda-pendiente-a-veinte-anos-del-informe-final-de-la-cvr-apuntes-sobre-la-noensenanza-del-conflicto-armado-interno-en-las-universidades-peruanas-28539/"
+  tags = ["Column", "Memory", "Education", "CVR"]
+
+[[blogs]]
+  section = "columns"
+  type = "Column"
+  date = "June 20, 2023"
+  title = "Reconstruction without Change: When Prevention Is Not a Priority"
+  authors = "Solis, E. & Valverde, L."
+  outlet = "IDEHPUCP — Boletín y Eventos"
+  summary = "Analysis of post-disaster reconstruction processes in Peru and the systematic neglect of prevention in public policy after the 2017 Coastal El Niño."
+  link = "https://idehpucp.pucp.edu.pe/boletin-eventos/reconstruccion-sin-cambios-cuando-la-prevencion-no-es-una-prioridad-28343/"
+  tags = ["Column", "Disasters", "Public Policy", "Peru"]
+
+[[blogs]]
+  section = "columns"
+  type = "Column"
+  date = "March 21, 2023"
+  title = "The Stagnation of Democracy in Peru"
+  authors = "Benites, A. & Valverde, L."
+  outlet = "IDEHPUCP — Boletín y Eventos"
+  summary = "Opinion piece analyzing the structural factors behind democratic erosion in Peru since the transitions of the 1980s and 1990s."
+  link = "https://idehpucp.pucp.edu.pe/boletin-eventos/el-estancamiento-de-la-democracia-en-el-peru-27949/"
+  tags = ["Column", "Democracy", "Peru"]

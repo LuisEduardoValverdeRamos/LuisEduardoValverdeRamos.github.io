@@ -1,0 +1,70 @@
+[author]
+  name = "Luis Valverde Ramos"
+  location = "Lima, Perú"
+  description = "Political Scientist | Causal Inference & ML | Public Policy | Debate"
+
+
+  profile_image = "/images/profile.jpeg"
+
+  email    = "luis.valverde@pucp.edu.pe"
+  linkedin = "https://www.linkedin.com/in/luisvalverderamos/"
+  linkedin_username = "luisvalverderamos"
+  github   = "https://github.com/LuisEduardoValverdeRamos"
+  github_username = "LuisEduardoValverdeRamos"
+
+# --- Honors & Awards ---
+[[honors]]
+  institution = "Liga Peruana de Debate Escolar"
+  title = "National Intercollegiate Debate Champion (CNDI)"
+  date = "2025"
+
+[[honors]]
+  institution = "Faculty of Social Sciences, PUCP"
+  title = "First Place — Student Research Competition 2023"
+  date = "2024"
+
+[[honors]]
+  institution = "DARI PUCP — Student Mobility Program"
+  title = "Scholarship for Political and Social Sciences at Ghent University, Belgium"
+  date = "2024"
+
+[[honors]]
+  institution = "World Universities Debating Championship — Madrid"
+  title = "Semifinalist"
+  date = "2022"
+
+[[honors]]
+  institution = "PRONABEC — Beca 18 Program"
+  title = "Full Scholarship for Political Science at PUCP"
+  date = "2019 – 2024"
+
+# --- Certifications ---
+[[certifications]]
+  title = "English — Full Professional Proficiency"
+  date = "Present"
+
+[[certifications]]
+  title = "Spanish — Native Speaker"
+  date = "Present"
+
+# --- Volunteering & Organizational Participation ---
+[[voluntary]]
+  role = "Active Member"
+  organization = "DEJUCA — Youth Organization"
+  period = "Jul. 2020 – Present"
+  description = "Active member in the creation, promotion and implementation of social projects focused on education, environment and civic participation."
+  url = ""
+
+[[voluntary]]
+  role = "Honorary Member"
+  organization = "Sociedad de Debate PUCP"
+  period = "May. 2021 – Present"
+  description = "Honorary member of the PUCP Debate Society."
+  url = ""
+
+[[voluntary]]
+  role = "Electoral Observer"
+  organization = "Transparencia"
+  period = "Apr. 11, 2021 (First Round) & Jun. 6, 2021 (Second Round)"
+  description = "Electoral observer for the 2021 Peruvian general elections (first and second round) on behalf of Transparencia."
+  url = ""

@@ -1,0 +1,90 @@
+[[experience]]
+  role = "Researcher (part-time)"
+  company = "Liga Peruana de Debate Escolar (LPDE)"
+  period = "Feb. 2026 – Present"
+  country = "Lima, Peru"
+  company_link = ""
+  description = "Leading the design and implementation of the First Survey on School Debate in Peru, establishing the first national evidence base on the state of school debate."
+  responsibilities = [
+    "Leading the design and implementation of the First Survey on School Debate in Peru, establishing the first national evidence base on the state of school debate.",
+    "The survey is currently in the data collection stage."
+  ]
+  technologies = ["R", "Survey Design", "Policy Analysis", "Quantitative Methods"]
+
+[[experience]]
+  role = "Research Assistant"
+  company = "CISEPA PUCP — Centro de Investigaciones Sociológicas, Económicas, Políticas y Antropológicas"
+  period = "Oct. 2025 – Feb. 2026"
+  country = "Lima, Peru"
+  company_link = "https://cisepa.pucp.edu.pe"
+  description = "Assisted in econometric analysis of five projects — subnational reelection and corruption, subnational reelection and spending, media coverage in elections, perceived insecurity and migration, voting patterns in congress."
+  responsibilities = [
+    "Assisted in econometric analysis of five projects — subnational reelection and corruption, subnational reelection and spending, media coverage in elections, perceived insecurity and migration, voting patterns in congress — replicating ITS models, two-way fixed effects and shift-share instruments in R, with papers submitted to journals including Public Choice.",
+    "Measured the media visibility of five illicit economies in Peru by web scraping and analyzing 747,836 unique headlines from El Comercio and La República (2016–2024) using a multichannel pipeline and a proximity search dictionary in R."
+  ]
+  technologies = ["R", "fixest", "rdrobust", "K-means", "Web Scraping", "Econometrics"]
+
+[[experience]]
+  role = "Consultant"
+  company = "ProDiálogo — commissioned by the Jurado Nacional de Elecciones (JNE)"
+  period = "Nov. 2025 – Dec. 2025"
+  country = "Lima, Peru"
+  company_link = "https://www.jne.gob.pe"
+  description = "Was part of the technical team for three behavioral measurement instruments for the Peruvian electoral context, providing strategic inputs for the JNE's institutional policy."
+  responsibilities = [
+    "Was part of the technical team for three behavioral measurement instruments for the Peruvian electoral context: the 2026 Electoral Profile Survey, two survey experiments and a behavioral map, providing strategic inputs for the JNE's institutional policy.",
+    "Segmented the Peruvian electorate by applying clustering to survey data from three electoral cycles (2011, 2016, 2021), generating typological voter profiles as inputs for JNE policies."
+  ]
+  technologies = ["R", "Clustering", "Survey Experiments", "Behavioral Research"]
+
+[[experience]]
+  role = "Research Assistant"
+  company = "Q-LAB — Laboratory of AI and Computational Methods in Social Sciences, PUCP"
+  period = "Sep. 2024 – Sep. 2025"
+  country = "Lima, Peru"
+  company_link = "https://qlab.pucp.edu.pe"
+  description = "Analyzed implementation gaps in over 60,000 municipal public works (2018–2024) for a project in collaboration with the Swiss Cooperation Agency."
+  responsibilities = [
+    "Analyzed implementation gaps in over 60,000 municipal public works (2018–2024) for a project in collaboration with the Swiss Cooperation Agency, applying supervised machine learning (XGBoost, SHAP values) to predict subnational execution deficits and identify key underperformance factors.",
+    "Built and cleaned district- and regional-level databases integrating administrative records from MEF, RENAMU and INEI for research on corruption, municipal performance and migration."
+  ]
+  technologies = ["R", "Python", "XGBoost", "SHAP", "scikit-learn", "tidymodels", "Data Wrangling"]
+
+[[experience]]
+  role = "Data Analysis Consultant"
+  company = "Sapienza — project for Roche Pharma Peru"
+  period = "Jul. 2025 – Sep. 2025"
+  country = "Lima, Peru"
+  company_link = ""
+  description = "Analyzed over 8,000 administrative records on rare diseases, cancer and high-cost medications in Peru (2019–2025)."
+  responsibilities = [
+    "Analyzed over 8,000 administrative records on rare diseases, cancer and high-cost medications in Peru (2019–2025), identifying regional prevalence patterns and public procurement trends.",
+    "Produced 3 analytical reports as strategic inputs for Roche Peru's decisions."
+  ]
+  technologies = ["R", "Python", "Administrative Data", "Health Policy Analysis"]
+
+[[experience]]
+  role = "Research Assistant"
+  company = "Daniel Encinas (Ph.D. Candidate, Northwestern) & Rodrigo Barrenechea (Ph.D.)"
+  period = "May. 2024 – Aug. 2024"
+  country = "Lima, Peru"
+  company_link = ""
+  description = "Assisted in data processing and analysis for the identification of geographic patterns of the populist vote in Peru."
+  responsibilities = [
+    "Assisted in data processing and analysis for the identification of geographic patterns of the populist vote in Peru by analyzing provincial-level results across 10 presidential elections (1980–2021).",
+    "Produced descriptive analysis of Andean electoral behavior using LAPOP data, as inputs for papers submitted to international indexed journals."
+  ]
+  technologies = ["R", "ggplot2", "LAPOP Data", "Electoral Analysis"]
+
+[[experience]]
+  role = "Research Intern"
+  company = "Instituto de Democracia y Derechos Humanos de la PUCP (IDEHPUCP)"
+  period = "Feb. 2023 – Dec. 2023"
+  country = "Lima, Peru"
+  company_link = "https://idehpucp.pucp.edu.pe"
+  description = "Participated in the design and implementation of research projects on human rights, democracy and migration, coordinating with international organizations."
+  responsibilities = [
+    "Participated in the design and implementation of research projects on human rights, democracy and migration, coordinating with international organizations, and supported the editorial process of the commemorative volume for the 20th anniversary of Peru's CVR Final Report.",
+    "Wrote 6 opinion columns for the IDEHPUCP newsletter on memory, climate change and democracy."
+  ]
+  technologies = ["Policy Research", "Academic Writing", "Qualitative Methods"]

@@ -1,0 +1,34 @@
+[[projects]]
+  title = "Reconstrucción Post-Desastre y Brechas de Implementación en Perú"
+  description = "Tesis de pregrado (mención sobresaliente). Estudió el proceso de reconstrucción de infraestructura educativa en Piura (jul 2020 – ene 2023) tras el Fenómeno El Niño Costero, analizando los factores que explican las brechas de implementación en obras públicas post-desastre."
+  tech = "R, Process Tracing, Análisis Comparativo Cualitativo, Política Pública"
+  image = "/images/projects/disaster-reconstruction.jpg"
+  link = "http://hdl.handle.net/20.500.12404/32370"
+
+[[projects]]
+  title = "Brechas en Obras Municipales — Predicción ML"
+  description = "Lideré el análisis de brechas de implementación en más de 60,000 obras públicas municipales (2018–2024). Apliqué Machine Learning supervisado (XGBoost, valores SHAP) para predecir brechas de implementación a nivel subnacional e identificar factores clave de bajo desempeño."
+  tech = "R, Python, XGBoost, SHAP, tidymodels, datos MEF/RENAMU/INEI"
+  image = "/images/projects/public-works.jpg"
+  link = ""
+
+[[projects]]
+  title = "Tipología Electoral del Votante Peruano — JNE/ProDiálogo"
+  description = "Segmenté el electorado peruano aplicando clustering a datos de encuestas de tres ciclos electorales (2011, 2016 y 2021), generando perfiles tipológicos de votantes como insumos para las políticas de educación cívica del JNE."
+  tech = "R, Clustering, Experimentos de Encuesta, Investigación Conductual"
+  image = "/images/projects/electoral-typology.jpg"
+  link = "https://github.com/LuisEduardoValverdeRamos/clustering-profile-peruvian-voter"
+
+[[projects]]
+  title = "LPDE Debate Analytics — Seguimiento de Rendimiento en Debate Escolar en Perú"
+  description = "Pipeline de scraping, procesamiento y análisis estadístico que cubre 16 torneos de debate escolar en Perú (temporada 2025), con análisis longitudinal del TNDE 2023–2025. Hallazgos sobre paridad de género, brechas de acceso público vs. privado y concentración geográfica del debate competitivo."
+  tech = "R, Web Scraping, Tabbycat, Análisis Estadístico, Pipeline de Datos"
+  image = "/images/projects/lpde-debate.jpg"
+  link = "https://github.com/LuisEduardoValverdeRamos/lpde-debate-analytics"
+
+[[projects]]
+  title = "Joven Perú 2026 — Análisis Electoral Estratégico del Voto Joven"
+  description = "Pipeline de análisis electoral en R sobre el padrón RENIEC nacional, con foco en el voto joven (18–29), concentración territorial y análisis espacial de hot spots para las elecciones peruanas 2026. Hallazgo clave: 6.7M jóvenes (25.7% del padrón), con 71 distritos concentrando el 40% del electorado nacional."
+  tech = "R, Análisis Espacial, Datos RENIEC, Getis-Ord Gi*, Análisis Electoral"
+  image = "/images/projects/voto-joven.jpg"
+  link = "https://github.com/LuisEduardoValverdeRamos/voto-joven-peru-2026"

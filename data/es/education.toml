@@ -1,0 +1,32 @@
+[[education]]
+  period = "2019 – 2024"
+  degree = "Licenciado en Ciencia Política y Gobierno"
+  institution = "Pontificia Universidad Católica del Perú (PUCP)"
+  location = "Lima, Perú"
+  institution_link = "https://www.pucp.edu.pe"
+  highlights = [
+    "Primer puesto en la promoción de egreso (2019–2024).",
+    "Tesis con mención sobresaliente sobre brechas de implementación en infraestructura pública post-desastre.",
+    "Cursos relevantes: Política Comparada, Métodos de Investigación, Gestión Pública, Economía Política."
+  ]
+
+[[education]]
+  period = "2024"
+  degree = "Programa de Intercambio en Ciencias Políticas y Sociales"
+  institution = "Ghent University"
+  location = "Ghent, Bélgica"
+  institution_link = "https://www.ugent.be"
+  highlights = [
+    "Ganador de la Beca de Movilidad Estudiantil DARI PUCP.",
+    "Cursos: Quantitative Methods for Social Research, Public Management, Innovation Management, European Policy."
+  ]
+
+[[education]]
+  period = "2016 – 2018"
+  degree = "Diploma de Bachillerato Internacional (IB)"
+  institution = "Colegio de Alto Rendimiento (COAR), Amazonas"
+  location = "Amazonas, Perú"
+  institution_link = "https://www.minedu.gob.pe/colegios-de-alto-rendimiento/"
+  highlights = [
+    "Egresado destacado."
+  ]

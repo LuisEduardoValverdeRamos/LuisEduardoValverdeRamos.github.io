@@ -10,7 +10,7 @@
   description = "Lideré el análisis de brechas de implementación en más de 60,000 obras públicas municipales (2018–2024). Apliqué Machine Learning supervisado (XGBoost, valores SHAP) para predecir brechas de implementación a nivel subnacional e identificar factores clave de bajo desempeño."
   tech = "R, Python, XGBoost, SHAP, tidymodels, datos MEF/RENAMU/INEI"
   image = "/images/projects/public-works.jpg"
-  link = ""
+  link = "https://luiseduardovalverderamos.github.io/public_infrastructure_gaps/"
 
 [[projects]]
   title = "Tipología Electoral del Votante Peruano — JNE/ProDiálogo"

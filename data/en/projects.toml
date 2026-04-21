@@ -10,7 +10,7 @@
   description = "Led analysis of implementation gaps in 60,000+ municipal public works (2018–2024). Applied supervised Machine Learning (XGBoost, SHAP values) to predict implementation gaps at the subnational level and identify key underperformance factors."
   tech = "R, Python, XGBoost, SHAP, tidymodels, MEF/RENAMU/INEI data"
   image = "/images/projects/public-works.jpg"
-  link = ""
+  link = "https://luiseduardovalverderamos.github.io/public_infrastructure_gaps/"
 
 [[projects]]
   title = "Electoral Typology of Peruvian Voters — JNE/ProDiálogo"

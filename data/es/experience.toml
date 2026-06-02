@@ -1,17 +1,4 @@
 [[experience]]
-  role = "Investigador (tiempo parcial)"
-  company = "Liga Peruana de Debate Escolar (LPDE)"
-  period = "Feb. 2026 – Presente"
-  country = "Lima, Perú"
-  company_link = ""
-  description = "Lidero el diseño e implementación de la Primera Encuesta sobre Debate Escolar en el Perú, estableciendo la primera base de evidencia nacional sobre el estado del debate escolar."
-  responsibilities = [
-    "Lidero el diseño e implementación de la Primera Encuesta sobre Debate Escolar en el Perú, estableciendo la primera base de evidencia nacional sobre el estado del debate escolar.",
-    "La encuesta actualmente se encuentra en la etapa de recolección de información."
-  ]
-  technologies = ["R", "Diseño de encuestas", "Análisis de políticas", "Métodos cuantitativos"]
-
-[[experience]]
   role = "Asistente de Investigación"
   company = "CISEPA PUCP — Centro de Investigaciones Sociológicas, Económicas, Políticas y Antropológicas"
   period = "Oct. 2025 – Feb. 2026"

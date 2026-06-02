@@ -1,17 +1,4 @@
 [[experience]]
-  role = "Researcher (part-time)"
-  company = "Liga Peruana de Debate Escolar (LPDE)"
-  period = "Feb. 2026 – Present"
-  country = "Lima, Peru"
-  company_link = ""
-  description = "Leading the design and implementation of the First Survey on School Debate in Peru, establishing the first national evidence base on the state of school debate."
-  responsibilities = [
-    "Leading the design and implementation of the First Survey on School Debate in Peru, establishing the first national evidence base on the state of school debate.",
-    "The survey is currently in the data collection stage."
-  ]
-  technologies = ["R", "Survey Design", "Policy Analysis", "Quantitative Methods"]
-
-[[experience]]
   role = "Research Assistant"
   company = "CISEPA PUCP — Centro de Investigaciones Sociológicas, Económicas, Políticas y Antropológicas"
   period = "Oct. 2025 – Feb. 2026"

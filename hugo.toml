@@ -86,7 +86,7 @@ defaultContentLanguageInSubdir = true
 [params]
   name = "Luis Valverde Ramos"
   location = "Lima, Perú"
-  description = "Political Scientist | Quantitative Research | Public Policy | Data Analysis"
+  description = "Political Scientist | Mixed Methods & ML | Public Policy | Regulatory Analysis | Debate"
   profile_image = "/images/profile.jpeg"
   # Social links
   github = "https://github.com/LuisEduardoValverdeRamos"

@@ -9,12 +9,11 @@
         <canvas id="hero-net" class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></canvas>
 
         {{ with .profile_image }}
-        <figure class="hidden md:block absolute top-2 right-0 lg:right-8 w-44 lg:w-52 rotate-1 z-10">
-            <div class="p-2 pb-1 bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark rounded-md shadow-md">
+        <div class="hidden md:block absolute top-2 right-0 lg:right-8 w-44 lg:w-52 rotate-1 z-10">
+            <div class="p-2 bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark rounded-md shadow-md">
                 <img src="{{ strings.TrimPrefix "/" . | absURL }}" alt="Luis Valverde Ramos" class="w-full aspect-[4/5] object-cover rounded-sm">
-                <figcaption class="mono-data text-text-secondary-light dark:text-text-secondary-dark pt-1.5 pb-0.5 px-0.5" style="font-size:0.65rem;">fig. 01 — Piura, Perú</figcaption>
             </div>
-        </figure>
+        </div>
         {{ end }}
 
         <div class="max-w-3xl relative md:pr-52 lg:pr-60">
@@ -65,16 +64,8 @@
             </div>
         </div>
 
-        <!-- Identity illustration: election day in the Andes -->
-        <figure class="relative mt-12 max-w-3xl">
-            <div class="p-2 pb-1 bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark rounded-lg shadow-sm">
-                <img src="{{ "images/hero-illustration.jpg" | absURL }}" alt="{{ if eq site.Language.Lang "es" }}Día de elecciones en un pueblo andino{{ else }}Election day in an Andean town{{ end }}" class="w-full rounded-md">
-                <figcaption class="mono-data text-text-secondary-light dark:text-text-secondary-dark pt-1.5 pb-0.5 px-1" style="font-size:0.65rem;">{{ if eq site.Language.Lang "es" }}fig. 02 — día de elecciones, sierra del Perú{{ else }}fig. 02 — election day, Peruvian Andes{{ end }}</figcaption>
-            </div>
-        </figure>
-
         {{ with $authorData.stats }}
-        <div class="relative mt-6 max-w-3xl grid grid-cols-2 md:grid-cols-4 gap-px bg-border-primary-light dark:bg-border-primary-dark border border-border-primary-light dark:border-border-primary-dark rounded-lg overflow-hidden">
+        <div class="relative mt-12 max-w-3xl grid grid-cols-2 md:grid-cols-4 gap-px bg-border-primary-light dark:bg-border-primary-dark border border-border-primary-light dark:border-border-primary-dark rounded-lg overflow-hidden">
             {{ range . }}
             <div class="bg-bg-secondary-light dark:bg-bg-secondary-dark px-4 py-4">
                 <div class="font-serif text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark leading-none mb-1.5" data-count>{{ .value }}</div>
@@ -91,13 +82,14 @@
     <!-- Methods & Tools -->
     {{ with (index site.Data .Language.Lang "tech") }}
     <section class="mb-20 max-w-3xl">
+        {{ partial "scatter-divider.html" . }}
         <h2 class="text-3xl font-bold mb-6"><span class="section-index">01 /</span>{{ T "whatIWorkWith" }}</h2>
         <div class="flex flex-wrap gap-2">
             {{ range .row1 }}
-            <span class="px-3 py-1.5 text-sm rounded-md bg-bg-secondary-light dark:bg-bg-secondary-dark text-text-primary-light dark:text-text-primary-dark border border-border-primary-light dark:border-border-primary-dark">{{ .name }}</span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md bg-bg-secondary-light dark:bg-bg-secondary-dark text-text-primary-light dark:text-text-primary-dark border border-border-primary-light dark:border-border-primary-dark"><span class="w-1.5 h-1.5 rounded-full bg-accent-light dark:bg-accent-dark"></span>{{ .name }}</span>
             {{ end }}
             {{ range .row2 }}
-            <span class="px-3 py-1.5 text-sm rounded-md bg-bg-secondary-light dark:bg-bg-secondary-dark text-text-primary-light dark:text-text-primary-dark border border-border-primary-light dark:border-border-primary-dark">{{ .name }}</span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md bg-bg-secondary-light dark:bg-bg-secondary-dark text-text-primary-light dark:text-text-primary-dark border border-border-primary-light dark:border-border-primary-dark"><span class="w-1.5 h-1.5 rounded-full bg-accent2-light dark:bg-accent2-dark"></span>{{ .name }}</span>
             {{ end }}
         </div>
     </section>
@@ -109,6 +101,7 @@
 
     {{ with $experience }}
     <section class="mb-20">
+        {{ partial "scatter-divider.html" . }}
         <h2 class="text-3xl font-bold mb-6"><span class="section-index">02 /</span>{{ T "experienceTitle" }}</h2>
         <div class="space-y-6 max-w-3xl">
             {{ range first 4 . }}
@@ -144,6 +137,7 @@
 
     {{ with $projects }}
     <section class="mb-20">
+        {{ partial "scatter-divider.html" . }}
         <h2 class="text-3xl font-bold mb-8"><span class="section-index">03 /</span>{{ T "projectsTitle" }}</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
             {{ range first 3 . }}
@@ -174,13 +168,14 @@
     {{ $mediaData := index site.Data .Language.Lang "media" }}
     {{ with (and $mediaData $mediaData.media) }}
     <section class="mb-20">
+        {{ partial "scatter-divider.html" . }}
         <h2 class="text-3xl font-bold mb-8"><span class="section-index">04 /</span>{{ T "mediaTitle" }}</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
             {{ range first 3 . }}
             <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="project-card group flex flex-col overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
                 <div class="aspect-video overflow-hidden bg-bg-tertiary-light dark:bg-bg-tertiary-dark relative">
                     {{ if .image }}
-                    <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <img src="{{ if hasPrefix .image "http" }}{{ .image }}{{ else }}{{ strings.TrimPrefix "/" .image | absURL }}{{ end }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     {{ end }}
                     <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
                         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
@@ -250,6 +245,7 @@
 
     {{ with $blogs }}
     <section class="mb-20">
+        {{ partial "scatter-divider.html" . }}
         <h2 class="text-3xl font-bold mb-8"><span class="section-index">05 /</span>{{ T "blogsTitle" }}</h2>
         <div class="space-y-8 max-w-3xl">
             {{ range first 3 . }}

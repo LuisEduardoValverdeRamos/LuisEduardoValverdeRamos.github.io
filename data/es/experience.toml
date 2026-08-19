@@ -1,10 +1,48 @@
 [[experience]]
+  role = "Jefe de Práctica"
+  company = "Pontificia Universidad Católica del Perú (PUCP)"
+  period = "Ago. 2026 – Actualidad"
+  country = "Perú"
+  company_link = "https://www.pucp.edu.pe"
+  description = "Dirijo las sesiones prácticas semanales del curso de Economía Política en la Facultad de Ciencias Sociales."
+  responsibilities = [
+    "Dirijo las sesiones prácticas semanales del curso de Economía Política en la Facultad de Ciencias Sociales (PUCP)."
+  ]
+  technologies = ["Economía Política", "Docencia", "R"]
+
+[[experience]]
+  role = "Investigador"
+  company = "Jurado Nacional de Elecciones (JNE)"
+  period = "Jul. 2026 – Actualidad"
+  country = "Lima, Perú"
+  company_link = "https://www.jne.gob.pe"
+  description = "Contribuyo al diseño de la agenda de investigación de la institución mediante métodos cuantitativos y cualitativos, coordinando con autoridades académicas y jurídicas en el campo de los estudios electorales."
+  responsibilities = [
+    "Contribuyo al diseño de la agenda de investigación de la institución mediante métodos cuantitativos y cualitativos.",
+    "Enlace institucional y coordinación técnica con autoridades académicas y jurídicas en el campo de los estudios electorales."
+  ]
+  technologies = ["R", "Métodos mixtos", "Estudios electorales", "Diseño de investigación"]
+
+[[experience]]
+  role = "Consultor de Investigación"
+  company = "Liga Peruana de Debate Escolar (LPDE)"
+  period = "Feb. 2026 – Actualidad"
+  country = "Perú"
+  company_link = ""
+  description = "Investigación aplicada sobre el ecosistema de debate escolar en el Perú: diseño de estudios, análisis cuantitativo y cualitativo, e informes para las decisiones estratégicas de la LPDE."
+  responsibilities = [
+    "Investigación aplicada sobre el ecosistema de debate escolar en el Perú: diseño de estudios, análisis cuantitativo y cualitativo.",
+    "Producción de informes y policy briefs para informar las decisiones estratégicas de la LPDE y su posicionamiento ante audiencias del sector educativo y organismos multilaterales."
+  ]
+  technologies = ["R", "Web Scraping", "Diseño de encuestas", "Policy Briefs"]
+
+[[experience]]
   role = "Asistente de Investigación"
   company = "CISEPA PUCP — Centro de Investigaciones Sociológicas, Económicas, Políticas y Antropológicas"
   period = "Oct. 2025 – Feb. 2026"
   country = "Lima, Perú"
   company_link = "https://cisepa.pucp.edu.pe"
-  description = "Asistí en el análisis econométrico de cinco proyectos — reelección subnacional y corrupción, reelección subnacional y gasto, cobertura mediática en elecciones, inseguridad percibida y migración, patrones de voto en el congreso."
+  description = "Análisis econométrico de cinco proyectos sobre gobernanza subnacional, corrupción y comportamiento electoral; web scraping y análisis de más de 750,000 titulares de prensa (2016–2024) para medir la visibilidad mediática de las economías ilícitas en el Perú."
   responsibilities = [
     "Asistí en el análisis econométrico de cinco proyectos — reelección subnacional y corrupción, reelección subnacional y gasto, cobertura mediática en elecciones, inseguridad percibida y migración, patrones de voto en el congreso — replicando modelos ITS, efectos fijos de dos vías e instrumentos de shift-share en R, con artículos enviados a revistas como Public Choice.",
     "Medí la visibilidad mediática de cinco economías ilícitas en Perú web scrapeando y analizando 747,836 titulares únicos de El Comercio y La República (2016–2024) mediante un pipeline multicanal y un diccionario de búsqueda por proximidad en R."

@@ -6,14 +6,10 @@ layout: "about"
 profile_image: "/images/profile.jpeg"
 ---
 
-*Crecí en Pedregal Grande, una pequeña comunidad rural en las afueras de Catacaos, en el norte del Perú. Ese origen es parte de por qué hago lo que hago.*
+Soy **Luis Valverde Ramos**, politólogo piurano, graduado con distinción por la **Pontificia Universidad Católica del Perú (PUCP)**, con un semestre de intercambio en **Ghent University**, Bélgica. Trabajo en la intersección entre política electoral, políticas públicas y ciencia de datos — convirtiendo datos administrativos a gran escala e investigación con métodos mixtos en evidencia sobre la cual las instituciones puedan actuar. He trabajado con instituciones del Estado, centros de investigación financiados por cooperación internacional y el sector privado, traduciendo análisis complejo en productos claros y accionables para tomadores de decisión.
 
-¡Hola! Soy **Luis Valverde Ramos**, politólogo de Catacaos, Piura, graduado con distinción por la **Pontificia Universidad Católica del Perú (PUCP)**, con intercambio en **Ghent University**, Bélgica. Combino formación en ciencia política con análisis cuantitativo avanzado, procesamiento de datos a gran escala y producción de evidencia para política pública y estrategia comunicacional — colaborando con organismos del Estado, centros de investigación y el sector privado en equipos multidisciplinarios.
+Actualmente soy **Investigador en el Jurado Nacional de Elecciones (JNE)**, donde contribuyo al diseño de la agenda de investigación institucional; **Jefe de Práctica de Economía Política en la PUCP**; y **Consultor de Investigación de la Liga Peruana de Debate Escolar (LPDE)**.
 
 ### Más allá de mi trabajo
 
-Soy participante activo en el debate académico peruano — **Campeón Nacional de Debate Interuniversitario (2025)** y Semifinalista en el **Campeonato Mundial Universitario de Debate en Español** en Madrid (2022). Actualmente entreno a la selección nacional peruana de debate escolar de cara al **Mundial de Debate Escolar** en Panamá, y formo debatientes universitarios de Perú y República Dominicana en formato Parlamentario Británico. Creo que comunicar bien es tan importante como pensar bien. Fuera del trabajo, practico Muay Thai.
-
-### Intereses actuales
-
-Soy autodidacta en mi formación continua — actualmente profundizo mis habilidades en estadística aplicada y aprendizaje automático, y exploro la macroeconomía y el comportamiento humano como marcos para entender por qué las personas y las instituciones actúan como lo hacen. También llevo estos intereses a mi trabajo como entrenador de debate, ayudando a los estudiantes a incorporar datos y razonamiento basado en evidencia en su práctica argumentativa.
+Soy miembro activo de la comunidad peruana de debate competitivo — **Campeón Nacional de Debate Interuniversitario (2025)** y Semifinalista del **CMUDE — Campeonato Mundial Universitario de Debate en Español** (Madrid, 2022). Entreno a la selección nacional peruana de debate escolar y formo debatientes universitarios de Perú y República Dominicana en formato Parlamentario Británico. Creo que comunicar bien importa tanto como pensar bien. Fuera del trabajo, practico Muay Thai.

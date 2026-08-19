@@ -1,8 +1,12 @@
 [author]
   name = "Luis Valverde Ramos"
-  location = "Lima, Perú"
-  description = "Political Scientist | Mixed Methods & ML | Public Policy | Regulatory Analysis | Debate"
-
+  location = "Piura, Peru"
+  description = "Political Scientist (PUCP) | Mixed Methods | Electoral Politics · Public Policy"
+  current = [
+    "Researcher — Jurado Nacional de Elecciones",
+    "Teaching Assistant — PUCP",
+    "Research Consultant — LPDE",
+  ]
 
   profile_image = "/images/profile.jpeg"
 
@@ -11,6 +15,23 @@
   linkedin_username = "luisvalverderamos"
   github   = "https://github.com/LuisEduardoValverdeRamos"
   github_username = "LuisEduardoValverdeRamos"
+
+# --- Evidence stats (hero strip) ---
+[[stats]]
+  value = "750K+"
+  label = "headlines scraped & analyzed"
+
+[[stats]]
+  value = "60K+"
+  label = "public works modeled with ML"
+
+[[stats]]
+  value = "3"
+  label = "electoral cycles clustered"
+
+[[stats]]
+  value = "8+"
+  label = "institutions served"
 
 # --- Honors & Awards ---
 [[honors]]
@@ -29,7 +50,7 @@
   date = "2024"
 
 [[honors]]
-  institution = "World Universities Debating Championship — Madrid"
+  institution = "CMUDE — Campeonato Mundial Universitario de Debate en Español, Madrid"
   title = "Semifinalist"
   date = "2022"
 

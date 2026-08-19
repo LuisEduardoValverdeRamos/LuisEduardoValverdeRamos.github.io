@@ -1,6 +1,8 @@
 {{ define "main" }}
-<div class="w-full md:w-4/5 lg:w-3/5 mx-auto px-14 py-12">
-    <h1 class="text-5xl font-bold mb-12 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+<div class="w-full md:w-4/5 lg:w-3/5 mx-auto px-6 md:px-14 py-12">
+    {{ partial "scatter-divider.html" . }}
+    <p class="mono-label text-accent-light dark:text-accent-dark mb-3">// {{ if eq .Language.Lang "es" }}escritos y medios{{ else }}writing & media{{ end }}</p>
+    <h1 class="text-4xl md:text-5xl font-bold mb-12 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
 
     {{ $blogsData := index site.Data .Language.Lang "blogs" }}
     {{ $all := $blogsData.blogs }}

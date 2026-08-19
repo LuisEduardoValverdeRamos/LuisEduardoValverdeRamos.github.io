@@ -1,87 +1,43 @@
 {{ define "main" }}
-<div class="w-full md:w-3/4 lg:w-1/2 mx-auto px-4 py-12">
-    <h1 class="text-3xl md:text-5xl font-bold mb-8 md:mb-12 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
-    
-    <div class="grid grid-cols-1 gap-6 md:gap-8 max-w-3xl mx-auto">
-        {{ $projectsData := index site.Data .Language.Lang "projects" }}
-        {{ range $projectsData.projects }}
-        <div class="project-card relative overflow-hidden rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300 group">
-            <div class="aspect-w-16 aspect-h-9 overflow-hidden relative">
-                <div class="absolute inset-0 bg-gradient-to-br from-accent-light/20 to-accent-light/20 dark:from-accent-dark/20 dark:to-accent-dark/20 z-10"></div>
-                <img src="{{ strings.TrimPrefix "/" .image | absURL }}" alt="{{ .title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-60 z-20"></div>
-                
-                <!-- Content that moves up on hover -->
-                <div class="absolute inset-0 z-30 p-4 pb-3 md:p-6 md:pb-4 flex flex-col justify-end transform transition-transform duration-500 translate-y-0 group-hover:translate-y-[-20px]">
-                    <h3 class="text-xl md:text-2xl font-bold mb-1.5 md:mb-2 text-white line-clamp-2">{{ .title }}</h3>
-                    <div class="flex flex-wrap gap-1 md:gap-2 mb-1.5 md:mb-3">
-                        {{ $techs := split .tech "," }}
-                        {{ range $tech := $techs }}
-                        <span class="px-1.5 md:px-2 py-0.5 bg-neutral-700/30 backdrop-blur-sm rounded-md text-[10px] md:text-xs font-medium text-white">{{ $tech }}</span>
-                        {{ end }}
-                    </div>
-                    <p class="hidden md:block text-sm text-white mb-3 line-clamp-3 md:line-clamp-4">{{ .description }}</p>
-                    
-                    <!-- Learn More button -->
-                    <a href="{{ .link }}" class="bg-accent-light/90 dark:bg-accent-dark/90 backdrop-blur-sm hover:bg-accent-light dark:hover:bg-accent-dark text-neutral-800 dark:text-white text-xs md:text-sm font-medium py-1 md:py-1.5 px-2 md:px-3 rounded-md inline-block transition-all duration-300 transform opacity-100 md:opacity-0 group-hover:opacity-100 w-fit flex items-center shadow-lg hover:shadow-xl">
-                        Learn More
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
+<div class="w-full md:w-4/5 lg:w-3/5 mx-auto px-6 md:px-14 py-12">
+    <div class="max-w-4xl">
+        {{ partial "scatter-divider.html" . }}
+        <p class="mono-label text-accent-light dark:text-accent-dark mb-3">// {{ if eq .Language.Lang "es" }}investigación{{ else }}research{{ end }}</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-10 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+
+        <div class="space-y-6">
+            {{ $projectsData := index site.Data .Language.Lang "projects" }}
+            {{ range $projectsData.projects }}
+            <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="research-card group flex flex-col md:flex-row overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
+                <div class="md:w-64 shrink-0 aspect-video md:aspect-auto overflow-hidden bg-bg-tertiary-light dark:bg-bg-tertiary-dark">
+                    <img src="{{ strings.TrimPrefix "/" .image | absURL }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                 </div>
-            </div>
+                <div class="flex flex-col flex-1 p-5 md:p-6">
+                    <h3 class="text-xl md:text-2xl font-semibold leading-snug mb-2 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">{{ .title }}</h3>
+                    <p class="text-base text-text-secondary-light dark:text-text-secondary-dark leading-relaxed mb-4">{{ .description }}</p>
+                    <div class="mt-auto flex flex-wrap items-center gap-1.5">
+                        {{ $techs := split .tech "," }}
+                        {{ range $techs }}
+                        <span class="font-mono px-2 py-0.5 text-[11px] rounded bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark">{{ trim . " " }}</span>
+                        {{ end }}
+                        <span class="ml-auto text-sm font-medium text-accent-light dark:text-accent-dark opacity-0 group-hover:opacity-100 transition-opacity duration-300">{{ if eq $.Language.Lang "es" }}Ver proyecto{{ else }}View project{{ end }} →</span>
+                    </div>
+                </div>
+            </a>
+            {{ end }}
         </div>
-        {{ end }}
     </div>
 </div>
 
 <style>
-.project-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    /* Use Tailwind theme variables for more modular approach */
-    @apply bg-bg-primary-light dark:bg-bg-secondary-dark;
-    backdrop-filter: blur(10px);
+.research-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -8px rgba(28, 25, 23, 0.15);
+    border-color: #8A3033;
 }
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
-    border-color: rgba(2, 132, 199, 0.5); /* accent-light with alpha */
-}
-html.dark .project-card:hover {
-    border-color: rgba(14, 165, 233, 0.5); /* accent-dark with alpha */
-}
-
-.aspect-w-16 {
-    position: relative;
-    padding-bottom: 56.25%;
-}
-
-.aspect-w-16 > img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    object-fit: cover;
-    filter: saturate(1.1) contrast(1.1);
-}
-
-@media (max-width: 768px) {
-    .project-card:hover {
-        transform: none;
-    }
-    
-    .project-card .group-hover\:translate-y-\[-20px\] {
-        transform: translateY(-10px);
-    }
+html.dark .research-card:hover {
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.5);
+    border-color: #CF8378;
 }
 </style>
-{{ end }} 
+{{ end }}

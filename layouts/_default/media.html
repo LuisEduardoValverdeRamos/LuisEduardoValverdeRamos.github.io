@@ -1,51 +1,53 @@
 {{ define "main" }}
-<div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-5xl font-bold mb-10 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+<div class="w-full md:w-4/5 lg:w-3/5 mx-auto px-6 md:px-14 py-12">
+    <div class="max-w-4xl">
+        {{ partial "scatter-divider.html" . }}
+        <p class="mono-label text-accent-light dark:text-accent-dark mb-3">// {{ if eq .Language.Lang "es" }}medios{{ else }}media{{ end }}</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-10 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
 
-    {{ $mediaData := index site.Data .Language.Lang "media" }}
-    {{ if and $mediaData $mediaData.media }}
-    <div class="space-y-8">
-        {{ range $mediaData.media }}
-        <div class="group relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:w-[2px] before:h-full before:bg-border-secondary-light dark:before:bg-border-secondary-dark before:rounded-full">
-            <div class="absolute -left-1.5 top-0 w-2 h-2 bg-border-secondary-light dark:bg-border-secondary-dark rounded-full"></div>
-            <div class="p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300 border border-border-primary-light dark:border-border-primary-dark">
-
-                {{/* Badge + date row */}}
-                <div class="flex items-center gap-3 mb-2">
-                    <span class="px-2 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark border border-border-secondary-light dark:border-border-secondary-dark">
-                        {{ .type }}
-                    </span>
-                    <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark">{{ .date }}</span>
+        {{ $mediaData := index site.Data .Language.Lang "media" }}
+        {{ with (and $mediaData $mediaData.media) }}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {{ range . }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="media-card group flex flex-col overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
+                <div class="aspect-video overflow-hidden bg-bg-tertiary-light dark:bg-bg-tertiary-dark relative">
+                    {{ if .image }}
+                    <img src="{{ if hasPrefix .image "http" }}{{ .image }}{{ else }}{{ strings.TrimPrefix "/" .image | absURL }}{{ end }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    {{ else }}
+                    <div class="w-full h-full flex items-center justify-center text-accent-light dark:text-accent-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                    </div>
+                    {{ end }}
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
                 </div>
-
-                {{/* Title with optional external link */}}
-                {{ if .url }}
-                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="group/link inline-flex items-start gap-2 mb-1">
-                    <h2 class="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200 leading-snug">{{ .title }}</h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1.5 text-text-secondary-light dark:text-text-secondary-dark opacity-60 group-hover/link:opacity-100 transition-opacity duration-200">
-                        <path d="M7 17l9.2-9.2M17 17V7H7"/>
-                    </svg>
-                </a>
-                {{ else }}
-                <h2 class="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-1 leading-snug">{{ .title }}</h2>
-                {{ end }}
-
-                {{/* Outlet */}}
-                <div class="text-base text-text-secondary-light dark:text-text-secondary-dark">{{ .outlet }}</div>
-
-                {{/* Description behind divider */}}
-                {{ if .description }}
-                <div class="mt-4 pt-4 border-t border-border-primary-light dark:border-border-primary-dark text-lg text-text-secondary-light dark:text-text-secondary-dark">
-                    {{ .description }}
+                <div class="flex flex-col flex-1 p-4">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="font-mono text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark border border-border-secondary-light dark:border-border-secondary-dark">{{ .type }}</span>
+                        <span class="mono-data text-text-secondary-light dark:text-text-secondary-dark" style="font-size:0.7rem;">{{ .date }}</span>
+                    </div>
+                    <h3 class="text-base font-semibold leading-snug mb-1 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">{{ .title }}</h3>
+                    <p class="text-xs text-text-secondary-light dark:text-text-secondary-dark mt-auto">{{ .outlet }}</p>
                 </div>
-                {{ end }}
-
-            </div>
+            </a>
+            {{ end }}
         </div>
+        {{ else }}
+        <p class="text-text-secondary-light dark:text-text-secondary-dark">No media appearances yet.</p>
         {{ end }}
     </div>
-    {{ else }}
-    <p class="text-text-secondary-light dark:text-text-secondary-dark">No media appearances yet.</p>
-    {{ end }}
 </div>
+
+<style>
+.media-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -8px rgba(28, 25, 23, 0.15);
+    border-color: #8A3033;
+}
+html.dark .media-card:hover {
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.5);
+    border-color: #CF8378;
+}
+</style>
 {{ end }}

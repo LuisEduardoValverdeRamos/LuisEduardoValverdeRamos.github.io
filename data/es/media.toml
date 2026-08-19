@@ -1,4 +1,13 @@
 [[media]]
+  type = "Prensa"
+  title = "Qué se puede esperar de los primeros meses de Keiko Fujimori como presidenta de Perú"
+  outlet = "El Salto (España)"
+  date = "22 de julio de 2026"
+  url = "https://www.elsaltodiario.com/peru/se-puede-esperar-primeros-meses-keiko-fujimori-presidenta-peru"
+  image = "/images/media/elsalto-keiko.jpg"
+  description = "Entrevistado como politólogo por el medio español El Salto sobre el pasivo político de la presidenta electa, los límites del discurso de mano dura y los retos de gobernabilidad de sus primeros 100 días."
+
+[[media]]
   type = "Entrevista"
   title = "Keiko Fujimori es la presidenta electa: ¿cuáles son los retos que debe enfrentar?"
   outlet = "Radio Exitosa"

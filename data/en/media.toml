@@ -1,4 +1,13 @@
 [[media]]
+  type = "Press"
+  title = "What to Expect from Keiko Fujimori's First Months as President of Peru"
+  outlet = "El Salto (Spain)"
+  date = "July 22, 2026"
+  url = "https://www.elsaltodiario.com/peru/se-puede-esperar-primeros-meses-keiko-fujimori-presidenta-peru"
+  image = "/images/media/elsalto-keiko.jpg"
+  description = "Interviewed as a political scientist by the Spanish outlet El Salto on the president-elect's political liabilities, the limits of mano dura policies, and the governability challenges of her first 100 days."
+
+[[media]]
   type = "Interview"
   title = "Keiko Fujimori Is President-Elect: What Challenges Lie Ahead?"
   outlet = "Radio Exitosa"

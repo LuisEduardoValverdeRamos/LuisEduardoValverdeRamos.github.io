@@ -20,7 +20,7 @@
             <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="media-card group flex flex-col overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
                 <div class="aspect-video overflow-hidden bg-bg-tertiary-light dark:bg-bg-tertiary-dark relative">
                     {{ if .image }}
-                    <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <img src="{{ if hasPrefix .image "http" }}{{ .image }}{{ else }}{{ strings.TrimPrefix "/" .image | absURL }}{{ end }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     {{ else }}
                     <div class="w-full h-full flex items-center justify-center text-accent-light dark:text-accent-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>

@@ -1,15 +1,35 @@
 [[media]]
+  type = "Interview"
+  title = "Keiko Fujimori Is President-Elect: What Challenges Lie Ahead?"
+  outlet = "Radio Exitosa"
+  date = "July 4, 2026"
+  url = "https://www.youtube.com/watch?v=M2cBfmLUtGs&t=1690s"
+  image = "https://img.youtube.com/vi/M2cBfmLUtGs/hqdefault.jpg"
+  description = "Analysis of the political and material challenges facing Peru's president-elect: \"Keiko's biggest challenge is building a coalition.\""
+
+[[media]]
+  type = "Panel"
+  title = "Beca 18: Solution or Problem?"
+  outlet = "La República — Que No Se Te Olvide, with Carlos Cornejo"
+  date = "July 2026"
+  url = "https://www.youtube.com/watch?v=m5zQ97rbRJ8&t=1349s"
+  image = "https://img.youtube.com/vi/m5zQ97rbRJ8/hqdefault.jpg"
+  description = "Debate on Peru's flagship scholarship program on La República's program with Carlos Cornejo — speaking as a political scientist and Beca 18 alumnus."
+
+[[media]]
+  type = "Interview"
+  title = "Claims of Electoral Irregularities Delegitimize Institutions"
+  outlet = "Radio Exitosa"
+  date = "June 18, 2026"
+  url = "https://www.youtube.com/watch?v=wKjABJHgjHs"
+  image = "https://img.youtube.com/vi/wKjABJHgjHs/hqdefault.jpg"
+  description = "On how unsubstantiated fraud narratives during the 2026 vote count erode trust in Peru's electoral institutions."
+
+[[media]]
   type = "Panel"
   title = "Technical Analysis and Fresh Voices for Peru's 2026 Elections"
   outlet = "Colegio de Politólogos del Perú"
   date = "March 26, 2026"
   url = "https://www.youtube.com/watch?v=dJxkPe9QxE4"
+  image = "https://img.youtube.com/vi/dJxkPe9QxE4/hqdefault.jpg"
   description = "Live panel analyzing the 2026 Peruvian presidential debate, organized by the Colegio de Politólogos del Perú."
-
-[[media]]
-  type = "Interview"
-  title = "Interview on Peru's 2026 Elections"
-  outlet = "Sin Filtros Políticos — Canal 04, Catacaos, Piura"
-  date = "2026"
-  url = "https://www.facebook.com/share/v/1aWJJQNBfL/"
-  description = "Interview for the local political program Sin Filtros Políticos on Canal 04 de Catacaos, Piura, discussing the 2026 electoral landscape."

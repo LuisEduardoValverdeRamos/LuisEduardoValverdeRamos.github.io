@@ -3,13 +3,12 @@ languageCode = 'en-us'
 title = 'Luis Valverde Ramos'
 theme = "hugo-noir"
 
+defaultContentLanguage = "en"
+
 # Taxonomy configuration
 [taxonomies]
   category = "categories"
   tag = "tags"
-
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
 
 [languages]
 
@@ -24,29 +23,21 @@ defaultContentLanguageInSubdir = true
         pageRef = "/about"
         weight = 1
       [[languages.en.menu.main]]
-        name = "Education"
-        pageRef = "/education"
-        weight = 2
-      [[languages.en.menu.main]]
         name = "Experience"
         pageRef = "/experience"
+        weight = 2
+      [[languages.en.menu.main]]
+        name = "Research"
+        pageRef = "/projects"
         weight = 3
       [[languages.en.menu.main]]
-        name = "Projects"
-        pageRef = "/projects"
-        weight = 5
-      [[languages.en.menu.main]]
-        name = "Publications"
+        name = "Writing & Media"
         pageRef = "/publications"
-        weight = 6
-      [[languages.en.menu.main]]
-        name = "Media"
-        pageRef = "/media"
-        weight = 7
+        weight = 4
       [[languages.en.menu.main]]
         name = "Contact"
         pageRef = "/contact"
-        weight = 8
+        weight = 5
 
   [languages.es]
     languageName = "Español"
@@ -59,34 +50,26 @@ defaultContentLanguageInSubdir = true
         pageRef = "/about"
         weight = 1
       [[languages.es.menu.main]]
-        name = "Educación"
-        pageRef = "/education"
-        weight = 2
-      [[languages.es.menu.main]]
         name = "Experiencia"
         pageRef = "/experience"
+        weight = 2
+      [[languages.es.menu.main]]
+        name = "Investigación"
+        pageRef = "/projects"
         weight = 3
       [[languages.es.menu.main]]
-        name = "Proyectos"
-        pageRef = "/projects"
-        weight = 5
-      [[languages.es.menu.main]]
-        name = "Publicaciones"
+        name = "Escritos y Medios"
         pageRef = "/publications"
-        weight = 6
-      [[languages.es.menu.main]]
-        name = "Media"
-        pageRef = "/media"
-        weight = 7
+        weight = 4
       [[languages.es.menu.main]]
         name = "Contacto"
         pageRef = "/contact"
-        weight = 8
+        weight = 5
 
 [params]
   name = "Luis Valverde Ramos"
-  location = "Lima, Perú"
-  description = "Political Scientist | Mixed Methods & ML | Public Policy | Regulatory Analysis | Debate"
+  location = "Piura, Perú"
+  description = "Political Scientist (PUCP) | Mixed Methods | Electoral Politics · Public Policy"
   profile_image = "/images/profile.jpeg"
   # Social links
   github = "https://github.com/LuisEduardoValverdeRamos"

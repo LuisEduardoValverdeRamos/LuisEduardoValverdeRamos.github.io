@@ -1,15 +1,35 @@
 [[media]]
+  type = "Entrevista"
+  title = "Keiko Fujimori es la presidenta electa: ¿cuáles son los retos que debe enfrentar?"
+  outlet = "Radio Exitosa"
+  date = "4 de julio de 2026"
+  url = "https://www.youtube.com/watch?v=M2cBfmLUtGs&t=1690s"
+  image = "https://img.youtube.com/vi/M2cBfmLUtGs/hqdefault.jpg"
+  description = "Análisis de los retos políticos y materiales que enfrenta la presidenta electa: \"El reto más grande de Keiko es realizar una coalición\"."
+
+[[media]]
+  type = "Panel"
+  title = "Beca 18: ¿solución o problema?"
+  outlet = "La República — Que No Se Te Olvide, con Carlos Cornejo"
+  date = "Julio de 2026"
+  url = "https://www.youtube.com/watch?v=m5zQ97rbRJ8&t=1349s"
+  image = "https://img.youtube.com/vi/m5zQ97rbRJ8/hqdefault.jpg"
+  description = "Debate sobre el programa bandera de becas del Perú en el programa de La República con Carlos Cornejo — como politólogo y exbecario de Beca 18."
+
+[[media]]
+  type = "Entrevista"
+  title = "Discurso de irregularidades deslegitima a las instituciones"
+  outlet = "Radio Exitosa"
+  date = "18 de junio de 2026"
+  url = "https://www.youtube.com/watch?v=wKjABJHgjHs"
+  image = "https://img.youtube.com/vi/wKjABJHgjHs/hqdefault.jpg"
+  description = "Sobre cómo las narrativas de fraude sin sustento durante el conteo de votos de 2026 erosionan la confianza en las instituciones electorales."
+
+[[media]]
   type = "Panel"
   title = "Análisis técnico y voces frescas para las Elecciones 2026 del Perú"
   outlet = "Colegio de Politólogos del Perú"
   date = "26 de marzo de 2026"
   url = "https://www.youtube.com/watch?v=dJxkPe9QxE4"
+  image = "https://img.youtube.com/vi/dJxkPe9QxE4/hqdefault.jpg"
   description = "Panel en vivo de análisis del debate presidencial peruano 2026, organizado por el Colegio de Politólogos del Perú."
-
-[[media]]
-  type = "Entrevista"
-  title = "Entrevista sobre las Elecciones 2026"
-  outlet = "Sin Filtros Políticos — Canal 04, Catacaos, Piura"
-  date = "2026"
-  url = "https://www.facebook.com/share/v/1aWJJQNBfL/"
-  description = "Entrevista para el programa político local Sin Filtros Políticos del Canal 04 de Catacaos, Piura, sobre el panorama electoral 2026."

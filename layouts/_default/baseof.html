@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+        <meta name="description" content="{{ site.Params.description }}">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
+
+        <!-- Social sharing (Open Graph / Twitter) -->
+        <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}">
+        <meta property="og:description" content="{{ site.Params.description }}">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ .Permalink }}">
+        <meta property="og:image" content="{{ "images/profile.jpeg" | absURL }}">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="{{ "images/profile.jpeg" | absURL }}">
+
+        <!-- Fonts: Fraunces (display serif) + Inter (body) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+        <!-- Theme: light-first ("editorial"). Dark only if the visitor chose it. -->
+        <script>
+            if (localStorage.getItem('color-theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        </script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Inter', 'system-ui', 'sans-serif'],
+                            serif: ['Fraunces', 'Georgia', 'serif'],
+                            mono: ['IBM Plex Mono', 'ui-monospace', 'monospace'],
+                        },
+                        colors: {
+                            /* ── Editorial (light, default) ── */
+                            'bg-primary-light': '#FAF7F2',
+                            'bg-secondary-light': '#FFFFFF',
+                            'bg-tertiary-light': '#F1EBE1',
+                            'text-primary-light': '#1C1917',
+                            'text-secondary-light': '#5A544C',
+                            'border-primary-light': '#E4DDD1',
+                            'border-secondary-light': '#D3CABA',
+                            'accent-light': '#8A3033',
+                            'accent2-light': '#2F5D62',
+
+                            /* ── Tinta (dark, secondary) ── */
+                            'bg-primary-dark': '#14110F',
+                            'bg-secondary-dark': '#1D1916',
+                            'bg-tertiary-dark': '#262019',
+                            'text-primary-dark': '#ECE7DF',
+                            'text-secondary-dark': '#A79F93',
+                            'border-primary-dark': '#37302A',
+                            'border-secondary-dark': '#4A4139',
+                            'accent-dark': '#CF8378',
+                            'accent2-dark': '#7FA8AD',
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <style>
+            :root { color-scheme: light dark; }
+
+            html, body {
+                background-color: #FAF7F2;
+                color: #1C1917;
+                font-family: 'Inter', system-ui, sans-serif;
+            }
+            html.dark, html.dark body {
+                background-color: #14110F;
+                color: #ECE7DF;
+            }
+
+            /* Display serif for headings and the site name */
+            h1, h2, h3, .site-name {
+                font-family: 'Fraunces', Georgia, serif;
+                letter-spacing: -0.01em;
+            }
+
+            ::selection {
+                background: #8A3033;
+                color: #FAF7F2;
+            }
+
+            /* Mono metadata label — the visual code of "I write code" */
+            .mono-label {
+                font-family: 'IBM Plex Mono', ui-monospace, monospace;
+                font-size: 0.72rem;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+            .mono-data {
+                font-family: 'IBM Plex Mono', ui-monospace, monospace;
+                font-size: 0.8rem;
+            }
+
+            /* Section index prefix: "01 /" */
+            .section-index {
+                font-family: 'IBM Plex Mono', ui-monospace, monospace;
+                font-size: 0.85rem;
+                font-weight: 500;
+                color: #2F5D62;
+                margin-right: 0.6rem;
+                vertical-align: 0.35em;
+                letter-spacing: 0.05em;
+            }
+            html.dark .section-index { color: #7FA8AD; }
+
+            /* ── Legacy utility remapping ─────────────────────────────
+               Older layouts use hardcoded gray/blue utilities designed
+               for the dark theme. Remap them so light mode stays warm
+               and readable without touching every template. */
+            html:not(.dark) .text-gray-400 { color: #5A544C !important; }
+            html:not(.dark) .text-gray-500 { color: #6E675D !important; }
+            html:not(.dark) .bg-gray-700   { background-color: #D3CABA !important; }
+            html:not(.dark) .border-gray-700 { border-color: #E4DDD1 !important; }
+            html:not(.dark) .hover\:border-gray-400:hover { border-color: #8A3033 !important; }
+
+            /* Blue links → burgundy accent (both modes) */
+            html:not(.dark) .text-blue-500, html:not(.dark) .text-blue-400 { color: #8A3033 !important; }
+            html:not(.dark) .hover\:text-blue-400:hover { color: #6E2528 !important; }
+            html.dark .text-blue-500, html.dark .text-blue-400 { color: #CF8378 !important; }
+            html.dark .hover\:text-blue-400:hover { color: #E0A197 !important; }
+
+            /* Timeline lines & dots in dark mode: warm, not cold gray */
+            html.dark .bg-gray-700 { background-color: #4A4139 !important; }
+            html.dark .border-gray-700 { border-color: #37302A !important; }
+        </style>
+    </head>
+    <body class="min-h-screen bg-bg-primary-light dark:bg-bg-primary-dark text-text-primary-light dark:text-text-primary-dark">
+        {{ partial "header" . }}
+        <main>
+            {{ block "main" . }}{{ end }}
+        </main>
+        {{ partial "footer" . }}
+    </body>
+</html>

@@ -8,6 +8,42 @@
     {{ $academic := where $all "section" "academic" }}
     {{ $columns  := where $all "section" "columns"  }}
 
+    {{/* ── Section 1: Media Appearances — visual grid ── */}}
+    {{ $mediaData := index site.Data .Language.Lang "media" }}
+    {{ with (and $mediaData $mediaData.media) }}
+    <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 pb-2 border-b border-gray-700 text-text-primary-light dark:text-text-primary-dark">
+            {{ T "mediaTitle" }}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {{ range . }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="media-card group flex flex-col overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
+                <div class="aspect-video overflow-hidden bg-bg-tertiary-light dark:bg-bg-tertiary-dark relative">
+                    {{ if .image }}
+                    <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    {{ else }}
+                    <div class="w-full h-full flex items-center justify-center text-accent-light dark:text-accent-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                    </div>
+                    {{ end }}
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <div class="flex flex-col flex-1 p-4">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="font-mono text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark border border-border-secondary-light dark:border-border-secondary-dark">{{ .type }}</span>
+                        <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ .date }}</span>
+                    </div>
+                    <h3 class="text-base font-semibold leading-snug mb-1 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">{{ .title }}</h3>
+                    <p class="text-xs text-text-secondary-light dark:text-text-secondary-dark mt-auto">{{ .outlet }}</p>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
     {{/* ── Section 1: Academic Publications ─────────────────────────── */}}
     {{ with $academic }}
     <section class="mb-16">
@@ -18,10 +54,10 @@
             {{ range . }}
             <div class="pl-4 border-l-2 border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-colors duration-300">
                 <div class="flex items-center gap-3 mb-1">
-                    <span class="text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark border border-border-secondary-light dark:border-border-secondary-dark">
+                    <span class="font-mono text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark border border-border-secondary-light dark:border-border-secondary-dark">
                         {{ .type }}
                     </span>
-                    <span class="text-sm text-gray-400">{{ .date }}</span>
+                    <span class="mono-data text-gray-400">{{ .date }}</span>
                 </div>
                 {{ if .link }}
                 <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="group block">
@@ -52,10 +88,10 @@
             {{ range . }}
             <div class="pl-4 border-l-2 border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-colors duration-300">
                 <div class="flex items-center gap-3 mb-1">
-                    <span class="text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark border border-border-secondary-light dark:border-border-secondary-dark">
+                    <span class="font-mono text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark border border-border-secondary-light dark:border-border-secondary-dark">
                         {{ .type }}
                     </span>
-                    <span class="text-sm text-gray-400">{{ .date }}</span>
+                    <span class="mono-data text-gray-400">{{ .date }}</span>
                 </div>
                 {{ if .link }}
                 <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="group block">
@@ -75,5 +111,19 @@
         </div>
     </section>
     {{ end }}
+
+
 </div>
+
+<style>
+.media-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -8px rgba(28, 25, 23, 0.15);
+    border-color: #8A3033;
+}
+html.dark .media-card:hover {
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.5);
+    border-color: #CF8378;
+}
+</style>
 {{ end }}

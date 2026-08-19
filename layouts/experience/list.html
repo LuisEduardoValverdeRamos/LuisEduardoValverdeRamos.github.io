@@ -1,6 +1,8 @@
 {{ define "main" }}
 <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-5xl font-bold mb-10 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+    {{ partial "scatter-divider.html" . }}
+    <p class="mono-label text-accent-light dark:text-accent-dark mb-3">// {{ if eq .Language.Lang "es" }}experiencia{{ else }}experience{{ end }}</p>
+    <h1 class="text-4xl md:text-5xl font-bold mb-10 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
 
     {{/* ── Research & Consulting ── */}}
     <section class="mb-16">
@@ -12,7 +14,7 @@
             {{ with $experienceData.experience }}
                 {{ range . }}
                 <div class="group relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:w-[2px] before:h-full before:bg-border-secondary-light dark:before:bg-border-secondary-dark before:rounded-full">
-                    <div class="absolute -left-1.5 top-0 w-2 h-2 bg-border-secondary-light dark:bg-border-secondary-dark rounded-full"></div>
+                    <div class="absolute -left-1.5 top-0 w-2 h-2 bg-accent-light dark:bg-accent-dark rounded-full"></div>
                     <div class="p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300 border border-border-primary-light dark:border-border-primary-dark">
                         {{ if .company }}
                         <div class="text-text-secondary-light dark:text-text-secondary-dark text-lg mb-1">
@@ -29,7 +31,7 @@
                         </div>
                         {{ end }}
                         <h3 class="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-1">{{ .role }}</h3>
-                        <div class="text-text-secondary-light dark:text-text-secondary-dark text-base">{{ .period }}{{ if .country }} · {{ .country }}{{ end }}</div>
+                        <div class="mono-data text-text-secondary-light dark:text-text-secondary-dark">{{ .period }}{{ if .country }} · {{ .country }}{{ end }}</div>
                         {{ if .responsibilities }}
                         <ul class="mt-4 pt-4 border-t border-border-primary-light dark:border-border-primary-dark space-y-2">
                             {{ range .responsibilities }}
@@ -43,7 +45,7 @@
                         {{ if .technologies }}
                         <div class="mt-4 flex flex-wrap gap-2">
                             {{ range .technologies }}
-                            <span class="px-2 py-0.5 text-xs font-medium rounded-full bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark border border-border-secondary-light dark:border-border-secondary-dark">{{ . }}</span>
+                            <span class="font-mono px-2 py-0.5 text-[11px] font-medium rounded bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark border border-border-secondary-light dark:border-border-secondary-dark">{{ . }}</span>
                             {{ end }}
                         </div>
                         {{ end }}
@@ -64,7 +66,7 @@
         <div class="space-y-8">
             {{ range . }}
             <div class="group relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:w-[2px] before:h-full before:bg-border-secondary-light dark:before:bg-border-secondary-dark before:rounded-full">
-                <div class="absolute -left-1.5 top-0 w-2 h-2 bg-border-secondary-light dark:bg-border-secondary-dark rounded-full"></div>
+                <div class="absolute -left-1.5 top-0 w-2 h-2 bg-accent-light dark:bg-accent-dark rounded-full"></div>
                 <div class="p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300 border border-border-primary-light dark:border-border-primary-dark">
                     {{ if .group }}
                     <div class="text-text-secondary-light dark:text-text-secondary-dark text-lg mb-1">
@@ -81,7 +83,7 @@
                     </div>
                     {{ end }}
                     <h3 class="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-1">{{ .role }}</h3>
-                    <div class="text-text-secondary-light dark:text-text-secondary-dark text-base">{{ .period }}{{ if .location }} · {{ .location }}{{ end }}</div>
+                    <div class="mono-data text-text-secondary-light dark:text-text-secondary-dark">{{ .period }}{{ if .location }} · {{ .location }}{{ end }}</div>
                     {{ if .description }}
                     <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark text-lg italic">{{ .description }}</p>
                     {{ end }}

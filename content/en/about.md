@@ -6,7 +6,7 @@ layout: "about"
 profile_image: "/images/profile.jpeg"
 ---
 
-I am **Luis Valverde Ramos**, a political scientist from Piura, graduated with distinction from the **Pontificia Universidad Católica del Perú (PUCP)**, with an exchange semester at **Ghent University**, Belgium. I work at the intersection of electoral politics, public policy and data science — turning large-scale administrative data and mixed-methods research into evidence that institutions can act on. I have worked with State institutions, international cooperation–funded research centres and the private sector, translating complex analysis into clear, actionable outputs for decision-makers.
+I am **Luis Valverde Ramos**, a political scientist graduated with distinction from the **Pontificia Universidad Católica del Perú (PUCP)**, with an exchange semester at **Ghent University**, Belgium. I work at the intersection of electoral politics, public policy and data science — turning large-scale administrative data and mixed-methods research into evidence that institutions can act on. I have worked with State institutions, international cooperation–funded research centres and the private sector, translating complex analysis into clear, actionable outputs for decision-makers.
 
 I am currently a **Researcher at the Jurado Nacional de Elecciones (JNE)**, where I contribute to the design of the institution's research agenda; a **Teaching Assistant in Political Economy at PUCP**; and a **Research Consultant for the Liga Peruana de Debate Escolar (LPDE)**.
 

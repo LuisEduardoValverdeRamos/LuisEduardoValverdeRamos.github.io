@@ -1,0 +1,157 @@
+# publications.yaml — seed de Fase 0 (esquema A.1 del PROMPT.md, sección 9.3b)
+# Regla: cada entrada registra su fuente (source: cv | <url de verificación>).
+# Los [CONFIRMAR] viven solo en este fuente; la regla de degradación los omite del render.
+
+- id: tesis-2025
+  type: thesis
+  title: "Desastres y brechas de implementación: estudio del proceso de reconstrucción de la infraestructura educativa en Piura entre julio de 2020 y enero de 2023, tras el Fenómeno de El Niño Costero"
+  authors:
+    - { name: "Valverde, L.", role: author }
+  year: 2025
+  venue: "Pontificia Universidad Católica del Perú"
+  url: "https://hdl.handle.net/20.500.12404/32370"
+  pdf: ""
+  lang: es
+  status: null
+  source: "https://hdl.handle.net/20.500.12404/32370"
+  note: "Tesis de licenciatura con mención sobresaliente. Lidera la sección de escritos."
+
+- id: informe-jne-2026
+  type: report
+  title: "Análisis del elector peruano: aportes desde las ciencias del comportamiento"
+  authors:
+    - { name: "Monard", role: team }
+    - { name: "Encinas", role: team }
+    - { name: "Villena-Tagle", role: team }
+    - { name: "Valverde", role: team }
+  year: 2026
+  venue: "Jurado Nacional de Elecciones / ProDiálogo"
+  url: "[CONFIRMAR: URL pública del PDF]"
+  pdf: ""
+  lang: es
+  status: null
+  source: cv
+  note: "85 pp. Informe institucional; Luis integra el equipo técnico (encuadre de la sección 9.2: la autoría es institucional)."
+
+- id: clinicas-cidh-2023
+  type: editorial
+  title: "Escrito sobre la opinión consultiva Emergencia climática y derechos humanos a la Corte Interamericana de Derechos Humanos"
+  authors:
+    - { name: "Alianza de Clínicas Jurídicas Ambientales de Latinoamérica y el Caribe", role: author }
+    - { name: "Valverde Ramos, L. E.", role: team }
+  year: 2023
+  venue: "Alianza de Clínicas Jurídicas Ambientales de Latinoamérica y el Caribe, con SPDA e IDEHPUCP"
+  url: ""
+  pdf: "https://alianzadeclinicasambientales.com/wp-content/uploads/2023/12/Informe-O.C.-Emergencia-Climatica-Corte-IDH-Alianza-Clinicas-Juridicas-Ambientales-LAC-IDEHPUCP-y-SPDA-1.pdf"
+  lang: es
+  status: null
+  source: "verificado en el PDF (Fase 0d): p. 2, créditos"
+  note: "Rol verificado (p. 2 del PDF, 147 pp.): «Equipo editor: Santiago Cabrales Sánchez, Santiago Jesús Quiroz Urresti, Thainá Mamede, Ignacio Alfonso Barbosa Cuevas, Luis Eduardo Valverde Ramos» (coordinación general: Andrea Mariana Domínguez Noriega). Va bajo «Colaboraciones editoriales» con la atribución textual «Equipo editor»; NUNCA citar con (Eds.) a nombre de Luis."
+
+- id: col-estancamiento-democracia-2023
+  type: column
+  title: "El estancamiento de la democracia en el Perú"
+  authors:
+    - { name: "Valverde, L.", role: author }
+    - { name: "Benites, A.", role: author }
+  year: 2023
+  venue: "IDEHPUCP"
+  url: "https://idehpucp.pucp.edu.pe/boletin-eventos/el-estancamiento-de-la-democracia-en-el-peru-27949/"
+  pdf: ""
+  lang: es
+  status: null
+  source: "https://idehpucp.pucp.edu.pe/boletin-eventos/el-estancamiento-de-la-democracia-en-el-peru-27949/"
+  note: "Publicada el 21/03/2023."
+
+- id: col-reconstruccion-sin-cambios-2023
+  type: column
+  title: "Reconstrucción sin cambios: cuando la prevención no es una prioridad"
+  authors:
+    - { name: "Valverde, L.", role: author }
+    - { name: "Solís, E.", role: author }
+  year: 2023
+  venue: "IDEHPUCP"
+  url: "https://idehpucp.pucp.edu.pe/boletin-eventos/reconstruccion-sin-cambios-cuando-la-prevencion-no-es-una-prioridad-28343/"
+  pdf: ""
+  lang: es
+  status: null
+  source: "https://idehpucp.pucp.edu.pe/boletin-eventos/reconstruccion-sin-cambios-cuando-la-prevencion-no-es-una-prioridad-28343/"
+  note: "Publicada el 20/06/2023."
+
+- id: col-agenda-cvr-2023
+  type: column
+  title: "Una agenda pendiente a veinte años del Informe final de la CVR: apuntes sobre la no-enseñanza del conflicto armado interno en las universidades peruanas"
+  authors:
+    - { name: "Valverde, L.", role: author }
+    - { name: "Cépeda, M.", role: author }
+  year: 2023
+  venue: "IDEHPUCP"
+  url: "https://idehpucp.pucp.edu.pe/boletin-eventos/una-agenda-pendiente-a-veinte-anos-del-informe-final-de-la-cvr-apuntes-sobre-la-noensenanza-del-conflicto-armado-interno-en-las-universidades-peruanas-28539/"
+  pdf: ""
+  lang: es
+  status: null
+  source: "https://idehpucp.pucp.edu.pe/boletin-eventos/una-agenda-pendiente-a-veinte-anos-del-informe-final-de-la-cvr-apuntes-sobre-la-noensenanza-del-conflicto-armado-interno-en-las-universidades-peruanas-28539/"
+  note: "Publicada el 22/08/2023. Título completo reconstruido del slug de la URL; cotejar con el titular publicado."
+
+- id: col-cambio-climatico-tribunales-2023
+  type: column
+  title: "Cambio climático y derechos humanos: una relación que viene escalando en los tribunales"
+  authors:
+    - { name: "Valverde, L.", role: author }
+    - { name: "Domínguez, A.", role: author }
+  year: 2023
+  venue: "IDEHPUCP"
+  url: "https://idehpucp.pucp.edu.pe/boletin-eventos/cambio-climatico-y-derechos-humanos-una-relacion-que-viene-escalando-en-los-tribunales-28642/"
+  pdf: ""
+  lang: es
+  status: null
+  source: "https://idehpucp.pucp.edu.pe/boletin-eventos/cambio-climatico-y-derechos-humanos-una-relacion-que-viene-escalando-en-los-tribunales-28642/"
+  note: "Publicada el 19/09/2023."
+
+- id: col-reporte-renade-2023
+  type: column
+  title: "Nuevo reporte del Registro Nacional de Personas Desaparecidas y Sitios de Entierro (RENADE)"
+  authors:
+    - { name: "Valverde, L.", role: author }
+    - { name: "Jave, I.", role: author }
+  year: 2023
+  venue: "IDEHPUCP"
+  url: "https://idehpucp.pucp.edu.pe/boletin-eventos/nuevo-reporte-del-registro-nacional-de-personas-desaparecidas-y-sitios-de-entierro-renade-28722/"
+  pdf: ""
+  lang: es
+  status: null
+  source: "https://idehpucp.pucp.edu.pe/boletin-eventos/nuevo-reporte-del-registro-nacional-de-personas-desaparecidas-y-sitios-de-entierro-renade-28722/"
+  note: "Publicada el 03/10/2023. Título completo reconstruido del slug de la URL; cotejar con el titular publicado."
+
+- id: col-desaparicion-peru-2023
+  type: column
+  title: "La catástrofe humanitaria de la desaparición en el Perú: retos para la política de búsqueda de personas desaparecidas"
+  authors:
+    - { name: "Valverde, L.", role: author }
+    - { name: "Cépeda, M.", role: author }
+  year: 2023
+  venue: "IDEHPUCP"
+  url: "https://idehpucp.pucp.edu.pe/boletin-eventos/la-catastrofe-humanitaria-de-la-desaparicion-en-el-peru-retos-para-la-politica-de-busqueda-de-personas-desaparecidas-28811/"
+  pdf: ""
+  lang: es
+  status: null
+  source: "https://idehpucp.pucp.edu.pe/boletin-eventos/la-catastrofe-humanitaria-de-la-desaparicion-en-el-peru-retos-para-la-politica-de-busqueda-de-personas-desaparecidas-28811/"
+  note: "Publicada el 31/10/2023. Título completo reconstruido del slug de la URL; cotejar con el titular publicado."
+
+- id: wip-mal-menor
+  type: wip
+  title: "El mal menor y el voto en blanco: el voto expresivo en el balotaje presidencial peruano de 2021"
+  authors:
+    - { name: "Valverde, L.", role: author }
+    - { name: "Encinas, Daniel (Northwestern University)", role: author }
+  year: null
+  venue: ""
+  url: ""
+  pdf: ""
+  lang: es
+  status: preparacion
+  source: cv
+  note: "Solo título, coautor con afiliación y estado (matriz de la sección 10: el manuscrito dice NO CITAR NI CIRCULAR; nada de cifras, figuras, hipótesis ni hallazgos)."
+
+# El supuesto análisis para EnConsulta (debate 2021) no está indexado en ninguna parte:
+# [CONFIRMAR: enlace, o se omite] (sección 9.3b). No se crea entrada hasta confirmar.

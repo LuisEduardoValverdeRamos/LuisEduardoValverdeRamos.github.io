@@ -1,0 +1,102 @@
+# projects.yaml — seed de Fase 0 (esquema A.5 del PROMPT.md; slugs del Apéndice A.4).
+# Se migra a la colección `proyectos` en Fase 5a (única fuente de verdad desde entonces).
+# Regla de repos (§10): `repo` SOLO para repositorios ya auditables públicamente; los repos
+# pendientes de auditoría van en `repo_pendiente_auditoria` y se nombran sin enlace hasta sanearlos.
+# Campo adicional `source` por entrada (regla de la sección 9) y `nota` para pendientes [CONFIRMAR].
+
+- slug_es: "brechas-obras"
+  slug_en: "infrastructure-gaps"
+  title_es: "Brechas de infraestructura municipal con machine learning"
+  title_en: "Municipal infrastructure gaps with machine learning"
+  status: "publicado"
+  open_data: false
+  repo: ""
+  site: "https://luiseduardovalverderamos.github.io/public_infrastructure_gaps/"
+  image: ""
+  nota: "60,000+ obras públicas municipales (2018–2024), XGBoost + SHAP, proyecto Q-LAB/Cooperación Suiza. Encuadre: trabajo como asistente en Q-LAB; citar solo lo ya público en el sitio del proyecto (§10)."
+  source: "https://luiseduardovalverderamos.github.io/public_infrastructure_gaps/"
+
+- slug_es: "elector-peruano"
+  slug_en: "peruvian-voter"
+  title_es: "Tipología del elector peruano"
+  title_en: "A typology of the Peruvian voter"
+  status: "publicado"
+  open_data: false
+  repo_pendiente_auditoria: "clustering-profile-peruvian-voter"
+  site: ""
+  image: ""
+  nota: "Clustering de tres ciclos de encuestas JNE (2011, 2016, 2021); resultados publicados en el informe JNE/ProDiálogo 2026. Citar SOLO la solución oficial; presentar como trabajo institucional (§10). Repo sin enlace hasta auditarlo."
+  source: cv
+
+- slug_es: "analitica-debate-lpde"
+  slug_en: "lpde-debate-analytics"
+  title_es: "Analítica del debate escolar (LPDE)"
+  title_en: "School debate analytics (LPDE)"
+  status: "activo"
+  open_data: false
+  repo_pendiente_auditoria: "lpde-debate-analytics"
+  site: ""
+  image: ""
+  nota: "Resultados públicos de 16 torneos (2025, tabulaciones Tabbycat) + longitudinal TNDE 2023–2025; solo hallazgos agregados sobre equidad de acceso. Nunca datos individuales (menores de edad) ni el flujo de contactos de colegios (§10). Repo sin enlace hasta auditarlo."
+  source: cv
+
+- slug_es: "voto-joven"
+  slug_en: "young-vote"
+  title_es: "Voto joven 2026"
+  title_en: "The young vote in 2026"
+  status: "activo"
+  open_data: false
+  repo: "voto-joven-peru-2026"
+  site: ""
+  image: ""
+  nota: "Padrón RENIEC, hot spots Getis-Ord Gi*; 6.7M de electores jóvenes (25.7% del padrón). [CONFIRMAR: denominador exacto de «71 distritos concentran el 40% del electorado» — recalcular del repo]. Sin redistribuir microdatos del padrón (§10)."
+  source: cv
+
+- slug_es: "tesis-nino-costero"
+  slug_en: "el-nino-reconstruction"
+  title_es: "Tesis: reconstrucción post-Niño Costero en Piura"
+  title_en: "Thesis: post-El Niño reconstruction in Piura"
+  status: "publicado"
+  open_data: false
+  repo: ""
+  site: "https://hdl.handle.net/20.500.12404/32370"
+  image: ""
+  nota: "Brechas de implementación en infraestructura educativa (2020–2023); mención sobresaliente. Enlace al repositorio PUCP."
+  source: "https://hdl.handle.net/20.500.12404/32370"
+
+- slug_es: "padron-escale"
+  slug_en: "escale-registry"
+  title_es: "Nota de datos: padrón ESCALE de colegios del Perú"
+  title_en: "Data note: Peru's ESCALE school registry"
+  status: "cerrado"
+  open_data: true
+  repo: ""
+  site: ""
+  image: ""
+  nota: "Aislamiento documentado del padrón MINEDU (corte mar-2026), script DBF→UTF-8 reproducible e informe de limitaciones. Publicable íntegro, sin mencionar la base de correos (§10)."
+  source: cv
+
+- slug_es: "indicadores-bcrp"
+  slug_en: "bcrp-indicators"
+  title_es: "Indicadores BCRP en R"
+  title_en: "BCRP indicators in R"
+  status: "activo"
+  open_data: true
+  repo: ""
+  site: ""
+  image: ""
+  nota: "Pipeline sobre la API pública de BCRPData, figuras tipo paper, códigos de serie documentados. Publicable íntegro."
+  source: cv
+
+# Slug provisional: la ficha #8 no figura en el mapa de slugs del Apéndice A.4.
+- slug_es: "voto-informado-pedregal-grande"
+  slug_en: "pedregal-grande-voter-tool"
+  title_es: "Herramienta de voto informado — Pedregal Grande (Catacaos)"
+  title_en: "Informed-vote tool — Pedregal Grande (Catacaos)"
+  status: "en-curso"
+  open_data: false
+  repo: ""
+  site: ""
+  image: ""
+  nota: "[CONFIRMAR: URL y estado; si no existe, va al backlog, no a la web (§9.5)]"
+  source: cv

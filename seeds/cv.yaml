@@ -1,0 +1,418 @@
+# cv.yaml — seed de Fase 0 (esquema A.3 del PROMPT.md)
+# Fuentes: CV debate oct-2026 (CV_Debate_Luis_Valverde_2026.pdf), CV documentado 2026 pp. 1-3
+# (CV_Documentado_Luis_Valverde_Ramos_2026.pdf) y PROMPT.md §9.1, §9.2, §9.4, §9.7, matriz §10.
+# Reglas duras aplicadas:
+#   - Excluye teléfono, dirección postal, DNI y fecha de nacimiento. Único contacto: correo PUCP y perfiles.
+#   - Sin niveles de idioma (§9.1): el inglés se demuestra con /en/.
+#   - CISEPA: sin nombrar revistas ni conteo de proyectos (formulación canónica de §9.2 y §10).
+#   - Sector salud: sin nombrar al cliente mientras no se confirme (§10).
+#   - Debate: formulación canónica del MED (§9.4); jamás WSDC para Panamá; sin atribuirle los cuatro títulos.
+# Todas las cadenas EN son borrador redactado en Fase 0 (registro académico neutro); revisar antes de publicar.
+
+nombre: "Luis Eduardo Valverde Ramos"
+correo: "luis.valverde@pucp.edu.pe"
+ubicacion:
+  es: "Entre Piura y Lima, Perú"
+  en: "Between Piura and Lima, Peru"
+perfiles:
+  github: "LuisEduardoValverdeRamos"
+  linkedin: "luisvalverderamos"
+  orcid: "[CONFIRMAR: crear ORCID en Fase 0 e integrarlo aquí]"
+  google_scholar: "[CONFIRMAR: crear perfil de Google Scholar en Fase 0 e integrarlo aquí]"
+
+# EN: borrador, revisar
+perfil:
+  es: >-
+    Politólogo por la PUCP: primer puesto de su promoción, con tesis de licenciatura
+    distinguida con mención sobresaliente. Investiga comportamiento electoral y política
+    subnacional, prensa y agenda pública, y brechas de implementación en infraestructura
+    pública, combinando métodos mixtos y ciencia social computacional en R. Investigador
+    de la Escuela Electoral y de Gobernabilidad (ESEG) del Jurado Nacional de Elecciones
+    y Director Académico de la Liga Peruana de Debate Escolar (LPDE). Entrenador de la
+    selección peruana que en Panamá 2026 obtuvo su cuarto título consecutivo del Mundial
+    de Debate Escolar en Español (MED); Campeón Nacional Interuniversitario de Debate
+    (CNDI) 2025.
+  en: >-
+    Political scientist (PUCP): graduated first in his class, with an undergraduate
+    thesis awarded the highest distinction. His research covers electoral behaviour and
+    subnational politics, the press and the public agenda, and implementation gaps in
+    public infrastructure, combining mixed methods and computational social science in R.
+    Researcher at the Electoral and Governance School (ESEG) of Peru's National Elections
+    Jury (JNE) and Academic Director of the Peruvian School Debate League (LPDE). Coach
+    of the Peruvian national team that won its fourth consecutive title at the World
+    Schools Debating Championship in Spanish (MED) in Panama 2026; national
+    inter-university debate champion (CNDI 2025).
+
+# EN: borrador, revisar
+formacion:
+  - titulo:
+      es: "Licenciatura en Ciencia Política y Gobierno"
+      en: "BA and professional licentiate in Political Science and Government"
+    institucion:
+      es: "Pontificia Universidad Católica del Perú (PUCP), Lima"
+      en: "Pontificia Universidad Católica del Perú (PUCP), Lima"
+    desde: "2019"
+    hasta: "2024"
+    detalle:
+      es: "Primer puesto de la promoción; tesis de licenciatura con mención sobresaliente."
+      en: "First in his graduating class; undergraduate thesis awarded the highest distinction."
+    source: cv
+  - titulo:
+      es: "Programa de intercambio — Ciencias Políticas y Sociales"
+      en: "Exchange programme — Political and Social Sciences"
+    institucion:
+      es: "Ghent University, Bélgica"
+      en: "Ghent University, Belgium"
+    desde: "2024"
+    hasta: "2024"
+    detalle:
+      es: "Beca DARI. Cursos de maestría: Quantitative Methods for Social Research, Innovation Management, European Policy."
+      en: "DARI scholarship. Master's-level courses: Quantitative Methods for Social Research, Innovation Management, European Policy."
+    source: cv
+  - titulo:
+      es: "Bachillerato Internacional (IB)"
+      en: "International Baccalaureate (IB)"
+    institucion:
+      es: "Colegio de Alto Rendimiento (COAR), Amazonas"
+      en: "Colegio de Alto Rendimiento (COAR), Amazonas"
+    desde: "2016"
+    hasta: "2018"
+    detalle:
+      es: "Egresado destacado."
+      en: "Graduated with distinction."
+    source: cv
+
+# EN: borrador, revisar
+cargos:
+  - cargo:
+      es: "Investigador"
+      en: "Researcher"
+    institucion:
+      es: "Escuela Electoral y de Gobernabilidad (ESEG), Jurado Nacional de Elecciones, Lima"
+      en: "Electoral and Governance School (ESEG), National Elections Jury (JNE), Lima"
+    desde: "2026-07"
+    hasta: null
+    detalle:
+      es: >-
+        Contribuye al diseño de la agenda de investigación institucional con métodos
+        cuantitativos y cualitativos, en el marco de las Elecciones Regionales y
+        Municipales 2026; enlace técnico con autoridades académicas y jurídicas en
+        estudios electorales. Censo de la enseñanza electoral universitaria (en curso).
+      en: >-
+        Contributes to the design of the institutional research agenda using quantitative
+        and qualitative methods for the 2026 regional and municipal elections; technical
+        liaison with academic and legal authorities on electoral studies. Census of
+        university-level electoral education (ongoing).
+    nota: "[CONFIRMAR: nombre exacto del curso de la ESEG del que es tutor (§6, /investigacion/)]"
+    source: cv
+  - cargo:
+      es: "Director Académico"
+      en: "Academic Director"
+    institucion:
+      es: "Liga Peruana de Debate Escolar (LPDE), Lima"
+      en: "Peruvian School Debate League (LPDE), Lima"
+    desde: "2026-09"
+    hasta: null
+    detalle:
+      es: >-
+        Lidera el equipo académico de la LPDE: programas de capacitación, entrenamiento
+        y consultoría en debate escolar. Antes, Consultor de Investigación (ene.–ago. 2026):
+        primer informe sobre el ecosistema de debate escolar en el Perú (70 instituciones)
+        y siete policy briefs para la estrategia institucional de expansión.
+      en: >-
+        Leads the LPDE's academic team: training, coaching and consultancy programmes in
+        school debate. Previously Research Consultant (Jan–Aug 2026): first report on the
+        school debate ecosystem in Peru (70 institutions) and seven policy briefs for the
+        organisation's expansion strategy.
+    source: cv
+  - cargo:
+      es: "Jefe de Práctica — Economía Política"
+      en: "Teaching Assistant — Political Economy"
+    institucion:
+      es: "Pontificia Universidad Católica del Perú (PUCP), Lima"
+      en: "Pontificia Universidad Católica del Perú (PUCP), Lima"
+    desde: "2026-08"
+    hasta: null
+    detalle:
+      es: "Dicta sesiones de práctica y retroalimentación académica a estudiantes de pregrado."
+      en: "Teaches practice sessions and provides academic feedback to undergraduate students."
+    source: cv
+  - cargo:
+      es: "Entrenador General"
+      en: "Head Coach"
+    institucion:
+      es: "Sociedad de Debate PUCP, Lima"
+      en: "PUCP Debate Society, Lima"
+    desde: "2026-07"
+    hasta: null
+    detalle:
+      es: >-
+        Dirige el entrenamiento general de la sociedad: planificación de sesiones,
+        preparación competitiva de equipos y desarrollo de debatientes en formato
+        parlamentario británico. Previamente, instructor de novatos (ago.–dic. 2025).
+      en: >-
+        Directs the society's training programme: session planning, competitive team
+        preparation and debater development in British Parliamentary format. Previously
+        novice instructor (Aug–Dec 2025).
+    source: cv
+  - cargo:
+      es: "Entrenador de debate"
+      en: "Debate Coach"
+    institucion:
+      es: "Colegio Alpamayo, Lima"
+      en: "Colegio Alpamayo, Lima"
+    desde: "2026-06"
+    hasta: null
+    detalle:
+      es: >-
+        Diseña y dicta el programa de entrenamiento en debate del colegio: construcción
+        de argumentos, refutación, ponderación y fundamentos de economía, con práctica
+        y retroalimentación individual.
+      en: >-
+        Designs and delivers the school's debate training programme: argument
+        construction, rebuttal, weighing and foundations of economics, with individual
+        practice and feedback.
+    source: cv
+  - cargo:
+      es: "Entrenador"
+      en: "Coach"
+    institucion:
+      es: "Selección Nacional de Debate Escolar del Perú"
+      en: "Peruvian National Schools Debate Team"
+    desde: "2025"
+    hasta: "2026"
+    detalle:
+      es: >-
+        Entrenador de la selección peruana que en Panamá 2026 obtuvo su cuarto título
+        consecutivo del Mundial de Debate Escolar en Español (MED). Planificó, diseñó y
+        ejecutó sesiones de contenido, estilo y estrategia para debatientes escolares de
+        alto rendimiento.
+      en: >-
+        Coach of the Peruvian national team that won its fourth consecutive title at the
+        World Schools Debating Championship in Spanish (MED) in Panama 2026. Planned,
+        designed and delivered content, style and strategy sessions for high-performing
+        school debaters.
+    source: cv
+  - cargo:
+      es: "Entrenador de debate universitario (remoto)"
+      en: "University Debate Coach (remote)"
+    institucion:
+      es: "Independiente — República Dominicana"
+      en: "Independent — Dominican Republic"
+    desde: "2024"
+    hasta: null
+    detalle:
+      es: "Entrena a debatientes universitarios en formato parlamentario británico."
+      en: "Coaches university debaters in British Parliamentary format."
+    nota: "[CONFIRMAR: resultados publicables de las duplas entrenadas (p. ej. octavos de final del WUDC 2025, primera vez para República Dominicana; cuartos de final del CMUDE Ecuador 2026) — torneo, año y permiso antes de publicar (§9.4)]"
+    source: cv
+  - cargo:
+      es: "Miembro investigador"
+      en: "Research Member"
+    institucion:
+      es: "Grupo de Investigación en Estado y Sociedad (GIES), PUCP, Lima"
+      en: "State and Society Research Group (GIES), PUCP, Lima"
+    desde: "2025"
+    hasta: null
+    detalle:
+      es: >-
+        Seguimiento legislativo de cuatro reformas políticas clave de cara a las
+        Elecciones Generales 2026; construyó el historial de votación de candidatos para
+        el portal ciudadano hechosynopalabras.pe.
+      en: >-
+        Legislative tracking of four key political reforms ahead of the 2026 general
+        elections; built the candidates' voting-record database for the civic portal
+        hechosynopalabras.pe.
+    source: cv
+
+# EN: borrador, revisar
+experiencia:
+  - cargo:
+      es: "Asistente de investigación"
+      en: "Research Assistant"
+    institucion:
+      es: "CISEPA — PUCP, Lima"
+      en: "CISEPA — PUCP, Lima"
+    desde: "2025-10"
+    hasta: "2026-02"
+    detalle:
+      es: >-
+        Apoyo econométrico a proyectos de economía política; manuscritos en revisión en
+        revistas internacionales. Sistematizó la cobertura mediática de cinco economías
+        ilícitas a partir de un corpus de 747,836 titulares de El Comercio y La República
+        (2016–2024), construido como asistente de investigación.
+      en: >-
+        Econometric support for political economy projects; manuscripts under review at
+        international journals. Systematised media coverage of five illicit economies
+        from a corpus of 747,836 headlines from El Comercio and La República (2016–2024),
+        built as a research assistant.
+    source: cv
+  - cargo:
+      es: "Consultor"
+      en: "Consultant"
+    institucion:
+      es: "ProDiálogo — Jurado Nacional de Elecciones (JNE), Lima"
+      en: "ProDiálogo — National Elections Jury (JNE), Lima"
+    desde: "2025-11"
+    hasta: "2025-12"
+    detalle:
+      es: >-
+        Como parte del equipo técnico, contribuyó al diseño de tres instrumentos de
+        análisis del comportamiento electoral para las Elecciones Generales 2026
+        (Encuesta del Perfil Electoral, dos experimentos de encuesta y un mapa conductual
+        del votante) y al clustering del electorado peruano sobre tres ciclos de
+        encuestas (2011, 2016, 2021), insumo de las estrategias de educación cívica del JNE.
+      en: >-
+        As part of the technical team, contributed to the design of three instruments for
+        analysing electoral behaviour ahead of the 2026 general elections (an electoral
+        profile survey, two survey experiments and a behavioural map of the voter) and to
+        the clustering of the Peruvian electorate across three survey cycles (2011, 2016,
+        2021), an input for the JNE's civic education strategies.
+    source: cv
+  - cargo:
+      es: "Asistente de investigación"
+      en: "Research Assistant"
+    institucion:
+      es: "Q-LAB — Laboratorio de IA y Métodos Computacionales en Ciencias Sociales, PUCP, Lima"
+      en: "Q-LAB — AI and Computational Methods in Social Sciences Lab, PUCP, Lima"
+    desde: "2024-09"
+    hasta: "2025-09"
+    detalle:
+      es: >-
+        Coordinó un proyecto para la Cooperación Suiza (GFP Subnacional): identificación
+        de brechas de ejecución en más de 60,000 obras públicas municipales (XGBoost +
+        SHAP) a partir del cruce de tres fuentes oficiales (MEF, RENAMU, INEI). Asistente
+        docente de Introducción a R para la Investigación Social (dos ediciones) y del
+        módulo de Causal Machine Learning.
+      en: >-
+        Coordinated a project for the Swiss Cooperation (Subnational PFM): identified
+        execution gaps in over 60,000 municipal public works (XGBoost + SHAP) by linking
+        three official sources (MEF, RENAMU, INEI). Teaching assistant for Introduction
+        to R for Social Research (two editions) and the Causal Machine Learning module.
+    source: cv
+  - cargo:
+      es: "Consultor de análisis de datos"
+      en: "Data Analysis Consultant"
+    institucion:
+      es: "Sector salud, Lima"
+      en: "Health sector, Lima"
+    desde: "2025-07"
+    hasta: "2025-09"
+    detalle:
+      es: "Consultor de análisis de datos en el sector salud."
+      en: "Data analysis consultant in the health sector."
+    nota: "[CONFIRMAR: nombrar al cliente (Sapienza / Roche) solo con visto bueno; sin cifras ni entregables del encargo (§10)]"
+    source: cv
+  - cargo:
+      es: "Asistente de investigación"
+      en: "Research Assistant"
+    institucion:
+      es: "Daniel Encinas (Northwestern University) y Rodrigo Barrenechea"
+      en: "Daniel Encinas (Northwestern University) and Rodrigo Barrenechea"
+    desde: "2024"
+    hasta: "2024"
+    detalle:
+      es: "Apoyo de investigación sobre la geografía del voto populista en el Perú (1980–2021)."
+      en: "Research support on the geography of the populist vote in Peru (1980–2021)."
+    source: cv
+  - cargo:
+      es: "Practicante preprofesional"
+      en: "Undergraduate Intern"
+    institucion:
+      es: "Instituto de Democracia y Derechos Humanos (IDEHPUCP), Lima"
+      en: "Institute of Democracy and Human Rights (IDEHPUCP), Lima"
+    desde: "2023-02"
+    hasta: "2023-12"
+    detalle:
+      es: >-
+        Apoyó tres proyectos de investigación sobre gobernanza, migración y derechos
+        humanos; autor de seis columnas de análisis en el portal institucional.
+      en: >-
+        Supported three research projects on governance, migration and human rights;
+        author of six analysis columns on the institute's portal.
+    source: cv
+
+# Referencias a publications.yaml por id (esquema A.3)
+publicaciones:
+  - tesis-2025
+  - informe-jne-2026
+  - clinicas-cidh-2023
+  - col-estancamiento-democracia-2023
+  - col-reconstruccion-sin-cambios-2023
+  - col-agenda-cvr-2023
+  - col-cambio-climatico-tribunales-2023
+  - col-reporte-renade-2023
+  - col-desaparicion-peru-2023
+  - wip-mal-menor
+
+# EN: borrador, revisar
+reconocimientos:
+  - texto:
+      es: "Primer puesto de la promoción, Ciencia Política y Gobierno, PUCP"
+      en: "First in his graduating class, Political Science and Government, PUCP"
+    anio: "2024"
+    source: cv
+  - texto:
+      es: "Tesis de licenciatura con mención sobresaliente, PUCP"
+      en: "Undergraduate thesis awarded the highest distinction, PUCP"
+    anio: "2025"
+    source: "https://hdl.handle.net/20.500.12404/32370"
+  - texto:
+      es: "Primer puesto, Concurso de Investigación de la Facultad de Ciencias Sociales, PUCP"
+      en: "First place, Research Competition of the Faculty of Social Sciences, PUCP"
+    anio: "[CONFIRMAR: 2023 o 2024 — el CV y la web actual difieren (§9.7)]"
+    source: cv
+  - texto:
+      es: "Campeón Nacional Interuniversitario de Debate (CNDI) — Perú"
+      en: "National Inter-university Debate Champion (CNDI) — Peru"
+    anio: "2025"
+    source: cv
+  - texto:
+      es: "Becario Beca 18 (PRONABEC): beca nacional por mérito que cubrió la totalidad del pregrado"
+      en: "Beca 18 scholar (PRONABEC): national merit scholarship covering his full undergraduate studies"
+    anio: "2019–2024"
+    source: cv
+  - texto:
+      es: "Beca DARI para el intercambio en Ghent University"
+      en: "DARI grant for the exchange at Ghent University"
+    anio: "2024"
+    source: cv
+
+# EN: borrador, revisar
+# Sin niveles de idioma (regla §9.1).
+habilidades:
+  - categoria:
+      es: "Métodos cuantitativos"
+      en: "Quantitative methods"
+    detalle:
+      es: "Estadística descriptiva e inferencial; econometría e inferencia causal; machine learning aplicado a ciencias sociales"
+      en: "Descriptive and inferential statistics; econometrics and causal inference; machine learning applied to the social sciences"
+    source: cv
+  - categoria:
+      es: "Métodos cualitativos"
+      en: "Qualitative methods"
+    detalle:
+      es: "Estudios de caso; process tracing; entrevistas semiestructuradas; análisis documental, de contenido y de discurso"
+      en: "Case studies; process tracing; semi-structured interviews; documentary, content and discourse analysis"
+    source: cv
+  - categoria:
+      es: "Herramientas"
+      en: "Tools"
+    detalle:
+      es: "R (avanzado: tidyverse); Python (scikit-learn, spaCy); Stata; Git/GitHub; LaTeX; KoboToolbox"
+      en: "R (advanced: tidyverse); Python (scikit-learn, spaCy); Stata; Git/GitHub; LaTeX; KoboToolbox"
+    source: cv
+  - categoria:
+      es: "Debate"
+      en: "Debate"
+    detalle:
+      es: "Formatos parlamentario británico y World Schools; diseño de sesiones; formación de entrenadores y jueces; adjudicación y gestión de torneos"
+      en: "British Parliamentary and World Schools formats; session design; coach and judge training; adjudication and tournament management"
+    source: cv
+  - categoria:
+      es: "Productos"
+      en: "Deliverables"
+    detalle:
+      es: "Policy briefs; informes de análisis político y electoral; documentos de política pública; columnas de divulgación"
+      en: "Policy briefs; political and electoral analysis reports; public policy documents; outreach columns"
+    source: cv

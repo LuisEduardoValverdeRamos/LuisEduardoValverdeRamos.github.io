@@ -1,7 +1,79 @@
 ---
+// Tabla de datos accesible del mapa de portada (PROMPT.md §6 y §8).
 import Base from '../layouts/Base.astro';
-import Stub from '../components/Stub.astro';
+import tabla from '../data/mapa-tabla.json';
+import meta from '../../public/data/hero_meta.json';
+
+const filas = tabla as Array<{
+  ubigeo: string; departamento: string; provincia: string; distrito: string;
+  electores: number; participacion: number; nulos_blancos: number; nec: number;
+}>;
+const excluidos = (meta.excluidos.con_votos_sin_poligono as string[]).length;
 ---
-<Base title="Datos del mapa">
-  <Stub title="Datos del mapa" fase="Fase 3" lang="es" />
+
+<Base
+  title="Datos del mapa"
+  description="Tabla completa de los datos del mapa de portada: participación, votos nulos y blancos y fragmentación por distrito, EG 2021 primera vuelta (ONPE)."
+>
+  <section class="wrap head">
+    <p class="kicker">El Perú, distrito por distrito · datos</p>
+    <h1>Los datos del mapa</h1>
+    <p>
+      Resultados oficiales de la ONPE para la primera vuelta de las Elecciones Generales
+      2021, agregados por distrito: {meta.n_distritos} distritos a partir de
+      {meta.fuente_electoral.mesas_contabilizadas.toLocaleString('es-PE')} mesas contabilizadas.
+      {excluidos} distritos con votos quedaron fuera del mapa por no existir en la
+      cartografía usada (fueron creados después); el detalle está en el
+      <a href="/data/hero_meta.json">archivo de metadatos</a>.
+    </p>
+    <p class="mono small">
+      <a href="/data/hero_table.csv">Descargar CSV</a> · fuente electoral: ONPE ·
+      cartografía: INEI · ubigeo: INEI
+    </p>
+  </section>
+
+  <section class="wrap">
+    <div class="scroll" tabindex="0" role="region" aria-label="Tabla de datos por distrito">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Ubigeo</th>
+            <th scope="col">Departamento</th>
+            <th scope="col">Provincia</th>
+            <th scope="col">Distrito</th>
+            <th scope="col" class="num">Electores</th>
+            <th scope="col" class="num">Participación %</th>
+            <th scope="col" class="num">Nulos y blancos %</th>
+            <th scope="col" class="num">Candidatos efectivos</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filas.map((f) => (
+            <tr>
+              <td class="mono">{f.ubigeo}</td>
+              <td>{f.departamento}</td>
+              <td>{f.provincia}</td>
+              <td>{f.distrito}</td>
+              <td class="num mono">{f.electores.toLocaleString('es-PE')}</td>
+              <td class="num mono">{f.participacion.toFixed(1)}</td>
+              <td class="num mono">{f.nulos_blancos.toFixed(1)}</td>
+              <td class="num mono">{f.nec.toFixed(1)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
 </Base>
+
+<style>
+  .head { padding: var(--space-8) var(--space-3) var(--space-4); }
+  .head h1 { font-size: clamp(32px, 4vw, 48px); margin: var(--space-2) 0 var(--space-3); }
+  .small { font-size: 12.5px; margin-top: var(--space-2); }
+  .scroll { overflow-x: auto; border: 1px solid var(--color-linea); }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  th, td { padding: 7px 12px; border-bottom: 1px solid var(--color-linea); text-align: left; white-space: nowrap; }
+  th { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-tinta-2); background: var(--color-niebla); position: sticky; top: 0; }
+  .num { text-align: right; }
+  tbody tr:hover { background: var(--color-niebla); }
+</style>

@@ -1,0 +1,86 @@
+{
+  "generado": "2026-10-16",
+  "fuente_electoral": {
+    "descripcion": "ONPE, Elecciones Generales 2021, primera vuelta presidencial, resultados por mesa (version PCM)",
+    "archivo": "C:/48_paper_mal_menor/data/raw/onpe/r1/Resultados_1ra_vuelta_Version_PCM.csv",
+    "md5": "dbd0fdea8f4ac966e9aabac30446d6fb",
+    "mesas_total": 86488,
+    "mesas_contabilizadas": 82202,
+    "estados_incluidos": ["CONTABILIZADA", "COMPUTADA RESUELTA"]
+  },
+  "fuente_geografica": {
+    "descripcion": "GeoJSON de distritos del Peru (cartografia INEI)",
+    "url": "https://raw.githubusercontent.com/juaneladio/peru-geojson/master/peru_distrital_simple.geojson",
+    "campo_ubigeo": "IDDIST"
+  },
+  "campos_hero": ["x", "y", "electores", "participacion", "nulos_blancos", "nec", "ubigeo"],
+  "n_distritos": 1824,
+  "crosswalk_reniec_inei": {
+    "url": "https://raw.githubusercontent.com/jmcastagnetto/ubigeo-peru-aumentado/main/ubigeo_distrito.csv",
+    "nota": "ONPE codifica con ubigeo RENIEC; la cartografia con ubigeo INEI; el ubigeo de las salidas es INEI"
+  },
+  "excluidos": {
+    "mesas_extranjero": 3440,
+    "reniec_sin_equivalencia_inei": [],
+    "con_votos_sin_poligono": ["030220", "030609", "030610", "030611", "050116", "050409", "050410", "050411", "050412", "050509", "050510", "050511", "080911", "080912", "080913", "080914", "090719", "090720", "090721", "090722", "090723", "090511", "100112", "100113", "100704", "100705", "100607", "100608", "100609", "100610", "120609", "160801", "160802", "160803", "160804", "190308", "200115", "211105", "230111", "070107", "250304", "250305"],
+    "con_poligono_sin_votos": ["160109", "160114"]
+  },
+  "box": {
+    "w": 721,
+    "h": 1000
+  },
+  "rangos": {
+    "electores": {
+      "min": 140,
+      "max": 786917
+    },
+    "participacion": {
+      "min": 25.1,
+      "max": 88.8,
+      "p5": 46.8,
+      "p95": 81.1,
+      "p98": 83.6
+    },
+    "nulos_blancos": {
+      "min": 5.3,
+      "max": 63.8,
+      "p5": 13.5,
+      "p95": 36,
+      "p98": 40.2
+    },
+    "nec": {
+      "min": 1.3,
+      "max": 10.7,
+      "p5": 2.2,
+      "p95": 9.1,
+      "p98": 9.6
+    }
+  },
+  "estados_mapa": [
+    {
+      "id": "participacion",
+      "es": "Participación electoral",
+      "en": "Turnout",
+      "unidad": "%"
+    },
+    {
+      "id": "nulos_blancos",
+      "es": "Votos nulos y blancos",
+      "en": "Null and blank votes",
+      "unidad": "%"
+    },
+    {
+      "id": "nec",
+      "es": "Fragmentación del voto (candidatos efectivos)",
+      "en": "Vote fragmentation (effective candidates)",
+      "unidad": ""
+    },
+    {
+      "id": "inversion",
+      "es": "Ejecución de inversión pública (pendiente)",
+      "en": "Public investment execution (pending)",
+      "unidad": "%",
+      "pendiente": true
+    }
+  ]
+}

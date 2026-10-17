@@ -1,0 +1,39 @@
+---
+// Página aislada de prueba del mapa (Fase 3). Se elimina antes del lanzamiento.
+import Base from '../layouts/Base.astro';
+import HeroMap from '../components/HeroMap.astro';
+import meta from '../../public/data/hero_meta.json';
+---
+
+<Base title="Prueba del mapa" description="Página interna de la Fase 3." noindex>
+  <section class="wrap test">
+    <p class="kicker">Fase 3 · prueba aislada del mapa</p>
+    <h1>El Perú, distrito por distrito</h1>
+    <div class="grid">
+      <div class="map"><HeroMap lang="es" /></div>
+      <aside>
+        <p class="kicker">Datos</p>
+        <ul class="mono">
+          <li>{meta.n_distritos} distritos dibujados</li>
+          <li>{meta.fuente_electoral.mesas_contabilizadas.toLocaleString('es-PE')} mesas contabilizadas</li>
+          <li>{(meta.excluidos.con_votos_sin_poligono as string[]).length} distritos sin polígono (posteriores a la cartografía)</li>
+          <li>box {meta.box.w} × {meta.box.h}</li>
+        </ul>
+        <p class="note">
+          Entra al viewport → el país se dibuja de norte a sur. Cada 6 s alterna la
+          variable; con hover o clic se detiene. Pasa el cursor por un punto para el
+          rótulo. Con <code>prefers-reduced-motion</code> queda el SVG estático.
+        </p>
+      </aside>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .test { padding: var(--space-8) var(--space-3) var(--space-12); }
+  .test h1 { font-size: clamp(32px, 4vw, 48px); margin: var(--space-2) 0 var(--space-6); }
+  .grid { display: grid; grid-template-columns: minmax(300px, 560px) 1fr; gap: var(--space-8); align-items: start; }
+  @media (max-width: 880px) { .grid { grid-template-columns: 1fr; } }
+  aside ul { list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; color: var(--color-tinta-2); margin: var(--space-2) 0 var(--space-3); }
+  .note { font-size: 15px; color: var(--color-tinta-2); max-width: 44ch; }
+</style>

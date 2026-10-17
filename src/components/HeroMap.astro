@@ -1,0 +1,98 @@
+---
+// Mapa de portada (PROMPT.md §8): SVG estático siempre presente (noscript,
+// reduced-motion, LCP) + módulo D3 que lo reemplaza con crossfade.
+import heroStatic from '../assets/hero-static.svg';
+import meta from '../../public/data/hero_meta.json';
+
+interface Props {
+  lang?: 'es' | 'en';
+}
+const { lang = 'es' } = Astro.props;
+const states = (meta.estados_mapa as any[]).filter((s) => !s.pendiente);
+const first = states[0];
+const box = meta.box as { w: number; h: number };
+const n = meta.n_distritos;
+const tabla = lang === 'es' ? '/datos-del-mapa/' : '/datos-del-mapa/';
+---
+
+<figure class="hero-map" data-hero data-lang={lang}>
+  <div class="stage" data-stage style={`aspect-ratio: ${box.w} / ${box.h};`}>
+    <img
+      src={heroStatic.src}
+      alt={lang === 'es'
+        ? `Mapa del Perú: ${n} distritos como puntos; el tamaño codifica electores hábiles y el color la participación en la primera vuelta de 2021.`
+        : `Map of Peru: ${n} districts as dots; size encodes registered voters and colour turnout in the 2021 first round.`}
+      width={box.w}
+      height={box.h}
+      data-static
+    />
+    <p class="tip mono" data-tip hidden></p>
+  </div>
+  <figcaption class="legend">
+    <span class="mono" data-legend-label>
+      {first[lang]}{first.unidad ? ` · ${first.unidad}` : ''} · EG 2021 (1.ª vuelta) · ONPE
+    </span>
+    <span class="controls" role="group" aria-label={lang === 'es' ? 'Variable del mapa' : 'Map variable'}>
+      {states.map((s, i) => (
+        <button class="mono" data-state={s.id} aria-pressed={i === 0 ? 'true' : 'false'}>
+          {s[lang]}
+        </button>
+      ))}
+    </span>
+    <a class="mono tabla" href={tabla}>
+      {lang === 'es' ? 'Ver la tabla de datos' : 'View the data table'}
+    </a>
+  </figcaption>
+</figure>
+
+<style>
+  .hero-map { margin: 0; }
+  .stage { position: relative; width: 100%; }
+  .stage :global(svg),
+  .stage img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .tip {
+    position: absolute;
+    z-index: 5;
+    background: var(--color-fondo);
+    border: 1px solid var(--color-linea);
+    color: var(--color-tinta);
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    padding: 6px 9px;
+    pointer-events: none;
+    white-space: nowrap;
+    max-width: none;
+  }
+  .legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: var(--space-2);
+  }
+  .legend .mono { font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-tinta-2); }
+  .controls { display: flex; gap: 8px; flex-wrap: wrap; }
+  .controls button {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--color-fondo);
+    border: 1px solid var(--color-linea);
+    color: var(--color-tinta-2);
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+  .controls button[aria-pressed='true'] { border-color: var(--color-mar); color: var(--color-mar); }
+  .controls button:hover { border-color: var(--color-tinta); color: var(--color-tinta); }
+  .tabla { align-self: flex-start; color: var(--color-tinta-2); }
+</style>
+
+<script>
+  import { initHero } from '../scripts/hero.js';
+  document.querySelectorAll('[data-hero]').forEach((el) => initHero(el as HTMLElement));
+</script>

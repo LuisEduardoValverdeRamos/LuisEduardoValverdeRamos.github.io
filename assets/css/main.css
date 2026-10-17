@@ -339,10 +339,11 @@
 .s-entry summary { cursor: pointer; font-size: 13.5px; font-weight: 600; color: var(--s-ink); }
 .s-entry details ul { display: grid; gap: 4px; margin-top: 6px; padding-left: 18px; list-style: disc; }
 
-/* Footer: a contained block («rectángulo») */
-.s-footer-zone { padding: 72px 24px 24px; }
-.s-footer { max-width: 1080px; margin: 0 auto; display: grid; gap: 36px; padding: 44px 44px 28px; color: var(--color-footer-text-light); background: var(--color-footer-bg-light); border: 1px solid var(--color-footer-border-light); border-radius: 14px; }
-.s-footer .top { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 32px; }
+/* Footer: a full-width band at the bottom of the window, closed by a darker
+   bar with the colophon (the body is a flex column, so it stays at the bottom
+   on short pages too) */
+.s-footer { margin-top: 88px; color: var(--color-footer-text-light); background: var(--color-footer-bg-light); border-top: 1px solid var(--color-footer-border-light); }
+.s-footer .top { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 32px; padding-block: 56px 48px; }
 .s-footer .cta-title { margin: 0; font-family: var(--s-display); font-weight: 650; font-size: 30px; line-height: 1.1; letter-spacing: -.02em; color: var(--color-footer-text-light); }
 .s-footer h3 { margin: 0 0 10px; font-family: var(--s-text); font-size: 11.5px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--color-footer-muted-light); }
 .s-footer p { margin-top: 10px; font-size: 14.5px; color: var(--color-footer-muted-light); }
@@ -350,8 +351,11 @@
 .s-footer ul a { color: var(--color-footer-link-light); text-decoration: none; }
 .s-footer ul a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .s-footer .s-mail { margin-top: 18px; }
-.s-footer .bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 18px; border-top: 1px solid var(--color-footer-border-light); font-size: 12.5px; color: var(--color-footer-muted-light); }
-.s-footer .bottom a { text-decoration: underline; text-underline-offset: 2px; }
+.s-mail-break { display: none; }
+.s-footer .s-mail-break { display: block; flex-basis: 100%; height: 0; }
+.s-footer-bar { background: var(--color-bg-tertiary-light); border-top: 1px solid var(--color-footer-border-light); }
+.s-footer-bar .bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: 16px; font-size: 12.5px; color: var(--color-footer-muted-light); }
+.s-footer-bar .bottom a { text-decoration: underline; text-underline-offset: 2px; }
 
 /* Content pending Luis's confirmation: shown only in local previews
    (hugo server / --environment development), never in production. */
@@ -407,9 +411,8 @@
   .s-cv { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .s-cv-toc { position: static; display: flex; flex-wrap: wrap; gap: 6px 14px; }
   .s-entry { grid-template-columns: minmax(0, 1fr); }
-  .s-footer-zone { padding: 48px 12px 12px; }
-  .s-footer { padding: 28px 22px 20px; border-radius: 12px; }
-  .s-footer .top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .s-footer { margin-top: 64px; }
+  .s-footer .top { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-block: 40px 32px; }
   .s-footer .cta-title { font-size: 26px; }
 }
 @media (max-width: 379px) {
@@ -420,7 +423,7 @@
 .s-printonly { display: none; }
 @page { size: A4; margin: 15mm 16mm 16mm; }
 @media print {
-  .s-header, .s-footer-zone, .skip-link, .s-cv-toc, .s-noprint { display: none !important; }
+  .s-header, .s-footer, .skip-link, .s-cv-toc, .s-noprint { display: none !important; }
   .s-printonly { display: block; }
   body { font-size: 9.5pt; line-height: 1.45; }
   .wrap { max-width: none; padding-inline: 0; }

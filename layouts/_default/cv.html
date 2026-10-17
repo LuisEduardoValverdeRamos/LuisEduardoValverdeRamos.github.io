@@ -44,6 +44,9 @@
         {{- range where $d.experience.experience "current" true }}
         {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .company "link" .company_link "text" .description "details" (cond (gt (len .responsibilities) 1) .responsibilities slice) "details_label" $l.details) }}
         {{- end }}
+        {{- range where $d.debate.coach.items "cv_current" true }}
+        {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .org "text" .text) }}
+        {{- end }}
         {{- range $d.research.groups }}
         {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .group "link" .link "text" .description) }}
         {{- end }}
@@ -90,7 +93,7 @@
 
       <section id="debate" aria-labelledby="h-debate">
         <h2 id="h-debate" class="s-h2">{{ $s.debate }}</h2>
-        {{- range $d.debate.coach.items }}
+        {{- range where $d.debate.coach.items "cv_current" "!=" true }}
         {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .org "text" .text) }}
         {{- end }}
         {{- range $d.debate.judge.items }}

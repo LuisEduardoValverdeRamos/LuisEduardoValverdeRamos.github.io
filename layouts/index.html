@@ -35,13 +35,8 @@
             {{ end }}
 
             <div class="flex flex-wrap items-center gap-3">
-                <a href="{{ "files/CV_Luis Valverde - English.pdf" | absURL }}" download class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent-light dark:bg-accent-dark text-white dark:text-bg-primary-dark hover:opacity-90 transition-opacity text-sm font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    CV — English
-                </a>
-                <a href="{{ "files/CV_Luis Valverde - Spanish.pdf" | absURL }}" download class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-accent-light dark:border-accent-dark text-accent-light dark:text-accent-dark hover:bg-bg-tertiary-light dark:hover:bg-bg-tertiary-dark transition-colors text-sm font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    CV — Español
+                <a href="{{ "about/" | relLangURL }}" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent-light dark:bg-accent-dark text-white dark:text-bg-primary-dark hover:opacity-90 transition-opacity text-sm font-medium">
+                    {{ if eq $.Language.Lang "es" }}Sobre mí{{ else }}About me{{ end }} →
                 </a>
 
                 <span class="hidden sm:inline-block w-px h-6 bg-border-secondary-light dark:bg-border-secondary-dark mx-1"></span>
@@ -141,7 +136,7 @@
         <h2 class="text-3xl font-bold mb-8"><span class="section-index">03 /</span>{{ T "projectsTitle" }}</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
             {{ range first 3 . }}
-            <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="project-card group flex flex-col overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
+            {{ if .link }}<a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="project-card group flex flex-col overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">{{ else }}<div class="project-card group flex flex-col overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">{{ end }}
                 <div class="aspect-video overflow-hidden">
                     <img src="{{ strings.TrimPrefix "/" .image | absURL }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                 </div>
@@ -155,7 +150,7 @@
                         {{ end }}
                     </div>
                 </div>
-            </a>
+            {{ if .link }}</a>{{ else }}</div>{{ end }}
             {{ end }}
         </div>
         <div class="mt-8">

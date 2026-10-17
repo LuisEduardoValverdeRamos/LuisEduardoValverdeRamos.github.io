@@ -3,32 +3,32 @@
   description = "Undergraduate thesis (outstanding mention). Studied the reconstruction process of educational infrastructure in Piura (Jul 2020 – Jan 2023) after the Coastal El Niño phenomenon, analyzing the factors explaining implementation gaps in post-disaster public works."
   tech = "R, Process Tracing, Qualitative Comparative Analysis, Public Policy"
   image = "/images/projects/disaster-reconstruction.jpg"
-  link = "http://hdl.handle.net/20.500.12404/32370"
+  link = "https://hdl.handle.net/20.500.12404/32370"
 
 [[projects]]
   title = "Municipal Public Works Gaps — ML Prediction"
-  description = "Led analysis of implementation gaps in 60,000+ municipal public works (2018–2024). Applied supervised Machine Learning (XGBoost, SHAP values) to predict implementation gaps at the subnational level and identify key underperformance factors."
+  description = "Project started as a research assistant at Q-LAB-PUCP: a supervised machine learning model (XGBoost, SHAP values) of implementation gaps in municipal public works (2018–2024). The project site reports 40,243 works analysed."
   tech = "R, Python, XGBoost, SHAP, tidymodels, MEF/RENAMU/INEI data"
   image = "/images/projects/public-works.jpg"
   link = "https://luiseduardovalverderamos.github.io/public_infrastructure_gaps/"
 
 [[projects]]
   title = "Electoral Typology of Peruvian Voters — JNE/ProDiálogo"
-  description = "Segmented the Peruvian electorate by applying clustering to survey data from three electoral cycles (2011, 2016, and 2021), generating voter typological profiles as inputs for civic education policies of the JNE."
+  description = "As part of the technical team behind the JNE/ProDiálogo report, took part in segmenting the Peruvian electorate with cluster analysis of survey data from three electoral cycles (2011, 2016 and 2021), as input for the JNE's civic education work."
   tech = "R, Clustering, Survey Experiments, Behavioral Research"
   image = "/images/projects/electoral-typology.jpg"
-  link = "https://github.com/LuisEduardoValverdeRamos/clustering-profile-peruvian-voter"
+  link = ""
 
 [[projects]]
-  title = "LPDE Debate Analytics — School Debate Performance Tracking in Peru"
-  description = "Scraping, processing and statistical analysis pipeline covering 16 school debate tournaments in Peru (2025 season), with longitudinal analysis of the TNDE 2023–2025. Findings on gender parity, public vs. private school access gaps, and geographic concentration of competitive debate."
+  title = "Aggregate Analytics of School Debate (LPDE)"
+  description = "Analysis of public results from 16 school debate tournaments in Peru (2025 season), with longitudinal analysis of the TNDE 2023–2025. Aggregate findings on gender parity, access gaps between public and private schools, and the geographic concentration of competitive debate."
   tech = "R, Web Scraping, Tabbycat, Statistical Analysis, Data Pipeline"
   image = "/images/projects/lpde-debate.jpg"
-  link = "https://github.com/LuisEduardoValverdeRamos/lpde-debate-analytics"
+  link = ""
 
 [[projects]]
-  title = "Joven Perú 2026 — Youth Vote Strategic Electoral Analysis"
-  description = "Electoral analysis pipeline in R on the national RENIEC voter registry, focused on the youth vote (18–29), territorial concentration and spatial hot spot analysis for Peru's 2026 elections. Key finding: 6.7M young voters (25.7% of the registry), with 71 districts concentrating 40% of the national electorate."
+  title = "Youth Vote 2026 — Territorial Concentration of Young Voters"
+  description = "Analysis in R of district-level aggregates from the RENIEC voter registry, focused on young voters (18–29): territorial concentration and spatial hot spot analysis for Peru's 2026 elections. The registry lists 6.7 million young voters, 25.7% of the total."
   tech = "R, Spatial Analysis, RENIEC Data, Getis-Ord Gi*, Electoral Analysis"
   image = "/images/projects/voto-joven.jpg"
   link = "https://github.com/LuisEduardoValverdeRamos/voto-joven-peru-2026"

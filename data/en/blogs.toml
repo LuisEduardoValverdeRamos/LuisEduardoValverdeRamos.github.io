@@ -8,7 +8,7 @@
   authors = "Valverde, L."
   outlet = "Undergraduate Thesis — Outstanding Mention · Pontificia Universidad Católica del Perú"
   summary = "Analyzes the factors explaining implementation gaps in post-disaster educational public works in the Piura region."
-  link = "http://hdl.handle.net/20.500.12404/32370"
+  link = "https://hdl.handle.net/20.500.12404/32370"
   tags = ["Thesis", "Public Policy", "Disasters", "Peru"]
 
 [[blogs]]
@@ -16,9 +16,9 @@
   type = "Editorial"
   date = "2023"
   title = "Climate Emergency and Human Rights: Writing on the Advisory Opinion to the Inter-American Court of Human Rights"
-  authors = "Cabrales, S., Quiroz, S.J., Mamede, T., Barbosa, I. & Valverde, L. (Eds.)"
+  authors = "Editorial team: Cabrales, S., Quiroz, S. J., Mamede, T., Barbosa, I. & Valverde, L."
   outlet = "Alianza de Clínicas Jurídicas Ambientales de Latinoamérica y el Caribe"
-  summary = "Collective volume co-edited on climate emergency and human rights, submitted to the Inter-American Court of Human Rights."
+  summary = "Collective submission by the Alliance on climate emergency and human rights, presented to the Inter-American Court of Human Rights. Member of the editorial team."
   link = "https://alianzadeclinicasambientales.com/wp-content/uploads/2023/12/Informe-O.C.-Emergencia-Climatica-Corte-IDH-Alianza-Clinicas-Juridicas-Ambientales-LAC-IDEHPUCP-y-SPDA-1.pdf"
   tags = ["Editorial", "Human Rights", "Climate", "IACHR"]
 
@@ -31,7 +31,7 @@
   title = "The Humanitarian Catastrophe of Disappearance in Peru: Challenges for the Search Policy for Missing Persons"
   authors = "Valverde, L. & Cépeda, M."
   outlet = "IDEHPUCP — Boletín y Eventos"
-  summary = "Analysis of the institutional and policy challenges surrounding the search for missing persons in Peru, published on the Day of the Dead."
+  summary = "Analysis of the institutional and policy challenges surrounding the search for missing persons in Peru."
   link = "https://idehpucp.pucp.edu.pe/boletin-eventos/la-catastrofe-humanitaria-de-la-desaparicion-en-el-peru-retos-para-la-politica-de-busqueda-de-personas-desaparecidas-28811/"
   tags = ["Column", "Human Rights", "Missing Persons", "Peru"]
 

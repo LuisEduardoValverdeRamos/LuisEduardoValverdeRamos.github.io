@@ -3,9 +3,10 @@
   location = "Lima, Perú"
   description = "Politólogo (PUCP) | Métodos Mixtos | Política Electoral · Políticas Públicas"
   current = [
-    "Investigador — Jurado Nacional de Elecciones",
+    "Investigador — Jurado Nacional de Elecciones (ESEG)",
+    "Consultor — Observatorio de Corrupción del CAL",
+    "Director Académico — LPDE",
     "Jefe de Práctica — PUCP",
-    "Consultor de Investigación — LPDE",
   ]
 
   profile_image = "/images/profile.jpeg"
@@ -16,23 +17,6 @@
   github   = "https://github.com/LuisEduardoValverdeRamos"
   github_username = "LuisEduardoValverdeRamos"
 
-# --- Estadísticas de evidencia (franja del hero) ---
-[[stats]]
-  value = "750K+"
-  label = "titulares scrapeados y analizados"
-
-[[stats]]
-  value = "60K+"
-  label = "obras públicas modeladas con ML"
-
-[[stats]]
-  value = "3"
-  label = "ciclos electorales segmentados"
-
-[[stats]]
-  value = "8+"
-  label = "instituciones asesoradas"
-
 # --- Premios y Reconocimientos ---
 [[honors]]
   institution = "Liga Peruana de Debate Universitario"
@@ -41,8 +25,8 @@
 
 [[honors]]
   institution = "Facultad de Ciencias Sociales, PUCP"
-  title = "Primer Puesto — Concurso de Investigación para Estudiantes 2023"
-  date = "2024"
+  title = "Primer Puesto — Concurso de Investigación para Estudiantes"
+  date = "2023"
 
 [[honors]]
   institution = "DARI PUCP — Dirección Académica de Relaciones Institucionales"
@@ -58,15 +42,6 @@
   institution = "PRONABEC — Programa Beca 18"
   title = "Beca completa para Ciencia Política en la PUCP"
   date = "2019 – 2024"
-
-# --- Certificaciones ---
-[[certifications]]
-  title = "Inglés — Dominio profesional pleno"
-  date = "Presente"
-
-[[certifications]]
-  title = "Español — Hablante nativo"
-  date = "Presente"
 
 # --- Voluntariados y Participación en Organizaciones ---
 [[voluntary]]

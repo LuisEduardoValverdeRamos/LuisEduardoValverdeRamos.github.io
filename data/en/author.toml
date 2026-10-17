@@ -3,9 +3,10 @@
   location = "Lima, Peru"
   description = "Political Scientist (PUCP) | Mixed Methods | Electoral Politics · Public Policy"
   current = [
-    "Researcher — Jurado Nacional de Elecciones",
+    "Researcher — Jurado Nacional de Elecciones (ESEG)",
+    "Consultant — Corruption Observatory, Lima Bar Association",
+    "Academic Director — LPDE",
     "Teaching Assistant — PUCP",
-    "Research Consultant — LPDE",
   ]
 
   profile_image = "/images/profile.jpeg"
@@ -16,23 +17,6 @@
   github   = "https://github.com/LuisEduardoValverdeRamos"
   github_username = "LuisEduardoValverdeRamos"
 
-# --- Evidence stats (hero strip) ---
-[[stats]]
-  value = "750K+"
-  label = "headlines scraped & analyzed"
-
-[[stats]]
-  value = "60K+"
-  label = "public works modeled with ML"
-
-[[stats]]
-  value = "3"
-  label = "electoral cycles clustered"
-
-[[stats]]
-  value = "8+"
-  label = "institutions served"
-
 # --- Honors & Awards ---
 [[honors]]
   institution = "Liga Peruana de Debate Universitario"
@@ -41,8 +25,8 @@
 
 [[honors]]
   institution = "Faculty of Social Sciences, PUCP"
-  title = "First Place — Student Research Competition 2023"
-  date = "2024"
+  title = "First Place — Student Research Competition"
+  date = "2023"
 
 [[honors]]
   institution = "DARI PUCP — Student Mobility Program"
@@ -58,15 +42,6 @@
   institution = "PRONABEC — Beca 18 Program"
   title = "Full Scholarship for Political Science at PUCP"
   date = "2019 – 2024"
-
-# --- Certifications ---
-[[certifications]]
-  title = "English — Full Professional Proficiency"
-  date = "Present"
-
-[[certifications]]
-  title = "Spanish — Native Speaker"
-  date = "Present"
 
 # --- Volunteering & Organizational Participation ---
 [[voluntary]]

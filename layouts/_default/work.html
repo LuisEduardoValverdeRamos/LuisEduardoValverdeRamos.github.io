@@ -48,7 +48,7 @@
         <h2 class="s-h2">{{ .title }}</h2>
         <p>{{ .intro }}</p>
         {{- with .subject }}
-        <p class="s-note"><a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" . "body" $cp.body) }}">{{ $l.write }} →</a> · {{ $l.subject }}: «{{ . }}»</p>
+        <p class="s-note"><a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" . "body" $cp.body) }}">{{ $l.write }} →</a><span class="s-asksub">{{ $l.subject }}: «{{ . }}»</span></p>
         {{- end }}
       </div>
       {{- end }}
@@ -82,12 +82,5 @@
     </div>
   </section>
 
-  <section id="{{ cond (eq .Language.Lang "es") "contacto" "contact" }}" class="s-contact" aria-labelledby="h-contact">
-    <h2 id="h-contact" class="s-h2">{{ $s.contact.title }}</h2>
-    <p class="s-lead">{{ $s.contact.text }}</p>
-    {{- with $a.email }}
-    {{ partial "email-block.html" (dict "email" . "subject" (T "footerMailSubject")) }}
-    {{- end }}
-  </section>
 </div>
 {{ end }}

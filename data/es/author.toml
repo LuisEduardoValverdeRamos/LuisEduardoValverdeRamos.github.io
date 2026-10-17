@@ -53,21 +53,21 @@
 
 # --- Voluntariados y Participación en Organizaciones ---
 [[voluntary]]
-  role = "Miembro Activo"
+  role = "Miembro activo"
   organization = "DEJUCA — Organización Juvenil"
   period = "Jul. 2020 – Actualidad"
   description = "Miembro activo en la creación, promoción y realización de proyectos sociales enfocados en educación, medio ambiente y participación ciudadana."
   url = ""
 
 [[voluntary]]
-  role = "Miembro Honorario"
+  role = "Miembro honorario"
   organization = "Sociedad de Debate PUCP"
   period = "May. 2021 – Actualidad"
   description = "Miembro honorario de la Sociedad de Debate PUCP."
   url = ""
 
 [[voluntary]]
-  role = "Observador Electoral"
+  role = "Observador electoral"
   organization = "Transparencia"
   period = "Abr. y jun. 2021"
   description = "Observador electoral de las elecciones generales peruanas 2021 (primera y segunda vuelta) por parte de Transparencia."

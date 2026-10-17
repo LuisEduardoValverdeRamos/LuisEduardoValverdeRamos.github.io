@@ -17,7 +17,7 @@ Trabajo en tres líneas, cada una formulada como una pregunta.
 
 ## Consultoría
 
-Analizo datos públicos, electorales y administrativos para instituciones que necesitan responder una pregunta concreta: qué se puede medir con los datos disponibles, cómo diseñar un instrumento o qué muestran unos registros. He trabajado con el Observatorio de Corrupción del Colegio de Abogados de Lima (evaluación de indicadores de contrataciones públicas, desde 2026), con ProDiálogo para el JNE (equipo técnico del informe sobre el elector peruano, 2025), con la LPDE (el primer informe de la Liga sobre el ecosistema de debate escolar, con 70 instituciones, y siete policy briefs, 2026) y con Roche Pharma Perú, vía Sapienza Consultora (análisis de datos administrativos del sector salud, 2025).
+Analizo datos públicos, electorales y administrativos para instituciones que necesitan responder una pregunta concreta: qué se puede medir con los datos disponibles, cómo diseñar un instrumento o qué muestran unos registros. He trabajado con el Observatorio de Corrupción del Colegio de Abogados de Lima (evaluación de indicadores de contrataciones públicas, desde 2026), con ProDiálogo para el JNE (equipo técnico del informe sobre el elector peruano, 2026), con la LPDE (el primer informe de la Liga sobre el ecosistema de debate escolar, con 70 instituciones, y siete policy briefs, 2026) y con Roche Pharma Perú, vía Sapienza Consultora (análisis de datos administrativos del sector salud, 2025).
 
 Trabajo de forma presencial en Lima y a distancia con el resto del país y América Latina. Respondo en 24 horas y emito recibos por honorarios.
 

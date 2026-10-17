@@ -6,7 +6,7 @@
 <div class="wrap">
   <div class="s-about">
     <aside class="s-about-side">
-      <img src="{{ $a.profile_image | relURL }}" alt="{{ .Params.photo_alt }}" width="400" height="500">
+      {{ partial "profile-img.html" (dict "author" $a "alt" .Params.photo_alt) }}
       {{- with .TableOfContents }}
       <nav aria-label="{{ T "onThisPage" }}">{{ . }}</nav>
       {{- end }}

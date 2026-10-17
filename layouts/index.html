@@ -17,7 +17,7 @@
         {{- end }}
       </div>
     </div>
-    <figure class="s-photo"><img src="{{ $a.profile_image | relURL }}" alt="{{ $h.photo_alt }}" width="400" height="500"></figure>
+    <figure class="s-photo">{{ partial "profile-img.html" (dict "author" $a "alt" $h.photo_alt) }}</figure>
   </section>
   {{- range $h.blocks }}
   {{ partial (printf "home/%s.html" .) (dict "d" $d "h" $h) }}

@@ -14,15 +14,17 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# Runners and actions are pinned: ubuntu-latest migrates to Ubuntu 26 on
+# 19 Oct 2026, and the v4 actions ran on the deprecated Node 20.
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           submodules: recursive
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -31,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v3.2.1
         with:
           hugo-version: "0.159.2"
           extended: true
@@ -42,7 +44,7 @@ jobs:
         run: hugo --gc --minify
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
 
@@ -50,9 +52,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

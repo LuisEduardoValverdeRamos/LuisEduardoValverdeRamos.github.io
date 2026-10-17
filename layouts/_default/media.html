@@ -11,7 +11,7 @@
     <h1 class="s-h1">{{ .Params.heading | default .Title }}</h1>
     {{- with $press }}
     <p class="s-lead">{{ .intro }}</p>
-    <p class="s-note"><a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" .subject "body" .body) }}">{{ $sv.labels.press }} →</a> · {{ $a.email }}</p>
+    <p class="s-note"><a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" .subject "body" .body) }}">{{ $sv.labels.press }} →</a><span class="s-asksub">{{ $a.email }}</span></p>
     {{- end }}
     {{- with .Params.note }}<p class="s-note">{{ . }}</p>{{ end }}
   </header>

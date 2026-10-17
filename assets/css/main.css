@@ -186,16 +186,19 @@
 .s-nav a[aria-current="page"] { color: var(--s-ink); box-shadow: inset 0 -2px 0 var(--s-accent); }
 .s-navcta { font-weight: 600; white-space: nowrap; text-decoration: none; padding: 7px 14px !important; border-radius: var(--s-radius); background: var(--s-accent); color: var(--s-accent-ink) !important; box-shadow: none !important; }
 .s-navcta:hover { background: var(--s-accent-hover); }
-.s-lang { font-size: 12.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 3px 8px !important; border: 1px solid var(--s-line2); border-radius: var(--s-radius); color: var(--s-ink) !important; text-decoration: none; }
+.s-lang { font-size: 12.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 6px 10px !important; border: 1px solid var(--s-line2); border-radius: var(--s-radius); color: var(--s-ink) !important; text-decoration: none; }
 .s-mobbar { display: none; align-items: center; gap: 6px; }
 .s-burger { display: grid; place-items: center; width: 44px; height: 44px; margin-right: -10px; color: var(--s-ink); background: none; border: 0; }
+.s-burger .icon-x { display: none; }
+.s-burger[aria-expanded="true"] .icon-x { display: block; }
+.s-burger[aria-expanded="true"] .icon-bars { display: none; }
 .s-mobmenu { border-top: 1px solid var(--s-line); }
 .s-mobmenu[hidden] { display: none; }
 .s-mobmenu nav { display: grid; padding-block: 6px 20px; }
 .s-mobmenu nav > a { padding-block: 13px; font-size: 18px; color: var(--s-ink); text-decoration: none; border-bottom: 1px solid var(--s-line); }
 .s-mobmenu nav > a[aria-current="page"] { font-weight: 600; }
 .s-mobmenu .s-mobfoot { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; padding-top: 16px; font-size: 15px; color: var(--s-ink2); }
-.s-mobmenu .s-mobfoot a:not(.s-btn) { color: var(--s-ink); }
+.s-mobmenu .s-mobfoot a:not(.s-btn) { color: var(--s-ink); padding-block: 10px; }
 
 /* Home: hero, proof strip, questions, debate band, services, lines */
 .s-hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 56px; align-items: center; padding-block: 60px 48px; }
@@ -234,6 +237,11 @@
 .s-doors a .go { color: var(--s-accent); font-weight: 600; font-size: 14px; }
 .s-doors a:hover b { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
+/* An odd last card in a two-column grid spans the full width instead of
+   leaving a hole (text cards only: a stretched image card would blur) */
+.s-svcs > .s-svc:last-child:nth-child(odd),
+.s-cards > .s-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
 /* Lists of entries (writing, media) */
 .s-list { display: grid; }
 .s-item { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 18px; padding-block: 16px; border-top: 1px solid var(--s-line); }
@@ -264,7 +272,8 @@
 .s-svc dl { margin: 0; display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 6px 12px; font-size: 14px; }
 .s-svc dt { padding-top: 2px; font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--s-ink2); }
 .s-svc dd { margin: 0; color: var(--s-ink); }
-.s-svc .ask { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; padding-top: 10px; border-top: 1px solid var(--s-line); font-size: 13.5px; color: var(--s-ink2); }
+.s-svc .ask { display: grid; gap: 4px; justify-items: start; padding-top: 10px; border-top: 1px solid var(--s-line); font-size: 13.5px; color: var(--s-ink2); }
+.s-asksub { display: block; margin-top: 2px; font-size: 13.5px; color: var(--s-ink2); }
 .s-svc .ask a { font-size: 14px; font-weight: 600; color: var(--s-accent); text-decoration: none; }
 .s-svc .ask a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .s-svc details { font-size: 13.5px; color: var(--s-ink2); }
@@ -415,7 +424,12 @@
   .s-footer .top { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-block: 40px 32px; }
   .s-footer .cta-title { font-size: 26px; }
 }
-@media (max-width: 379px) {
+/* Narrow phones: shrink the name and the call to action before hiding it */
+@media (max-width: 419px) {
+  .s-logo { font-size: 15.5px; }
+  .s-mobbar .s-navcta { font-size: 12.5px; padding: 6px 9px !important; }
+}
+@media (max-width: 339px) {
   .s-mobbar .s-navcta { display: none; }
 }
 

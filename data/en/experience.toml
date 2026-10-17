@@ -39,19 +39,6 @@
   technologies = ["Public Procurement", "Indicators", "Open Data"]
 
 [[experience]]
-  role = "Academic Director"
-  company = "Liga Peruana de Debate Escolar (LPDE)"
-  period = "Sep. 2026 – Present"
-  current = true
-  country = "Peru"
-  company_link = ""
-  description = "Lead the LPDE's academic team: training, coaching and consultancy programmes in school debate."
-  responsibilities = [
-    "Lead the LPDE's academic team: training, coaching and consultancy programmes in school debate."
-  ]
-  technologies = ["School Debate", "Training", "Academic Management"]
-
-[[experience]]
   role = "Research Consultant"
   company = "Liga Peruana de Debate Escolar (LPDE)"
   period = "Feb. 2026 – Aug. 2026"

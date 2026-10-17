@@ -1,10 +1,12 @@
 # Debate page (/debate/). Team results are labelled as the team's («the team I
-# coached», «the pairs I prepared»); MED, CMUDE and WUDC are spelled out; nothing
+# coached», «the pairs I prepared»); MED and CMUDE are spelled out; nothing
 # individual about school debaters (they are minors).
+# Luis's corrections (17 Oct 2026): he did not coach teams at WUDC, only at
+# CMUDE, and he was never Academic Director of the LPDE (consultant, Feb–Aug 2026).
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
-lead = "I lead the Peruvian National Schools Debate Team and the academic team of the Peruvian School Debate League (LPDE). I coach school and university teams and adjudicate tournaments held in Spanish."
-glossary = "MED is the Mundial de Debate Escolar en Español, the world schools championship held in Spanish; CMUDE is the world universities championship held in Spanish; WUDC is the World Universities Debating Championship, held in English."
+lead = "I lead the Peruvian National Schools Debate Team, coach school and university teams and adjudicate tournaments held in Spanish."
+glossary = "MED is the Mundial de Debate Escolar en Español, the world schools championship held in Spanish, and CMUDE is the world universities championship held in Spanish."
 
 [home]
   eyebrow = "Debate"
@@ -27,8 +29,8 @@ glossary = "MED is the Mundial de Debate Escolar en Español, the world schools 
   url = "https://andina.pe/agencia/noticia-peru-se-corona-tetracampeon-el-mundial-debate-escolar-espanol-2026-1091241.aspx"
 
 [[highlights]]
-  label = "WUDC 2025 · CMUDE 2026"
-  text = "I prepared the Dominican pairs that reached the WUDC octofinals, a first for the country, and the CMUDE quarterfinals."
+  label = "CMUDE · Ecuador 2026"
+  text = "I prepared the Dominican pairs that reached the quarterfinals of the world universities championship held in Spanish."
 
 [[highlights]]
   label = "CNDI 2025"
@@ -65,7 +67,7 @@ glossary = "MED is the Mundial de Debate Escolar en Español, the world schools 
     period = "2024–"
     role = "University coach, online"
     org = "Dominican Republic"
-    text = "British Parliamentary format. The pairs I prepared reached the octofinals of WUDC 2025, a first for the country, and the quarterfinals of CMUDE Ecuador 2026."
+    text = "British Parliamentary format. The pairs I prepared reached the quarterfinals of CMUDE Ecuador 2026."
 
 [judge]
   title = "Adjudication"
@@ -99,7 +101,7 @@ glossary = "MED is the Mundial de Debate Escolar en Español, the world schools 
 
 [lpde]
   title = "Peruvian School Debate League"
-  text = "Since September 2026 I have been Academic Director of the LPDE, leading the team in charge of its training, coaching and consultancy programmes in school debate. Before that, as a research consultant, I prepared the League's first report on the school debate ecosystem (70 institutions) and seven policy briefs. I only work with aggregate data: the debaters are minors."
+  text = "Between February and August 2026, as a research consultant to the LPDE, I prepared the League's first report on the school debate ecosystem (70 institutions) and seven policy briefs. I worked only with aggregate data: the debaters are minors."
 
 [team]
   title = "For your team"

@@ -5,7 +5,7 @@
   current = [
     "Investigador — Jurado Nacional de Elecciones (ESEG)",
     "Consultor — Observatorio de Corrupción del CAL",
-    "Director Académico — LPDE",
+    "Director general — Selección Nacional de Debate Escolar",
     "Jefe de Práctica — PUCP",
   ]
 
@@ -18,7 +18,7 @@
   github_username = "LuisEduardoValverdeRamos"
 
   # Perfil del CV (página /cv/), sin adjetivos sobre sí mismo
-  profile = "Politólogo por la PUCP, primer puesto de su promoción, con tesis de licenciatura aprobada con mención sobresaliente. Investiga comportamiento electoral, prensa y agenda pública, y brechas de implementación en infraestructura pública con métodos mixtos y ciencia social computacional en R. Investigador de la Escuela Electoral y de Gobernabilidad (ESEG) del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima, director general de la Selección Nacional de Debate Escolar del Perú y director académico de la Liga Peruana de Debate Escolar (LPDE)."
+  profile = "Politólogo por la PUCP, primer puesto de su promoción, con tesis de licenciatura aprobada con mención sobresaliente. Investiga comportamiento electoral, prensa y agenda pública, y brechas de implementación en infraestructura pública con métodos mixtos y ciencia social computacional en R. Investigador de la Escuela Electoral y de Gobernabilidad (ESEG) del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima y director general de la Selección Nacional de Debate Escolar del Perú."
 
 # --- Reconocimientos (fuente: CV de oct-2026) ---
 [[honors]]

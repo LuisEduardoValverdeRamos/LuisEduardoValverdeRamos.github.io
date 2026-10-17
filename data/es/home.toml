@@ -5,9 +5,9 @@
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
 blocks = ["proof", "research", "debate", "services", "institutions", "media"]
-eyebrow = "ESEG-JNE · PUCP · Liga Peruana de Debate Escolar"
+eyebrow = "ESEG-JNE · PUCP · Selección Nacional de Debate Escolar"
 statement = "Investigo comportamiento electoral e implementación de políticas públicas en el Perú, asesoro a instituciones en el análisis de sus datos y entreno equipos de debate."
-bio = "Politólogo por la PUCP. Investigador en la Escuela Electoral y de Gobernabilidad del JNE, jefe de práctica de Economía Política y director académico de la Liga Peruana de Debate Escolar."
+bio = "Politólogo por la PUCP. Investigador en la Escuela Electoral y de Gobernabilidad del JNE, jefe de práctica de Economía Política y director general de la Selección Nacional de Debate Escolar del Perú."
 photo_alt = "Retrato de Luis Valverde Ramos"
 proof_label = "Hechos verificables"
 media_label = "En medios"

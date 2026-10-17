@@ -4,7 +4,7 @@
 # Regla: lo que está en curso se nombra sin resultados ni cifras.
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
-lead = "Cuatro líneas formuladas como preguntas; para cada una, el método, la evidencia y su estado."
+lead = "Tres líneas formuladas como preguntas; para cada una, el método, la evidencia y su estado."
 cta_title = "¿Una colaboración o asistencia de investigación?"
 cta_label = "Trabajemos"
 cta_anchor = "investigacion"
@@ -33,19 +33,10 @@ cta_anchor = "investigacion"
   id = "comportamiento-electoral"
   name = "Comportamiento electoral"
   question = "¿Cómo vota la gente cuando los partidos no existen?"
-  summary = "Encuestas postelectorales, clustering y modelos de elección discreta. Integré el equipo técnico del informe del JNE y ProDiálogo sobre el elector peruano (2026) y preparo un artículo con Daniel Encinas (Northwestern University)."
+  summary = "Encuestas postelectorales, clustering y modelos de elección discreta. Integré el equipo técnico del informe del JNE y ProDiálogo sobre el elector peruano (2026)."
   method = "Encuestas postelectorales del JNE (2011, 2016 y 2021), análisis de conglomerados, modelos de elección discreta y análisis espacial del padrón."
-  evidence = "Informe del JNE y ProDiálogo (2026), como parte del equipo técnico; proyecto Voto Joven 2026; artículo en preparación con Daniel Encinas."
+  evidence = "Informe del JNE y ProDiálogo (2026), como parte del equipo técnico; proyecto Voto Joven 2026."
   status = "Activa"
-
-[[lines]]
-  id = "prensa-y-agenda"
-  name = "Prensa y agenda pública"
-  question = "¿Qué decide nombrar la prensa, y qué calla?"
-  summary = "Como asistente de investigación en CISEPA-PUCP trabajé en la construcción de un corpus de 747,836 titulares de El Comercio y La República (2016–2024). Es una línea en desarrollo."
-  method = "Análisis de texto a escala sobre un corpus de 747,836 titulares de El Comercio y La República (2016–2024), construido como asistente de investigación en CISEPA-PUCP."
-  evidence = "Aún sin publicaciones propias."
-  status = "En desarrollo"
 
 [[lines]]
   id = "implementacion"
@@ -64,11 +55,6 @@ cta_anchor = "investigacion"
   method = "Analítica de resultados públicos de torneos escolares, siempre en agregado; censo de la enseñanza electoral universitaria (ESEG-JNE)."
   evidence = "Informe y policy briefs de la LPDE (2026). El censo de la ESEG está en curso y aún no tiene resultados publicables."
   status = "Activa"
-
-[[wip]]
-  title = "El mal menor y el voto en blanco: el voto expresivo en el balotaje presidencial peruano de 2021"
-  with = "Con Daniel Encinas (Northwestern University)"
-  status = "En preparación"
 
 [[wip]]
   title = "Censo de la enseñanza electoral universitaria"

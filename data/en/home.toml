@@ -26,8 +26,8 @@ doors_label = "Main areas"
 
 [[doors]]
   eyebrow = "Research"
-  title = "Voting, the press and public works"
-  text = "Four research lines framed as questions; thesis, reports and columns."
+  title = "Voting, public works and civic education"
+  text = "Three research lines framed as questions; thesis, reports and columns."
   cta = "Research"
   page = "/research"
 

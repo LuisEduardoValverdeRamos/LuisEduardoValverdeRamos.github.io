@@ -3,7 +3,7 @@
 # Rule: work in progress is named without results or figures.
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
-lead = "Four research lines framed as questions; for each, the method, the evidence and where it stands."
+lead = "Three research lines framed as questions; for each, the method, the evidence and where it stands."
 cta_title = "Research collaboration or assistance?"
 cta_label = "Work with me"
 cta_anchor = "research"
@@ -32,19 +32,10 @@ cta_anchor = "research"
   id = "electoral-behaviour"
   name = "Electoral behaviour"
   question = "How do people vote in the absence of parties?"
-  summary = "Post-election surveys, clustering and discrete-choice models. I was part of the technical team behind the JNE/ProDiálogo report on the Peruvian voter (2026), and I am preparing an article with Daniel Encinas (Northwestern University)."
+  summary = "Post-election surveys, clustering and discrete-choice models. I was part of the technical team behind the JNE/ProDiálogo report on the Peruvian voter (2026)."
   method = "JNE post-election surveys (2011, 2016 and 2021), cluster analysis, discrete-choice models and spatial analysis of the voter register."
-  evidence = "JNE/ProDiálogo report (2026), as part of the technical team; Youth Vote 2026 project; article in preparation with Daniel Encinas."
+  evidence = "JNE/ProDiálogo report (2026), as part of the technical team; Youth Vote 2026 project."
   status = "Active"
-
-[[lines]]
-  id = "press-and-agenda"
-  name = "The press and the public agenda"
-  question = "What does the press choose to name, and what does it leave out?"
-  summary = "As a research assistant at CISEPA-PUCP, I helped build a corpus of 747,836 headlines from El Comercio and La República (2016–2024). This line is in development."
-  method = "Text analysis at scale on a corpus of 747,836 headlines from El Comercio and La República (2016–2024), built as a research assistant at CISEPA-PUCP."
-  evidence = "No publications of my own yet."
-  status = "In development"
 
 [[lines]]
   id = "implementation"
@@ -63,11 +54,6 @@ cta_anchor = "research"
   method = "Analysis of public results from school tournaments, always in aggregate; census of electoral education in universities (ESEG-JNE)."
   evidence = "LPDE report and policy briefs (2026). The ESEG census is ongoing and has no publishable results yet."
   status = "Active"
-
-[[wip]]
-  title = "El mal menor y el voto en blanco: el voto expresivo en el balotaje presidencial peruano de 2021"
-  with = "With Daniel Encinas (Northwestern University) · on expressive and blank voting in Peru's 2021 presidential run-off"
-  status = "In preparation"
 
 [[wip]]
   title = "Census of electoral education in Peruvian universities"

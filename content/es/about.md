@@ -11,7 +11,7 @@ Hoy soy investigador en la Escuela Electoral y de Gobernabilidad (ESEG) del Jura
 
 ## Qué investigo
 
-Trabajo en cuatro líneas, cada una formulada como una pregunta.
+Trabajo en tres líneas, cada una formulada como una pregunta.
 
 {{< research-lines "Ver investigación y escritos →" >}}
 

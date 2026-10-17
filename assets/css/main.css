@@ -1,37 +1,60 @@
 /* Tailwind CSS 4, compiled by Hugo (css.TailwindCSS).
-   Only the classes Hugo records in hugo_stats.json end up in the output. */
+   Only the classes Hugo records in hugo_stats.json end up in the output.
+   This file is the single place for the palette: templates use the token
+   classes (bg-bg-primary-light, text-accent-light…) or var(--color-…). */
 @import "tailwindcss" source(none);
 @source "hugo_stats.json";
 
-/* Same behaviour as Tailwind 3's darkMode: 'class' */
+/* Same behaviour as Tailwind 3's darkMode: 'class'. The site is light-only
+   (Puerto excludes dark backgrounds), so dark: classes stay inert. */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Palette and fonts. The class names (bg-bg-primary-light, text-accent-light…)
-   are the ones the templates already use. */
+/* Puerto: white, green-ink text, algarrobo green as the only interface
+   accent; the sea blue (accent2) is reserved for data and charts. */
 @theme {
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-serif: "Fraunces", Georgia, serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-sans: "Archivo", system-ui, sans-serif;
+  --font-serif: "Piazzolla", Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
 
-  --color-bg-primary-light: #FAF7F2;
-  --color-bg-secondary-light: #FFFFFF;
-  --color-bg-tertiary-light: #F1EBE1;
-  --color-text-primary-light: #1C1917;
-  --color-text-secondary-light: #5A544C;
-  --color-border-primary-light: #E4DDD1;
-  --color-border-secondary-light: #D3CABA;
-  --color-accent-light: #8A3033;
-  --color-accent2-light: #2F5D62;
+  --color-bg-primary-light: #FFFFFF;
+  --color-bg-secondary-light: #F1F3EF;
+  --color-bg-tertiary-light: #E4E8E1;
+  --color-text-primary-light: #191E1B;
+  --color-text-secondary-light: #525A54;
+  --color-text-muted-light: #5F6862;
+  --color-border-primary-light: #DEE1DA;
+  --color-border-secondary-light: #C2C9BF;
+  --color-accent-light: #2E6B4F;
+  --color-accent-hover-light: #24573F;
+  --color-on-accent-light: #FFFFFF;
+  --color-accent2-light: #11606F;
+  --color-selection-light: #D3E6DA;
 
-  --color-bg-primary-dark: #14110F;
-  --color-bg-secondary-dark: #1D1916;
-  --color-bg-tertiary-dark: #262019;
-  --color-text-primary-dark: #ECE7DF;
-  --color-text-secondary-dark: #A79F93;
-  --color-border-primary-dark: #37302A;
-  --color-border-secondary-dark: #4A4139;
-  --color-accent-dark: #CF8378;
-  --color-accent2-dark: #7FA8AD;
+  --color-footer-bg-light: #F1F3EF;
+  --color-footer-text-light: #191E1B;
+  --color-footer-muted-light: #525A54;
+  --color-footer-link-light: #2E6B4F;
+  --color-footer-border-light: #DEE1DA;
+  --color-footer-btn-bg-light: #2E6B4F;
+  --color-footer-btn-text-light: #FFFFFF;
+
+  /* Dark counterparts, kept only so existing dark: classes still compile. */
+  --color-bg-primary-dark: #0F1512;
+  --color-bg-secondary-dark: #151C18;
+  --color-bg-tertiary-dark: #1D2621;
+  --color-text-primary-dark: #E3E8E4;
+  --color-text-secondary-dark: #A0AAA3;
+  --color-border-primary-dark: #27302B;
+  --color-border-secondary-dark: #3A453F;
+  --color-accent-dark: #7CC29D;
+  --color-accent2-dark: #6DB6C4;
+  --color-footer-bg-dark: #151C18;
+  --color-footer-text-dark: #E3E8E4;
+  --color-footer-muted-dark: #A0AAA3;
+  --color-footer-link-dark: #7CC29D;
+  --color-footer-border-dark: #27302B;
+  --color-footer-btn-bg-dark: #7CC29D;
+  --color-footer-btn-text-dark: #0F1512;
 }
 
 /* Tailwind 3 → 4 compatibility (official upgrade guide) */
@@ -42,4 +65,87 @@
   button:not(:disabled), [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+}
+
+/* ── Element defaults: in the base layer, so utility classes can override them ── */
+@layer base {
+  :root { color-scheme: light; }
+
+  html, body {
+    background-color: var(--color-bg-primary-light);
+    color: var(--color-text-primary-light);
+    font-family: var(--font-sans);
+  }
+  body {
+    font-size: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Piazzolla for headings and the site name */
+  h1, h2, h3, .site-name {
+    font-family: var(--font-serif);
+    font-optical-sizing: auto;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  h1 { font-weight: 650; }
+  h2, h3, .site-name { font-weight: 600; }
+
+  ::selection {
+    background: var(--color-selection-light);
+    color: var(--color-text-primary-light);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent-light);
+    outline-offset: 3px;
+  }
+}
+
+/* ── Site styles (unlayered) ── */
+/* Labels and data: the text face, no monospace */
+.mono-label {
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.mono-data {
+  font-family: var(--font-sans);
+  font-size: .875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Section numbers ("01 /") carried no sequence: hidden */
+.section-index { display: none; }
+
+/* Inherited gray/blue utilities from the theme, mapped to the palette */
+.text-gray-400 { color: var(--color-text-secondary-light) !important; }
+.text-gray-500 { color: var(--color-text-muted-light) !important; }
+.bg-gray-700 { background-color: var(--color-border-secondary-light) !important; }
+.border-gray-700 { border-color: var(--color-border-primary-light) !important; }
+.hover\:border-gray-400:hover { border-color: var(--color-accent-light) !important; }
+.text-blue-500, .text-blue-400 { color: var(--color-accent-light) !important; }
+.hover\:text-blue-400:hover { color: var(--color-accent-hover-light) !important; }
+
+/* Cards: no lift, shadow or zoom; only the border changes */
+.project-card:hover { transform: none !important; box-shadow: none !important; border-color: var(--color-accent-light) !important; }
+.project-card img { transform: none !important; }
+
+/* Skip link, visible only on keyboard focus */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  padding: .5rem 1rem;
+  background: var(--color-bg-primary-light);
+  color: var(--color-text-primary-light);
+  border: 2px solid var(--color-accent-light);
+  border-radius: 4px;
 }

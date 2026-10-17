@@ -40,6 +40,30 @@ other = "Hecho con"
 [takeALookAtMy]
 other = "Código en"
 
+[footerCtaTitle]
+other = "¿Trabajamos juntos?"
+
+[footerCtaText]
+other = "Investigación aplicada, consultoría y formación en debate para colegios, universidades e instituciones. Respondo en 24 horas."
+
+[footerWriteEmail]
+other = "Escribir un correo"
+
+[footerMailSubject]
+other = "Consulta desde tu web"
+
+[footerNavLabel]
+other = "Pie de página"
+
+[footerSite]
+other = "Sitio"
+
+[footerProfiles]
+other = "Perfiles"
+
+[footerCode]
+other = "código en GitHub"
+
 [notFoundTitle]
 other = "Página no encontrada"
 

@@ -11,7 +11,7 @@ I am currently a researcher at the Electoral and Governance School (ESEG) of Per
 
 ## Research
 
-I work on four lines, each framed as a question.
+I work on three lines, each framed as a question.
 
 {{< research-lines "Research and writing →" >}}
 

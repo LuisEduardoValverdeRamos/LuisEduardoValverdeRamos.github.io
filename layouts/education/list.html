@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="max-w-4xl mx-auto px-4 py-12">
     {{ partial "scatter-divider.html" . }}
-    <p class="mono-label text-accent-light dark:text-accent-dark mb-3">// {{ if eq .Language.Lang "es" }}educación{{ else }}education{{ end }}</p>
+    <p class="mono-label text-accent-light dark:text-accent-dark mb-3">{{ if eq .Language.Lang "es" }}educación{{ else }}education{{ end }}</p>
     <h1 class="text-4xl md:text-5xl font-bold mb-10 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
     <div class="space-y-8">
         {{ $educationData := index site.Data .Language.Lang "education" }}
@@ -60,11 +60,11 @@
 
 <style>
     .prose {
-        color: #4b5563;
+        color: var(--color-text-secondary-light);
         font-size: 1.25rem;
     }
     html.dark .prose {
-        color: #9ca3af;
+        color: var(--color-text-secondary-dark);
     }
 </style>
 {{ end }}

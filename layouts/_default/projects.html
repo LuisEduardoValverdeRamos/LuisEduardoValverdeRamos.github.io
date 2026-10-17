@@ -2,7 +2,7 @@
 <div class="w-full md:w-4/5 lg:w-3/5 mx-auto px-6 md:px-14 py-12">
     <div class="max-w-4xl">
         {{ partial "scatter-divider.html" . }}
-        <p class="mono-label text-accent-light dark:text-accent-dark mb-3">// {{ if eq .Language.Lang "es" }}investigación{{ else }}research{{ end }}</p>
+        <p class="mono-label text-accent-light dark:text-accent-dark mb-3">{{ if eq .Language.Lang "es" }}investigación{{ else }}research{{ end }}</p>
         <h1 class="text-4xl md:text-5xl font-bold mb-10 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
 
         <div class="space-y-6">
@@ -10,7 +10,7 @@
             {{ range $projectsData.projects }}
             {{ if .link }}<a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="research-card group flex flex-col md:flex-row overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">{{ else }}<div class="research-card group flex flex-col md:flex-row overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">{{ end }}
                 <div class="md:w-64 shrink-0 aspect-video md:aspect-auto overflow-hidden bg-bg-tertiary-light dark:bg-bg-tertiary-dark">
-                    <img src="{{ strings.TrimPrefix "/" .image | absURL }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <img src="{{ strings.TrimPrefix "/" .image | absURL }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
                 <div class="flex flex-col flex-1 p-5 md:p-6">
                     <h3 class="text-xl md:text-2xl font-semibold leading-snug mb-2 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">{{ .title }}</h3>
@@ -31,13 +31,10 @@
 
 <style>
 .research-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px -8px rgba(28, 25, 23, 0.15);
-    border-color: #8A3033;
+    border-color: var(--color-accent-light);
 }
 html.dark .research-card:hover {
-    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.5);
-    border-color: #CF8378;
+    border-color: var(--color-accent-dark);
 }
 </style>
 {{ end }}

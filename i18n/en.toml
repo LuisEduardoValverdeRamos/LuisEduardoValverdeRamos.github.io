@@ -40,6 +40,30 @@ other = "Built with"
 [takeALookAtMy]
 other = "Source on"
 
+[footerCtaTitle]
+other = "Get in touch"
+
+[footerCtaText]
+other = "Applied research, consulting and debate training for schools, universities and institutions. I reply within 24 hours."
+
+[footerWriteEmail]
+other = "Send an email"
+
+[footerMailSubject]
+other = "Inquiry from your website"
+
+[footerNavLabel]
+other = "Footer"
+
+[footerSite]
+other = "Site"
+
+[footerProfiles]
+other = "Profiles"
+
+[footerCode]
+other = "code on GitHub"
+
 [notFoundTitle]
 other = "Page not found"
 

@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="max-w-4xl mx-auto px-4 py-12">
     {{ partial "scatter-divider.html" . }}
-    <p class="mono-label text-accent-light dark:text-accent-dark mb-3">// {{ if eq .Language.Lang "es" }}sobre mí{{ else }}about{{ end }}</p>
+    <p class="mono-label text-accent-light dark:text-accent-dark mb-3">{{ if eq .Language.Lang "es" }}sobre mí{{ else }}about{{ end }}</p>
     <h1 class="text-4xl md:text-5xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
 
     <div class="flex flex-col gap-8">
@@ -120,29 +120,29 @@
 
 <style>
     .prose {
-        color: #4b5563;
+        color: var(--color-text-secondary-light);
         font-size: 1.125rem;
     }
     html.dark .prose {
-        color: #9ca3af;
+        color: var(--color-text-secondary-dark);
     }
     .prose h3 {
         font-size: 1.5rem;
         font-weight: 700;
         margin-top: 2rem;
         margin-bottom: 0.75rem;
-        color: #1f2937;
+        color: var(--color-text-primary-light);
     }
     html.dark .prose h3 {
-        color: #f3f4f6;
+        color: var(--color-text-primary-dark);
     }
     .prose p {
-        color: #4b5563;
+        color: var(--color-text-secondary-light);
         margin-bottom: 1.5rem;
         line-height: 1.9;
     }
     html.dark .prose p {
-        color: #9ca3af;
+        color: var(--color-text-secondary-dark);
     }
     .prose p + p {
         margin-top: 2rem;
@@ -160,14 +160,14 @@
         height: 1px;
         bottom: -1px;
         left: 0;
-        background-color: #0284c7;
+        background-color: var(--color-accent-light);
         transition: width 0.3s ease-in-out;
     }
     .animated-link:hover::after {
         width: 100%;
     }
     html.dark .animated-link::after {
-        background-color: #0ea5e9;
+        background-color: var(--color-accent-dark);
     }
 </style>
 {{ end }}

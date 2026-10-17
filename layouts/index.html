@@ -6,18 +6,13 @@
 
     {{ with $author }}
     <section class="mb-20 relative">
-        <canvas id="hero-net" class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></canvas>
-
         {{ with .profile_image }}
-        <div class="hidden md:block absolute top-2 right-0 lg:right-8 w-44 lg:w-52 rotate-1 z-10">
-            <div class="p-2 bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark rounded-md shadow-md">
-                <img src="{{ strings.TrimPrefix "/" . | absURL }}" alt="Luis Valverde Ramos" class="w-full aspect-[4/5] object-cover rounded-sm">
-            </div>
+        <div class="hidden md:block absolute top-2 right-0 lg:right-8 w-44 lg:w-52 z-10">
+            <img src="{{ strings.TrimPrefix "/" . | absURL }}" alt="Luis Valverde Ramos" width="400" height="500" class="w-full aspect-[4/5] object-cover rounded">
         </div>
         {{ end }}
 
         <div class="max-w-3xl relative md:pr-52 lg:pr-60">
-            <div class="w-12 h-1 bg-accent-light dark:bg-accent-dark mb-6"></div>
             <h1 class="text-4xl md:text-5xl font-bold mb-3 text-text-primary-light dark:text-text-primary-dark">{{ .name }}</h1>
             <p class="text-lg md:text-xl mb-2 text-text-secondary-light dark:text-text-secondary-dark">{{ .description }}</p>
             <p class="text-text-secondary-light dark:text-text-secondary-dark mb-5 flex items-center gap-1 text-base">
@@ -27,7 +22,7 @@
 
             {{ with .current }}
             <div class="flex flex-wrap items-center gap-2 mb-6">
-                <span class="mono-label text-accent-light dark:text-accent-dark">// {{ T "currentlyLabel" | default "Currently" }}</span>
+                <span class="mono-label text-accent-light dark:text-accent-dark">{{ T "currentlyLabel" | default "Currently" }}</span>
                 {{ range . }}
                 <span class="px-3 py-1 text-sm rounded-full bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-text-primary-light dark:text-text-primary-dark border border-border-primary-light dark:border-border-primary-dark">{{ . }}</span>
                 {{ end }}
@@ -138,7 +133,7 @@
             {{ range first 3 . }}
             {{ if .link }}<a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="project-card group flex flex-col overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">{{ else }}<div class="project-card group flex flex-col overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">{{ end }}
                 <div class="aspect-video overflow-hidden">
-                    <img src="{{ strings.TrimPrefix "/" .image | absURL }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <img src="{{ strings.TrimPrefix "/" .image | absURL }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
                 <div class="flex flex-col flex-1 p-5">
                     <h3 class="text-lg font-semibold mb-2 leading-snug group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">{{ .title }}</h3>
@@ -170,7 +165,7 @@
             <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="project-card group flex flex-col overflow-hidden rounded-lg bg-bg-secondary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
                 <div class="aspect-video overflow-hidden bg-bg-tertiary-light dark:bg-bg-tertiary-dark relative">
                     {{ if .image }}
-                    <img src="{{ if hasPrefix .image "http" }}{{ .image }}{{ else }}{{ strings.TrimPrefix "/" .image | absURL }}{{ end }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <img src="{{ if hasPrefix .image "http" }}{{ .image }}{{ else }}{{ strings.TrimPrefix "/" .image | absURL }}{{ end }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500">
                     {{ end }}
                     <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
                         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
@@ -265,13 +260,7 @@
 
 <style>
 .project-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px -8px rgba(28, 25, 23, 0.15);
-    border-color: #8A3033;
-}
-html.dark .project-card:hover {
-    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.5);
-    border-color: #CF8378;
+    border-color: var(--color-accent-light);
 }
 .line-clamp-4 {
     display: -webkit-box;
@@ -282,72 +271,4 @@ html.dark .project-card:hover {
 }
 </style>
 
-<script>
-(function () {
-    // Subtle node-network animation behind the hero — the "AI" detail.
-    const canvas = document.getElementById('hero-net');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const N = 26, LINK = 120;
-    let nodes = [], W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
-
-    function palette() {
-        const dark = document.documentElement.classList.contains('dark');
-        return dark
-            ? { node: 'rgba(207,131,120,0.5)', node2: 'rgba(127,168,173,0.5)', link: 'rgba(207,131,120,' }
-            : { node: 'rgba(138,48,51,0.4)',  node2: 'rgba(47,93,98,0.4)',   link: 'rgba(138,48,51,' };
-    }
-
-    function resize() {
-        const r = canvas.getBoundingClientRect();
-        W = r.width; H = r.height;
-        canvas.width = W * dpr; canvas.height = H * dpr;
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-
-    function seed() {
-        nodes = Array.from({ length: N }, (_, i) => ({
-            x: Math.random() * W, y: Math.random() * H,
-            vx: (Math.random() - 0.5) * 0.25, vy: (Math.random() - 0.5) * 0.25,
-            r: 1.2 + Math.random() * 1.6, teal: i % 3 === 0
-        }));
-    }
-
-    function draw() {
-        const c = palette();
-        ctx.clearRect(0, 0, W, H);
-        for (let i = 0; i < N; i++) {
-            for (let j = i + 1; j < N; j++) {
-                const a = nodes[i], b = nodes[j];
-                const dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy);
-                if (d < LINK) {
-                    ctx.strokeStyle = c.link + (0.14 * (1 - d / LINK)).toFixed(3) + ')';
-                    ctx.lineWidth = 1;
-                    ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
-                }
-            }
-        }
-        for (const n of nodes) {
-            ctx.fillStyle = n.teal ? c.node2 : c.node;
-            ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fill();
-        }
-    }
-
-    function step() {
-        for (const n of nodes) {
-            n.x += n.vx; n.y += n.vy;
-            if (n.x < 0 || n.x > W) n.vx *= -1;
-            if (n.y < 0 || n.y > H) n.vy *= -1;
-        }
-        draw();
-        requestAnimationFrame(step);
-    }
-
-    resize(); seed(); draw();
-    window.addEventListener('resize', () => { resize(); seed(); draw(); });
-    new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    if (!reduceMotion) requestAnimationFrame(step);
-})();
-</script>
 {{ end }}

@@ -18,12 +18,12 @@
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="{{ "images/profile.jpeg" | absURL }}">
 
-        <!-- Fonts: Space Grotesk (display grotesque) + Inter (body) + IBM Plex Mono (data) -->
+        <!-- Fonts: Fraunces (display serif) + Inter (body) -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-        <!-- Theme: light-first ("Observatorio"). Dark only if the visitor chose it. -->
+        <!-- Theme: light-first ("editorial"). Dark only if the visitor chose it. -->
         <script>
             if (localStorage.getItem('color-theme') === 'dark') {
                 document.documentElement.classList.add('dark');
@@ -40,32 +40,31 @@
                     extend: {
                         fontFamily: {
                             sans: ['Inter', 'system-ui', 'sans-serif'],
-                            serif: ['Space Grotesk', 'Inter', 'sans-serif'],
-                            display: ['Space Grotesk', 'Inter', 'sans-serif'],
+                            serif: ['Fraunces', 'Georgia', 'serif'],
                             mono: ['IBM Plex Mono', 'ui-monospace', 'monospace'],
                         },
                         colors: {
-                            /* ── Observatorio (light, default) ── */
-                            'bg-primary-light': '#F7F6F2',
+                            /* ── Editorial (light, default) ── */
+                            'bg-primary-light': '#FAF7F2',
                             'bg-secondary-light': '#FFFFFF',
-                            'bg-tertiary-light': '#ECEAE2',
-                            'text-primary-light': '#111113',
-                            'text-secondary-light': '#5B6473',
-                            'border-primary-light': '#E3E1D9',
-                            'border-secondary-light': '#D3D0C6',
-                            'accent-light': '#1B45E0',
-                            'accent2-light': '#243B6B',
+                            'bg-tertiary-light': '#F1EBE1',
+                            'text-primary-light': '#1C1917',
+                            'text-secondary-light': '#5A544C',
+                            'border-primary-light': '#E4DDD1',
+                            'border-secondary-light': '#D3CABA',
+                            'accent-light': '#8A3033',
+                            'accent2-light': '#2F5D62',
 
-                            /* ── Observatorio (dark, secondary) ── */
-                            'bg-primary-dark': '#0E1014',
-                            'bg-secondary-dark': '#15181E',
-                            'bg-tertiary-dark': '#1C2029',
-                            'text-primary-dark': '#E7E9EC',
-                            'text-secondary-dark': '#9AA3B0',
-                            'border-primary-dark': '#242A33',
-                            'border-secondary-dark': '#333B46',
-                            'accent-dark': '#6E8BFF',
-                            'accent2-dark': '#9DB0D8',
+                            /* ── Tinta (dark, secondary) ── */
+                            'bg-primary-dark': '#14110F',
+                            'bg-secondary-dark': '#1D1916',
+                            'bg-tertiary-dark': '#262019',
+                            'text-primary-dark': '#ECE7DF',
+                            'text-secondary-dark': '#A79F93',
+                            'border-primary-dark': '#37302A',
+                            'border-secondary-dark': '#4A4139',
+                            'accent-dark': '#CF8378',
+                            'accent2-dark': '#7FA8AD',
                         },
                     },
                 },
@@ -76,32 +75,31 @@
             :root { color-scheme: light dark; }
 
             html, body {
-                background-color: #F7F6F2;
-                color: #111113;
+                background-color: #FAF7F2;
+                color: #1C1917;
                 font-family: 'Inter', system-ui, sans-serif;
-                -webkit-font-smoothing: antialiased;
             }
             html.dark, html.dark body {
-                background-color: #0E1014;
-                color: #E7E9EC;
+                background-color: #14110F;
+                color: #ECE7DF;
             }
 
-            /* Display grotesque for headings and the site name */
+            /* Display serif for headings and the site name */
             h1, h2, h3, .site-name {
-                font-family: 'Space Grotesk', Inter, sans-serif;
-                letter-spacing: -0.02em;
+                font-family: 'Fraunces', Georgia, serif;
+                letter-spacing: -0.01em;
             }
 
             ::selection {
-                background: #1B45E0;
-                color: #F7F6F2;
+                background: #8A3033;
+                color: #FAF7F2;
             }
 
-            /* Mono metadata label — the "computational" signal */
+            /* Mono metadata label — the visual code of "I write code" */
             .mono-label {
                 font-family: 'IBM Plex Mono', ui-monospace, monospace;
                 font-size: 0.72rem;
-                letter-spacing: 0.16em;
+                letter-spacing: 0.14em;
                 text-transform: uppercase;
                 font-weight: 500;
             }
@@ -115,29 +113,32 @@
                 font-family: 'IBM Plex Mono', ui-monospace, monospace;
                 font-size: 0.85rem;
                 font-weight: 500;
-                color: #1B45E0;
+                color: #2F5D62;
                 margin-right: 0.6rem;
                 vertical-align: 0.35em;
                 letter-spacing: 0.05em;
             }
-            html.dark .section-index { color: #6E8BFF; }
+            html.dark .section-index { color: #7FA8AD; }
 
-            /* ── Legacy utility remapping (old layouts use gray/blue utilities) ── */
-            html:not(.dark) .text-gray-400 { color: #5B6473 !important; }
-            html:not(.dark) .text-gray-500 { color: #6B7280 !important; }
-            html:not(.dark) .bg-gray-700   { background-color: #D3D0C6 !important; }
-            html:not(.dark) .border-gray-700 { border-color: #E3E1D9 !important; }
-            html:not(.dark) .hover\:border-gray-400:hover { border-color: #1B45E0 !important; }
+            /* ── Legacy utility remapping ─────────────────────────────
+               Older layouts use hardcoded gray/blue utilities designed
+               for the dark theme. Remap them so light mode stays warm
+               and readable without touching every template. */
+            html:not(.dark) .text-gray-400 { color: #5A544C !important; }
+            html:not(.dark) .text-gray-500 { color: #6E675D !important; }
+            html:not(.dark) .bg-gray-700   { background-color: #D3CABA !important; }
+            html:not(.dark) .border-gray-700 { border-color: #E4DDD1 !important; }
+            html:not(.dark) .hover\:border-gray-400:hover { border-color: #8A3033 !important; }
 
-            /* Blue links → cobalt accent (both modes) */
-            html:not(.dark) .text-blue-500, html:not(.dark) .text-blue-400 { color: #1B45E0 !important; }
-            html:not(.dark) .hover\:text-blue-400:hover { color: #1536B8 !important; }
-            html.dark .text-blue-500, html.dark .text-blue-400 { color: #6E8BFF !important; }
-            html.dark .hover\:text-blue-400:hover { color: #9DB0D8 !important; }
+            /* Blue links → burgundy accent (both modes) */
+            html:not(.dark) .text-blue-500, html:not(.dark) .text-blue-400 { color: #8A3033 !important; }
+            html:not(.dark) .hover\:text-blue-400:hover { color: #6E2528 !important; }
+            html.dark .text-blue-500, html.dark .text-blue-400 { color: #CF8378 !important; }
+            html.dark .hover\:text-blue-400:hover { color: #E0A197 !important; }
 
-            /* Timeline lines & dots in dark mode */
-            html.dark .bg-gray-700 { background-color: #333B46 !important; }
-            html.dark .border-gray-700 { border-color: #242A33 !important; }
+            /* Timeline lines & dots in dark mode: warm, not cold gray */
+            html.dark .bg-gray-700 { background-color: #4A4139 !important; }
+            html.dark .border-gray-700 { border-color: #37302A !important; }
         </style>
     </head>
     <body class="min-h-screen bg-bg-primary-light dark:bg-bg-primary-dark text-text-primary-light dark:text-text-primary-dark">

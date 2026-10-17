@@ -1,3 +1,0 @@
----
-title: "Investigación y proyectos"
----

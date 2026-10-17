@@ -1,3 +1,0 @@
----
-title: "Repositorio de trabajo"
----

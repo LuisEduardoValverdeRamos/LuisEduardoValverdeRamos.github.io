@@ -1,0 +1,58 @@
+---
+import { footerLinks, strings, type Locale } from '../i18n/ui';
+
+const locale = (Astro.currentLocale ?? 'es') as Locale;
+const links = footerLinks[locale];
+const t = strings[locale];
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div>
+      <p class="name">Luis Valverde Ramos</p>
+      <ul>
+        {links.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+        <li><a href="/rss.xml">RSS</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="kicker">{locale === 'es' ? 'Perfiles' : 'Profiles'}</p>
+      <ul>
+        <li><a href="https://github.com/LuisEduardoValverdeRamos" rel="me">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/luisvalverderamos/" rel="me">LinkedIn</a></li>
+        <!-- ORCID y Google Scholar se añaden cuando existan (PROMPT §14, regla de degradación) -->
+      </ul>
+    </div>
+    <div>
+      <p class="kicker">{locale === 'es' ? 'Colofón' : 'Colophon'}</p>
+      <p class="small">
+        {t.colophon}
+        <a href="https://github.com/LuisEduardoValverdeRamos/LuisEduardoValverdeRamos.github.io">{t.code}</a>.
+        {t.license}. © {year}
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--color-linea);
+    margin-top: var(--space-16);
+    padding: var(--space-8) 0 var(--space-8);
+    background: var(--color-fondo);
+  }
+  .cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-6);
+  }
+  .name { font-family: var(--font-display); font-weight: 640; font-size: 18px; margin-bottom: var(--space-2); }
+  .kicker { margin-bottom: var(--space-2); }
+  ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  a { color: var(--color-tinta); font-size: 15px; }
+  a:hover { color: var(--color-algarrobo); }
+  .small { font-size: 14px; color: var(--color-tinta-2); }
+</style>

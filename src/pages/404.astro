@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Página no encontrada" noindex>
+  <section class="wrap nf">
+    <p class="kicker mono">404</p>
+    <h1>Esta página no existe</h1>
+    <p>Quizá buscabas una de estas:</p>
+    <ul>
+      <li><a href="/">Portada</a> · <a href="/en/" lang="en">Home (English)</a></li>
+      <li><a href="/investigacion/">Investigación</a></li>
+      <li><a href="/proyectos/">Proyectos</a></li>
+      <li><a href="/debate/">Debate</a></li>
+      <li><a href="/servicios/">Servicios</a></li>
+      <li><a href="/contacto/">Contacto</a></li>
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .nf { padding: var(--space-16) var(--space-3); }
+  .nf h1 { font-size: clamp(36px, 5vw, 56px); margin: var(--space-2) 0 var(--space-3); }
+  .nf ul { list-style: none; margin-top: var(--space-3); display: flex; flex-direction: column; gap: 10px; }
+</style>

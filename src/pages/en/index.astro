@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base
+  title="Home"
+  description="Political scientist (PUCP). Computational social science on elections, the press and public infrastructure in Peru; competitive debating."
+>
+  <section class="wrap hero">
+    <p class="kicker">Pedregal Grande, Catacaos · Piura–Lima, Peru</p>
+    <h1>I study how Peru votes — and how the state delivers on what it promises</h1>
+    <p class="method">
+      Political scientist (PUCP). Computational social science on elections, the press and
+      public infrastructure; competitive debating.
+    </p>
+    <div class="actions">
+      <a class="btn btn-solid" href="/en/research/">View research</a>
+      <a class="btn btn-ghost" href="/en/consulting/">Work with me</a>
+    </div>
+    <p class="note mono">FULL HOMEPAGE IN PHASE 4 · THE DISTRICT-LEVEL MAP OF PERU GOES HERE</p>
+  </section>
+</Base>
+
+<style>
+  .hero { padding: var(--space-16) var(--space-3) var(--space-12); }
+  .hero h1 { font-size: clamp(44px, 6.5vw, 88px); max-width: 18ch; margin: var(--space-3) 0; }
+  .method { color: var(--color-tinta-2); font-size: 18px; max-width: 54ch; }
+  .actions { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-6); }
+  .note { margin-top: var(--space-12); font-size: 12px; letter-spacing: 0.06em; color: var(--color-tinta-2); }
+</style>

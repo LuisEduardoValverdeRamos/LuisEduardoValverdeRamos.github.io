@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Inicio"
+  description="Politólogo (PUCP). Ciencia social computacional sobre elecciones, prensa e infraestructura pública; formación en debate competitivo."
+>
+  <section class="wrap hero">
+    <p class="kicker">Pedregal Grande, Catacaos · Piura–Lima</p>
+    <h1>Estudio cómo vota el Perú y cómo el Estado cumple lo que promete</h1>
+    <p class="method">
+      Politólogo (PUCP). Ciencia social computacional sobre elecciones, prensa e
+      infraestructura pública; formación en debate competitivo.
+    </p>
+    <div class="actions">
+      <a class="btn btn-solid" href="/servicios/">Trabajemos juntos</a>
+      <a class="btn btn-ghost" href="/investigacion/">Ver investigación</a>
+    </div>
+    <p class="note mono">PORTADA COMPLETA EN FASE 4 · AQUÍ IRÁ EL MAPA DEL PERÚ POR DISTRITOS</p>
+  </section>
+</Base>
+
+<style>
+  .hero { padding: var(--space-16) var(--space-3) var(--space-12); }
+  .hero h1 { font-size: clamp(44px, 6.5vw, 88px); max-width: 16ch; margin: var(--space-3) 0; }
+  .method { color: var(--color-tinta-2); font-size: 18px; max-width: 54ch; }
+  .actions { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-6); }
+  .note { margin-top: var(--space-12); font-size: 12px; letter-spacing: 0.06em; color: var(--color-tinta-2); }
+</style>

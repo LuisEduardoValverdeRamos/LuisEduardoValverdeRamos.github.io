@@ -1,0 +1,34 @@
+---
+// Internal typography test page (Phase 2). Removed before launch.
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="Type test" description="Internal Phase 2 page." noindex>
+  <section class="wrap block">
+    <p class="kicker">Puerto · type test · internal</p>
+    <h1 class="headline">I study how Peru votes — and how the state delivers on what it promises</h1>
+    <p class="method">
+      Political scientist (PUCP). Computational social science on elections, the press and
+      public infrastructure; competitive debating.
+    </p>
+    <div class="actions">
+      <a class="btn btn-solid" href="#" onclick="return false">View research</a>
+      <a class="btn btn-ghost" href="#" onclick="return false">Work with me</a>
+    </div>
+    <p class="body-sample">
+      Reconstruction after the 2017 El Niño Costero left an open question: why does what the
+      state promises arrive late, or not at all? The thesis followed school infrastructure in
+      Piura between 2020 and 2023, combining Mill's method of difference with semi-structured
+      interviews. Every figure in the text — 747,836 headlines; 115,269 active school
+      services — comes from the data, never the other way around.
+    </p>
+  </section>
+</Base>
+
+<style>
+  .block { padding: var(--space-12) var(--space-3) var(--space-12); }
+  .headline { font-size: var(--type-headline); max-width: 17ch; margin: var(--space-3) 0; }
+  .method { color: var(--color-tinta-2); font-size: 18px; max-width: 54ch; }
+  .actions { display: flex; gap: var(--space-2); flex-wrap: wrap; margin: var(--space-4) 0; }
+  .body-sample { margin-top: var(--space-4); }
+</style>

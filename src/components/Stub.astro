@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  fase: string;
+  lang?: 'es' | 'en';
+}
+const { title, fase, lang = 'es' } = Astro.props;
+---
+
+<section class="wrap stub">
+  <p class="kicker">{lang === 'es' ? `En construcción · ${fase}` : `Under construction · ${fase}`}</p>
+  <h1>{title}</h1>
+  <p>
+    {lang === 'es'
+      ? 'Esta página se construye en una fase posterior del plan (PROMPT.md).'
+      : 'This page is built in a later phase of the plan (PROMPT.md).'}
+  </p>
+  <p><a href={lang === 'es' ? '/' : '/en/'}>{lang === 'es' ? '← Volver a la portada' : '← Back to home'}</a></p>
+</section>
+
+<style>
+  .stub { padding: var(--space-16) var(--space-3); }
+  .stub h1 { font-size: clamp(36px, 5vw, 56px); margin: var(--space-2) 0 var(--space-3); }
+  .stub p + p { margin-top: var(--space-2); }
+</style>

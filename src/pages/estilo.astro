@@ -1,0 +1,126 @@
+---
+// Página interna de prueba tipográfica (Fase 2). Se elimina antes del lanzamiento.
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Prueba tipográfica" description="Página interna de la Fase 2." noindex>
+  <section class="wrap block">
+    <p class="kicker">Puerto · prueba tipográfica · interna</p>
+    <h1 class="headline">Estudio cómo vota el Perú y cómo el Estado cumple lo que promete</h1>
+    <p class="method">
+      Politólogo (PUCP). Ciencia social computacional sobre elecciones, prensa e
+      infraestructura pública; formación en debate competitivo.
+    </p>
+    <div class="actions">
+      <a class="btn btn-solid" href="#" onclick="return false">Trabajemos juntos</a>
+      <a class="btn btn-ghost" href="#" onclick="return false">Ver investigación</a>
+    </div>
+  </section>
+
+  <hr class="hairline wrap" />
+
+  <section class="wrap block cols">
+    <div>
+      <p class="kicker">Texto · Archivo · 17px/1.6 · máx. 68ch</p>
+      <p class="body-sample">
+        La reconstrucción tras El Niño Costero dejó una pregunta abierta: ¿por qué lo que el
+        Estado promete llega tarde o no llega? La tesis siguió el caso de la infraestructura
+        educativa en Piura entre 2020 y 2023, combinando el método de la diferencia con
+        entrevistas semiestructuradas. Las cifras del texto — 747,836 titulares; 115,269
+        servicios educativos activos — salen siempre de los datos, nunca al revés. Comillas
+        «españolas», ñ y tildes: áéíóú.
+      </p>
+      <div class="sep">
+        <p>Del distrito al Congreso, y de vuelta.</p>
+      </div>
+    </div>
+    <div>
+      <p class="kicker">Datos y metadatos · Spline Sans Mono</p>
+      <p class="num mono">1,890</p>
+      <p class="kicker">distritos dibujados con datos de la ONPE</p>
+      <p class="kicker" style="margin-top: var(--space-2)">12 OCT 2026 · ANÁLISIS · 8 MIN</p>
+      <div class="tags">
+        <span class="tag tag-on">activo</span>
+        <span class="tag">en preparación</span>
+        <span class="tag">publicado</span>
+        <span class="tag">datos abiertos</span>
+      </div>
+      <a class="card" href="#" onclick="return false">
+        <span class="n mono">01</span>
+        <h3>Brechas de obras municipales</h3>
+        <p>60,000+ obras públicas (2018–2024) modeladas para anticipar dónde se detienen.</p>
+        <span class="open">Abrir proyecto →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="wrap block">
+    <p class="kicker">Fragmento de escritos</p>
+    <div class="pubs">
+      <div class="pub">
+        <span class="yr mono">2026</span>
+        <span>
+          <b>Análisis del elector peruano: aportes desde las ciencias del comportamiento</b>
+          <small>JNE / ProDiálogo · informe institucional · equipo técnico</small>
+        </span>
+        <a href="#" onclick="return false">PDF</a>
+      </div>
+      <div class="pub">
+        <span class="yr mono">2025</span>
+        <span>
+          <b>Desastres y brechas de implementación: la reconstrucción educativa en Piura</b>
+          <small>Tesis de licenciatura · mención sobresaliente · PUCP</small>
+        </span>
+        <a href="#" onclick="return false">Repositorio</a>
+      </div>
+      <div class="pub">
+        <span class="yr mono">2023</span>
+        <span>
+          <b>El estancamiento de la democracia en el Perú</b>
+          <small>Con A. Benites · IDEHPUCP · columna</small>
+        </span>
+        <a href="#" onclick="return false">Leer</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .block { padding: var(--space-12) var(--space-3) 0; }
+  .block:last-of-type { padding-bottom: var(--space-12); }
+  .headline { font-size: var(--type-headline); max-width: 15ch; margin: var(--space-3) 0; }
+  .method { color: var(--color-tinta-2); font-size: 18px; max-width: 54ch; }
+  .actions { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4); }
+
+  .cols { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--space-8); }
+  @media (max-width: 880px) { .cols { grid-template-columns: 1fr; } }
+  .body-sample { margin-top: var(--space-2); }
+
+  .num { font-size: 48px; font-weight: 500; line-height: 1.1; margin-top: var(--space-1); }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; margin: var(--space-3) 0; }
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid var(--color-linea);
+    padding: 3px 9px;
+    color: var(--color-tinta-2);
+  }
+  .tag-on { border-color: var(--color-mar); color: var(--color-mar); }
+
+  .card { max-width: 360px; margin-top: var(--space-2); }
+  .card .n { font-size: 28px; color: var(--color-tinta-2); }
+  .card h3 { font-size: 21px; margin: 10px 0 6px; }
+  .card p { font-size: 14.5px; color: var(--color-tinta-2); }
+  .card .open { display: inline-block; margin-top: 14px; font-size: 13.5px; font-weight: 600; color: var(--color-algarrobo); opacity: 0; transition: opacity 180ms var(--ease); }
+  .card:hover .open { opacity: 1; }
+
+  .pubs { border-top: 1px solid var(--color-linea); margin-top: var(--space-2); max-width: 720px; }
+  .pub { display: grid; grid-template-columns: 60px 1fr auto; gap: 18px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--color-linea); }
+  .pub .yr { font-size: 13px; color: var(--color-tinta-2); }
+  .pub b { font-weight: 600; font-size: 15.5px; line-height: 1.4; display: block; }
+  .pub small { color: var(--color-tinta-2); font-size: 13px; }
+  .pub a { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--color-algarrobo); }
+  @media (max-width: 640px) { .pub { grid-template-columns: 48px 1fr; } .pub a { grid-column: 2; justify-self: start; } }
+</style>

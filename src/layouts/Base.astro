@@ -1,0 +1,49 @@
+---
+import { Font } from 'astro:assets';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { altFor } from '../i18n/routes';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  noindex?: boolean;
+}
+
+const { title, description = '', noindex = false } = Astro.props;
+const locale = (Astro.currentLocale ?? 'es') as 'es' | 'en';
+const alt = altFor(Astro.url.pathname);
+const site = Astro.site?.href.replace(/\/$/, '') ?? '';
+---
+
+<!doctype html>
+<html lang={locale === 'es' ? 'es-PE' : 'en-GB'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · Luis Valverde Ramos</title>
+    {description && <meta name="description" content={description} />}
+    {noindex && <meta name="robots" content="noindex" />}
+    {alt && (
+      <>
+        <link rel="alternate" hreflang="es-PE" href={site + alt.es} />
+        <link rel="alternate" hreflang="en-GB" href={site + alt.en} />
+        <link rel="alternate" hreflang="x-default" href={site + alt.es} />
+      </>
+    )}
+    <link rel="canonical" href={site + Astro.url.pathname} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <Font cssVariable="--font-display" preload />
+    <Font cssVariable="--font-text" preload />
+    <Font cssVariable="--font-mono" />
+  </head>
+  <body>
+    <Header />
+    <main id="contenido">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

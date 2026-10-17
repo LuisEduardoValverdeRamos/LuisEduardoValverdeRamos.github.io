@@ -1,0 +1,27 @@
+{{- /* Home: the first three research lines as questions, and selected writing. */ -}}
+{{- $d := .d -}}
+{{- $h := .h.research -}}
+{{- $rp := site.GetPage "/research" -}}
+<section class="s-section" aria-labelledby="h-research">
+  <div class="s-section-head">
+    <h2 id="h-research" class="s-h2">{{ $h.title }}</h2>
+    {{- with $rp }}<a class="s-link" href="{{ .RelPermalink }}">{{ $h.more }}</a>{{ end }}
+  </div>
+  <div class="s-questions">
+    {{- range first 3 $d.research.lines }}
+    <a class="s-q" href="{{ with $rp }}{{ .RelPermalink }}{{ end }}#{{ .id }}"><span class="s-eyebrow">{{ .name }}</span><b>{{ .question }}</b><span class="go">{{ $h.line_cta }} →</span></a>
+    {{- end }}
+  </div>
+  <h3 class="s-h3 s-sub">{{ $h.writing_title }}</h3>
+  <div class="s-list">
+    {{- range $id := $h.writing }}{{ range where $d.blogs.blogs "id" $id }}
+    <div class="s-item">
+      <span class="k">{{ .year }} · {{ .type }}</span>
+      <div>
+        {{- if .link }}<a class="t" href="{{ .link }}">{{ .short_title | default .title }}</a>{{ else }}<span class="t">{{ .short_title | default .title }}</span>{{ end }}
+        <span class="m">{{ .short_meta | default .outlet }}</span>
+      </div>
+    </div>
+    {{- end }}{{ end }}
+  </div>
+</section>

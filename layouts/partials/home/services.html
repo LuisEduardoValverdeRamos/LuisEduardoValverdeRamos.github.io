@@ -1,0 +1,21 @@
+{{- /* Home: three pillars from data/<lang>/services.toml, each linking to its
+       section of the Work with me page. */ -}}
+{{- $sv := .d.services -}}
+{{- $wp := site.GetPage "/work" -}}
+{{- $base := "" }}{{ with $wp }}{{ $base = .RelPermalink }}{{ end -}}
+<section class="s-section" aria-labelledby="h-services">
+  <div class="s-section-head">
+    <h2 id="h-services" class="s-h2">{{ $sv.home.title }}</h2>
+    {{- with $wp }}<a class="s-link" href="{{ .RelPermalink }}">{{ $sv.home.more }}</a>{{ end }}
+  </div>
+  <div class="s-pillars">
+    {{- range $id := $sv.home.pillars }}{{ range where $sv.pillars "id" $id }}
+    <article class="s-pillar">
+      <p class="s-eyebrow">{{ .name }}</p>
+      <h3 class="s-h3">{{ .home_title }}</h3>
+      <p>{{ .home_text }}</p>
+      <a class="s-go" href="{{ $base }}#{{ .id }}">{{ .home_cta }} →</a>
+    </article>
+    {{- end }}{{ end }}
+  </div>
+</section>

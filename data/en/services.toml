@@ -1,0 +1,189 @@
+# Work with me (/work-with-me/): a shorter version of the Spanish page, from the
+# same structure. A service or note with confirmar = "…" waits for Luis: it shows
+# only in local previews, marked, and is never published in production.
+# Top-level keys first: in TOML, anything below a table header belongs to it.
+
+title = "How I can help"
+lead = "Alongside my research, I take on projects in five areas. Email me with what you need: I reply within 24 hours."
+router_label = "What do you need?"
+
+[labels]
+  for = "For"
+  format = "Format"
+  deliverables = "Deliverables"
+  proof = "Track record"
+  write = "Email about this"
+  subject = "Subject"
+  nopromise = "What I don't promise"
+  pillar_proof = "Track record"
+  press = "Press enquiries"
+
+[home]
+  title = "How I can help"
+  more = "All services"
+  pillars = ["consulting", "debate", "research"]
+
+[[router]]
+  label = "Prepare a debate team"
+  anchor = "debate"
+[[router]]
+  label = "Analyse electoral or institutional data"
+  anchor = "consulting"
+[[router]]
+  label = "Collaborate on research"
+  anchor = "research"
+[[router]]
+  label = "An R workshop for my team"
+  anchor = "workshops"
+[[router]]
+  label = "I'm a journalist"
+  anchor = "media"
+
+[[pillars]]
+  id = "debate"
+  name = "Debate"
+  title = "Team coaching and adjudicator training"
+  intro = "I coach school and university teams in World Schools and British Parliamentary formats, and I train adjudicators."
+  proof = "Coach of the Peruvian national schools team that won its fourth consecutive title at the Mundial de Debate Escolar en Español (MED), the Spanish-language world schools championship, in Panama in 2026. I prepared the Dominican pairs that reached the octofinals of WUDC 2025, a first for the Dominican Republic, and the quarterfinals of CMUDE Ecuador 2026."
+  home_title = "Team coaching and adjudication"
+  home_text = "Schools, universities and national teams: tournament preparation and adjudicator training."
+  home_cta = "Coach my team"
+
+  [[pillars.services]]
+    title = "University teams and national squads"
+    for = "Debating societies and national teams preparing for WUDC, CMUDE or a national championship."
+    format = "A preparation cycle before the tournament, online, in British Parliamentary or World Schools format."
+    deliverables = "Preparation plan, sessions with motions and feedback, and content material by topic."
+    proof = "Dominican pairs: octofinals at WUDC 2025 and quarterfinals at CMUDE Ecuador 2026. Head coach of the PUCP Debate Society."
+    subject = "Debate coaching - university or national team"
+    body = "Institution or team:\nFormat (BP or World Schools):\nTarget tournament and date:\nNumber of debaters and level:\nTime zone and availability:\n"
+    nopromise = "Breaking to the elimination rounds. I also do not accompany a team at a tournament where I judge or sit on the adjudication core."
+
+  [[pillars.services]]
+    title = "Schools and adjudicators"
+    for = "Schools starting a debate club, and leagues or organisers that need adjudicators with shared criteria."
+    format = "A term or year-long programme for schools, in person in Lima or online; two-hour adjudication workshops with a calibration session before the tournament."
+    proof = "Debate coach at Colegio Alpamayo since June 2026; judge of the CMUDE 2026 grand final (Ecuador); chief adjudicator of TNDE 2025."
+    subject = "Debate programme or adjudicator training"
+    body = "Institution or tournament:\nWhat you need:\nDates:\n"
+    nopromise = "Titles or rankings. I do not publish students' names, data or images without written consent from the school and the families."
+
+[[pillars]]
+  id = "consulting"
+  name = "Consulting and data analysis"
+  title = "Electoral and administrative data for institutions"
+  intro = "I analyse data for institutions that need a specific question answered, with documented methods and reproducible code in R."
+  note = "I do not consult for political parties, candidates or election campaigns, and I do not use non-public institutional information."
+  note_confirmar = "To confirm with Luis: publishing this line while he works at the JNE."
+  home_title = "Electoral and public data analysis"
+  home_text = "Surveys, voter registers and administrative records, with stated methods and code in R."
+  home_cta = "Email me about a project"
+
+  [[pillars.services]]
+    title = "Electoral and public-opinion analysis"
+    for = "NGOs, research centres, international cooperation and newsrooms with a data unit."
+    format = "Scope agreed at the start: from a one-off question about a dataset to a report with figures."
+    deliverables = "Report with stated methods and limitations, reproducible figures, a documented dataset and R scripts."
+    proof = "Technical team of the JNE/ProDiálogo report on the Peruvian voter (2026); research assistant to Daniel Encinas and Rodrigo Barrenechea on the geography of the vote (1980–2021)."
+    subject = "Consulting: data analysis"
+    body = "Organisation:\nWhat you need analysed or assessed:\nData available:\nDeadline:\n"
+    nopromise = "Election forecasts, voting-intention polls for publication or voter micro-targeting."
+
+  [[pillars.services]]
+    title = "Methods support and indicator validity"
+    for = "Observatories, NGOs and research units about to publish indicators built from administrative data."
+    format = "A review of the dataset and of each indicator, with working sessions with the team."
+    deliverables = "A feasibility and validity matrix for each indicator, and a memo on the methodological decisions still open."
+    proof = "Consultant to the Corruption Observatory of the Lima Bar Association since September 2026, on its public procurement report (ongoing)."
+    subject = "Methods support - indicator validity"
+    body = "Organisation:\nReport or indicators in preparation:\nData source:\nPlanned publication date:\n"
+    nopromise = "Endorsing conclusions already reached, or signing the institution's report as an author."
+
+[[pillars]]
+  id = "research"
+  name = "Research and papers"
+  title = "Collaboration and methods review"
+  intro = "I collaborate on projects on electoral behaviour, subnational politics, policy implementation and civic education in Peru and Latin America."
+  limit = "I do not write theses, papers or assignments for others to submit as their own. I review, explain and teach; the text and the decisions belong to whoever signs them."
+  home_title = "Collaboration and methods review"
+  home_text = "Research design, indicator validity and analysis in R. No ghost-writing of theses or papers."
+  home_cta = "Propose a collaboration"
+
+  [[pillars.services]]
+    title = "Collaboration and co-authorship"
+    for = "Researchers working on Peru or Latin America on these topics."
+    format = "Roles agreed at the start using the CRediT taxonomy: data curation, analysis, software, visualisation and writing."
+    proof = "Article in preparation with Daniel Encinas (Northwestern University); licentiate thesis with distinction (PUCP, 2025)."
+    subject = "Research: collaboration or methods support"
+    body = "Topic and question:\nStage of the project:\nData:\nThe role you have in mind for me:\n"
+    nopromise = "Authorship without a substantive contribution: I neither ask for it nor accept it."
+
+  [[pillars.services]]
+    title = "Research assistance and methods review"
+    for = "Researchers and centres that need datasets built, replicable econometric analysis in R, or a second reading before submission."
+    format = "By project, online; a written memo and a session to discuss it."
+    proof = "Research assistant at CISEPA-PUCP and Q-LAB-PUCP, and to Daniel Encinas and Rodrigo Barrenechea; teaching assistant in Political Economy (PUCP)."
+    subject = "Research assistance or methods review"
+    body = "Project and institution:\nWhat you need:\nDeadline:\n"
+
+[[pillars]]
+  id = "workshops"
+  name = "Workshops"
+  compact = true
+  title = "R workshops (two hours)"
+  intro = "For research teams, NGOs, newsrooms and research units: R with Peruvian administrative data, data visualisation for reports, and public data from R (BCRP, ESCALE, election results). In person in Lima or online."
+  subject = "Workshop: proposal"
+  body = "Institution:\nWorkshop topic:\nAudience and approximate number of participants:\nFormat (Lima or online) and tentative date:\n"
+
+[[pillars]]
+  id = "media"
+  name = "Media"
+  compact = true
+  title = "For journalists"
+  intro = "Electoral behaviour, political reform, subnational politics, scholarships and civic education, in Spanish. I speak in a personal capacity, not on behalf of the JNE, PUCP or the LPDE."
+  subject = "Press: interview request"
+  body = "Outlet and programme:\nTopic:\nFormat (interview, panel or written piece):\nDate and time:\n"
+
+[how]
+  title = "How I work"
+  steps = [
+    "You email me with your question, the deadline and the data or resources you have.",
+    "Within 24 hours I reply with questions or a proposal covering scope and deliverables.",
+    "We agree on deliverables, timeline and fees.",
+    "I deliver with documentation and a closing session.",
+  ]
+  notes = [
+    "In person in Lima; online for the rest of Peru and Latin America.",
+    "I issue Peruvian electronic fee receipts (recibos por honorarios).",
+    "I do not publish data or results from a project without the institution's permission.",
+  ]
+
+[dont]
+  title = "What I don't do"
+  [[dont.items]]
+    text = "Write theses or papers for someone else to sign."
+  [[dont.items]]
+    text = "Voting-intention polls for publication."
+  [[dont.items]]
+    text = "Work for parties, candidates or campaigns while I am at the JNE."
+    confirmar = "To confirm with Luis."
+  [[dont.items]]
+    text = "Publish data or images of minors."
+
+[institutions]
+  title = "Institutions I have worked with"
+  home_label = "I have worked with"
+  home_line = "JNE (ESEG) · PUCP (Q-LAB, CISEPA, GIES) · ProDiálogo · Corruption Observatory of the Lima Bar Association · LPDE · Colegio Alpamayo · IDEHPUCP · Roche Pharma Peru (through Sapienza Consultora)"
+  [[institutions.groups]]
+    label = "Employment and affiliation"
+    text = "Jurado Nacional de Elecciones, Peru's National Elections Jury (ESEG) · Pontificia Universidad Católica del Perú (CISEPA, Q-LAB, GIES) · IDEHPUCP"
+  [[institutions.groups]]
+    label = "Consulting"
+    text = "Corruption Observatory of the Lima Bar Association · ProDiálogo (commissioned by the JNE) · Roche Pharma Peru (through Sapienza Consultora)"
+  [[institutions.groups]]
+    label = "Debate"
+    text = "Peruvian School Debate League (LPDE) · PUCP Debate Society · Colegio Alpamayo · university teams from the Dominican Republic"
+
+[contact]
+  title = "Email me"
+  text = "Tell me what you need and when you need it. I reply within 24 hours, in English or Spanish."

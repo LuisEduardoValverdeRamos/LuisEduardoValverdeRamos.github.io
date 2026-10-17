@@ -1,0 +1,8 @@
+{{- /* Short home page: three doors (research, debate, work with me). */ -}}
+{{- with .h.doors }}
+<nav class="s-doors" aria-label="{{ $.h.doors_label }}">
+  {{- range . }}
+  <a href="{{ partial "link.html" . }}"><span class="s-eyebrow">{{ .eyebrow }}</span><b>{{ .title }}</b>{{ .text }}<span class="go">{{ .cta }} →</span></a>
+  {{- end }}
+</nav>
+{{- end }}

@@ -1,0 +1,11 @@
+{{- /* The research lines as question + summary, from data/<lang>/research.toml.
+       Usage in content: {{< research-lines "Link text" >}} */ -}}
+{{- $d := index hugo.Data .Page.Language.Lang -}}
+<div class="s-lines">
+  {{- range $d.research.lines }}
+  <div><b>{{ .question }}</b>{{ .summary }}</div>
+  {{- end }}
+</div>
+{{- with .Get 0 }}{{ $label := . }}{{ with site.GetPage "/research" }}
+<p><a href="{{ .RelPermalink }}">{{ $label }}</a></p>
+{{- end }}{{ end }}

@@ -1,0 +1,20 @@
+{{- /* Home: debate band with three labelled results from data/<lang>/debate.toml. */ -}}
+{{- $db := .d.debate -}}
+{{- $dp := site.GetPage "/debate" -}}
+{{- $wp := site.GetPage "/work" -}}
+<section class="s-band" aria-labelledby="h-debate">
+  <div class="s-band-text">
+    <p class="s-eyebrow">{{ $db.home.eyebrow }}</p>
+    <h2 id="h-debate" class="s-h2">{{ $db.home.title }}</h2>
+    <p>{{ $db.home.text }}</p>
+    <div class="s-ctas tight">
+      {{- with $dp }}<a class="s-link" href="{{ .RelPermalink }}">{{ $db.home.more }}</a>{{ end }}
+      {{- with $wp }}<a class="s-go" href="{{ .RelPermalink }}#debate">{{ $db.home.cta }} →</a>{{ end }}
+    </div>
+  </div>
+  <ul class="s-achv">
+    {{- range first 3 $db.highlights }}
+    <li><span class="s-eyebrow">{{ .label }}</span>{{ .text }}</li>
+    {{- end }}
+  </ul>
+</section>

@@ -2,6 +2,7 @@
   role = "Teaching Assistant"
   company = "Pontificia Universidad Católica del Perú (PUCP)"
   period = "Aug. 2026 – Present"
+  current = true
   country = "Peru"
   company_link = "https://www.pucp.edu.pe"
   description = "Lead weekly practical sessions for the Political Economy course at the Faculty of Social Sciences."
@@ -14,6 +15,7 @@
   role = "Researcher"
   company = "Electoral and Governance School (ESEG) — National Elections Jury of Peru (JNE)"
   period = "Jul. 2026 – Present"
+  current = true
   country = "Lima, Peru"
   company_link = "https://www.jne.gob.pe"
   description = "Contribute to the design of the institutional research agenda using quantitative and qualitative methods, for the 2026 regional and municipal elections."
@@ -27,6 +29,7 @@
   role = "Consultant"
   company = "Corruption Observatory — Lima Bar Association (CAL)"
   period = "Sep. 2026 – Present"
+  current = true
   country = "Lima, Peru"
   company_link = ""
   description = "Advise the Observatory on the first instalment of its 2016–2025 public procurement report: feasibility and validity assessment of indicators built from open SEACE/OECE records."
@@ -39,6 +42,7 @@
   role = "Academic Director"
   company = "Liga Peruana de Debate Escolar (LPDE)"
   period = "Sep. 2026 – Present"
+  current = true
   country = "Peru"
   company_link = ""
   description = "Lead the LPDE's academic team: training, coaching and consultancy programmes in school debate."

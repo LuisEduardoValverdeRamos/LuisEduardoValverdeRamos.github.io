@@ -1,0 +1,14 @@
+{{- /* Link to this page in the other language, or to the other language's home
+       page when there is no translation. Context: dict "page" and optional
+       "long" (full language name instead of the code). */ -}}
+{{- $p := .page -}}
+{{- $long := .long -}}
+{{- $targets := slice -}}
+{{- with $p.Translations }}
+  {{- range . }}{{ $targets = $targets | append (dict "url" .RelPermalink "lang" .Language.Lang) }}{{ end }}
+{{- else }}
+  {{- range hugo.Sites }}{{ if ne .Language.Lang $p.Language.Lang }}{{ $targets = $targets | append (dict "url" .Home.RelPermalink "lang" .Language.Lang) }}{{ end }}{{ end }}
+{{- end }}
+{{- range $targets }}
+<a href="{{ .url }}" hreflang="{{ .lang }}" lang="{{ .lang }}"{{ if not $long }} class="s-lang"{{ end }} title="{{ if eq .lang "es" }}Ver en español{{ else }}View in English{{ end }}">{{ if $long }}{{ if eq .lang "es" }}Español{{ else }}English{{ end }}{{ else }}{{ .lang }}{{ end }}</a>
+{{- end }}

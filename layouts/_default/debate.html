@@ -1,0 +1,71 @@
+{{ define "main" }}
+{{- /* Debate: labelled results, coaching, adjudication, competing, the LPDE and
+       the debate services (same data as Work with me, so the visitor can write
+       without another click). Data: debate and services. */ -}}
+{{- $d := index hugo.Data .Language.Lang -}}
+{{- $db := $d.debate -}}
+{{- $sv := $d.services -}}
+{{- $a := $d.author.author -}}
+<div class="wrap">
+  <header class="s-page-head">
+    <h1 class="s-h1">{{ .Title }}</h1>
+    <p class="s-lead">{{ $db.lead }}</p>
+    <nav class="s-toc" aria-label="{{ T "onThisPage" }}">
+      <a href="#coaching">{{ $db.toc.coach }}</a>
+      <a href="#adjudication">{{ $db.toc.judge }}</a>
+      <a href="#competing">{{ $db.toc.compete }}</a>
+      <a href="#lpde">{{ $db.toc.lpde }}</a>
+      <a href="#team">{{ $db.toc.team }}</a>
+    </nav>
+  </header>
+
+  <div class="s-proof">
+    {{- range $db.highlights }}
+    {{- $src := .src }}
+    <div>
+      <span class="s-eyebrow">{{ .label }}</span>
+      <span class="fact">{{ .text }}</span>
+      {{- with .url }}<a class="src" href="{{ . }}">{{ $src }}</a>{{ end }}
+    </div>
+    {{- end }}
+  </div>
+
+  {{- range $sec := slice (dict "id" "coaching" "data" $db.coach) (dict "id" "adjudication" "data" $db.judge) (dict "id" "competing" "data" $db.compete) }}
+  <section id="{{ $sec.id }}" class="s-section" aria-labelledby="h-{{ $sec.id }}">
+    <div class="s-section-head"><h2 id="h-{{ $sec.id }}" class="s-h2">{{ $sec.data.title }}</h2></div>
+    <div class="s-list">
+      {{- range $sec.data.items }}
+      <div class="s-item">
+        <span class="k">{{ .period }}</span>
+        <div><span class="t">{{ .role }} · {{ .org }}</span>{{ with .text }}<p>{{ . }}</p>{{ end }}</div>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  <section id="lpde" class="s-section" aria-labelledby="h-lpde">
+    <div class="s-section-head"><h2 id="h-lpde" class="s-h2">{{ $db.lpde.title }}</h2></div>
+    <p class="s-lead">{{ $db.lpde.text }}</p>
+  </section>
+
+  {{- with where $sv.pillars "id" "debate" }}{{ with index . 0 }}
+  {{- $p := . }}
+  <section id="team" class="s-section" aria-labelledby="h-team">
+    <div class="s-section-head">
+      <h2 id="h-team" class="s-h2">{{ $db.team.title }}</h2>
+      {{- with site.GetPage "/work" }}<a class="s-link" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+    </div>
+    <p class="s-lead">{{ $db.team.text }}</p>
+    {{- with $p.note }}{{ if or (not $p.note_confirmar) (not hugo.IsProduction) }}
+    <p class="s-note{{ with $p.note_confirmar }} tbc{{ end }}"{{ with $p.note_confirmar }} data-tbc="{{ . }}"{{ end }}>{{ . }}</p>
+    {{- end }}{{ end }}
+    <div class="s-svcs" style="margin-top:20px">
+      {{- range $p.services }}{{ partial "service-card.html" (dict "s" . "labels" $sv.labels "email" $a.email) }}{{ end }}
+    </div>
+  </section>
+  {{- end }}{{ end }}
+
+  <p class="s-note" style="margin-top:32px">{{ $db.glossary }}</p>
+</div>
+{{ end }}

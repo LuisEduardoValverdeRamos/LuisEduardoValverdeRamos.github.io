@@ -1,0 +1,25 @@
+# Página CV (/es/cv/). Reúne en un solo lugar experiencia, formación,
+# reconocimientos, docencia, debate, métodos y participación cívica; los datos
+# vienen de los archivos de cada tema. Sin teléfono, dirección, DNI ni referencias.
+
+title = "Currículum"
+pdf_label = "Descargar CV (PDF)"
+pdf_other = "CV in English (PDF)"
+
+[sections]
+  current = "Cargos actuales"
+  experience = "Experiencia previa"
+  education = "Formación"
+  honors = "Reconocimientos"
+  writing = "Escritos"
+  teaching = "Docencia"
+  debate = "Debate"
+  skills = "Métodos y herramientas"
+  civic = "Participación cívica"
+
+[labels]
+  details = "Detalle"
+  all_writing = "Resúmenes y enlaces en Investigación →"
+  more_debate = "Más en Debate →"
+  coaching = "Entrenamiento"
+  competing = "Como debatiente"

@@ -20,27 +20,34 @@ disableKinds = ["taxonomy", "term"]
     contentDir = "content/en"
     [languages.en.params]
       description = "Luis Valverde Ramos, political scientist (PUCP). Research on electoral behaviour and policy implementation in Peru; consulting and debate coaching."
+    # Menu: the last item is the call to action (params.cta draws it as a button)
     [languages.en.menu]
       [[languages.en.menu.main]]
+        identifier = "about"
         name = "About"
         pageRef = "/about"
         weight = 1
       [[languages.en.menu.main]]
-        name = "Experience"
-        pageRef = "/experience"
+        identifier = "research"
+        name = "Research"
+        pageRef = "/research"
         weight = 2
       [[languages.en.menu.main]]
-        name = "Research"
-        pageRef = "/projects"
+        identifier = "debate"
+        name = "Debate"
+        pageRef = "/debate"
         weight = 3
       [[languages.en.menu.main]]
-        name = "Writing & Media"
-        pageRef = "/publications"
+        identifier = "cv"
+        name = "CV"
+        pageRef = "/cv"
         weight = 4
       [[languages.en.menu.main]]
-        name = "Contact"
-        pageRef = "/contact"
+        identifier = "work"
+        name = "Work with me"
+        pageRef = "/work"
         weight = 5
+        params = { cta = true }
 
   [languages.es]
     languageName = "Español"
@@ -51,25 +58,36 @@ disableKinds = ["taxonomy", "term"]
       description = "Luis Valverde Ramos, politólogo (PUCP). Investigación sobre comportamiento electoral e implementación de políticas públicas en el Perú; consultoría y debate."
     [languages.es.menu]
       [[languages.es.menu.main]]
+        identifier = "about"
         name = "Sobre mí"
         pageRef = "/about"
         weight = 1
       [[languages.es.menu.main]]
-        name = "Experiencia"
-        pageRef = "/experience"
+        identifier = "research"
+        name = "Investigación"
+        pageRef = "/research"
         weight = 2
       [[languages.es.menu.main]]
-        name = "Investigación"
-        pageRef = "/projects"
+        identifier = "debate"
+        name = "Debate"
+        pageRef = "/debate"
         weight = 3
       [[languages.es.menu.main]]
-        name = "Escritos y medios"
-        pageRef = "/publications"
+        identifier = "cv"
+        name = "CV"
+        pageRef = "/cv"
         weight = 4
       [[languages.es.menu.main]]
-        name = "Contacto"
-        pageRef = "/contact"
+        identifier = "work"
+        name = "Trabajemos"
+        pageRef = "/work"
         weight = 5
+        params = { cta = true }
+
+# Heading anchors without accents: «Qué investigo» → #que-investigo
+[markup]
+  [markup.goldmark.parser]
+    autoHeadingIDType = "github-ascii"
 
 [params]
   name = "Luis Valverde Ramos"
@@ -102,3 +120,7 @@ disableKinds = ["taxonomy", "term"]
     disableWatch = true
     source = 'hugo_stats.json'
     target = 'assets/notwatching/hugo_stats.json'
+  # Images are also assets, so templates can resize them (project thumbnails)
+  [[module.mounts]]
+    source = 'static/images'
+    target = 'assets/images'

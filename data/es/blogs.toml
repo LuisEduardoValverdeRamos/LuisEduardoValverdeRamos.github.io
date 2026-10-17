@@ -1,91 +1,116 @@
-# ── PUBLICACIONES ACADÉMICAS ──────────────────────────────────────────────────
+# Escritos (página Investigación, sección «Escritos»; la portada muestra los que
+# nombra data/es/home.toml por id). group: tesis | informes | editorial | columnas.
+# Atribución: «Equipo editor», nunca «(Eds.)»; el informe del JNE es institucional
+# y Luis integró su equipo técnico. Sin enlace hasta que el JNE lo publique.
 
 [[blogs]]
-  section = "academic"
+  id = "tesis-2025"
+  group = "tesis"
   type = "Tesis"
+  year = "2025"
   date = "2025"
   title = "Desastres y brechas de implementación: Estudio del proceso de reconstrucción de la infraestructura educativa en Piura entre julio de 2020 y enero de 2023, tras el Fenómeno de El Niño Costero"
+  short_title = "Desastres y brechas de implementación: la reconstrucción de la infraestructura educativa en Piura tras El Niño Costero"
+  short_meta = "PUCP · mención sobresaliente · repositorio ↗"
   authors = "Valverde, L."
   outlet = "Tesis de licenciatura con mención sobresaliente · Pontificia Universidad Católica del Perú"
   summary = "Analiza los factores que explican las brechas de implementación en obras públicas educativas post-desastre en la región Piura."
   link = "https://hdl.handle.net/20.500.12404/32370"
-  tags = ["Tesis", "Política Pública", "Desastres", "Perú"]
 
 [[blogs]]
-  section = "academic"
-  type = "Equipo Editorial"
+  id = "informe-jne-2026"
+  group = "informes"
+  type = "Informe"
+  year = "2026"
+  date = "2026"
+  title = "Análisis del elector peruano: aportes desde las ciencias del comportamiento"
+  short_meta = "JNE y ProDiálogo · equipo técnico · enlace cuando el JNE lo publique"
+  authors = "Equipo técnico: Monard, Encinas, Villena-Tagle y Valverde"
+  outlet = "Jurado Nacional de Elecciones y ProDiálogo · 85 pp."
+  summary = "Informe institucional para las estrategias de educación cívica del JNE rumbo a las Elecciones Generales 2026. Integré el equipo técnico. El enlace se añadirá cuando el JNE lo publique."
+  link = ""
+
+[[blogs]]
+  id = "clinicas-cidh-2023"
+  group = "editorial"
+  type = "Equipo editor"
+  year = "2023"
   date = "2023"
   title = "Emergencia climática y derechos humanos: Escrito sobre la opinión consultiva a la Corte Interamericana de Derechos Humanos"
   authors = "Equipo editor: Cabrales, S., Quiroz, S. J., Mamede, T., Barbosa, I. y Valverde, L."
   outlet = "Alianza de Clínicas Jurídicas Ambientales de Latinoamérica y el Caribe"
   summary = "Escrito colectivo de la Alianza sobre emergencia climática y derechos humanos, presentado ante la Corte Interamericana de Derechos Humanos. Integré el equipo editor."
   link = "https://alianzadeclinicasambientales.com/wp-content/uploads/2023/12/Informe-O.C.-Emergencia-Climatica-Corte-IDH-Alianza-Clinicas-Juridicas-Ambientales-LAC-IDEHPUCP-y-SPDA-1.pdf"
-  tags = ["Editorial", "Derechos Humanos", "Clima", "CIDH"]
-
-# ── COLUMNAS ──────────────────────────────────────────────────────────────────
 
 [[blogs]]
-  section = "columns"
+  id = "col-desaparicion-2023"
+  group = "columnas"
   type = "Columna"
+  year = "2023"
   date = "31 de octubre de 2023"
   title = "La catástrofe humanitaria de la desaparición en el Perú: retos para la política de búsqueda de personas desaparecidas"
-  authors = "Valverde, L. & Cépeda, M."
+  authors = "Valverde, L. y Cépeda, M."
   outlet = "IDEHPUCP — Boletín y Eventos"
   summary = "Análisis de los retos institucionales y de política pública en torno a la búsqueda de personas desaparecidas en el Perú."
   link = "https://idehpucp.pucp.edu.pe/boletin-eventos/la-catastrofe-humanitaria-de-la-desaparicion-en-el-peru-retos-para-la-politica-de-busqueda-de-personas-desaparecidas-28811/"
-  tags = ["Columna", "Derechos Humanos", "Personas Desaparecidas", "Perú"]
 
 [[blogs]]
-  section = "columns"
+  id = "col-renade-2023"
+  group = "columnas"
   type = "Columna"
+  year = "2023"
   date = "3 de octubre de 2023"
   title = "Nuevo reporte del Registro Nacional de Personas Desaparecidas y Sitios de Entierro (RENADE)"
-  authors = "Jave, I. & Valverde, L."
+  authors = "Jave, I. y Valverde, L."
   outlet = "IDEHPUCP — Boletín y Eventos"
   summary = "Nota analítica sobre el último reporte del RENADE y sus implicancias para la búsqueda de personas desaparecidas y la justicia transicional en el Perú."
   link = "https://idehpucp.pucp.edu.pe/boletin-eventos/nuevo-reporte-del-registro-nacional-de-personas-desaparecidas-y-sitios-de-entierro-renade-28722/"
-  tags = ["Columna", "Justicia Transicional", "RENADE", "Perú"]
 
 [[blogs]]
-  section = "columns"
+  id = "col-clima-tribunales-2023"
+  group = "columnas"
   type = "Columna"
+  year = "2023"
   date = "19 de septiembre de 2023"
   title = "Cambio climático y derechos humanos: una relación que viene escalando en los tribunales"
-  authors = "Dominguez, A. & Valverde, L."
+  authors = "Domínguez, A. y Valverde, L."
   outlet = "IDEHPUCP — Boletín y Eventos"
   summary = "Análisis del rol creciente de los tribunales internacionales en abordar el cambio climático como una cuestión de derechos humanos."
   link = "https://idehpucp.pucp.edu.pe/boletin-eventos/cambio-climatico-y-derechos-humanos-una-relacion-que-viene-escalando-en-los-tribunales-28642/"
-  tags = ["Columna", "Cambio Climático", "Derechos Humanos", "Tribunales"]
 
 [[blogs]]
-  section = "columns"
+  id = "col-agenda-cvr-2023"
+  group = "columnas"
   type = "Columna"
+  year = "2023"
   date = "22 de agosto de 2023"
   title = "Una agenda pendiente a veinte años del Informe final de la CVR: apuntes sobre la (no)enseñanza del Conflicto Armado Interno en las universidades peruanas"
-  authors = "Cépeda, M. & Valverde, L."
+  authors = "Cépeda, M. y Valverde, L."
   outlet = "IDEHPUCP — Boletín y Eventos"
   summary = "Reflexión sobre las brechas en la enseñanza del conflicto armado interno en la educación superior peruana, a veinte años del Informe Final de la CVR."
   link = "https://idehpucp.pucp.edu.pe/boletin-eventos/una-agenda-pendiente-a-veinte-anos-del-informe-final-de-la-cvr-apuntes-sobre-la-noensenanza-del-conflicto-armado-interno-en-las-universidades-peruanas-28539/"
-  tags = ["Columna", "Memoria", "Educación", "CVR"]
 
 [[blogs]]
-  section = "columns"
+  id = "col-reconstruccion-2023"
+  group = "columnas"
   type = "Columna"
+  year = "2023"
   date = "20 de junio de 2023"
   title = "Reconstrucción sin cambios: cuando la prevención no es una prioridad"
-  authors = "Solis, E. & Valverde, L."
+  short_meta = "IDEHPUCP · con E. Solís ↗"
+  authors = "Solís, E. y Valverde, L."
   outlet = "IDEHPUCP — Boletín y Eventos"
   summary = "Análisis de los procesos de reconstrucción post-desastre en el Perú y el abandono sistemático de la prevención en la política pública tras el Niño Costero de 2017."
   link = "https://idehpucp.pucp.edu.pe/boletin-eventos/reconstruccion-sin-cambios-cuando-la-prevencion-no-es-una-prioridad-28343/"
-  tags = ["Columna", "Desastres", "Política Pública", "Perú"]
 
 [[blogs]]
-  section = "columns"
+  id = "col-estancamiento-2023"
+  group = "columnas"
   type = "Columna"
+  year = "2023"
   date = "21 de marzo de 2023"
   title = "El estancamiento de la democracia en el Perú"
-  authors = "Benites, A. & Valverde, L."
+  authors = "Benites, A. y Valverde, L."
   outlet = "IDEHPUCP — Boletín y Eventos"
   summary = "Columna de opinión que analiza los factores estructurales detrás de la erosión democrática en el Perú desde las transiciones de los años ochenta y noventa."
   link = "https://idehpucp.pucp.edu.pe/boletin-eventos/el-estancamiento-de-la-democracia-en-el-peru-27949/"
-  tags = ["Columna", "Democracia", "Perú"]

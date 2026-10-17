@@ -17,31 +17,39 @@
   github   = "https://github.com/LuisEduardoValverdeRamos"
   github_username = "LuisEduardoValverdeRamos"
 
-# --- Premios y Reconocimientos ---
-[[honors]]
-  institution = "Liga Peruana de Debate Universitario"
-  title = "Campeón Nacional de Debate Interuniversitario (CNDI)"
-  date = "2025"
+  # Perfil del CV (página /cv/), sin adjetivos sobre sí mismo
+  profile = "Politólogo por la PUCP, primer puesto de su promoción, con tesis de licenciatura aprobada con mención sobresaliente. Investiga comportamiento electoral, prensa y agenda pública, y brechas de implementación en infraestructura pública con métodos mixtos y ciencia social computacional en R. Investigador de la Escuela Electoral y de Gobernabilidad (ESEG) del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima y director académico de la Liga Peruana de Debate Escolar (LPDE)."
 
+# --- Reconocimientos (fuente: CV de oct-2026) ---
 [[honors]]
-  institution = "Facultad de Ciencias Sociales, PUCP"
-  title = "Primer Puesto — Concurso de Investigación para Estudiantes"
-  date = "2023"
-
-[[honors]]
-  institution = "DARI PUCP — Dirección Académica de Relaciones Institucionales"
-  title = "Beca de Movilidad Estudiantil — Ghent University, Bélgica"
+  title = "Primer puesto de la promoción, Ciencia Política y Gobierno"
+  institution = "Pontificia Universidad Católica del Perú"
   date = "2024"
 
 [[honors]]
-  institution = "CMUDE — Campeonato Mundial Universitario de Debate en Español, Madrid"
-  title = "Semifinalista"
-  date = "2022"
+  title = "Tesis de licenciatura con mención sobresaliente"
+  institution = "Pontificia Universidad Católica del Perú"
+  date = "2025"
 
 [[honors]]
-  institution = "PRONABEC — Programa Beca 18"
-  title = "Beca completa para Ciencia Política en la PUCP"
-  date = "2019 – 2024"
+  title = "Primer puesto, Concurso de Investigación de la Facultad de Ciencias Sociales"
+  institution = "Pontificia Universidad Católica del Perú"
+  date = "2023"
+
+[[honors]]
+  title = "Campeón Nacional Interuniversitario de Debate (CNDI)"
+  institution = "Perú"
+  date = "2025"
+
+[[honors]]
+  title = "Beca DARI para el intercambio en Ghent University"
+  institution = "Pontificia Universidad Católica del Perú"
+  date = "2024"
+
+[[honors]]
+  title = "Beca 18: beca nacional por mérito que cubrió todo el pregrado"
+  institution = "PRONABEC"
+  date = "2019–2024"
 
 # --- Voluntariados y Participación en Organizaciones ---
 [[voluntary]]
@@ -61,6 +69,6 @@
 [[voluntary]]
   role = "Observador Electoral"
   organization = "Transparencia"
-  period = "11 abr. 2021 (Primera vuelta) & 6 jun. 2021 (Segunda vuelta)"
+  period = "Abr. y jun. 2021"
   description = "Observador electoral de las elecciones generales peruanas 2021 (primera y segunda vuelta) por parte de Transparencia."
   url = ""

@@ -1,0 +1,8 @@
+{{- /* Returns a mailto: URL with an optional subject and body, encoded as RFC 6068
+       asks: spaces as %20 (urlquery would write "+") and line breaks as %0D%0A. */ -}}
+{{- $q := slice -}}
+{{- with .subject }}{{ $q = $q | append (printf "subject=%s" (replace (urlquery .) "+" "%20")) }}{{ end -}}
+{{- with .body }}{{ $q = $q | append (printf "body=%s" (replace (replace (urlquery .) "+" "%20") "%0A" "%0D%0A")) }}{{ end -}}
+{{- $href := printf "mailto:%s" .email -}}
+{{- with $q }}{{ $href = printf "%s?%s" $href (delimit . "&") }}{{ end -}}
+{{- return ($href | safeURL) -}}

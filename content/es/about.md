@@ -1,16 +1,54 @@
 ---
 title: "Sobre mí"
-description: "Luis Valverde Ramos, politólogo (PUCP): investigador en la ESEG del JNE, consultor y director académico de la LPDE."
-date: 2026-04-04
-draft: false
+description: "Politólogo (PUCP), investigador en la ESEG del JNE, consultor y director académico de la LPDE. Formación, líneas de investigación y debate."
 layout: "about"
-profile_image: "/images/profile.jpeg"
+photo_alt: "Retrato de Luis Valverde Ramos"
 ---
 
-Soy **Luis Valverde Ramos**, politólogo por la **Pontificia Universidad Católica del Perú (PUCP)**, donde egresé en el primer puesto de mi promoción, con un semestre de intercambio en **Ghent University**, Bélgica. Trabajo en la intersección entre política electoral, políticas públicas y ciencia de datos — convirtiendo datos administrativos a gran escala e investigación con métodos mixtos en evidencia sobre la cual las instituciones puedan actuar. He trabajado con instituciones del Estado, centros de investigación financiados por cooperación internacional y el sector privado, traduciendo análisis complejo en productos claros y accionables para tomadores de decisión.
+Soy politólogo por la Pontificia Universidad Católica del Perú (PUCP). Egresé en el primer puesto de mi promoción y mi tesis de licenciatura fue aprobada con mención sobresaliente en 2025. Estudié la carrera con Beca 18 y pasé un semestre de intercambio en Ghent University (Bélgica) con una beca DARI. Soy de Pedregal Grande (Catacaos, Piura) y trabajo desde Lima.
 
-Actualmente soy **Investigador en la Escuela Electoral y de Gobernabilidad (ESEG) del Jurado Nacional de Elecciones**, donde contribuyo al diseño de la agenda de investigación institucional; **consultor del Observatorio de Corrupción del Colegio de Abogados de Lima**; **Director Académico de la Liga Peruana de Debate Escolar (LPDE)**; y **Jefe de Práctica de Economía Política en la PUCP**.
+Hoy soy investigador en la Escuela Electoral y de Gobernabilidad (ESEG) del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima, director académico de la Liga Peruana de Debate Escolar (LPDE) y jefe de práctica de Economía Política en la PUCP.
 
-### Más allá de mi trabajo
+## Qué investigo
 
-Soy miembro activo de la comunidad peruana de debate competitivo — **Campeón Nacional de Debate Interuniversitario (2025)** y Semifinalista del **CMUDE — Campeonato Mundial Universitario de Debate en Español** (Madrid, 2022). Fui entrenador de la selección peruana que en Panamá 2026 obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED), y formo debatientes universitarios de Perú y República Dominicana en formato Parlamentario Británico: preparé a las duplas dominicanas que llegaron a octavos de final del WUDC 2025, la primera vez para su país. Creo que comunicar bien importa tanto como pensar bien. Fuera del trabajo, practico Muay Thai.
+Trabajo en cuatro líneas, cada una formulada como una pregunta.
+
+{{< research-lines "Ver investigación y escritos →" >}}
+
+## Consultoría
+
+Analizo datos públicos, electorales y administrativos para instituciones que necesitan responder una pregunta concreta: qué se puede medir con los datos disponibles, cómo diseñar un instrumento o qué muestran unos registros. He trabajado con el Observatorio de Corrupción del Colegio de Abogados de Lima (evaluación de indicadores de contrataciones públicas, desde 2026), con ProDiálogo para el JNE (equipo técnico del informe sobre el elector peruano, 2025), con la LPDE (el primer informe de la Liga sobre el ecosistema de debate escolar, con 70 instituciones, y siete policy briefs, 2026) y con Roche Pharma Perú, vía Sapienza Consultora (análisis de datos administrativos del sector salud, 2025).
+
+Trabajo de forma presencial en Lima y a distancia con el resto del país y América Latina. Respondo en 24 horas y emito recibos por honorarios.
+
+[Trabajemos →]({{< relref "/work" >}})
+
+## Debate
+
+- Entrenador de la selección peruana que en Panamá 2026 obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED).
+- Entrenador general de la Sociedad de Debate PUCP y entrenador de debate del Colegio Alpamayo, desde 2026.
+- Desde 2024 entreno a distancia a debatientes universitarios de República Dominicana. Preparé a las duplas que llegaron a los octavos de final del WUDC 2025, la primera vez para el país, y a los cuartos de final del CMUDE Ecuador 2026.
+- Como director académico de la LPDE, lidero el equipo a cargo de sus programas de capacitación, entrenamiento y consultoría en debate escolar.
+- Como debatiente: campeón nacional interuniversitario (CNDI 2025), semifinalista del CMUDE Madrid 2022, cuartofinalista del CMUDE Panamá 2023 y subcampeón del Torneo Rosarista (Bogotá, 2023). Como juez: juez de la gran final del CMUDE 2026 (Ecuador) y jefe de adjudicación del TNDE 2025.
+
+[Ver debate →]({{< relref "/debate" >}})
+
+## Formación
+
+- Licenciatura en Ciencia Política y Gobierno, PUCP (2019–2024). Primer puesto de la promoción; tesis con mención sobresaliente (2025). Becario de Beca 18 (PRONABEC).
+- Intercambio en Ghent University, Bélgica (2024), con beca DARI-PUCP y cursos de nivel de maestría, entre ellos Quantitative Methods for Social Research.
+- Diploma del Bachillerato Internacional, COAR Amazonas (2016–2018).
+- Primer puesto del Concurso de Investigación de la Facultad de Ciencias Sociales de la PUCP (2023).
+- Docencia: jefe de práctica de Economía Política en la PUCP (desde 2026). En Q-LAB fui asistente docente de Introducción a R para la Investigación Social (dos ediciones) y del módulo de Causal Machine Learning.
+
+[Ver CV completo →]({{< relref "/cv" >}})
+
+## Fuera del trabajo
+
+Practico muay thai. Fui observador electoral de Transparencia en las dos vueltas de 2021.
+
+## Bio breve
+
+Para programas de eventos y medios:
+
+> Luis Valverde Ramos es politólogo por la Pontificia Universidad Católica del Perú, donde egresó en el primer puesto de su promoción. Es investigador en la Escuela Electoral y de Gobernabilidad del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima y director académico de la Liga Peruana de Debate Escolar. Investiga el comportamiento electoral y la implementación de políticas públicas en el Perú. Fue entrenador de la selección peruana que en Panamá 2026 obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED).

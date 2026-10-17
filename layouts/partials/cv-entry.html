@@ -1,0 +1,15 @@
+{{- /* One CV line: date column, title, organisation (linked when there is a link),
+       an optional sentence, an optional visible list and an optional folded
+       list of details. Context: dict when, title, org, link, text, list,
+       details, details_label. */ -}}
+<div class="s-entry">
+  <div class="when">{{ .when }}</div>
+  <div class="what">
+    {{- with .title }}<b>{{ . }}</b>{{ end }}{{ with .org }}{{ if $.title }} · {{ end }}{{ if $.link }}<a href="{{ $.link }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}
+    {{- with .text }}<p>{{ . }}</p>{{ end }}
+    {{- with .list }}<ul class="s-bullets" style="margin-top:6px">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+    {{- with .details }}
+    <details><summary>{{ $.details_label }}</summary><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul></details>
+    {{- end }}
+  </div>
+</div>

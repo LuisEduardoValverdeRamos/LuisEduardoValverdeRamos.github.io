@@ -1,0 +1,7 @@
+{{- /* Returns the URL of a data entry: its page (a content path such as "/cv",
+       resolved in the current language) or its external url, plus an optional
+       anchor. */ -}}
+{{- $u := .url -}}
+{{- with .page }}{{ with site.GetPage . }}{{ $u = .RelPermalink }}{{ end }}{{ end -}}
+{{- with .anchor }}{{ $u = printf "%s#%s" $u . }}{{ end -}}
+{{- return $u -}}

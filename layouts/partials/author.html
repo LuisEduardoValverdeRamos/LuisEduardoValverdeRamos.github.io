@@ -1,0 +1,2 @@
+{{- /* Returns the author table of data/<lang>/author.toml for the page's language. */ -}}
+{{- return (index hugo.Data .Language.Lang "author").author -}}

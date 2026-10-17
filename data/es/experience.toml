@@ -2,6 +2,7 @@
   role = "Jefe de Práctica"
   company = "Pontificia Universidad Católica del Perú (PUCP)"
   period = "Ago. 2026 – Actualidad"
+  current = true
   country = "Perú"
   company_link = "https://www.pucp.edu.pe"
   description = "Dirijo las sesiones prácticas semanales del curso de Economía Política en la Facultad de Ciencias Sociales."
@@ -14,6 +15,7 @@
   role = "Investigador"
   company = "Escuela Electoral y de Gobernabilidad (ESEG) — Jurado Nacional de Elecciones"
   period = "Jul. 2026 – Actualidad"
+  current = true
   country = "Lima, Perú"
   company_link = "https://www.jne.gob.pe"
   description = "Contribuyo al diseño de la agenda de investigación institucional con métodos cuantitativos y cualitativos, en el marco de las Elecciones Regionales y Municipales 2026."
@@ -27,6 +29,7 @@
   role = "Consultor"
   company = "Observatorio de Corrupción — Colegio de Abogados de Lima (CAL)"
   period = "Sep. 2026 – Actualidad"
+  current = true
   country = "Lima, Perú"
   company_link = ""
   description = "Asesoro al Observatorio en la primera entrega de su informe sobre contrataciones públicas 2016–2025: evaluación de factibilidad y validez de indicadores construidos con registros abiertos del SEACE/OECE."
@@ -39,6 +42,7 @@
   role = "Director Académico"
   company = "Liga Peruana de Debate Escolar (LPDE)"
   period = "Sep. 2026 – Actualidad"
+  current = true
   country = "Perú"
   company_link = ""
   description = "Lidero el equipo académico de la LPDE: programas de capacitación, entrenamiento y consultoría en debate escolar."

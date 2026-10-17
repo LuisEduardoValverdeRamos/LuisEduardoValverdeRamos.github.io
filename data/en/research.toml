@@ -1,10 +1,92 @@
-[[research]]
-  period = "2024 – Present"
-  role = "Research Member"
-  group = "Research Group on State and Society (GIES — PUCP)"
-  location = "Lima, Peru"
-  group_link = "https://hechosynopalabras.pe"
-  description = "Research group at PUCP focused on state institutions, democracy and social policy in Peru."
-  responsibilities = [
-    "Systematised congressional votes and built legislative tracking databases for the civic portal hechosynopalabras.pe, documenting gender and higher education reforms ahead of Peru's 2026 elections."
-  ]
+# Research page (/research/): research lines framed as questions, work in
+# progress, teaching and groups. The lines also feed the home page and About.
+# Rule: work in progress is named without results or figures.
+# Top-level keys first: in TOML, anything below a table header belongs to it.
+
+lead = "Four research lines framed as questions; for each, the method, the evidence and where it stands."
+cta_title = "Research collaboration or assistance?"
+cta_label = "Work with me"
+cta_anchor = "research"
+
+[toc]
+  lines = "Lines"
+  projects = "Projects"
+  writing = "Writing"
+  wip = "In progress"
+  teaching = "Teaching and groups"
+
+[labels]
+  method = "Method"
+  evidence = "Evidence"
+  status = "Status"
+  tools = "Tools"
+  see = "View project ↗"
+
+[groups_titles]
+  tesis = "Thesis"
+  informes = "Technical and institutional reports"
+  editorial = "Editorial contributions"
+  columnas = "Columns and outreach"
+
+[[lines]]
+  id = "electoral-behaviour"
+  name = "Electoral behaviour"
+  question = "How do people vote in the absence of parties?"
+  summary = "Post-election surveys, clustering and discrete-choice models. I was part of the technical team behind the JNE/ProDiálogo report on the Peruvian voter (2026), and I am preparing an article with Daniel Encinas (Northwestern University)."
+  method = "JNE post-election surveys (2011, 2016 and 2021), cluster analysis, discrete-choice models and spatial analysis of the voter register."
+  evidence = "JNE/ProDiálogo report (2026), as part of the technical team; Youth Vote 2026 project; article in preparation with Daniel Encinas."
+  status = "Active"
+
+[[lines]]
+  id = "press-and-agenda"
+  name = "The press and the public agenda"
+  question = "What does the press choose to name, and what does it leave out?"
+  summary = "As a research assistant at CISEPA-PUCP, I helped build a corpus of 747,836 headlines from El Comercio and La República (2016–2024). This line is in development."
+  method = "Text analysis at scale on a corpus of 747,836 headlines from El Comercio and La República (2016–2024), built as a research assistant at CISEPA-PUCP."
+  evidence = "No publications of my own yet."
+  status = "In development"
+
+[[lines]]
+  id = "implementation"
+  name = "Policy implementation"
+  question = "Why do the works the state promises arrive late, or not at all?"
+  summary = "My thesis examined the reconstruction of school infrastructure in Piura after the 2017 coastal El Niño (2020–2023). As a research assistant at Q-LAB-PUCP, I worked on a machine-learning model of delays in municipal public works."
+  method = "Case study with comparison and interviews (thesis); a machine-learning model (XGBoost and SHAP) of municipal works, as a research assistant at Q-LAB-PUCP."
+  evidence = "Licentiate thesis with distinction (PUCP, 2025); public site and code of the municipal works project."
+  status = "Active"
+
+[[lines]]
+  id = "civic-education"
+  name = "Civic education and debate"
+  question = "What prepares citizens to deliberate?"
+  summary = "For the LPDE, I analyse public results from school debate tournaments, in aggregate only. For the ESEG, I work on a census of electoral education in Peruvian universities (ongoing)."
+  method = "Analysis of public results from school tournaments, always in aggregate; census of electoral education in universities (ESEG-JNE)."
+  evidence = "LPDE report and policy briefs (2026). The ESEG census is ongoing and has no publishable results yet."
+  status = "Active"
+
+[[wip]]
+  title = "El mal menor y el voto en blanco: el voto expresivo en el balotaje presidencial peruano de 2021"
+  with = "With Daniel Encinas (Northwestern University) · on expressive and blank voting in Peru's 2021 presidential run-off"
+  status = "In preparation"
+
+[[wip]]
+  title = "Census of electoral education in Peruvian universities"
+  with = "For the Electoral and Governance School (ESEG) of the JNE"
+  status = "Ongoing"
+
+[[teaching]]
+  period = "2026–"
+  role = "Teaching assistant (jefe de práctica) in Political Economy"
+  org = "Pontificia Universidad Católica del Perú (PUCP)"
+
+[[teaching]]
+  period = "2024–2025"
+  role = "Teaching assistant for Introduction to R for Social Research (two editions) and the Causal Machine Learning module"
+  org = "Q-LAB-PUCP"
+
+[[groups]]
+  period = "2024–"
+  role = "Research member"
+  group = "State and Society Research Group (GIES), PUCP"
+  link = "https://hechosynopalabras.pe"
+  description = "Systematised congressional votes and built legislative tracking databases for the civic portal hechosynopalabras.pe, documenting gender and higher education reforms ahead of Peru's 2026 elections."

@@ -1,0 +1,4 @@
+{{- /* Home: one line with the institutions (the grouped list lives in Work with me). */ -}}
+{{- with .d.services.institutions }}
+<p class="s-inst-line"><span class="s-eyebrow">{{ .home_label }}</span> {{ .home_line }}</p>
+{{- end }}

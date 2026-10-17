@@ -1,0 +1,101 @@
+# Página Debate (/es/debate/) y banda de debate de la portada.
+# Reglas: los logros de equipo se rotulan como del equipo («la selección que
+# entrené», «las duplas que preparé»); MED, CMUDE y WUDC con su nombre
+# completo; nada individual de debatientes escolares (son menores de edad).
+# Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
+
+lead = "Entreno equipos escolares y universitarios, juzgo torneos en español y dirijo el equipo académico de la Liga Peruana de Debate Escolar (LPDE)."
+glossary = "El MED es el Mundial de Debate Escolar en Español; el CMUDE, el Campeonato Mundial Universitario de Debate en Español, y el WUDC, el Mundial Universitario de Debate, que se compite en inglés."
+
+[home]
+  eyebrow = "Debate"
+  title = "Entreno equipos escolares y universitarios, y juzgo torneos en español"
+  text = "Entrenador general de la Sociedad de Debate PUCP y entrenador del Colegio Alpamayo; juez de la Gran Final del CMUDE 2026 y jefe de adjudicación del TNDE 2025."
+  more = "Más sobre debate"
+  cta = "¿Quieres entrenar a tu equipo?"
+
+[toc]
+  coach = "Entreno"
+  judge = "Juzgo"
+  compete = "Compito"
+  lpde = "LPDE"
+  team = "Para tu equipo"
+
+[[highlights]]
+  label = "MED · Panamá 2026"
+  text = "Entrené a la selección peruana que obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español."
+  src = "Andina ↗"
+  url = "https://andina.pe/agencia/noticia-peru-se-corona-tetracampeon-el-mundial-debate-escolar-espanol-2026-1091241.aspx"
+
+[[highlights]]
+  label = "WUDC 2025 · CMUDE 2026"
+  text = "Preparé a las duplas dominicanas que llegaron a octavos de final del WUDC, primera vez para el país, y a cuartos de final del CMUDE."
+
+[[highlights]]
+  label = "CNDI 2025"
+  text = "Campeón nacional interuniversitario de debate, como debatiente."
+
+[[highlights]]
+  label = "CMUDE 2026 · TNDE 2025"
+  text = "Juez de la Gran Final del CMUDE 2026 (Ecuador) y jefe de adjudicación del TNDE 2025."
+
+[coach]
+  title = "Entreno"
+  [[coach.items]]
+    period = "2025–2026"
+    role = "Entrenador"
+    org = "Selección Nacional de Debate Escolar del Perú"
+    text = "Sesiones de contenido, estilo y estrategia en el ciclo que terminó con el cuarto título consecutivo del MED (Panamá 2026)."
+  [[coach.items]]
+    period = "Jul. 2026–"
+    role = "Entrenador general"
+    org = "Sociedad de Debate PUCP"
+    text = "Planificación de sesiones y preparación competitiva en formato parlamentario británico. Antes, instructor de novatos (ago.–dic. 2025)."
+  [[coach.items]]
+    period = "Jun. 2026–"
+    role = "Entrenador de debate"
+    org = "Colegio Alpamayo"
+    text = "Diseño y dicto el programa del colegio: construcción de argumentos, refutación, ponderación y fundamentos de economía."
+  [[coach.items]]
+    period = "2024–"
+    role = "Entrenador universitario, a distancia"
+    org = "República Dominicana"
+    text = "Formato parlamentario británico. Las duplas que preparé llegaron a octavos de final del WUDC 2025, primera vez para el país, y a cuartos de final del CMUDE Ecuador 2026."
+
+[judge]
+  title = "Juzgo"
+  [[judge.items]]
+    period = "2026"
+    role = "Juez de la Gran Final"
+    org = "CMUDE 2026 (Ecuador)"
+  [[judge.items]]
+    period = "2025"
+    role = "Jefe de adjudicación"
+    org = "TNDE 2025"
+
+[compete]
+  title = "Compito"
+  [[compete.items]]
+    period = "2025"
+    role = "Campeón"
+    org = "Campeonato Nacional Interuniversitario de Debate (CNDI)"
+  [[compete.items]]
+    period = "2023"
+    role = "Cuartofinalista"
+    org = "CMUDE Panamá 2023"
+  [[compete.items]]
+    period = "2023"
+    role = "Subcampeón"
+    org = "Torneo Rosarista (Bogotá)"
+  [[compete.items]]
+    period = "2022"
+    role = "Semifinalista"
+    org = "CMUDE Madrid 2022"
+
+[lpde]
+  title = "Liga Peruana de Debate Escolar"
+  text = "Desde septiembre de 2026 soy director académico de la LPDE: lidero el equipo a cargo de sus programas de capacitación, entrenamiento y consultoría en debate escolar. Antes, como consultor de investigación, preparé el primer informe de la Liga sobre el ecosistema de debate escolar (70 instituciones) y siete policy briefs. Trabajo solo con datos agregados: los debatientes son menores de edad."
+
+[team]
+  title = "Para tu equipo"
+  text = "Programas para colegios, preparación de equipos universitarios y selecciones, formación de jueces y talleres de 2 horas."

@@ -56,5 +56,26 @@
             {{ block "main" . }}{{ end }}
         </main>
         {{ partial "footer" . }}
+        <script>
+          (function () {
+            // Mobile menu
+            var b = document.getElementById('s-menu-btn'), m = document.getElementById('s-menu');
+            if (b && m) b.addEventListener('click', function () {
+              var open = m.hasAttribute('hidden');
+              if (open) m.removeAttribute('hidden'); else m.setAttribute('hidden', '');
+              b.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+            // "Copy email" buttons
+            document.addEventListener('click', function (e) {
+              var c = e.target.closest('[data-copy]');
+              if (!c || !navigator.clipboard) return;
+              navigator.clipboard.writeText(c.getAttribute('data-copy')).then(function () {
+                var label = c.textContent;
+                c.textContent = c.getAttribute('data-done');
+                setTimeout(function () { c.textContent = label; }, 2000);
+              });
+            });
+          })();
+        </script>
     </body>
 </html>

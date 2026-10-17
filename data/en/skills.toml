@@ -1,0 +1,23 @@
+# Methods and tools (CV). Source: October 2026 CV and Luis's answer of
+# 17 Oct 2026 on tools: R; Python and Stata at an intermediate level.
+# Nothing he has not used in delivered work (never Linux), no language levels.
+
+[[skills]]
+  category = "Quantitative methods"
+  detail = "Descriptive and inferential statistics; econometrics and causal inference; machine learning applied to the social sciences."
+
+[[skills]]
+  category = "Qualitative methods"
+  detail = "Case studies; process tracing; semi-structured interviews; documentary, content and discourse analysis."
+
+[[skills]]
+  category = "Tools"
+  detail = "R, my main tool; Python and Stata at an intermediate level."
+
+[[skills]]
+  category = "Debate"
+  detail = "British Parliamentary and World Schools formats; session design; training coaches and adjudicators; adjudication and tournament management."
+
+[[skills]]
+  category = "Outputs"
+  detail = "Policy briefs; political and electoral analysis reports; public policy papers; outreach columns."

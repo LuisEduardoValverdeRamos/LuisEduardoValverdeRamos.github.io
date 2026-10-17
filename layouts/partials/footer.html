@@ -1,45 +1,46 @@
-{{- /* Footer: a contained "contact card" block with a call to action, the email
-       as copyable text, and the site and profile links. */ -}}
-{{- $authorData := index site.Data .Language.Lang "author" -}}
-{{- $a := cond (and $authorData $authorData.author) $authorData.author site.Params -}}
-<footer class="mt-16 md:mt-20 px-3 pb-3 md:px-8 md:pb-8" aria-labelledby="footer-cta">
-  <div class="max-w-6xl mx-auto rounded-lg border border-footer-border-light bg-footer-bg-light text-footer-text-light px-6 pt-8 pb-5 md:px-12 md:pt-12 md:pb-6">
-    <div class="grid gap-10 md:grid-cols-12">
-      <div class="md:col-span-6">
-        <h2 id="footer-cta" class="text-3xl md:text-4xl leading-tight">{{ T "footerCtaTitle" }}</h2>
-        <p class="mt-3 max-w-[42ch] text-footer-muted-light">{{ T "footerCtaText" }}</p>
+{{- /* Footer: a contained block («rectángulo») with the invitation to write, the
+       email as copyable text, site links, profiles and the colophon. */ -}}
+{{- $a := partial "author.html" . -}}
+{{- $p := . -}}
+<div class="s-footer-zone">
+  <footer class="s-footer" aria-labelledby="footer-cta">
+    <div class="top">
+      <div>
+        <h2 id="footer-cta" class="cta-title">{{ T "footerCtaTitle" }}</h2>
+        <p>{{ T "footerCtaText" }}</p>
         {{- with $a.email }}
-        <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
-          <a href="mailto:{{ . }}?subject={{ T "footerMailSubject" }}" class="inline-flex items-center rounded px-5 py-2.5 font-semibold bg-footer-btn-bg-light text-footer-btn-text-light hover:opacity-90">{{ T "footerWriteEmail" }}</a>
-          <span class="font-semibold select-all">{{ . }}</span>
-        </div>
+        {{ partial "email-block.html" (dict "email" . "subject" (T "footerMailSubject")) }}
         {{- end }}
       </div>
-      <nav class="md:col-span-6 grid grid-cols-2 gap-8 text-[15px]" aria-label="{{ T "footerNavLabel" }}">
-        <div>
-          <h3 class="font-sans mb-3 text-xs font-semibold uppercase tracking-[0.07em] text-footer-muted-light">{{ T "footerSite" }}</h3>
-          <ul class="space-y-2">
-            {{- range site.Menus.main }}
-            <li><a href="{{ .URL | absURL }}" class="text-footer-link-light hover:underline underline-offset-4">{{ .Name }}</a></li>
-            {{- end }}
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-sans mb-3 text-xs font-semibold uppercase tracking-[0.07em] text-footer-muted-light">{{ T "footerProfiles" }}</h3>
-          <ul class="space-y-2">
-            {{- with $a.linkedin }}<li><a href="{{ . }}" rel="me noopener" class="text-footer-link-light hover:underline underline-offset-4">LinkedIn</a></li>{{ end }}
-            {{- with $a.github }}<li><a href="{{ . }}" rel="me noopener" class="text-footer-link-light hover:underline underline-offset-4">GitHub</a></li>{{ end }}
-            {{- with $a.orcid }}<li><a href="{{ . }}" rel="me noopener" class="text-footer-link-light hover:underline underline-offset-4">ORCID</a></li>{{ end }}
-            {{- with $a.scholar }}<li><a href="{{ . }}" rel="me noopener" class="text-footer-link-light hover:underline underline-offset-4">Google Scholar</a></li>{{ end }}
-          </ul>
-        </div>
+      <nav aria-labelledby="footer-site">
+        <h3 id="footer-site">{{ T "footerSite" }}</h3>
+        <ul>
+          {{- range site.Menus.main }}{{ if ne .Identifier "cv" }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{- end }}{{ end }}
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-more">
+        <h3 id="footer-more">{{ T "footerMore" }}</h3>
+        <ul>
+          {{- with site.GetPage "/media" }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+          {{- with site.GetPage "/cv" }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+          <li>{{ partial "lang-switch.html" (dict "page" $p "long" true) }}</li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-profiles">
+        <h3 id="footer-profiles">{{ T "footerProfiles" }}</h3>
+        <ul>
+          {{- with $a.linkedin }}<li><a href="{{ . }}" rel="me noopener">LinkedIn</a></li>{{ end }}
+          {{- with $a.github }}<li><a href="{{ . }}" rel="me noopener">GitHub</a></li>{{ end }}
+          {{- with $a.orcid }}<li><a href="{{ . }}" rel="me noopener">ORCID</a></li>{{ end }}
+          {{- with $a.scholar }}<li><a href="{{ . }}" rel="me noopener">Google Scholar</a></li>{{ end }}
+        </ul>
       </nav>
     </div>
-    <div class="mt-10 pt-4 border-t border-footer-border-light flex flex-col gap-2 text-sm text-footer-muted-light md:flex-row md:justify-between">
-      <p>© {{ now.Format "2006" }} {{ $a.name }}{{ with $a.location }} · {{ . }}{{ end }}</p>
-      <p>{{ T "builtUsing" }} <a href="https://gohugo.io/" class="underline underline-offset-2">Hugo</a>
-        {{- with $a.github }} · <a href="{{ . }}" class="underline underline-offset-2">{{ T "footerCode" }}</a>{{ end }}
-      </p>
+    <div class="bottom">
+      <span>© {{ now.Year }} {{ $a.name }}{{ with $a.location }} · {{ . }}{{ end }}</span>
+      <span>{{ T "builtUsing" }} <a href="https://gohugo.io/">Hugo</a>{{ with $a.github }} · <a href="{{ . }}/LuisEduardoValverdeRamos.github.io">{{ T "footerCode" }}</a>{{ end }} · {{ T "footerUpdated" }} {{ now | time.Format (T "footerDateLayout") }}</span>
     </div>
-  </div>
-</footer>
+  </footer>
+</div>

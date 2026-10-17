@@ -1,0 +1,121 @@
+{{ define "main" }}
+{{- /* CV: the one page that lists everything, one line per entry. The data stays
+       in each topic's file (experience, education, research, debate, skills,
+       author). This page is also the source of the PDF (print styles in
+       main.css). */ -}}
+{{- $d := index hugo.Data .Language.Lang -}}
+{{- $cv := $d.cv -}}
+{{- $s := $cv.sections -}}
+{{- $l := $cv.labels -}}
+{{- $a := $d.author.author -}}
+{{- $lang := .Language.Lang -}}
+{{- $other := cond (eq $lang "es") "en" "es" -}}
+<div class="wrap">
+  <header class="s-page-head">
+    <div class="s-printonly">
+      <p class="s-cv-name">{{ $a.name }}</p>
+      <p class="s-cv-contact">{{ $a.location }} · {{ $a.email }} · {{ replace site.Home.Permalink "https://" "" | strings.TrimSuffix "/" }}{{ with $a.linkedin }} · {{ replace . "https://www." "" | strings.TrimSuffix "/" }}{{ end }}{{ with $a.github }} · {{ replace . "https://" "" }}{{ end }}</p>
+    </div>
+    <p class="s-eyebrow s-noprint">{{ .Title }}</p>
+    <h1 class="s-h1 s-noprint">{{ $cv.title }}</h1>
+    <p class="s-lead">{{ $a.profile }}</p>
+    <div class="s-ctas tight s-noprint">
+      {{- with (printf "files/cv-%s.pdf" $lang) }}{{ if fileExists (printf "static/%s" .) }}<a class="s-btn primary small" href="{{ . | relURL }}">{{ $cv.pdf_label }}</a>{{ end }}{{ end }}
+      {{- with (printf "files/cv-%s.pdf" $other) }}{{ if fileExists (printf "static/%s" .) }}<a class="s-link" href="{{ . | relURL }}" hreflang="{{ $other }}">{{ $cv.pdf_other }}</a>{{ end }}{{ end }}
+      <span class="s-note">{{ T "footerUpdated" }} {{ now | time.Format (T "footerDateLayout") }} · {{ $a.email }}</span>
+    </div>
+  </header>
+
+  <div class="s-cv">
+    <nav class="s-cv-toc" aria-label="{{ T "onThisPage" }}">
+      <a href="#current">{{ $s.current }}</a>
+      <a href="#experience">{{ $s.experience }}</a>
+      <a href="#education">{{ $s.education }}</a>
+      <a href="#honors">{{ $s.honors }}</a>
+      <a href="#writing">{{ $s.writing }}</a>
+      <a href="#teaching">{{ $s.teaching }}</a>
+      <a href="#debate">{{ $s.debate }}</a>
+      <a href="#skills">{{ $s.skills }}</a>
+      <a href="#civic">{{ $s.civic }}</a>
+    </nav>
+    <div>
+      <section id="current" aria-labelledby="h-current">
+        <h2 id="h-current" class="s-h2">{{ $s.current }}</h2>
+        {{- range where $d.experience.experience "current" true }}
+        {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .company "link" .company_link "text" .description "details" (cond (gt (len .responsibilities) 1) .responsibilities slice) "details_label" $l.details) }}
+        {{- end }}
+        {{- range $d.research.groups }}
+        {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .group "link" .link "text" .description) }}
+        {{- end }}
+      </section>
+
+      <section id="experience" aria-labelledby="h-experience">
+        <h2 id="h-experience" class="s-h2">{{ $s.experience }}</h2>
+        {{- range where $d.experience.experience "current" "!=" true }}
+        {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .company "link" .company_link "text" .description "details" (cond (gt (len .responsibilities) 1) .responsibilities slice) "details_label" $l.details) }}
+        {{- end }}
+      </section>
+
+      <section id="education" aria-labelledby="h-education">
+        <h2 id="h-education" class="s-h2">{{ $s.education }}</h2>
+        {{- range $d.education.education }}
+        {{ partial "cv-entry.html" (dict "when" .period "title" .degree "org" (printf "%s, %s" .institution .location) "link" .institution_link "list" .highlights) }}
+        {{- end }}
+      </section>
+
+      <section id="honors" aria-labelledby="h-honors">
+        <h2 id="h-honors" class="s-h2">{{ $s.honors }}</h2>
+        {{- range $d.author.honors }}
+        {{ partial "cv-entry.html" (dict "when" .date "title" .title "org" .institution) }}
+        {{- end }}
+      </section>
+
+      <section id="writing" aria-labelledby="h-writing">
+        <h2 id="h-writing" class="s-h2">{{ $s.writing }}</h2>
+        {{- range $d.blogs.blogs }}
+        {{ partial "cv-entry.html" (dict "when" .year "title" .title "org" (cond (in (lower .outlet) (lower .type)) .outlet (printf "%s · %s" .type .outlet)) "link" .link) }}
+        {{- end }}
+        {{- range $d.research.wip }}
+        {{ partial "cv-entry.html" (dict "when" .status "title" .title "org" .with) }}
+        {{- end }}
+        {{- with site.GetPage "/research" }}<p class="s-note s-noprint" style="margin-top:8px"><a class="s-go" href="{{ .RelPermalink }}#writing">{{ $l.all_writing }}</a></p>{{ end }}
+      </section>
+
+      <section id="teaching" aria-labelledby="h-teaching">
+        <h2 id="h-teaching" class="s-h2">{{ $s.teaching }}</h2>
+        {{- range $d.research.teaching }}
+        {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .org) }}
+        {{- end }}
+      </section>
+
+      <section id="debate" aria-labelledby="h-debate">
+        <h2 id="h-debate" class="s-h2">{{ $s.debate }}</h2>
+        {{- range $d.debate.coach.items }}
+        {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .org "text" .text) }}
+        {{- end }}
+        {{- range $d.debate.judge.items }}
+        {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .org) }}
+        {{- end }}
+        {{- range $d.debate.compete.items }}
+        {{ partial "cv-entry.html" (dict "when" .period "title" (printf "%s (%s)" .role (lower $l.competing)) "org" .org) }}
+        {{- end }}
+        {{- with site.GetPage "/debate" }}<p class="s-note s-noprint" style="margin-top:8px"><a class="s-go" href="{{ .RelPermalink }}">{{ $l.more_debate }}</a></p>{{ end }}
+      </section>
+
+      <section id="skills" aria-labelledby="h-skills">
+        <h2 id="h-skills" class="s-h2">{{ $s.skills }}</h2>
+        {{- range $d.skills.skills }}
+        {{ partial "cv-entry.html" (dict "when" .category "title" "" "text" .detail) }}
+        {{- end }}
+      </section>
+
+      <section id="civic" aria-labelledby="h-civic">
+        <h2 id="h-civic" class="s-h2">{{ $s.civic }}</h2>
+        {{- range $d.author.voluntary }}
+        {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .organization "text" .description) }}
+        {{- end }}
+      </section>
+    </div>
+  </div>
+</div>
+{{ end }}

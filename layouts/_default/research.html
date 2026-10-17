@@ -1,0 +1,107 @@
+{{ define "main" }}
+{{- /* Research / Investigación: lines as questions, projects, writing, work in
+       progress, teaching and groups. Data: research, projects and blogs. */ -}}
+{{- $d := index hugo.Data .Language.Lang -}}
+{{- $r := $d.research -}}
+{{- $t := $r.toc -}}
+<div class="wrap">
+  <header class="s-page-head">
+    <h1 class="s-h1">{{ .Title }}</h1>
+    <p class="s-lead">{{ $r.lead }}</p>
+    <nav class="s-toc" aria-label="{{ T "onThisPage" }}">
+      <a href="#lines">{{ $t.lines }}</a>
+      <a href="#projects">{{ $t.projects }}</a>
+      <a href="#writing">{{ $t.writing }}</a>
+      <a href="#in-progress">{{ $t.wip }}</a>
+      <a href="#teaching">{{ $t.teaching }}</a>
+    </nav>
+  </header>
+
+  <section id="lines" class="s-section" aria-labelledby="h-lines">
+    <div class="s-section-head"><h2 id="h-lines" class="s-h2">{{ $t.lines }}</h2></div>
+    <div class="s-cards">
+      {{- range $r.lines }}
+      <article id="{{ .id }}" class="s-card">
+        <p class="s-eyebrow">{{ .name }}</p>
+        <h3 class="q">{{ .question }}</h3>
+        <dl>
+          <div><dt>{{ $r.labels.method }}</dt><dd>{{ .method }}</dd></div>
+          <div><dt>{{ $r.labels.evidence }}</dt><dd>{{ .evidence }}</dd></div>
+        </dl>
+        <p class="s-status">{{ .status }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+
+  {{- with $d.projects.projects }}
+  <section id="projects" class="s-section" aria-labelledby="h-projects">
+    <div class="s-section-head"><h2 id="h-projects" class="s-h2">{{ $t.projects }}</h2></div>
+    <div class="s-projects">
+      {{- range . }}
+      <article class="s-project">
+        {{- with .image }}{{ partial "thumb.html" . }}{{ end }}
+        <div class="body">
+          <h3 class="s-h3">{{ .title }}</h3>
+          <p>{{ .description }}</p>
+          <p class="tools">{{ .tech }}</p>
+          {{- with .link }}<a class="s-go" href="{{ . }}">{{ $r.labels.see }}</a>{{ end }}
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  <section id="writing" class="s-section" aria-labelledby="h-writing">
+    <div class="s-section-head"><h2 id="h-writing" class="s-h2">{{ $t.writing }}</h2></div>
+    {{- range $g := slice "tesis" "informes" "editorial" "columnas" }}
+    {{- with where $d.blogs.blogs "group" $g }}
+    <h3 class="s-h3 s-sub">{{ index $r.groups_titles $g }}</h3>
+    <div class="s-list">
+      {{- range . }}
+      <div class="s-item">
+        <span class="k">{{ .year }}</span>
+        <div>
+          {{- if .link }}<a class="t" href="{{ .link }}">{{ .title }}</a>{{ else }}<span class="t">{{ .title }}</span>{{ end }}
+          <span class="m">{{ .authors }} · {{ .outlet }}{{ if ne .date .year }} · {{ .date }}{{ end }}</span>
+          <p>{{ .summary }}</p>
+        </div>
+      </div>
+      {{- end }}
+    </div>
+    {{- end }}
+    {{- end }}
+  </section>
+
+  {{- with $r.wip }}
+  <section id="in-progress" class="s-section" aria-labelledby="h-wip">
+    <div class="s-section-head"><h2 id="h-wip" class="s-h2">{{ $t.wip }}</h2></div>
+    <div class="s-list">
+      {{- range . }}
+      <div class="s-item"><span class="k">{{ .status }}</span><div><span class="t">{{ .title }}</span><span class="m">{{ .with }}</span></div></div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  <section id="teaching" class="s-section" aria-labelledby="h-teaching">
+    <div class="s-section-head"><h2 id="h-teaching" class="s-h2">{{ $t.teaching }}</h2></div>
+    <div class="s-list">
+      {{- range $r.teaching }}
+      <div class="s-item"><span class="k">{{ .period }}</span><div><span class="t">{{ .role }}</span><span class="m">{{ .org }}</span></div></div>
+      {{- end }}
+      {{- range $r.groups }}
+      <div class="s-item"><span class="k">{{ .period }}</span><div><span class="t">{{ .role }} · {{ .group }}</span><p>{{ .description }}{{ with .link }} <a class="s-go" href="{{ . }}">{{ replace . "https://" "" }} ↗</a>{{ end }}</p></div></div>
+      {{- end }}
+    </div>
+  </section>
+
+  {{- with site.GetPage "/work" }}
+  <section class="s-contact">
+    <h2 class="s-h2">{{ $r.cta_title }}</h2>
+    <div><a class="s-btn primary" href="{{ .RelPermalink }}#{{ $r.cta_anchor }}">{{ $r.cta_label }} →</a></div>
+  </section>
+  {{- end }}
+</div>
+{{ end }}

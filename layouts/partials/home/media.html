@@ -1,0 +1,11 @@
+{{- /* Home: one line with the outlets, built from data/<lang>/media.toml. */ -}}
+{{- $h := .h -}}
+{{- with .d.media.media }}
+{{- $outlets := slice }}
+{{- range . }}{{ $o := .outlet_short | default .outlet }}{{ if not (in $outlets $o) }}{{ $outlets = $outlets | append $o }}{{ end }}{{ end }}
+<div class="s-media-line">
+  <span class="s-eyebrow">{{ $h.media_label }}</span>
+  <span>{{ delimit $outlets " · " }}</span>
+  {{- with site.GetPage "/media" }}<a class="s-link" href="{{ .RelPermalink }}">{{ $h.media_more }}</a>{{ end }}
+</div>
+{{- end }}

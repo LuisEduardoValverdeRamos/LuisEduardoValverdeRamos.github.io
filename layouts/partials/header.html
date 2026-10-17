@@ -1,47 +1,42 @@
-{{- /* Header: name on one line, main menu, a direct link to the other language
-       (no hover dropdown, keyboard-accessible) and an accessible mobile menu. */ -}}
-{{- $authorData := index site.Data .Language.Lang "author" -}}
-{{- $a := cond (and $authorData $authorData.author) $authorData.author site.Params -}}
-<header class="border-b border-border-primary-light">
-  <div class="max-w-6xl mx-auto px-5 md:px-8 h-16 md:h-[72px] flex items-center justify-between gap-6">
-    <a href="{{ "/" | relLangURL }}" class="site-name whitespace-nowrap text-lg md:text-xl text-text-primary-light">{{ $a.name }}</a>
-    <nav class="hidden md:flex items-center gap-6 lg:gap-7 text-[15px]" aria-label="{{ T "menuTitle" }}">
-      {{- range .Site.Menus.main }}
+{{- /* Header: name on one line, main menu with the call to action as a button,
+       a direct link to the other language and an accessible mobile menu. The
+       call to action stays visible next to the menu button on phones. */ -}}
+{{- $a := partial "author.html" . -}}
+{{- $cta := false -}}
+{{- range site.Menus.main }}{{ if .Params.cta }}{{ $cta = . }}{{ end }}{{ end -}}
+<header class="s-header">
+  <div class="wrap s-head">
+    <a href="{{ site.Home.RelPermalink }}" class="s-logo">{{ $a.name }}</a>
+    <nav class="s-nav" aria-label="{{ T "menuTitle" }}">
+      {{- range site.Menus.main }}
       {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
-      <a href="{{ .URL | absURL }}"{{ if $active }} aria-current="page"{{ end }} class="{{ if $active }}font-semibold text-text-primary-light underline decoration-2 underline-offset-[6px] decoration-accent-light{{ else }}text-text-secondary-light hover:text-text-primary-light{{ end }}">{{ .Name }}</a>
+      <a href="{{ .URL }}"{{ if .Params.cta }} class="s-navcta"{{ end }}{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
       {{- end }}
+      {{ partial "lang-switch.html" (dict "page" .) }}
     </nav>
-    <div class="flex items-center gap-3">
-      {{- with .Translations }}
-        {{- range . }}
-      <a href="{{ .Permalink }}" hreflang="{{ .Language.Lang }}" lang="{{ .Language.Lang }}" title="{{ if eq .Language.Lang "es" }}Ver en español{{ else }}View in English{{ end }}" class="text-sm font-semibold uppercase tracking-wide rounded border border-border-secondary-light px-2 py-1 text-text-secondary-light hover:text-text-primary-light">{{ .Language.Lang }}</a>
-        {{- end }}
-      {{- else }}
-        {{- range hugo.Sites }}{{ if ne .Language.Lang $.Language.Lang }}
-      <a href="{{ .Home.Permalink }}" hreflang="{{ .Language.Lang }}" lang="{{ .Language.Lang }}" title="{{ if eq .Language.Lang "es" }}Ver en español{{ else }}View in English{{ end }}" class="text-sm font-semibold uppercase tracking-wide rounded border border-border-secondary-light px-2 py-1 text-text-secondary-light hover:text-text-primary-light">{{ .Language.Lang }}</a>
-        {{- end }}{{ end }}
+    <div class="s-mobbar">
+      {{- with $cta }}
+      <a href="{{ .URL }}" class="s-navcta">{{ .Name }}</a>
       {{- end }}
-      <button id="mobile-menu-button" type="button" class="md:hidden p-2 text-text-primary-light" aria-controls="mobile-menu" aria-expanded="false" aria-label="{{ T "menuTitle" }}">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button id="s-menu-btn" type="button" class="s-burger" aria-controls="s-menu" aria-expanded="false" aria-label="{{ T "menuTitle" }}">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" d="M3 7h18M3 12h18M3 17h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden border-t border-border-primary-light">
-    <nav class="max-w-6xl mx-auto px-5 py-4 flex flex-col gap-3 text-lg" aria-label="{{ T "menuTitle" }}">
-      {{- range .Site.Menus.main }}
-      <a href="{{ .URL | absURL }}" class="py-1 text-text-primary-light">{{ .Name }}</a>
+  <div id="s-menu" class="s-mobmenu" hidden>
+    <nav class="wrap" aria-label="{{ T "menuTitle" }}">
+      {{- range site.Menus.main }}{{ if not .Params.cta }}
+      {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+      <a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{- end }}{{ end }}
+      {{- with site.GetPage "/media" }}
+      <a href="{{ .RelPermalink }}"{{ if eq . $ }} aria-current="page"{{ end }}>{{ .Title }}</a>
       {{- end }}
-      {{- with $a.email }}<a href="mailto:{{ . }}" class="mt-1 pt-3 border-t border-border-primary-light text-base text-text-secondary-light">{{ . }}</a>{{ end }}
+      <div class="s-mobfoot">
+        {{- with $cta }}<a href="{{ .URL }}" class="s-btn primary small">{{ .Name }}</a>{{ end }}
+        {{ partial "lang-switch.html" (dict "page" . "long" true) }}
+        {{- with $a.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+      </div>
     </nav>
   </div>
 </header>
-<script>
-  (function () {
-    var b = document.getElementById('mobile-menu-button'), m = document.getElementById('mobile-menu');
-    if (!b || !m) return;
-    b.addEventListener('click', function () {
-      var open = !m.classList.toggle('hidden');
-      b.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  })();
-</script>

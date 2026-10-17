@@ -1,0 +1,46 @@
+# English home page: the «short» variant (about one and a half screens), in the
+# register of academic home pages: the statement, a short bio and three doors.
+# Top-level keys first: in TOML, anything below a table header belongs to it.
+
+blocks = ["doors"]
+eyebrow = "ESEG–JNE · PUCP · Peruvian School Debate League"
+statement = "I research electoral behaviour and public policy implementation in Peru, advise institutions on analysing their data, and coach school and university debate teams."
+bio = "Political scientist trained at PUCP, where I graduated first in my class. Researcher at the Electoral and Governance School of Peru's National Elections Jury and Academic Director of the Peruvian School Debate League."
+photo_alt = "Portrait of Luis Valverde Ramos"
+doors_label = "Main areas"
+
+[[ctas]]
+  label = "Research"
+  page = "/research"
+  style = "primary"
+
+[[ctas]]
+  label = "CV"
+  page = "/cv"
+  style = "button"
+
+[[ctas]]
+  label = "Work with me →"
+  page = "/work"
+  style = "link"
+
+[[doors]]
+  eyebrow = "Research"
+  title = "Voting, the press and public works"
+  text = "Four research lines framed as questions; thesis, reports and columns."
+  cta = "Research"
+  page = "/research"
+
+[[doors]]
+  eyebrow = "Debate"
+  title = "Coaching and adjudication"
+  text = "Coach of the Peruvian team that won its fourth consecutive title at the Spanish-language world schools championship (MED, Panama 2026)."
+  cta = "Debate"
+  page = "/debate"
+
+[[doors]]
+  eyebrow = "Work with me"
+  title = "Data, debate and research support"
+  text = "Analysis for institutions, debate coaching and methods workshops. I reply within 24 hours."
+  cta = "Work with me"
+  page = "/work"

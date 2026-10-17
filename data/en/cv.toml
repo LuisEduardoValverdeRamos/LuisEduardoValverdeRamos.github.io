@@ -1,0 +1,25 @@
+# CV page (/cv/). Brings together experience, education, awards, teaching,
+# debate, methods and civic participation, from each topic's data file.
+# No phone number, address, ID number or references.
+
+title = "Curriculum vitae"
+pdf_label = "Download CV (PDF)"
+pdf_other = "CV en español (PDF)"
+
+[sections]
+  current = "Current positions"
+  experience = "Previous experience"
+  education = "Education"
+  honors = "Awards"
+  writing = "Writing"
+  teaching = "Teaching"
+  debate = "Debate"
+  skills = "Methods and tools"
+  civic = "Civic participation"
+
+[labels]
+  details = "Details"
+  all_writing = "Summaries and links on the Research page →"
+  more_debate = "More on the Debate page →"
+  coaching = "Coaching"
+  competing = "As a debater"

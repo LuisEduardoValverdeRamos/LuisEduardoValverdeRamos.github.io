@@ -1,0 +1,23 @@
+# Métodos y herramientas (CV). Fuente: CV de oct-2026 y respuesta de Luis del
+# 17-oct-2026 sobre herramientas: R; Python y Stata a nivel intermedio.
+# Nada que no use en trabajo entregado (nunca Linux) y sin niveles de idioma.
+
+[[skills]]
+  category = "Métodos cuantitativos"
+  detail = "Estadística descriptiva e inferencial; econometría e inferencia causal; machine learning aplicado a las ciencias sociales."
+
+[[skills]]
+  category = "Métodos cualitativos"
+  detail = "Estudios de caso; process tracing; entrevistas semiestructuradas; análisis documental, de contenido y de discurso."
+
+[[skills]]
+  category = "Herramientas"
+  detail = "R, mi herramienta principal; Python y Stata, a nivel intermedio."
+
+[[skills]]
+  category = "Debate"
+  detail = "Formatos parlamentario británico y World Schools; diseño de sesiones; formación de entrenadores y jueces; adjudicación y gestión de torneos."
+
+[[skills]]
+  category = "Productos"
+  detail = "Policy briefs; informes de análisis político y electoral; documentos de política pública; columnas de divulgación."

@@ -1,0 +1,14 @@
+{{- /* Home: four verifiable facts, each with its source. */ -}}
+{{- $h := .h -}}
+{{- with $h.proof }}
+<div class="s-proof" aria-label="{{ $h.proof_label }}">
+  {{- range . }}
+  {{- $src := .src }}
+  <div>
+    <span class="s-eyebrow">{{ .label }}</span>
+    <span class="fact">{{ .fact }}</span>
+    {{- with partial "link.html" . }}<a class="src" href="{{ . }}">{{ $src }}</a>{{ end }}
+  </div>
+  {{- end }}
+</div>
+{{- end }}

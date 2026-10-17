@@ -1,0 +1,22 @@
+{{- /* One service of data/<lang>/services.toml. Context: dict "s" (the service),
+       "labels" and "email". A service with confirmar = "…" waits for Luis: it
+       shows only in local previews, marked, and never in production. */ -}}
+{{- $s := .s -}}
+{{- $l := .labels -}}
+{{- if or (not $s.confirmar) (not hugo.IsProduction) }}
+<article class="s-svc{{ with $s.confirmar }} tbc{{ end }}"{{ with $s.confirmar }} data-tbc="{{ . }}"{{ end }}>
+  <h3 class="s-h3">{{ $s.title }}</h3>
+  <dl>
+    {{- with $s.for }}<dt>{{ $l.for }}</dt><dd>{{ . }}</dd>{{ end }}
+    {{- with $s.format }}<dt>{{ $l.format }}</dt><dd>{{ . }}</dd>{{ end }}
+    {{- with $s.deliverables }}<dt>{{ $l.deliverables }}</dt><dd>{{ . }}</dd>{{ end }}
+    {{- with $s.proof }}<dt>{{ $l.proof }}</dt><dd>{{ . }}</dd>{{ end }}
+  </dl>
+  {{- with $s.subject }}
+  <p class="ask"><a href="{{ partial "mailto.html" (dict "email" $.email "subject" . "body" $s.body) }}">{{ $l.write }} →</a><span>{{ $l.subject }}: «{{ . }}»</span></p>
+  {{- end }}
+  {{- with $s.nopromise }}
+  <details><summary>{{ $l.nopromise }}</summary><p>{{ . }}</p></details>
+  {{- end }}
+</article>
+{{- end }}

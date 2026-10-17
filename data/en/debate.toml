@@ -1,0 +1,100 @@
+# Debate page (/debate/). Team results are labelled as the team's («the team I
+# coached», «the pairs I prepared»); MED, CMUDE and WUDC are spelled out; nothing
+# individual about school debaters (they are minors).
+# Top-level keys first: in TOML, anything below a table header belongs to it.
+
+lead = "I coach school and university teams, adjudicate tournaments held in Spanish and lead the academic team of the Peruvian School Debate League (LPDE)."
+glossary = "MED is the Mundial de Debate Escolar en Español, the world schools championship held in Spanish; CMUDE is the world universities championship held in Spanish; WUDC is the World Universities Debating Championship, held in English."
+
+[home]
+  eyebrow = "Debate"
+  title = "I coach school and university teams and adjudicate tournaments in Spanish"
+  text = "Head coach of the PUCP Debate Society and debate coach at Colegio Alpamayo; judge of the CMUDE 2026 grand final and chief adjudicator of TNDE 2025."
+  more = "More on debate"
+  cta = "Coaching for your team"
+
+[toc]
+  coach = "Coaching"
+  judge = "Adjudication"
+  compete = "Competing"
+  lpde = "LPDE"
+  team = "For your team"
+
+[[highlights]]
+  label = "MED · Panama 2026"
+  text = "I coached the Peruvian national team that won its fourth consecutive title at the Mundial de Debate Escolar en Español."
+  src = "Andina (in Spanish) ↗"
+  url = "https://andina.pe/agencia/noticia-peru-se-corona-tetracampeon-el-mundial-debate-escolar-espanol-2026-1091241.aspx"
+
+[[highlights]]
+  label = "WUDC 2025 · CMUDE 2026"
+  text = "I prepared the Dominican pairs that reached the WUDC octofinals, a first for the country, and the CMUDE quarterfinals."
+
+[[highlights]]
+  label = "CNDI 2025"
+  text = "National inter-university debate champion, as a debater."
+
+[[highlights]]
+  label = "CMUDE 2026 · TNDE 2025"
+  text = "Judge of the CMUDE 2026 grand final (Ecuador) and chief adjudicator of TNDE 2025."
+
+[coach]
+  title = "Coaching"
+  [[coach.items]]
+    period = "2025–2026"
+    role = "Coach"
+    org = "Peruvian National Schools Debate Team"
+    text = "Content, style and strategy sessions in the cycle that ended with the team's fourth consecutive MED title (Panama 2026)."
+  [[coach.items]]
+    period = "Jul 2026–"
+    role = "Head coach"
+    org = "PUCP Debate Society"
+    text = "Session planning and competitive preparation in British Parliamentary format. Previously novice instructor (Aug–Dec 2025)."
+  [[coach.items]]
+    period = "Jun 2026–"
+    role = "Debate coach"
+    org = "Colegio Alpamayo"
+    text = "I design and teach the school's programme: argument construction, rebuttal, weighing and foundations of economics."
+  [[coach.items]]
+    period = "2024–"
+    role = "University coach, online"
+    org = "Dominican Republic"
+    text = "British Parliamentary format. The pairs I prepared reached the octofinals of WUDC 2025, a first for the country, and the quarterfinals of CMUDE Ecuador 2026."
+
+[judge]
+  title = "Adjudication"
+  [[judge.items]]
+    period = "2026"
+    role = "Grand final judge"
+    org = "CMUDE 2026 (Ecuador)"
+  [[judge.items]]
+    period = "2025"
+    role = "Chief adjudicator"
+    org = "TNDE 2025"
+
+[compete]
+  title = "Competing"
+  [[compete.items]]
+    period = "2025"
+    role = "Champion"
+    org = "National Inter-university Debate Championship of Peru (CNDI)"
+  [[compete.items]]
+    period = "2023"
+    role = "Quarterfinalist"
+    org = "CMUDE Panama 2023"
+  [[compete.items]]
+    period = "2023"
+    role = "Runner-up"
+    org = "Torneo Rosarista (Bogotá)"
+  [[compete.items]]
+    period = "2022"
+    role = "Semifinalist"
+    org = "CMUDE Madrid 2022"
+
+[lpde]
+  title = "Peruvian School Debate League"
+  text = "Since September 2026 I have been Academic Director of the LPDE, leading the team in charge of its training, coaching and consultancy programmes in school debate. Before that, as a research consultant, I prepared the League's first report on the school debate ecosystem (70 institutions) and seven policy briefs. I only work with aggregate data: the debaters are minors."
+
+[team]
+  title = "For your team"
+  text = "Coaching for university teams and national squads, school programmes and adjudicator training."

@@ -1,68 +1,50 @@
-[currentlyLabel]
-other = "Currently"
-
-[whatIWorkWith]
-other = "Methods and tools"
-
-[projectsTitle]
-other = "Research and projects"
-
-[blogsTitle]
-other = "Selected writing"
-
-[mediaTitle]
-other = "In the media"
-
-[educationTitle]
-other = "Education"
-
-[experienceTitle]
-other = "Experience"
-
-[honorsTitle]
-other = "Awards"
-
-[certificationsTitle]
-other = "Certifications"
-
-[voluntaryTitle]
-other = "Volunteering"
-
-[viewAll]
-other = "View all"
-
 [menuTitle]
 other = "Menu"
 
 [builtUsing]
 other = "Built with"
 
-[takeALookAtMy]
-other = "Source on"
-
 [footerCtaTitle]
-other = "Get in touch"
+other = "Have a project, a team or a question?"
 
 [footerCtaText]
-other = "Applied research, consulting and debate training for schools, universities and institutions. I reply within 24 hours."
-
-[footerWriteEmail]
-other = "Send an email"
+other = "Debate coaching, consulting, research or workshops. I reply within 24 hours, in English or Spanish."
 
 [footerMailSubject]
-other = "Inquiry from your website"
-
-[footerNavLabel]
-other = "Footer"
+other = "Enquiry via your website"
 
 [footerSite]
 other = "Site"
+
+[footerMore]
+other = "More"
 
 [footerProfiles]
 other = "Profiles"
 
 [footerCode]
-other = "code on GitHub"
+other = "Source on GitHub"
+
+[footerUpdated]
+other = "Updated:"
+
+[footerDateLayout]
+other = "January 2006"
+
+[writeEmail]
+other = "Send an email"
+
+[copyEmail]
+other = "Copy email"
+
+[copied]
+other = "Copied"
+
+[onThisPage]
+other = "On this page"
+
+[seeCV]
+other = "See CV"
 
 [notFoundTitle]
 other = "Page not found"
@@ -77,4 +59,4 @@ other = "Go to the home page"
 other = "About"
 
 [notFoundContact]
-other = "Contact"
+other = "Work with me"

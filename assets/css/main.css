@@ -1,0 +1,45 @@
+/* Tailwind CSS 4, compiled by Hugo (css.TailwindCSS).
+   Only the classes Hugo records in hugo_stats.json end up in the output. */
+@import "tailwindcss" source(none);
+@source "hugo_stats.json";
+
+/* Same behaviour as Tailwind 3's darkMode: 'class' */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Palette and fonts. The class names (bg-bg-primary-light, text-accent-light…)
+   are the ones the templates already use. */
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-bg-primary-light: #FAF7F2;
+  --color-bg-secondary-light: #FFFFFF;
+  --color-bg-tertiary-light: #F1EBE1;
+  --color-text-primary-light: #1C1917;
+  --color-text-secondary-light: #5A544C;
+  --color-border-primary-light: #E4DDD1;
+  --color-border-secondary-light: #D3CABA;
+  --color-accent-light: #8A3033;
+  --color-accent2-light: #2F5D62;
+
+  --color-bg-primary-dark: #14110F;
+  --color-bg-secondary-dark: #1D1916;
+  --color-bg-tertiary-dark: #262019;
+  --color-text-primary-dark: #ECE7DF;
+  --color-text-secondary-dark: #A79F93;
+  --color-border-primary-dark: #37302A;
+  --color-border-secondary-dark: #4A4139;
+  --color-accent-dark: #CF8378;
+  --color-accent2-dark: #7FA8AD;
+}
+
+/* Tailwind 3 → 4 compatibility (official upgrade guide) */
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}

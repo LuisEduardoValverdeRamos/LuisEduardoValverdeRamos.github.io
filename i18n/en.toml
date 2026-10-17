@@ -2,16 +2,55 @@
 other = "Currently"
 
 [whatIWorkWith]
-other = "Methods & Tools"
+other = "Methods and tools"
 
 [projectsTitle]
-other = "Research & Projects"
+other = "Research and projects"
 
 [blogsTitle]
-other = "Selected Writing"
+other = "Selected writing"
 
 [mediaTitle]
-other = "Media Appearances"
+other = "In the media"
 
 [educationTitle]
 other = "Education"
+
+[experienceTitle]
+other = "Experience"
+
+[honorsTitle]
+other = "Awards"
+
+[certificationsTitle]
+other = "Certifications"
+
+[voluntaryTitle]
+other = "Volunteering"
+
+[viewAll]
+other = "View all"
+
+[menuTitle]
+other = "Menu"
+
+[builtUsing]
+other = "Built with"
+
+[takeALookAtMy]
+other = "Source on"
+
+[notFoundTitle]
+other = "Page not found"
+
+[notFoundText]
+other = "The address you are looking for does not exist or has moved."
+
+[notFoundHome]
+other = "Go to the home page"
+
+[notFoundAbout]
+other = "About"
+
+[notFoundContact]
+other = "Contact"

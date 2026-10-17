@@ -2,16 +2,55 @@
 other = "Actualmente"
 
 [whatIWorkWith]
-other = "Métodos y Herramientas"
+other = "Métodos y herramientas"
 
 [projectsTitle]
-other = "Investigación y Proyectos"
+other = "Investigación y proyectos"
 
 [blogsTitle]
-other = "Escritos Selectos"
+other = "Escritos seleccionados"
 
 [mediaTitle]
-other = "Apariciones en Medios"
+other = "En medios"
 
 [educationTitle]
-other = "Educación"
+other = "Formación"
+
+[experienceTitle]
+other = "Experiencia"
+
+[honorsTitle]
+other = "Reconocimientos"
+
+[certificationsTitle]
+other = "Certificaciones"
+
+[voluntaryTitle]
+other = "Voluntariado"
+
+[viewAll]
+other = "Ver todo"
+
+[menuTitle]
+other = "Menú"
+
+[builtUsing]
+other = "Hecho con"
+
+[takeALookAtMy]
+other = "Código en"
+
+[notFoundTitle]
+other = "Página no encontrada"
+
+[notFoundText]
+other = "La dirección que buscas no existe o cambió de lugar."
+
+[notFoundHome]
+other = "Ir a la portada"
+
+[notFoundAbout]
+other = "Sobre mí"
+
+[notFoundContact]
+other = "Contacto"

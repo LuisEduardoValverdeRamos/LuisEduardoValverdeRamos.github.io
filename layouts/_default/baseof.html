@@ -3,20 +3,43 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{- $desc := or .Description site.Params.description }}
         <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-        <meta name="description" content="{{ site.Params.description }}">
+        <meta name="description" content="{{ $desc }}">
+        <link rel="canonical" href="{{ .Permalink }}">
+        {{- if .IsTranslated }}
+        {{- range .AllTranslations }}
+        <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+        {{- if eq .Language.Lang "en" }}
+        <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+        {{- end }}
+        {{- end }}
+        {{- end }}
 
         <!-- Favicon -->
         <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
 
         <!-- Social sharing (Open Graph / Twitter) -->
         <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}">
-        <meta property="og:description" content="{{ site.Params.description }}">
+        <meta property="og:description" content="{{ $desc }}">
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ .Permalink }}">
+        <meta property="og:locale" content="{{ if eq .Language.Lang "es" }}es_PE{{ else }}en_US{{ end }}">
         <meta property="og:image" content="{{ "images/profile.jpeg" | absURL }}">
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="{{ "images/profile.jpeg" | absURL }}">
+        {{- if .IsHome }}
+        {{- $person := dict
+            "@context" "https://schema.org"
+            "@type" "Person"
+            "name" site.Params.name
+            "url" site.Home.Permalink
+            "jobTitle" (cond (eq .Language.Lang "es") "Politólogo" "Political scientist")
+            "alumniOf" (dict "@type" "CollegeOrUniversity" "name" "Pontificia Universidad Católica del Perú")
+            "worksFor" (dict "@type" "GovernmentOrganization" "name" "Jurado Nacional de Elecciones")
+            "sameAs" (slice site.Params.linkedin site.Params.github) }}
+        <script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+        {{- end }}
 
         <!-- Fonts: Fraunces (display serif) + Inter (body) -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,44 +55,8 @@
             }
         </script>
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                darkMode: 'class',
-                theme: {
-                    extend: {
-                        fontFamily: {
-                            sans: ['Inter', 'system-ui', 'sans-serif'],
-                            serif: ['Fraunces', 'Georgia', 'serif'],
-                            mono: ['IBM Plex Mono', 'ui-monospace', 'monospace'],
-                        },
-                        colors: {
-                            /* ── Editorial (light, default) ── */
-                            'bg-primary-light': '#FAF7F2',
-                            'bg-secondary-light': '#FFFFFF',
-                            'bg-tertiary-light': '#F1EBE1',
-                            'text-primary-light': '#1C1917',
-                            'text-secondary-light': '#5A544C',
-                            'border-primary-light': '#E4DDD1',
-                            'border-secondary-light': '#D3CABA',
-                            'accent-light': '#8A3033',
-                            'accent2-light': '#2F5D62',
-
-                            /* ── Tinta (dark, secondary) ── */
-                            'bg-primary-dark': '#14110F',
-                            'bg-secondary-dark': '#1D1916',
-                            'bg-tertiary-dark': '#262019',
-                            'text-primary-dark': '#ECE7DF',
-                            'text-secondary-dark': '#A79F93',
-                            'border-primary-dark': '#37302A',
-                            'border-secondary-dark': '#4A4139',
-                            'accent-dark': '#CF8378',
-                            'accent2-dark': '#7FA8AD',
-                        },
-                    },
-                },
-            };
-        </script>
+        <!-- Tailwind CSS compiled by Hugo; palette and fonts live in assets/css/main.css -->
+        {{ with (templates.Defer (dict "key" "global")) }}{{ partial "css.html" . }}{{ end }}
 
         <style>
             :root { color-scheme: light dark; }

@@ -5,10 +5,11 @@ theme = "hugo-noir"
 
 defaultContentLanguage = "en"
 
-# Taxonomy configuration
-[taxonomies]
-  category = "categories"
-  tag = "tags"
+# Top-level keys must stay above the first [table]: in TOML, any key written
+# below a table header belongs to that table and Hugo ignores it silently.
+enableRobotsTXT = true
+pluralizeListTitles = false
+disableKinds = ["taxonomy", "term"]
 
 [languages]
 
@@ -17,6 +18,8 @@ defaultContentLanguage = "en"
     title = "Luis Valverde Ramos"
     weight = 1
     contentDir = "content/en"
+    [languages.en.params]
+      description = "Luis Valverde Ramos, political scientist (PUCP). Research on electoral behaviour and policy implementation in Peru; consulting and debate coaching."
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "About"
@@ -44,9 +47,11 @@ defaultContentLanguage = "en"
     title = "Luis Valverde Ramos"
     weight = 2
     contentDir = "content/es"
+    [languages.es.params]
+      description = "Luis Valverde Ramos, politólogo (PUCP). Investigación sobre comportamiento electoral e implementación de políticas públicas en el Perú; consultoría y debate."
     [languages.es.menu]
       [[languages.es.menu.main]]
-        name = "Sobre Mí"
+        name = "Sobre mí"
         pageRef = "/about"
         weight = 1
       [[languages.es.menu.main]]
@@ -58,7 +63,7 @@ defaultContentLanguage = "en"
         pageRef = "/projects"
         weight = 3
       [[languages.es.menu.main]]
-        name = "Escritos y Medios"
+        name = "Escritos y medios"
         pageRef = "/publications"
         weight = 4
       [[languages.es.menu.main]]
@@ -76,3 +81,24 @@ defaultContentLanguage = "en"
   linkedin = "https://www.linkedin.com/in/luisvalverderamos/"
   twitter = "https://x.com/LuisValverde06"
   email = "luis.valverde@pucp.edu.pe"
+
+# Tailwind CSS is compiled by Hugo (css.TailwindCSS). Hugo writes the classes
+# it sees to hugo_stats.json and Tailwind reads them from there.
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'
+
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    disableWatch = true
+    source = 'hugo_stats.json'
+    target = 'assets/notwatching/hugo_stats.json'

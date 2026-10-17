@@ -103,8 +103,27 @@ cargos:
         and qualitative methods for the 2026 regional and municipal elections; technical
         liaison with academic and legal authorities on electoral studies. Census of
         university-level electoral education (ongoing).
-    nota: "[CONFIRMAR: nombre exacto del curso de la ESEG del que es tutor (§6, /investigacion/)]"
+    nota: "Resuelto (16-oct-2026): el curso de la ESEG donde fue tutor NO se nombra en la web — rol de tutoría no relevante, decisión de Luis."
     source: cv
+  - cargo:
+      es: "Consultor, Observatorio de Corrupción"
+      en: "Consultant, Corruption Observatory"
+    institucion:
+      es: "Colegio de Abogados de Lima (CAL)"
+      en: "Lima Bar Association (CAL)"
+    desde: "2026-09"
+    hasta: null
+    detalle:
+      es: >-
+        Asesora la primera entrega del informe de contrataciones públicas 2016–2025:
+        evaluación de factibilidad y validez de indicadores sobre registros abiertos
+        del SEACE/OECE. Sin cifras ni hallazgos hasta que el Observatorio publique (§10).
+      en: >-
+        Advises the first instalment of the 2016–2025 public procurement report:
+        feasibility and validity assessment of indicators over open SEACE/OECE records.
+        No figures or findings until the Observatory publishes (§10).
+    nota: "Cliente nombrable (confirmado por Luis, 16-oct-2026). Prohibido publicar cifras o hallazgos antes de que el CAL publique."
+    source: "confirmado por Luis (16-oct-2026)"
   - cargo:
       es: "Director Académico"
       en: "Academic Director"
@@ -202,9 +221,16 @@ cargos:
     desde: "2024"
     hasta: null
     detalle:
-      es: "Entrena a debatientes universitarios en formato parlamentario británico."
-      en: "Coaches university debaters in British Parliamentary format."
-    nota: "[CONFIRMAR: resultados publicables de las duplas entrenadas (p. ej. octavos de final del WUDC 2025, primera vez para República Dominicana; cuartos de final del CMUDE Ecuador 2026) — torneo, año y permiso antes de publicar (§9.4)]"
+      es: >-
+        Entrena a debatientes universitarios en formato parlamentario británico.
+        Preparó a las duplas dominicanas que alcanzaron los octavos de final del
+        WUDC 2025 — primera vez para República Dominicana — y los cuartos de final
+        del CMUDE Ecuador 2026.
+      en: >-
+        Coaches university debaters in British Parliamentary format. Prepared the
+        Dominican pairs that reached the octofinals of WUDC 2025 — a first for the
+        Dominican Republic — and the quarterfinals of CMUDE Ecuador 2026.
+    nota: "Publicación autorizada por Luis (16-oct-2026)."
     source: cv
   - cargo:
       es: "Miembro investigador"
@@ -294,14 +320,14 @@ experiencia:
       es: "Consultor de análisis de datos"
       en: "Data Analysis Consultant"
     institucion:
-      es: "Sector salud, Lima"
-      en: "Health sector, Lima"
+      es: "Roche Pharma Perú, vía Sapienza Consultora, Lima"
+      en: "Roche Pharma Peru, via Sapienza Consulting, Lima"
     desde: "2025-07"
     hasta: "2025-09"
     detalle:
-      es: "Consultor de análisis de datos en el sector salud."
-      en: "Data analysis consultant in the health sector."
-    nota: "[CONFIRMAR: nombrar al cliente (Sapienza / Roche) solo con visto bueno; sin cifras ni entregables del encargo (§10)]"
+      es: "Consultoría de análisis de datos administrativos del sector salud."
+      en: "Data analysis consultancy on administrative health-sector records."
+    nota: "Cliente nombrable (confirmado por Luis, 16-oct-2026). Siguen prohibidas las cifras y entregables del encargo (§10)."
     source: cv
   - cargo:
       es: "Asistente de investigación"
@@ -360,7 +386,7 @@ reconocimientos:
   - texto:
       es: "Primer puesto, Concurso de Investigación de la Facultad de Ciencias Sociales, PUCP"
       en: "First place, Research Competition of the Faculty of Social Sciences, PUCP"
-    anio: "[CONFIRMAR: 2023 o 2024 — el CV y la web actual difieren (§9.7)]"
+    anio: "2023"  # confirmado por Luis (16-oct-2026)
     source: cv
   - texto:
       es: "Campeón Nacional Interuniversitario de Debate (CNDI) — Perú"

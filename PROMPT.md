@@ -42,7 +42,7 @@ Lección de los referentes (oct-2026: andrewheiss.com, joseincio.com, visualcinn
 1. **Stack: Astro, no Quarto ni Hugo.** La prioridad número uno declarada por Luis es el diseño; Astro da control total del HTML, i18n nativo y ecosistema vigente. El flujo R se conserva: los posts computacionales se escriben en `.qmd` y se renderizan localmente a Markdown (sección 11).
 2. **Idiomas: español en la raíz, inglés en `/en/` como espejo parcial.** El espejo EN cubre: portada, investigación, proyectos (índice y fichas), debate, CV, contacto, un resumen breve de servicios (`/en/consulting/`) y el blog con los posts traducidos (como mínimo, el post metodológico del mapa desde el lanzamiento). `/medios/` solo ES en v1. Nada de mezclar idiomas en una página.
 3. **Alcance v1**: las páginas de la sección 6. Docencia como página propia, Charlas, /ahora y /herramientas NO existen en v1 (backlog, sección 15); docencia vive como bloque en /investigacion/ y en el CV.
-4. **Dirección de arte: Litoral** (sección 5), aprobación por style tile obligatoria.
+4. **Dirección de arte: EN REVISIÓN (16-oct-2026).** La dirección «Litoral» original (fondo crema arena + acento terracota + Fraunces) fue **rechazada por Luis en la parada de Fase 1**: se lee como estética genérica de IA. Se evalúan tres direcciones nuevas sobre fondo blanco/papel en el style tile v2 (Imprenta · Tinta y dato · Puerto). La sección 5 se reescribirá con la elegida; mientras tanto siguen vigentes sus reglas no cromáticas (espaciado, movimiento, iconos, fotografía, convención de cifras), y toda referencia tipográfica del documento a Fraunces/Plex se lee como «display / texto / mono de la dirección elegida». Prohibición añadida: nada de fondo crema con acento terracota; Fraunces queda descartada.
 5. **La pieza central es la visualización del Perú por distritos** (sección 8), con un cuarto estado de infraestructura pública: titular y mapa cubren las dos líneas maestras (voto + Estado).
 6. **El contenido de la sección 9 se usa tal cual; la matriz de la sección 10 es ley.**
 7. **Nada de frameworks UI** (React/Preact/Svelte/Vue): el único JavaScript del sitio son módulos ES propios + D3 para el mapa.
@@ -66,7 +66,7 @@ i18n: {
 ```
 Las rutas localizadas se crean por estructura de archivos (`src/pages/investigacion.astro` ↔ `src/pages/en/research.astro`). Un módulo **`src/i18n/routes.ts`** contiene el mapa completo ES↔EN de rutas y slugs (Apéndice A.4); de él se alimentan el conmutador de idioma y los `hreflang`. Regla para páginas sin espejo (p. ej. /medios/): el conmutador lleva a `/en/` con `aria-label` que lo indique, y esas páginas no emiten `hreflang` de alternate. Integración `@astrojs/sitemap` con `i18n: { defaultLocale: 'es', locales: { es: 'es-PE', en: 'en-GB' } }` para que el sitemap emita las alternates.
 
-**Hosting y despliegue**: GitHub Pages con el action oficial `withastro/action` (build) + `actions/deploy-pages` (deploy) sobre push a `main`. `site: 'https://luiseduardovalverderamos.github.io'`, sin `base` (repo de usuario). **Un repo de usuario tiene UN solo sitio Pages: no existen deploy previews por rama.** El mecanismo de previsualización del proyecto es: build local + `astro preview` + las capturas Playwright exigidas en cada fase. El workflow nuevo se escribe en la rama `astro` configurado para desplegar solo desde `main`; el cutover está en la Fase 8. En Fase 0 se audita cómo se despliega el Hugo actual (hay un workflow `peaceiris/actions-hugo` + `deploy-pages`; verificar su estado y el source configurado en Pages).
+**Hosting y despliegue**: GitHub Pages con el action oficial `withastro/action` (build) + `actions/deploy-pages` (deploy) sobre push a `main`. `site: 'https://luiseduardovalverderamos.github.io'`, sin `base` (repo de usuario). **Dominio: CONFIRMADO (16-oct-2026) — se queda en github.io, sin CNAME.** **Un repo de usuario tiene UN solo sitio Pages: no existen deploy previews por rama.** El mecanismo de previsualización del proyecto es: build local + `astro preview` + las capturas Playwright exigidas en cada fase. El workflow nuevo se escribe en la rama `astro` configurado para desplegar solo desde `main`; el cutover está en la Fase 8. **Auditoría hecha (Fase 0c)**: el Pages actual ya publica con `build_type=workflow` (peaceiris/actions-hugo + deploy-pages, últimos runs en verde) — la Fase 8 NO necesita migrar el source, solo reemplazar el workflow.
 
 **El CI no ejecuta R, Quarto, Typst ni Playwright.** Todo render computacional, PDF y captura ocurre en local y sus productos se versionan. El action de Astro solo hace `npm ci && astro build`.
 
@@ -74,7 +74,7 @@ Las rutas localizadas se crean por estructura de archivos (`src/pages/investigac
 
 **Front-end**: HTML semántico; CSS propio en `src/styles/` con tokens (`--color-*`, `--space-*`, `--type-*`); cero frameworks CSS y cero frameworks UI. JavaScript: módulos ES propios cargados con `<script>` de Astro (bundled). La única librería permitida es D3 v7 (solo los módulos necesarios). Presupuesto total de JS: 150 KB comprimidos, incluida D3. **El mapa de portada NO es una “island” de framework**: es un módulo propio que se auto-inicializa de forma perezosa con `IntersectionObserver` (sección 8); prohibido añadir Preact/Svelte/React para esto.
 
-**Tipografía**: Fonts API de Astro (estable desde Astro 6) con provider Fontsource: Fraunces (variable) + IBM Plex Sans + IBM Plex Mono, `subsets: ['latin', 'latin-ext']` (ñ, tildes, comillas españolas), `font-display: swap`, fallbacks métricos anti-CLS y preloads generados por la API. Sin peticiones a Google Fonts. `pyftsubset` manual solo si hiciera falta recortar ejes de Fraunces — no empezar por ahí.
+**Tipografía**: Fonts API de Astro (estable desde Astro 6) con provider Fontsource: las tres familias (display + texto + mono) de la dirección elegida en el style tile v2, `subsets: ['latin', 'latin-ext']` (ñ, tildes, comillas españolas), `font-display: swap`, fallbacks métricos anti-CLS y preloads generados por la API. Sin peticiones a Google Fonts en producción. `pyftsubset` manual solo si hiciera falta recortar ejes de una variable — no empezar por ahí.
 
 **Imágenes**: `astro:assets` (`<Image />`) con salida AVIF/WebP, `loading="lazy"` fuera del primer pantallazo, dimensiones explícitas siempre. Material de partida: las fotos que Luis aporte + `static/images/` del sitio viejo (retrato y 5 imágenes de proyectos), movidas a `src/assets/legacy/`.
 
@@ -86,9 +86,11 @@ Las rutas localizadas se crean por estructura de archivos (`src/pages/investigac
 
 **Transiciones de página**: view transitions nativas cross-document vía CSS (sin `<ClientRouter />`); el sitio sigue siendo MPA. Si un navegador no las soporta, simplemente no hay transición.
 
-## 5. Dirección de arte: Litoral
+## 5. Dirección de arte
 
-Parte del paisaje de Piura (arena, sol bajo, mar frío), no de ninguna convención académica ni tecnológica. Cálida, luminosa y seria. Un solo acento fuerte. Nada de fondos oscuros.
+> **ESTADO (16-oct-2026): la dirección «Litoral» descrita abajo fue RECHAZADA por Luis** («se ve mucho a Claude/IA»: crema + terracota + Fraunces es la estética genérica de IA de 2026). El style tile v2 presenta tres direcciones nuevas sobre blanco/papel — **Imprenta** (Alegreya + Alegreya Sans + Fira Mono; papel #FDFCFA; acento carmín editorial; datos en azul petróleo), **Tinta y dato** (IBM Plex Serif/Sans/Mono; blanco; UI monocroma; el ÚNICO color del sitio es el del dato, azul ultramar) y **Puerto** (Piazzolla + Archivo + Spline Sans Mono; blanco; acento verde algarrobo; datos en azul de mar frío). Cuando Luis elija, esta sección se reescribe entera con los tokens de la ganadora. **Siguen vigentes**: las reglas de un solo acento por pantalla, color de datos exclusivo, contraste AA, y todo lo no cromático de abajo (espacio, movimiento, iconos, fotografía, cifras).
+
+Lo que sigue documenta Litoral solo como registro de lo descartado. Un solo acento fuerte. Nada de fondos oscuros.
 
 | Token | Hex | Uso |
 | --- | --- | --- |
@@ -180,19 +182,19 @@ Las URLs basura del tema viejo (`/publications/my-first-blog/`, `/experience/exp
 **/investigacion/** — en este orden:
 1. **Las cuatro líneas de investigación** (retícula 2×2), definidas en la sección 9.3a — pregunta, método, evidencia, estado. No inventar una quinta ni recortar a tres.
 2. **Escritos** (desde `publications.yaml`), agrupados así — y SOLO con estas categorías mientras no exista un artículo arbitrado: **Tesis** (lidera: es la pieza más fuerte, con enlace al repositorio PUCP) · **Informes técnicos e institucionales** · **Columnas y divulgación** · **Colaboraciones editoriales** (el volumen de clínicas, según la atribución literal que se verifique en Fase 0). Cuando exista el primer artículo arbitrado se crea la categoría «Artículos» — no antes: una categoría vacía o inflada es el error que un editor detecta primero.
-3. **Formación y docencia** (bloque breve): intercambio en Ghent con cursos de maestría en métodos cuantitativos; Beca 18; Jefe de Práctica de Economía Política (PUCP); asistencias docentes de Introducción a R y Causal ML (Q-LAB); tutor del curso de la ESEG `[CONFIRMAR: nombre exacto del curso ESEG]`.
+3. **Formación y docencia** (bloque breve): intercambio en Ghent con cursos de maestría en métodos cuantitativos; Beca 18; Jefe de Práctica de Economía Política (PUCP); asistencias docentes de Introducción a R y Causal ML (Q-LAB). (El curso de la ESEG donde fue tutor NO se nombra — decisión de Luis, 16-oct-2026: rol de tutoría no relevante.)
 4. **Trabajos en curso**, con etiqueta de estado (en preparación / enviado / en revisión / aceptado) y coautor con afiliación: «con Daniel Encinas (Northwestern University)».
 
 **/proyectos/** — índice con tarjetas; ficha por proyecto: qué problema resuelve, para quién, qué datos usa, estado, enlaces a código/sitio/informe. Una imagen o gráfico real por ficha; si no hay, ninguna. Etiqueta «datos y código abiertos» cuando aplique. **Antes de enlazar cualquier repo, auditarlo** (sección 10, regla de repos).
 
-**/debate/** — cuatro bloques: (1) entrenador (selección nacional, Alpamayo, Sociedad de Debate PUCP, República Dominicana); (2) juez (CMUDE, TNDE, paneles); (3) LPDE (dirección académica, investigación del ecosistema — solo hallazgos agregados, sección 10); (4) **«Trabaja conmigo», el bloque de conversión**, segmentado: «Para colegios» / «Para universidades y selecciones», cada uno con 2-3 líneas de oferta concreta (qué incluye, modalidad, desde qué nivel) y contacto directo (mailto + WhatsApp si se confirma) EN la propia página — la directora de colegio aterriza aquí directo y no debe necesitar otro clic para escribir. Al final, recursos descargables. En portada, el acto 4 enlaza aquí con texto de acción.
+**/debate/** — cuatro bloques: (1) entrenador (selección nacional, Alpamayo, Sociedad de Debate PUCP, República Dominicana — con los resultados autorizados de 9.4); (2) juez (CMUDE, TNDE, paneles); (3) LPDE (dirección académica, investigación del ecosistema — solo hallazgos agregados, sección 10); (4) **«Trabaja conmigo», el bloque de conversión**, segmentado: «Para colegios» / «Para universidades y selecciones», cada uno con 2-3 líneas de oferta concreta (qué incluye, modalidad, desde qué nivel) y contacto directo (mailto con asunto prellenado + correo copiable — **sin WhatsApp: decisión de Luis, 16-oct-2026**) EN la propia página — la directora de colegio aterriza aquí directo y no debe necesitar otro clic para escribir. Al final, recursos descargables. En portada, el acto 4 enlaza aquí con texto de acción.
 
-**/servicios/** — la página ES completa:
-1. Cuatro servicios, cada uno publicado con **cinco campos obligatorios**: nombre propio · para quién exactamente · formato y duración típica · entregables · **siguiente paso explícito** («Escríbeme contándome X; te respondo en 48 horas hábiles con una llamada de 20 minutos sin costo» `[CONFIRMAR: tiempos reales]`). Nombres propuestos (Luis puede renombrar): **Análisis electoral y de opinión pública** · **Formación en debate** (colegios, universidades, selecciones; coaching de duplas con diagnóstico en tres ejes `[CONFIRMAR: los ejes]`) · **Talleres de métodos en R** (análisis de texto, visualización) · **Acompañamiento metodológico** (tesis, investigaciones, evaluación de factibilidad y validez de indicadores).
-2. Bloque **«Cómo trabajo»**: proceso en 3 pasos (diagnóstico → propuesta → entrega), modalidad («Trabajo entre Piura y Lima; talleres y entrenamientos presenciales en ambas ciudades; consultoría y coaching remoto para todo el país y América Latina»), y comprobantes `[CONFIRMAR: recibos por honorarios / factura]` — para un colegio o una ONG la pregunta administrativa decide.
-3. Franja de instituciones (solo confirmadas en Fase 0) + enlace a /medios/.
-4. **2-3 casos reales** (problema → qué hizo → resultado). **Bloqueante: /servicios/ no se publica con menos de 2 casos redactados con Luis.** Testimonios solo reales y con nombre; en Fase 0 se le pide a Luis gestionar 1-2 con contactos seguros (Alpamayo, LPDE, coordinador de RD).
-5. Contacto: botón mailto **y** el correo como texto plano copiable; WhatsApp (`wa.me/...` con mensaje prellenado) si se confirma; Calendly recomendado para el servicio de análisis `[CONFIRMAR]`. Sin precios.
+**/servicios/** — la página ES completa (operativa confirmada por Luis el 16-oct-2026):
+1. Cuatro servicios, cada uno publicado con **cinco campos obligatorios**: nombre propio · para quién exactamente · formato y duración típica · entregables · **siguiente paso explícito** («Escríbeme contándome X; **te respondo en 24 horas**»). Nombres propuestos (Luis puede renombrar): **Análisis electoral y de opinión pública** · **Formación en debate** (colegios, universidades, selecciones; coaching de duplas con diagnóstico en tres ejes `[CONFIRMAR: los ejes]`) · **Talleres de métodos en R** (análisis de texto, visualización; **formato típico: taller de 2 horas**, presencial o remoto) · **Acompañamiento metodológico** (tesis, investigaciones, evaluación de factibilidad y validez de indicadores).
+2. Bloque **«Cómo trabajo»**: proceso en 3 pasos (diagnóstico → propuesta → entrega), modalidad («Trabajo entre Piura y Lima; talleres y entrenamientos presenciales en ambas ciudades; consultoría y coaching remoto para todo el país y América Latina»), **respuesta en 24 horas** y **emite recibos por honorarios (RxH)** — la pregunta administrativa que decide a un colegio o una ONG.
+3. Franja de instituciones confirmadas: JNE/ESEG, PUCP (Q-LAB, CISEPA, GIES), ProDiálogo, LPDE, Colegio Alpamayo, IDEHPUCP, **Colegio de Abogados de Lima (Observatorio de Corrupción)** y **Roche Pharma Perú (vía Sapienza Consultora)** — ambas autorizadas por Luis el 16-oct-2026. Enlace a /medios/.
+4. **Casos reales** (problema → qué hizo → resultado): los 3 borradores viven en `seeds/casos.yaml` (CAL, JNE/ProDiálogo, LPDE) y Luis aprueba el texto antes de publicar. **Bloqueante: /servicios/ no se publica con menos de 2 casos aprobados.** Roche se nombra en la franja pero NO lleva caso narrado (§10). Testimonios solo reales y con nombre; pedirlos a contactos seguros (Alpamayo, LPDE, coordinador de RD).
+5. Contacto: botón mailto con asunto prellenado **y** el correo como texto plano copiable. **Sin WhatsApp (decisión de Luis) y sin Calendly.** Sin precios.
 
 **/en/consulting/** — una pantalla: las cuatro líneas de servicio en una frase cada una, la línea de modalidad, contacto, y enlace a la versión ES completa. El lector EN prioritario es el comité; esta página existe para no esconder la pata profesional, no para vender.
 
@@ -200,7 +202,7 @@ Las URLs basura del tema viejo (`/publications/my-first-blog/`, `/experience/exp
 
 **/cv/** — generado desde `cv.yaml` (estructura bilingüe por campo, Apéndice A.3); hoja de impresión A4; botón «Descargar PDF». **PDF con Typst** (binario único, trivial en Windows), dos archivos versionados: `public/files/cv-es.pdf` y `public/files/cv-en.pdf`, regenerados con `make cv`. **El cv.yaml y los PDF públicos excluyen teléfono, dirección postal, DNI y fecha de nacimiento**; único contacto publicado: el correo PUCP y los perfiles.
 
-**/contacto/** — reencuadrada como «Cómo contactarme según lo que necesitas», tres rutas: (1) quiero contratar un servicio → mailto con asunto prellenado por servicio + WhatsApp si existe; (2) soy periodista o productor → respuesta rápida, el canal más directo que Luis confirme; (3) soy estudiante o debatiente → correo, respuesta más lenta. El correo siempre visible como texto copiable. Invita, no advierte.
+**/contacto/** — reencuadrada como «Cómo contactarme según lo que necesitas», tres rutas: (1) quiero contratar un servicio → mailto con asunto prellenado por servicio, respuesta en 24 horas; (2) soy periodista o productor → correo con asunto de prensa, respuesta prioritaria; (3) soy estudiante o debatiente → correo, respuesta más lenta. Todo por correo — **sin WhatsApp (decisión de Luis, 16-oct-2026)**. El correo siempre visible como texto copiable. Invita, no advierte.
 
 ## 7. La portada, sección por sección
 
@@ -262,7 +264,7 @@ Cada afirmación lleva su fuente: «CV» = CV real de Luis (oct-2026, autodeclar
 
 ### 9.1 Identidad y bio
 
-Luis Eduardo Valverde Ramos. Politólogo por la PUCP: primer puesto de su promoción (CV), tesis con mención sobresaliente (URL: repositorio PUCP); intercambio en Ghent University (2024, beca DARI, cursos de maestría en métodos cuantitativos — CV). Becario Beca 18 (PRONABEC, 2019–2024; CV y panel de La República). Bachillerato Internacional, COAR Amazonas. De **Pedregal Grande, Catacaos, Piura**; trabaja entre Piura y Lima. Fuera del trabajo practica muay thai (para el about, tono sobrio). Correo: luis.valverde@pucp.edu.pe. GitHub: `LuisEduardoValverdeRamos`. LinkedIn: `luisvalverderamos`. ORCID y Google Scholar: **se crean en Fase 0** (sección 14) y se integran a pie, CV y JSON-LD (`sameAs`).
+Luis Eduardo Valverde Ramos. Politólogo por la PUCP: primer puesto de su promoción (CV), tesis con mención sobresaliente (URL: repositorio PUCP); intercambio en Ghent University (2024, beca DARI, cursos de maestría en métodos cuantitativos — CV). Becario Beca 18 (PRONABEC, 2019–2024; CV y panel de La República). Bachillerato Internacional, COAR Amazonas. De **Pedregal Grande, Catacaos, Piura**; trabaja entre Piura y Lima. Fuera del trabajo practica muay thai (para el about, tono sobrio). Correo: luis.valverde@pucp.edu.pe. GitHub: `LuisEduardoValverdeRamos`. LinkedIn: `luisvalverderamos`. ORCID y Google Scholar: **tarea pendiente de Luis** (sección 14); hasta que existan, el pie y el JSON-LD los omiten (regla de degradación). **Fotos: decisión de Luis (16-oct-2026) — se usa la foto de perfil existente (`static/images/profile.jpeg`) y placeholders; no se esperan fotos nuevas para lanzar.**
 
 En la web no se declaran niveles de idioma; el inglés se demuestra con la calidad de `/en/`.
 
@@ -270,6 +272,7 @@ En la web no se declaran niveles de idioma; el inglés se demuestra con la calid
 
 Actuales:
 - Investigador, Escuela Electoral y de Gobernabilidad (ESEG), Jurado Nacional de Elecciones — jul. 2026–.
+- Consultor, Observatorio de Corrupción del Colegio de Abogados de Lima (CAL) — sep. 2026– (confirmado por Luis, 16-oct-2026; cliente nombrable, sin cifras hasta que el CAL publique).
 - Director Académico, Liga Peruana de Debate Escolar (LPDE) — sep. 2026– (antes Consultor de Investigación, ene.–ago. 2026).
 - Jefe de Práctica de Economía Política, PUCP — ago. 2026–.
 - Entrenador General, Sociedad de Debate PUCP — jul. 2026–.
@@ -278,7 +281,7 @@ Actuales:
 - Entrenador de debate universitario (remoto), República Dominicana — 2024–.
 - Miembro investigador, GIES–PUCP (seguimiento legislativo, hechosynopalabras.pe) — 2025–.
 
-Previa (para CV y casos): CISEPA–PUCP (asistente de investigación, oct. 2025–feb. 2026: **apoyo econométrico a proyectos de economía política con manuscritos en revisión en revistas internacionales** — sin nombrar revistas ni conteo de proyectos, ver matriz; scraping de **747,836 titulares** de El Comercio y La República 2016–2024); ProDiálogo–JNE (consultor, nov.–dic. 2025: instrumentos conductuales EG 2026 y clustering del electorado en 3 ciclos); Q-LAB–PUCP (asistente, 2024–2025: brechas de implementación en obras municipales con XGBoost+SHAP, proyecto con Cooperación Suiza; asistente docente de Introducción a R y Causal ML); **consultor de análisis de datos en el sector salud** (jul.–sep. 2025) — el cliente solo se nombra si se confirma `[CONFIRMAR: nombrar Sapienza/Roche]` y sin cifras del encargo; asistente de investigación de Daniel Encinas (Northwestern) y Rodrigo Barrenechea (2024: geografía del voto populista 1980–2021); practicante, IDEHPUCP (2023).
+Previa (para CV y casos): CISEPA–PUCP (asistente de investigación, oct. 2025–feb. 2026: **apoyo econométrico a proyectos de economía política con manuscritos en revisión en revistas internacionales** — sin nombrar revistas ni conteo de proyectos, ver matriz; scraping de **747,836 titulares** de El Comercio y La República 2016–2024); ProDiálogo–JNE (consultor, nov.–dic. 2025: instrumentos conductuales EG 2026 y clustering del electorado en 3 ciclos); Q-LAB–PUCP (asistente, 2024–2025: brechas de implementación en obras municipales con XGBoost+SHAP, proyecto con Cooperación Suiza; asistente docente de Introducción a R y Causal ML); **consultor de análisis de datos para Roche Pharma Perú, vía Sapienza Consultora** (jul.–sep. 2025) — cliente nombrable (confirmado por Luis, 16-oct-2026), siempre sin cifras ni entregables del encargo; asistente de investigación de Daniel Encinas (Northwestern) y Rodrigo Barrenechea (2024: geografía del voto populista 1980–2021); practicante, IDEHPUCP (2023).
 
 **Regla de encuadre**: el corpus de titulares y los manuscritos de CISEPA son proyectos de sus investigadores principales; Luis se presenta como asistente/equipo. Lo mismo con el informe JNE/ProDiálogo (equipo técnico: Monard, Encinas, Villena-Tagle, Valverde).
 
@@ -297,7 +300,7 @@ La portada muestra las preguntas de las líneas 1–3 en el acto 2; la línea 4 
 
 **Tesis** — Valverde, L. (2025). *Desastres y brechas de implementación: estudio del proceso de reconstrucción de la infraestructura educativa en Piura entre julio de 2020 y enero de 2023, tras el Fenómeno de El Niño Costero*. Tesis de licenciatura (mención sobresaliente), PUCP. https://hdl.handle.net/20.500.12404/32370
 
-**Informe institucional** — JNE (2026). *Análisis del elector peruano: aportes desde las ciencias del comportamiento*. JNE/ProDiálogo, 85 pp. Equipo técnico: Monard, Encinas, Villena-Tagle, Valverde. `[CONFIRMAR: URL pública del PDF]`.
+**Informe institucional** — JNE (2026). *Análisis del elector peruano: aportes desde las ciencias del comportamiento*. JNE/ProDiálogo, 85 pp. Equipo técnico: Monard, Encinas, Villena-Tagle, Valverde. **URL: en proceso de publicación por el JNE (confirmado 16-oct-2026)** — la entrada se publica sin enlace (regla de degradación) y el enlace se añade cuando el JNE lo publique.
 
 **Colaboración editorial** — *Escrito sobre la opinión consultiva Emergencia climática y derechos humanos a la Corte Interamericana de Derechos Humanos* (2023). Alianza de Clínicas Jurídicas Ambientales de Latinoamérica y el Caribe, con SPDA e IDEHPUCP. PDF: https://alianzadeclinicasambientales.com/wp-content/uploads/2023/12/Informe-O.C.-Emergencia-Climatica-Corte-IDH-Alianza-Clinicas-Juridicas-Ambientales-LAC-IDEHPUCP-y-SPDA-1.pdf — **RESUELTO en Fase 0 (verificado en el PDF, p. 2 de créditos)**: Luis figura como miembro del «Equipo editor» (5 personas, bajo una coordinación general distinta). Se lista bajo «Colaboraciones editoriales» con la atribución textual «Equipo editor»; nunca con (Eds.).
 
@@ -311,7 +314,7 @@ La portada muestra las preguntas de las líneas 1–3 en el acto 2; la línea 4 
 
 **Trabajos en curso**: «El mal menor y el voto en blanco: el voto expresivo en el balotaje presidencial peruano de 2021», con Daniel Encinas (Northwestern University) — estado: en preparación. **Solo título, coautor y estado** (sección 10).
 
-El supuesto análisis para EnConsulta (debate 2021) no está indexado en ninguna parte — `[CONFIRMAR: enlace, o se omite]`.
+EnConsulta (análisis del debate 2021): **RESUELTO (16-oct-2026) — el video fue borrado; SE OMITE del sitio.**
 
 ### 9.4 Debate (hechos corregidos — usar estas formulaciones)
 
@@ -321,10 +324,10 @@ Hechos (fuente: CV, salvo indicación):
 - Campeón Nacional Interuniversitario de Debate (CNDI) 2025 — el nacional universitario del Perú, formato BP.
 - Semifinalista CMUDE Madrid 2022; cuartofinalista CMUDE Panamá 2023; subcampeón Torneo Rosarista (Bogotá) 2023. CMUDE = Campeonato Mundial Universitario de Debate en Español; precisarlo así.
 - Juez de la Gran Final del CMUDE 2026 (Ecuador). Jefe de Adjudicación del TNDE 2025.
-- Entrenador universitario remoto para equipos de República Dominicana (2024–). «Duplas de RD a octavos del WUDC, primera vez para ese país»: NO verificado públicamente — `[CONFIRMAR: torneo, año, y si puede publicarse]`.
+- Entrenador universitario remoto para equipos de República Dominicana (2024–). **AUTORIZADO por Luis (16-oct-2026)**: «Preparó a las duplas dominicanas que alcanzaron los octavos de final del WUDC 2025 — primera vez para República Dominicana — y los cuartos de final del CMUDE Ecuador 2026». Es el social proof principal del bloque de conversión de /debate/.
 - Juez del Round Robin Hispanohablante 2026: `[CONFIRMAR]`.
 - Programa de formación y acreditación de entrenadores de la LPDE: `[CONFIRMAR: nombre, estado y meta]`.
-- Resultados citables de equipos que él entrenó directamente (Alpamayo, duplas RD): `[CONFIRMAR: 1-2 resultados con permiso]` — es el social proof que una dirección de colegio pide primero.
+- Resultados citables de equipos de Alpamayo: `[CONFIRMAR: con permiso del colegio]`.
 
 Recursos descargables de /debate/: taller de argumentos de principios y taller «¿Cómo se evalúa un debate?» (juzgamiento WSDC) `[CONFIRMAR: archivos]`.
 
@@ -350,7 +353,7 @@ Recursos descargables de /debate/: taller de argumentos de principios y taller �
 
 ### 9.7 Reconocimientos (CV; para el YAML del CV y, con sobriedad, el about)
 
-Primer puesto de la promoción PUCP; tesis con mención sobresaliente; primer puesto del Concurso de Investigación de la Facultad de CC.SS. PUCP `[CONFIRMAR: 2023 o 2024 — CV y web actual difieren]`; Beca 18 (2019–2024); beca DARI (Ghent). Los hechos hablan; sin adjetivos.
+Primer puesto de la promoción PUCP; tesis con mención sobresaliente; primer puesto del Concurso de Investigación de la Facultad de CC.SS. PUCP (**2023** — confirmado por Luis, 16-oct-2026); Beca 18 (2019–2024); beca DARI (Ghent). Los hechos hablan; sin adjetivos.
 
 ## 10. Matriz de confidencialidad (LEY — leer antes de escribir cualquier página)
 
@@ -359,13 +362,13 @@ Primer puesto de la promoción PUCP; tesis con mención sobresaliente; primer pu
 | Paper «mal menor» (con D. Encinas) | Título, coautor con afiliación, una línea de tema, estado «en preparación» | Cualquier cifra, figura, hipótesis o hallazgo (el manuscrito dice «NO CITAR NI CIRCULAR»), hasta el OK de ambos autores |
 | Clustering JNE / informe ProDiálogo | Referencia al informe publicado (2026); descripción del método; repo propio auditado; «equipo técnico» | Apropiarse la autoría institucional; citar soluciones exploratorias no oficiales; material interno de actualización |
 | Censo de materia electoral (ESEG-JNE) | «Censo de la enseñanza electoral universitaria para la ESEG-JNE (en curso)» — una línea, sin resultados | Toda cifra o figura, hasta que el JNE publique o autorice |
-| Compras públicas (Observatorio CAL) | Descripción genérica del encargo, idealmente con visto bueno `[CONFIRMAR]` | Toda cifra, hallazgo o crítica al borrador del cliente, antes de que el CAL publique |
+| Compras públicas (Observatorio CAL) | **Cliente nombrable (confirmado por Luis, 16-oct-2026)**: «Consultor del Observatorio de Corrupción del CAL (sep. 2026–)» + descripción genérica del encargo + el caso de `seeds/casos.yaml` | Toda cifra, hallazgo o crítica al borrador del cliente, antes de que el CAL publique |
 | LPDE torneos/briefs | Hallazgos agregados de los briefs (brecha público/privado, concentración geográfica, paridad) con sus caveats | Datos individuales (los oradores son **menores de edad**); rankings por colegio nombrado; **todo el flujo de contactos de colegios, incluido nombrarlo** (ni los CSV, ni el scraping de correos, ni su existencia) |
 | Corpus CISEPA | Mención como experiencia de asistente; la cifra del scraping (747,836) | Presentarse como autor de los papers; publicar el corpus; **nombrar la revista de destino o el estado editorial detallado de manuscritos ajenos** (decir solo «manuscritos en revisión en revistas internacionales»); el conteo interno de proyectos, salvo OK de los PIs |
 | Voto joven 2026 | Agregados y hot spots (cifras del repo) | Redistribuir microdatos del padrón RENIEC |
 | Q-LAB brechas (Cooperación Suiza) | Lo ya público en el sitio del proyecto; encuadre de asistente | Resultados no publicados del encargo |
 | BCRP, padrón ESCALE, motions | Todo (datos públicos, trabajo propio). Motions: verificar procedencia del CSV fuente antes de redistribuir datos | — |
-| Sector salud (Sapienza→Roche) | «Consultor de datos en el sector salud (2025)»; el nombre del cliente solo con `[CONFIRMAR]` | Cualquier dato del encargo (volúmenes, entregables, hallazgos) |
+| Roche Pharma Perú (vía Sapienza Consultora) | **Cliente nombrable (confirmado por Luis, 16-oct-2026)**: cargo y nombre en CV y franja de instituciones | Cualquier dato del encargo (volúmenes, entregables, hallazgos); caso narrado en /servicios/ |
 
 **Regla de repos**: antes de enlazar cualquier repositorio desde el sitio, auditar que no contenga datos individuales, bases de contactos, soluciones exploratorias no oficiales ni material interno de clientes. Si no está limpio, se nombra sin enlace hasta sanearlo. (Aplica en particular a `lpde-debate-analytics` y `clustering-profile-peruvian-voter`.)
 
@@ -471,7 +474,7 @@ Cada fase cierra con commit, capturas Playwright (escritorio y móvil) y resumen
 (b) Toolchain local: Node 22+, R 4.5 (`"C:\Program Files\R\R-4.5.1\bin\Rscript.exe"` — Rscript no está en PATH), Quarto, Typst, `npx playwright install chromium`, lychee o linkinator, paquetes R (tidyverse, sf, jsonlite).
 (c) Auditar el despliegue del Hugo actual: workflow, source de Pages, estado del último deploy.
 (d) Verificar la atribución literal de Luis en los créditos del PDF del volumen de clínicas (9.3b).
-(e) UNA lista de preguntas a Luis (máx. 10): dominio propio; fotos + CV definitivo; URL del informe JNE; EnConsulta (enlace o se omite); instituciones nombrables (Roche/Sapienza, CAL) + 2-3 casos + gestionar 1-2 testimonios con contactos seguros; WhatsApp para servicios (sí/no + número) y Calendly; confirmaciones de debate (WUDC RD, Round Robin, ejes del coaching, programa LPDE, resultados de equipos propios, archivos de talleres); formatos y proceso de cada servicio (tiempos de respuesta, recibos/factura); año del concurso FF.CC.SS.; **crear ORCID y perfil de Google Scholar esta semana** (tarea de Luis, ~1 hora: son las dos credenciales que un comité busca primero y deben existir al lanzar).
+(e) **RESPONDIDO por Luis el 16-oct-2026**: dominio = github.io; fotos = placeholders + `profile.jpeg` existente; URL del informe JNE = en proceso de publicación (entrada sin enlace); EnConsulta = video borrado, se omite; nombrables = Roche Pharma (vía Sapienza) y CAL (consultor desde sep-2026); WhatsApp = NO (todo por correo); duplas RD = publicables (octavos WUDC 2025, cuartos CMUDE Ecuador 2026); talleres = 2 horas; respuesta = 24 horas; emite RxH; curso ESEG = no se nombra; concurso FF.CC.SS. = 2023. **Pendientes**: ORCID y Google Scholar (tarea de Luis, ~1 h); aprobar los 3 casos de `seeds/casos.yaml`; gestionar 1-2 testimonios; Round Robin 2026; ejes del coaching; programa LPDE; archivos de los 2 talleres; elegir dirección de arte (style tile v2) y variante de titular.
 (f) Limpieza del Hugo vivo (borrar `my-first-blog`, `experience-a`, `project-a`): SOLO si la auditoría (c) confirma un pipeline automático verificable; si el deploy es opaco, va al backlog — el sitio nuevo lo reemplaza todo en semanas.
 
 **Fase 1 · Style tile (PARADA OBLIGATORIA).** `design/style-tile.html`: paleta con nombres y hex; las tres familias con muestras reales (probar el titular propuesto y 1-2 variantes); botón relleno y de borde; tarjeta de proyecto con hover; frase separadora; fragmento de tabla de publicaciones; boceto estático del mapa con ~200 puntos en la silueta aproximada del Perú. Captura y stop.

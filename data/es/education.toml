@@ -6,7 +6,7 @@
   institution_link = "https://www.pucp.edu.pe"
   highlights = [
     "Primer puesto en la promoción de egreso (2019–2024).",
-    "Tesis con mención sobresaliente sobre brechas de implementación en infraestructura pública post-desastre.",
+    "Tesis con mención sobresaliente sobre brechas de implementación en infraestructura pública posdesastre.",
     "Cursos relevantes: Política Comparada, Métodos de Investigación, Gestión Pública, Economía Política."
   ]
 
@@ -24,7 +24,7 @@
 [[education]]
   period = "2016 – 2018"
   degree = "Diploma de Bachillerato Internacional (IB)"
-  institution = "Colegio de Alto Rendimiento (COAR), Amazonas"
+  institution = "Colegio de Alto Rendimiento (COAR)"
   location = "Amazonas, Perú"
   institution_link = "https://www.minedu.gob.pe/colegios-de-alto-rendimiento/"
   highlights = [

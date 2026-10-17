@@ -1,0 +1,10 @@
+{{- /* Profile photo resized to what the layout shows (480×600 covers 2× retina)
+       and served as WebP; falls back to the original file. The grayscale comes
+       from CSS. Context: dict "author" and "alt". */ -}}
+{{- $a := .author -}}
+{{- $src := $a.profile_image | relURL -}}
+{{- $w := 400 }}{{ $h := 500 -}}
+{{- with resources.Get (strings.TrimPrefix "/" $a.profile_image) }}
+  {{- with .Fill "480x600 webp q82 Center" }}{{ $src = .RelPermalink }}{{ $w = .Width }}{{ $h = .Height }}{{ end }}
+{{- end -}}
+<img src="{{ $src }}" alt="{{ .alt }}" width="{{ $w }}" height="{{ $h }}">

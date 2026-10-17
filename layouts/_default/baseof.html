@@ -9,11 +9,14 @@
         <link rel="canonical" href="{{ .Permalink }}">
         {{- if .IsTranslated }}
         {{- range .AllTranslations }}
-        <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+        <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
         {{- if eq .Language.Lang "en" }}
         <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
         {{- end }}
         {{- end }}
+        {{- end }}
+        {{- if eq .Kind "404" }}
+        <meta name="robots" content="noindex">
         {{- end }}
 
         <!-- Favicon -->
@@ -44,7 +47,7 @@
         <!-- Fonts: Piazzolla (headings) + Archivo (text) -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..700;1,400&family=Piazzolla:ital,opsz,wght@0,8..30,500..700;1,8..30,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..700;1,400&family=Piazzolla:opsz,wght@8..30,500..700&display=swap" rel="stylesheet">
 
         <!-- Tailwind CSS compiled by Hugo; palette, fonts and site styles live in assets/css/main.css -->
         {{ with (templates.Defer (dict "key" "global")) }}{{ partial "css.html" . }}{{ end }}

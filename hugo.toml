@@ -15,6 +15,7 @@ disableKinds = ["taxonomy", "term"]
 
   [languages.en]
     languageName = "English"
+    languageCode = "en"
     title = "Luis Valverde Ramos"
     weight = 1
     contentDir = "content/en"
@@ -51,6 +52,7 @@ disableKinds = ["taxonomy", "term"]
 
   [languages.es]
     languageName = "Español"
+    languageCode = "es-PE"
     title = "Luis Valverde Ramos"
     weight = 2
     contentDir = "content/es"

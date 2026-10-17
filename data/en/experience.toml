@@ -105,13 +105,13 @@
 [[experience]]
   role = "Research Assistant"
   company = "Daniel Encinas (Northwestern University) & Rodrigo Barrenechea"
-  period = "May. 2024 – Aug. 2024"
+  period = "May 2024 – Aug. 2024"
   country = "Lima, Peru"
   company_link = ""
   description = "Assisted in data processing and analysis for the identification of geographic patterns of the populist vote in Peru."
   responsibilities = [
-    "Assisted in data processing and analysis for the identification of geographic patterns of the populist vote in Peru by analyzing provincial-level results across 10 presidential elections (1980–2021).",
-    "Produced descriptive analysis of Andean electoral behavior using LAPOP data, as input for the authors' research."
+    "Assisted in data processing and analysis for the identification of geographic patterns of the populist vote in Peru by analysing provincial-level results across 10 presidential elections (1980–2021).",
+    "Produced descriptive analysis of Andean electoral behaviour using LAPOP data, as input for the authors' research."
   ]
   technologies = ["R", "ggplot2", "LAPOP Data", "Electoral Analysis"]
 
@@ -121,9 +121,9 @@
   period = "Feb. 2023 – Dec. 2023"
   country = "Lima, Peru"
   company_link = "https://idehpucp.pucp.edu.pe"
-  description = "Participated in the design and implementation of research projects on human rights, democracy and migration, coordinating with international organizations."
+  description = "Participated in the design and implementation of research projects on human rights, democracy and migration, coordinating with international organisations."
   responsibilities = [
-    "Participated in the design and implementation of research projects on human rights, democracy and migration, coordinating with international organizations, and supported the editorial process of the commemorative volume for the 20th anniversary of Peru's CVR Final Report.",
+    "Participated in the design and implementation of research projects on human rights, democracy and migration, coordinating with international organisations, and supported the editorial process of the commemorative volume for the 20th anniversary of Peru's CVR Final Report.",
     "Co-wrote six opinion columns for the IDEHPUCP newsletter on memory, climate change and democracy."
   ]
   technologies = ["Policy Research", "Academic Writing", "Qualitative Methods"]

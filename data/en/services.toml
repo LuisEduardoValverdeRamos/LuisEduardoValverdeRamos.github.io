@@ -44,17 +44,17 @@ router_label = "What do you need?"
   name = "Debate"
   title = "Team coaching and adjudicator training"
   intro = "I coach school and university teams in World Schools and British Parliamentary formats, and I train adjudicators."
-  proof = "Director General of the Peruvian National Schools Debate Team, and previously its coach: in Panama in 2026 the team won its fourth consecutive title at the Mundial de Debate Escolar en Español (MED), the world schools championship held in Spanish. I prepared the Dominican pairs that reached the octofinals of WUDC 2025, a first for the Dominican Republic, and the quarterfinals of CMUDE Ecuador 2026."
+  proof = "Director General of the Peruvian National Schools Debate Team, and previously its coach: in Panama in 2026 the team won its fourth consecutive title at the Mundial de Debate Escolar en Español (MED), the world schools championship held in Spanish. I prepared the Dominican pairs that reached the quarterfinals of CMUDE Ecuador 2026."
   home_title = "Team coaching and adjudication"
   home_text = "Schools, universities and national teams: tournament preparation and adjudicator training."
   home_cta = "Coach my team"
 
   [[pillars.services]]
     title = "University teams and national squads"
-    for = "Debating societies and national teams preparing for WUDC, CMUDE or a national championship."
+    for = "Debating societies and national teams preparing for CMUDE, a national championship or other British Parliamentary tournaments."
     format = "A preparation cycle before the tournament, online, in British Parliamentary or World Schools format."
     deliverables = "Preparation plan, sessions with motions and feedback, and content material by topic."
-    proof = "Dominican pairs: octofinals at WUDC 2025 and quarterfinals at CMUDE Ecuador 2026. Head coach of the PUCP Debate Society."
+    proof = "Dominican pairs: quarterfinals at CMUDE Ecuador 2026. Head coach of the PUCP Debate Society."
     subject = "Debate coaching - university or national team"
     body = "Institution or team:\nFormat (BP or World Schools):\nTarget tournament and date:\nNumber of debaters and level:\nTime zone and availability:\n"
     nopromise = "Breaking to the elimination rounds. I also do not accompany a team at a tournament where I judge or sit on the adjudication core."
@@ -138,7 +138,7 @@ router_label = "What do you need?"
   name = "Media"
   compact = true
   title = "For journalists"
-  intro = "Electoral behaviour, political reform, subnational politics, scholarships and civic education, in Spanish. I speak in a personal capacity, not on behalf of the JNE, PUCP or the LPDE."
+  intro = "Electoral behaviour, political reform, subnational politics, scholarships and civic education, in Spanish. I speak in a personal capacity, not on behalf of the JNE or PUCP."
   subject = "Press: interview request"
   body = "Outlet and programme:\nTopic:\nFormat (interview, panel or written piece):\nDate and time:\n"
 
@@ -174,10 +174,10 @@ router_label = "What do you need?"
     text = "Jurado Nacional de Elecciones, Peru's National Elections Jury (ESEG) · Pontificia Universidad Católica del Perú (CISEPA, Q-LAB, GIES) · IDEHPUCP"
   [[institutions.groups]]
     label = "Consulting"
-    text = "Corruption Observatory of the Lima Bar Association · ProDiálogo (commissioned by the JNE) · Roche Pharma Peru (through Sapienza Consultora)"
+    text = "Corruption Observatory of the Lima Bar Association · ProDiálogo (commissioned by the JNE) · Peruvian School Debate League (LPDE) · Roche Pharma Peru (through Sapienza Consultora)"
   [[institutions.groups]]
     label = "Debate"
-    text = "Peruvian School Debate League (LPDE) · PUCP Debate Society · Colegio Alpamayo · university teams from the Dominican Republic"
+    text = "Peruvian National Schools Debate Team · PUCP Debate Society · Colegio Alpamayo · university teams from the Dominican Republic"
 
 [contact]
   title = "Email me"

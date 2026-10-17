@@ -1,11 +1,13 @@
 # Página Debate (/es/debate/) y banda de debate de la portada.
 # Reglas: los logros de equipo se rotulan como del equipo («la selección que
-# entrené», «las duplas que preparé»); MED, CMUDE y WUDC con su nombre
-# completo; nada individual de debatientes escolares (son menores de edad).
+# entrené», «las duplas que preparé»); MED y CMUDE con su nombre completo;
+# nada individual de debatientes escolares (son menores de edad).
+# Correcciones de Luis (17-oct-2026): no entrenó equipos en el WUDC, solo en el
+# CMUDE, y nunca fue director académico de la LPDE (fue consultor, feb.–ago. 2026).
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
-lead = "Dirijo la Selección Nacional de Debate Escolar del Perú y el equipo académico de la Liga Peruana de Debate Escolar (LPDE). Entreno equipos escolares y universitarios y juzgo torneos en español."
-glossary = "El MED es el Mundial de Debate Escolar en Español; el CMUDE, el Campeonato Mundial Universitario de Debate en Español, y el WUDC, el Mundial Universitario de Debate, que se compite en inglés."
+lead = "Dirijo la Selección Nacional de Debate Escolar del Perú, entreno equipos escolares y universitarios y juzgo torneos en español."
+glossary = "El MED es el Mundial de Debate Escolar en Español, y el CMUDE, el Campeonato Mundial Universitario de Debate en Español."
 
 [home]
   eyebrow = "Debate"
@@ -28,8 +30,8 @@ glossary = "El MED es el Mundial de Debate Escolar en Español; el CMUDE, el Cam
   url = "https://andina.pe/agencia/noticia-peru-se-corona-tetracampeon-el-mundial-debate-escolar-espanol-2026-1091241.aspx"
 
 [[highlights]]
-  label = "WUDC 2025 · CMUDE 2026"
-  text = "Preparé a las duplas dominicanas que llegaron a octavos de final del WUDC, primera vez para el país, y a cuartos de final del CMUDE."
+  label = "CMUDE · Ecuador 2026"
+  text = "Preparé a las duplas dominicanas que llegaron a cuartos de final del Campeonato Mundial Universitario de Debate en Español."
 
 [[highlights]]
   label = "CNDI 2025"
@@ -66,7 +68,7 @@ glossary = "El MED es el Mundial de Debate Escolar en Español; el CMUDE, el Cam
     period = "2024–"
     role = "Entrenador universitario, a distancia"
     org = "República Dominicana"
-    text = "Formato parlamentario británico. Las duplas que preparé llegaron a octavos de final del WUDC 2025, primera vez para el país, y a cuartos de final del CMUDE Ecuador 2026."
+    text = "Formato parlamentario británico. Las duplas que preparé llegaron a cuartos de final del CMUDE Ecuador 2026."
 
 [judge]
   title = "Juzgo"
@@ -100,7 +102,7 @@ glossary = "El MED es el Mundial de Debate Escolar en Español; el CMUDE, el Cam
 
 [lpde]
   title = "Liga Peruana de Debate Escolar"
-  text = "Desde septiembre de 2026 soy director académico de la LPDE: lidero el equipo a cargo de sus programas de capacitación, entrenamiento y consultoría en debate escolar. Antes, como consultor de investigación, preparé el primer informe de la Liga sobre el ecosistema de debate escolar (70 instituciones) y siete policy briefs. Trabajo solo con datos agregados: los debatientes son menores de edad."
+  text = "Entre febrero y agosto de 2026, como consultor de investigación de la LPDE, preparé el primer informe de la Liga sobre el ecosistema de debate escolar (70 instituciones) y siete policy briefs. Trabajé solo con datos agregados: los debatientes son menores de edad."
 
 [team]
   title = "Para tu equipo"

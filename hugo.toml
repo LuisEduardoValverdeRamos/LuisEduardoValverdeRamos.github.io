@@ -35,9 +35,13 @@ defaultContentLanguage = "en"
         pageRef = "/publications"
         weight = 4
       [[languages.en.menu.main]]
+        name = "Repository"
+        pageRef = "/work"
+        weight = 5
+      [[languages.en.menu.main]]
         name = "Contact"
         pageRef = "/contact"
-        weight = 5
+        weight = 6
 
   [languages.es]
     languageName = "Español"
@@ -62,9 +66,13 @@ defaultContentLanguage = "en"
         pageRef = "/publications"
         weight = 4
       [[languages.es.menu.main]]
+        name = "Repositorio"
+        pageRef = "/work"
+        weight = 5
+      [[languages.es.menu.main]]
         name = "Contacto"
         pageRef = "/contact"
-        weight = 5
+        weight = 6
 
 [params]
   name = "Luis Valverde Ramos"

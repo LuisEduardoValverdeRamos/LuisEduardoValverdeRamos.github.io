@@ -45,9 +45,3 @@ Trabajo de forma presencial en Lima y a distancia con el resto del país y Amér
 ## Fuera del trabajo
 
 Practico muay thai. Fui observador electoral de Transparencia en las dos vueltas de 2021.
-
-## Bio breve
-
-Para programas de eventos y medios:
-
-> Luis Valverde Ramos es politólogo por la Pontificia Universidad Católica del Perú, donde egresó en el primer puesto de su promoción. Es investigador en la Escuela Electoral y de Gobernabilidad del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima y director general de la Selección Nacional de Debate Escolar del Perú, de la que fue entrenador en el ciclo en que obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED, Panamá 2026). Investiga el comportamiento electoral y la implementación de políticas públicas en el Perú.

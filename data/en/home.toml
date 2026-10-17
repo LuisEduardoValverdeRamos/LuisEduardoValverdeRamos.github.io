@@ -1,46 +1,60 @@
-# English home page: the «short» variant (about one and a half screens), in the
-# register of academic home pages: the statement, a short bio and three doors.
+# English home page: the same «media» variant as the Spanish one (Luis's
+# decision, 17 Oct 2026): facts strip, research questions, selected writing,
+# debate band, services, institutions and media, in the same order.
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
-blocks = ["doors"]
+blocks = ["proof", "research", "debate", "services", "institutions", "media"]
 eyebrow = "ESEG–JNE · PUCP · Peruvian National Schools Debate Team"
 statement = "I research electoral behaviour and public policy implementation in Peru, advise institutions on analysing their data, and coach school and university debate teams."
 bio = "Political scientist trained at PUCP, where I graduated first in my class. Researcher at the Electoral and Governance School of Peru's National Elections Jury, teaching assistant in Political Economy and Director General of the Peruvian National Schools Debate Team."
 photo_alt = "Portrait of Luis Valverde Ramos"
-doors_label = "Main areas"
+proof_label = "Verifiable facts"
+media_label = "In the media"
+media_more = "See media"
+
+[[ctas]]
+  label = "Work with me"
+  page = "/work"
+  style = "primary"
 
 [[ctas]]
   label = "Research"
   page = "/research"
-  style = "primary"
-
-[[ctas]]
-  label = "CV"
-  page = "/cv"
   style = "button"
 
 [[ctas]]
-  label = "Work with me →"
-  page = "/work"
+  label = "See CV"
+  page = "/cv"
   style = "link"
 
-[[doors]]
-  eyebrow = "Research"
-  title = "Voting, public works and civic education"
-  text = "Three research lines framed as questions; thesis, reports and columns."
-  cta = "Research"
-  page = "/research"
+[[proof]]
+  label = "PUCP · 2024–2025"
+  fact = "First in the graduating class of Political Science and Government; licentiate thesis with distinction."
+  src = "PUCP repository ↗"
+  url = "https://hdl.handle.net/20.500.12404/32370"
 
-[[doors]]
-  eyebrow = "Debate"
-  title = "Coaching and adjudication"
-  text = "Director General of Peru's national schools debate team, after coaching the squad that won its fourth consecutive Spanish-language world schools title (MED, Panama 2026)."
-  cta = "Debate"
-  page = "/debate"
+[[proof]]
+  label = "JNE · 2026"
+  fact = "Researcher at the Electoral and Governance School of Peru's National Elections Jury."
+  src = "See CV →"
+  page = "/cv"
 
-[[doors]]
-  eyebrow = "Work with me"
-  title = "Data, debate and research support"
-  text = "Analysis for institutions, debate coaching and methods workshops. I reply within 24 hours."
-  cta = "Work with me"
+[[proof]]
+  label = "CAL · 2026"
+  fact = "Consultant to the Corruption Observatory of the Lima Bar Association."
+  src = "Consulting →"
   page = "/work"
+  anchor = "consulting"
+
+[[proof]]
+  label = "Media · 2026"
+  fact = "Interviews and panels on El Salto (Spain), Radio Exitosa and La República."
+  src = "See media →"
+  page = "/media"
+
+[research]
+  title = "What I research"
+  more = "Research"
+  line_cta = "See the line"
+  writing_title = "Selected writing"
+  writing = ["tesis-2025", "informe-jne-2026", "col-reconstruccion-2023"]

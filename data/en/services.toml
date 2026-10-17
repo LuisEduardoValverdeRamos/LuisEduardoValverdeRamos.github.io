@@ -19,7 +19,7 @@ router_label = "What do you need?"
   press = "Press enquiries"
 
 [home]
-  title = "How I can help"
+  title = "What I can help with"
   more = "All services"
   pillars = ["consulting", "debate", "research"]
 
@@ -50,6 +50,16 @@ router_label = "What do you need?"
   home_cta = "Coach my team"
 
   [[pillars.services]]
+    title = "Debate programme for schools"
+    for = "Schools that want to start a debate club or prepare their team for school tournaments."
+    format = "A term or year-long programme, in person in Lima or online; session frequency agreed with the school."
+    deliverables = "A content plan (arguments, rebuttal, weighing and foundations of economics), sessions with individual feedback, a suggested tournament calendar and a closing report."
+    proof = "Debate coach at Colegio Alpamayo since June 2026; Director General of the Peruvian National Schools Debate Team, which I coached in 2025–2026."
+    subject = "Debate programme for a school"
+    body = "School:\nCity:\nYear groups and number of students:\nDo you already have a debate club?:\nTournaments you are aiming for:\nFormat (in person or online):\nDesired start date:\n"
+    nopromise = "Titles, rankings or a place on the national team. I do not publish students' names, data or images without written consent from the school and the families."
+
+  [[pillars.services]]
     title = "University teams and national squads"
     for = "Debating societies and national teams preparing for CMUDE, a national championship or other British Parliamentary tournaments."
     format = "A preparation cycle before the tournament, online, in British Parliamentary or World Schools format."
@@ -60,13 +70,23 @@ router_label = "What do you need?"
     nopromise = "Breaking to the elimination rounds. I also do not accompany a team at a tournament where I judge or sit on the adjudication core."
 
   [[pillars.services]]
-    title = "Schools and adjudicators"
-    for = "Schools starting a debate club, and leagues or organisers that need adjudicators with shared criteria."
-    format = "A term or year-long programme for schools, in person in Lima or online; two-hour adjudication workshops with a calibration session before the tournament."
-    proof = "Director General of the Peruvian National Schools Debate Team; debate coach at Colegio Alpamayo since June 2026; judge of the CMUDE 2026 grand final (Ecuador); chief adjudicator of TNDE 2025."
-    subject = "Debate programme or adjudicator training"
-    body = "Institution or tournament:\nWhat you need:\nDates:\n"
-    nopromise = "Titles or rankings. I do not publish students' names, data or images without written consent from the school and the families."
+    title = "Adjudicator training"
+    for = "Leagues, tournament organisers, universities and schools that need adjudicators with shared criteria."
+    format = "A two-hour workshop, «How is a debate judged?», plus a calibration session with sample rounds before the tournament."
+    deliverables = "Workshop materials, a judging guide per format and calibration exercises."
+    proof = "Judge of the CMUDE 2026 grand final (Ecuador); chief adjudicator of TNDE 2025."
+    subject = "Adjudicator training"
+    body = "Organisation or tournament:\nTournament date:\nNumber of adjudicators and experience:\nFormat:\n"
+    nopromise = "Personal accreditations or certificates: only a league or institution can issue them."
+
+  [[pillars.services]]
+    title = "Argumentation workshops"
+    for = "Schools, universities, teachers and organisations that want a practical introduction to debate."
+    format = "Two hours, in person or online: principled arguments, rebuttal and weighing, or how a debate is judged."
+    deliverables = "Slides, an exercise guide and the workshop motions."
+    proof = "Novice instructor at the PUCP Debate Society (2025) and the Colegio Alpamayo programme."
+    subject = "Debate workshop (two hours)"
+    body = "Institution:\nAudience (ages and number):\nTopic of interest:\nTentative date:\nFormat:\n"
 
 [[pillars]]
   id = "consulting"
@@ -97,6 +117,16 @@ router_label = "What do you need?"
     body = "Organisation:\nReport or indicators in preparation:\nData source:\nPlanned publication date:\n"
     nopromise = "Endorsing conclusions already reached, or signing the institution's report as an author."
 
+  [[pillars.services]]
+    title = "Data and visualisation in R"
+    for = "Teams working with records from MEF, INEI, MINEDU, SEACE or BCRP that need them integrated, documented and visualised."
+    format = "Project-based deliverables. I work in R; I also use Python and Stata at an intermediate level."
+    deliverables = "An integrated dataset with a data dictionary, reproducible scripts, report-ready figures and a note on limitations."
+    proof = "Public site and code of the municipal works project, started as a research assistant at Q-LAB-PUCP."
+    subject = "Data analysis and visualisation in R"
+    body = "Organisation:\nData sources:\nWhat you need (dataset, figures, report):\nDeadline:\n"
+    nopromise = "Production applications with maintenance, or server administration."
+
 [[pillars]]
   id = "research"
   name = "Research and papers"
@@ -117,12 +147,23 @@ router_label = "What do you need?"
     nopromise = "Authorship without a substantive contribution: I neither ask for it nor accept it."
 
   [[pillars.services]]
-    title = "Research assistance and methods review"
-    for = "Researchers and centres that need datasets built, replicable econometric analysis in R, or a second reading before submission."
-    format = "By project, online; a written memo and a session to discuss it."
-    proof = "Research assistant at CISEPA-PUCP and Q-LAB-PUCP, and to Daniel Encinas and Rodrigo Barrenechea; teaching assistant in Political Economy (PUCP)."
-    subject = "Research assistance or methods review"
-    body = "Project and institution:\nWhat you need:\nDeadline:\n"
+    title = "Research assistance"
+    for = "Researchers and centres that need datasets built, replicable econometric analysis in R or literature reviews."
+    format = "By project, online."
+    deliverables = "Documented datasets, scripts, tables and figures, and results memos."
+    proof = "Research assistant at CISEPA-PUCP and Q-LAB-PUCP, and to Daniel Encinas and Rodrigo Barrenechea."
+    subject = "Research assistance"
+    body = "Project and institution:\nTasks:\nHours per week and duration:\n"
+
+  [[pillars.services]]
+    title = "Methods review"
+    for = "Thesis writers and teams that want a second reading before submitting."
+    format = "A reading of the document, a written memo and a session to discuss it."
+    deliverables = "A memo with prioritised observations: question, design, data, method and reproducibility."
+    proof = "Teaching assistant in Political Economy (PUCP); teaching assistant for Introduction to R for Social Research and Causal Machine Learning (Q-LAB-PUCP)."
+    subject = "Methods review"
+    body = "Type of document (thesis, project, report, manuscript):\nStage:\nQuestion and method:\nDeadline:\n"
+    nopromise = "Writing chapters or doing the analysis for someone else to sign. I do not work with students from the courses where I am a teaching assistant."
 
 [[pillars]]
   id = "workshops"

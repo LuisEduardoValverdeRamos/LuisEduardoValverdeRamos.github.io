@@ -1,5 +1,6 @@
 ---
-title: "Sobre Mí"
+title: "Sobre mí"
+description: "Luis Valverde Ramos, politólogo (PUCP): investigador en la ESEG del JNE, consultor y director académico de la LPDE."
 date: 2026-04-04
 draft: false
 layout: "about"

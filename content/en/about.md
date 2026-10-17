@@ -1,5 +1,6 @@
 ---
 title: "About Me"
+description: "Luis Valverde Ramos, political scientist (PUCP): researcher at the JNE's Electoral and Governance School, consultant and LPDE academic director."
 date: 2026-04-04
 draft: false
 layout: "about"

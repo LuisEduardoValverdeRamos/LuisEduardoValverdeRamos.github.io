@@ -99,6 +99,12 @@ const current = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.ur
   }
   .switcher a:hover { border-color: var(--color-algarrobo); color: var(--color-algarrobo); }
 
+  /* barra compacta tras 120px de scroll (PROMPT §5) */
+  .site-header[data-compact] .bar { min-height: 52px; }
+  .site-header[data-compact] .logo-full { display: none; }
+  .site-header[data-compact] .logo-compact { display: inline; }
+  .bar { transition: min-height 180ms var(--ease); }
+
   @media (max-width: 880px) {
     .logo-full { display: none; }
     .logo-compact { display: inline; }
@@ -106,3 +112,17 @@ const current = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.ur
     nav a { font-size: 14px; }
   }
 </style>
+
+<script>
+  const header = document.querySelector('[data-header]');
+  let compact = false;
+  const onScroll = () => {
+    const c = window.scrollY > 120;
+    if (c !== compact) {
+      compact = c;
+      header?.toggleAttribute('data-compact', c);
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>

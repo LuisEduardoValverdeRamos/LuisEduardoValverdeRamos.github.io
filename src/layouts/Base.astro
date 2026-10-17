@@ -38,6 +38,7 @@ const site = Astro.site?.href.replace(/\/$/, '') ?? '';
     <Font cssVariable="--font-display" preload />
     <Font cssVariable="--font-text" preload />
     <Font cssVariable="--font-mono" />
+    <slot name="head" />
   </head>
   <body>
     <Header />
@@ -45,5 +46,9 @@ const site = Astro.site?.href.replace(/\/$/, '') ?? '';
       <slot />
     </main>
     <Footer />
+    <script>
+      import { initReveal } from '../scripts/reveal.js';
+      initReveal();
+    </script>
   </body>
 </html>

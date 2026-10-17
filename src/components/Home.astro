@@ -1,0 +1,295 @@
+---
+// Portada: siete actos (PROMPT.md §7). Mismo contenido en ES y EN; la jerarquía
+// de llamados a la acción cambia por idioma (ES prioriza al contratante; EN, al
+// evaluador académico) — eso ya viene resuelto en home.ts.
+import { Image } from 'astro:assets';
+import HeroMap from './HeroMap.astro';
+import { home } from '../i18n/home';
+import type { Locale } from '../i18n/ui';
+import retrato from '../assets/legacy/profile.jpeg';
+
+interface Props {
+  lang?: Locale;
+}
+const { lang = 'es' } = Astro.props;
+const c = home[lang];
+---
+
+{/* ============================ ACTO 1 · mapa y titular ============================ */}
+<section class="acto hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">{c.hero.kicker}</p>
+      <h1>{c.hero.headline}</h1>
+      <p class="method">{c.hero.method}</p>
+      <div class="actions">
+        <a class="btn btn-solid" href={c.hero.primary.href}>{c.hero.primary.label}</a>
+        <a class="btn btn-ghost" href={c.hero.secondary.href}>{c.hero.secondary.label}</a>
+      </div>
+    </div>
+    <div class="hero-map-slot">
+      <HeroMap lang={lang} />
+    </div>
+  </div>
+</section>
+
+<hr class="hairline wrap" />
+
+{/* ======================= ACTO 2 · preguntas + escritos ========================== */}
+<section class="acto" data-reveal>
+  <div class="wrap">
+    <h2 class="sec-title">{c.questions.title}</h2>
+    <div class="questions">
+      {c.questions.items.map((q) => (
+        <article data-child>
+          <p class="mono n">{q.n}</p>
+          <h3><a href={q.href}>{q.q}</a></h3>
+          <p class="body">{q.body}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="writings" data-child>
+      <p class="kicker">{c.questions.writingsTitle}</p>
+      <ul>
+        {c.questions.writings.map((w) => (
+          <li>
+            <span class="mono yr">{w.year}</span>
+            <span>
+              {w.href ? <a href={w.href}>{w.title}</a> : w.title}
+              <small>{w.venue}</small>
+            </span>
+          </li>
+        ))}
+      </ul>
+      <a class="more" href={lang === 'es' ? '/investigacion/' : '/en/research/'}>
+        {c.questions.writingsMore} →
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="sep" data-reveal><p>{c.sep1}</p></div>
+
+{/* ============================== ACTO 3 · proyectos ============================== */}
+<section class="acto" data-reveal>
+  <div class="wrap">
+    <h2 class="sec-title">{c.projects.title}</h2>
+    <div class="cards">
+      {c.projects.items.map((p) => (
+        <a class="card" href={p.href} data-child>
+          <span class="mono n">{p.n}</span>
+          <h3>{p.title}</h3>
+          <p>{p.body}</p>
+          <span class="status mono">{p.status}</span>
+          <span class="open">{c.projects.open}</span>
+        </a>
+      ))}
+    </div>
+    <a class="more" href={lang === 'es' ? '/proyectos/' : '/en/projects/'}>{c.projects.more} →</a>
+  </div>
+</section>
+
+{/* =============================== ACTO 4 · debate ================================ */}
+<section class="acto banda" data-reveal>
+  <div class="wrap debate-grid">
+    <div>
+      <h2 class="sec-title">{c.debate.title}</h2>
+      <p class="body" data-child>{c.debate.body}</p>
+      <div class="debate-links" data-child>
+        <a class="more" href={lang === 'es' ? '/debate/' : '/en/debate/'}>{c.debate.more} →</a>
+        <a class="cta" href={lang === 'es' ? '/debate/#trabaja-conmigo' : '/en/debate/#work-with-me'}>
+          {c.debate.cta}
+        </a>
+      </div>
+    </div>
+    <dl class="stats">
+      {c.debate.stats.map((s) => (
+        <div data-child>
+          <dt class="mono figure">{s.figure}</dt>
+          <dd>{s.label}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>
+
+<div class="sep" data-reveal><p>{c.sep2}</p></div>
+
+{/* ============================= ACTO 5 · servicios =============================== */}
+<section class="acto" data-reveal>
+  <div class="wrap">
+    <h2 class="sec-title">{c.services.title}</h2>
+    <div class="services">
+      {c.services.items.map((s) => (
+        <article data-child>
+          <h3>{s.title}</h3>
+          <p class="body">{s.body}</p>
+        </article>
+      ))}
+    </div>
+    <div class="actions" data-child>
+      <a class="btn btn-ghost" href="mailto:luis.valverde@pucp.edu.pe">{c.services.mail}</a>
+      <a class="more" href={lang === 'es' ? '/servicios/' : '/en/consulting/'}>{c.services.more} →</a>
+    </div>
+  </div>
+</section>
+
+{/* Acto 6 (últimas entradas del blog) entra en la Fase 6, cuando existan posts:
+    la regla de degradación del brief omite la sección mientras esté vacía. */}
+
+<div class="sep" data-reveal><p>{c.sep3}</p></div>
+
+{/* ================================ ACTO 7 · cierre =============================== */}
+<section class="acto" data-reveal>
+  <div class="wrap close-grid">
+    <Image
+      src={retrato}
+      alt={c.close.photoAlt}
+      widths={[220, 440]}
+      sizes="220px"
+      class="retrato"
+      loading="lazy"
+    />
+    <div>
+      <h2 class="sec-title">{c.close.title}</h2>
+      {c.close.lines.map((l) => (
+        <p class="body" data-child>{l}</p>
+      ))}
+      <ul class="close-links" data-child>
+        {c.close.links.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .acto { padding: var(--space-12) 0; }
+  .sec-title { font-size: clamp(26px, 3vw, 34px); margin-bottom: var(--space-6); }
+  .body { color: var(--color-tinta-2); }
+  .more {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-linea);
+    padding-bottom: 2px;
+    color: var(--color-tinta);
+  }
+  .more:hover { border-bottom-color: var(--color-algarrobo); color: var(--color-algarrobo); }
+
+  /* ---------- acto 1 ---------- */
+  .hero { padding-top: var(--space-8); padding-bottom: var(--space-12); }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+    gap: var(--space-8);
+    align-items: center;
+    min-height: min(78vh, 760px);
+  }
+  .hero h1 { font-size: var(--type-headline); max-width: 15ch; margin: var(--space-3) 0; }
+  .hero .method { font-size: 18px; color: var(--color-tinta-2); max-width: 52ch; }
+  .actions { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; margin-top: var(--space-6); }
+
+  @media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr; gap: var(--space-6); min-height: 0; }
+    /* en móvil el mapa es fondo atenuado detrás del titular */
+    .hero-grid { position: relative; }
+    .hero-map-slot { opacity: 0.28; order: -1; pointer-events: none; margin-bottom: calc(-1 * var(--space-12)); }
+    .hero-copy { position: relative; z-index: 1; }
+  }
+
+  /* ---------- acto 2 ---------- */
+  .questions { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-6); }
+  .questions .n { font-size: 13px; color: var(--color-tinta-2); letter-spacing: 0.06em; }
+  .questions h3 { font-size: 23px; margin: var(--space-2) 0; }
+  .questions h3 a { color: var(--color-tinta); text-decoration: none; border-bottom: 2px solid transparent; }
+  .questions h3 a:hover { border-bottom-color: var(--color-algarrobo); }
+  .questions .body { font-size: 15.5px; }
+
+  .writings { margin-top: var(--space-8); max-width: 760px; }
+  .writings ul { list-style: none; border-top: 1px solid var(--color-linea); margin: var(--space-2) 0 var(--space-3); }
+  .writings li {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: var(--space-2);
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-linea);
+    align-items: baseline;
+  }
+  .writings .yr { font-size: 13px; color: var(--color-tinta-2); }
+  .writings li a { color: var(--color-tinta); }
+  .writings small { display: block; color: var(--color-tinta-2); font-size: 13.5px; margin-top: 3px; }
+
+  /* ---------- acto 3 ---------- */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-3); }
+  @media (min-width: 880px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+  .cards .n { font-size: 30px; color: var(--color-tinta-2); }
+  .cards h3 { font-size: 22px; margin: var(--space-2) 0 var(--space-1); }
+  .cards p { font-size: 15px; color: var(--color-tinta-2); }
+  .status {
+    display: inline-block;
+    margin-top: var(--space-3);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid var(--color-linea);
+    padding: 3px 9px;
+    color: var(--color-tinta-2);
+  }
+  .card .open {
+    display: block;
+    margin-top: var(--space-2);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--color-algarrobo);
+    opacity: 0;
+    transition: opacity 180ms var(--ease);
+  }
+  .card:hover .open, .card:focus-visible .open { opacity: 1; }
+  .cards + .more { margin-top: var(--space-4); }
+
+  /* ---------- acto 4 ---------- */
+  .banda { background: var(--color-niebla); border-block: 1px solid var(--color-linea); }
+  .debate-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--space-8); align-items: start; }
+  @media (max-width: 880px) { .debate-grid { grid-template-columns: 1fr; } }
+  .debate-links { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-4); align-items: center; }
+  .cta { font-weight: 600; font-size: 15px; color: var(--color-algarrobo); text-decoration: none; }
+  .cta:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .stats { display: flex; flex-direction: column; gap: var(--space-4); }
+  .stats .figure { font-size: 44px; font-weight: 500; line-height: 1; color: var(--color-mar); }
+  .stats dd { font-size: 14.5px; color: var(--color-tinta-2); margin-top: 6px; max-width: 34ch; }
+
+  /* ---------- acto 5 ---------- */
+  .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: var(--space-6); }
+  @media (min-width: 880px) { .services { grid-template-columns: repeat(2, 1fr); } }
+  .services h3 { font-size: 21px; margin-bottom: var(--space-1); }
+  .services .body { font-size: 15.5px; }
+
+  /* ---------- acto 7 ---------- */
+  .close-grid { display: grid; grid-template-columns: 220px 1fr; gap: var(--space-8); align-items: start; }
+  @media (max-width: 760px) { .close-grid { grid-template-columns: 1fr; gap: var(--space-4); } }
+  .retrato {
+    width: 220px;
+    height: auto;
+    filter: grayscale(1) sepia(0.14) contrast(1.04);
+    border: 1px solid var(--color-linea);
+  }
+  .close-grid .body + .body { margin-top: var(--space-2); }
+  .close-links { list-style: none; display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-4); }
+  .close-links a {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-tinta);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-linea);
+    padding-bottom: 2px;
+  }
+  .close-links a:hover { border-bottom-color: var(--color-algarrobo); color: var(--color-algarrobo); }
+</style>

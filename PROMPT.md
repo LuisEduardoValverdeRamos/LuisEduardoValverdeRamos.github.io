@@ -42,7 +42,7 @@ Lección de los referentes (oct-2026: andrewheiss.com, joseincio.com, visualcinn
 1. **Stack: Astro, no Quarto ni Hugo.** La prioridad número uno declarada por Luis es el diseño; Astro da control total del HTML, i18n nativo y ecosistema vigente. El flujo R se conserva: los posts computacionales se escriben en `.qmd` y se renderizan localmente a Markdown (sección 11).
 2. **Idiomas: español en la raíz, inglés en `/en/` como espejo parcial.** El espejo EN cubre: portada, investigación, proyectos (índice y fichas), debate, CV, contacto, un resumen breve de servicios (`/en/consulting/`) y el blog con los posts traducidos (como mínimo, el post metodológico del mapa desde el lanzamiento). `/medios/` solo ES en v1. Nada de mezclar idiomas en una página.
 3. **Alcance v1**: las páginas de la sección 6. Docencia como página propia, Charlas, /ahora y /herramientas NO existen en v1 (backlog, sección 15); docencia vive como bloque en /investigacion/ y en el CV.
-4. **Dirección de arte: EN REVISIÓN (16-oct-2026).** La dirección «Litoral» original (fondo crema arena + acento terracota + Fraunces) fue **rechazada por Luis en la parada de Fase 1**: se lee como estética genérica de IA. Se evalúan tres direcciones nuevas sobre fondo blanco/papel en el style tile v2 (Imprenta · Tinta y dato · Puerto). La sección 5 se reescribirá con la elegida; mientras tanto siguen vigentes sus reglas no cromáticas (espaciado, movimiento, iconos, fotografía, convención de cifras), y toda referencia tipográfica del documento a Fraunces/Plex se lee como «display / texto / mono de la dirección elegida». Prohibición añadida: nada de fondo crema con acento terracota; Fraunces queda descartada.
+4. **Dirección de arte: PUERTO (elegida por Luis el 16-oct-2026, style tile v2, opción C).** Blanco, verde algarrobo como único acento, azul de mar fría exclusivo para datos; Piazzolla + Archivo + Spline Sans Mono. Tokens y reglas en la sección 5. Contexto: la dirección «Litoral» original (crema + terracota + Fraunces) fue rechazada en la parada de Fase 1 por leerse como estética genérica de IA — prohibición permanente: nada de fondo crema con acento terracota, y Fraunces queda descartada.
 5. **La pieza central es la visualización del Perú por distritos** (sección 8), con un cuarto estado de infraestructura pública: titular y mapa cubren las dos líneas maestras (voto + Estado).
 6. **El contenido de la sección 9 se usa tal cual; la matriz de la sección 10 es ley.**
 7. **Nada de frameworks UI** (React/Preact/Svelte/Vue): el único JavaScript del sitio son módulos ES propios + D3 para el mapa.
@@ -86,46 +86,45 @@ Las rutas localizadas se crean por estructura de archivos (`src/pages/investigac
 
 **Transiciones de página**: view transitions nativas cross-document vía CSS (sin `<ClientRouter />`); el sitio sigue siendo MPA. Si un navegador no las soporta, simplemente no hay transición.
 
-## 5. Dirección de arte
+## 5. Dirección de arte: Puerto
 
-> **ESTADO (16-oct-2026): la dirección «Litoral» descrita abajo fue RECHAZADA por Luis** («se ve mucho a Claude/IA»: crema + terracota + Fraunces es la estética genérica de IA de 2026). El style tile v2 presenta tres direcciones nuevas sobre blanco/papel — **Imprenta** (Alegreya + Alegreya Sans + Fira Mono; papel #FDFCFA; acento carmín editorial; datos en azul petróleo), **Tinta y dato** (IBM Plex Serif/Sans/Mono; blanco; UI monocroma; el ÚNICO color del sitio es el del dato, azul ultramar) y **Puerto** (Piazzolla + Archivo + Spline Sans Mono; blanco; acento verde algarrobo; datos en azul de mar frío). Cuando Luis elija, esta sección se reescribe entera con los tokens de la ganadora. **Siguen vigentes**: las reglas de un solo acento por pantalla, color de datos exclusivo, contraste AA, y todo lo no cromático de abajo (espacio, movimiento, iconos, fotografía, cifras).
-
-Lo que sigue documenta Litoral solo como registro de lo descartado. Un solo acento fuerte. Nada de fondos oscuros.
+**ELEGIDA por Luis el 16-oct-2026** (style tile v2, opción C; «Litoral» fue rechazada por estética de IA). El Perú contemporáneo sin folklore: blanco, **verde algarrobo** — el árbol de Piura — como único acento, y un azul de mar fría exclusivo para los datos. Tipografía argentina actual: afilada en titulares, neutra y firme en texto. Menos libro, más estudio de diseño con rigor. Nada de fondos oscuros.
 
 | Token | Hex | Uso |
 | --- | --- | --- |
-| `--color-arena` | #F4EEE3 | fondo de página |
-| `--color-arena-2` | #EAE1D1 | fondo de tarjetas y franjas |
-| `--color-tinta` | #14181F | texto principal, titulares |
-| `--color-tinta-2` | #4A5160 | texto secundario, metadatos |
-| `--color-sol` | #D9572B | acento único: enlaces, botones, un dato destacado por pantalla |
-| `--color-mar` | #1F5F6B | color de datos en gráficos, segundo plano de la visualización |
-| `--color-linea` | #D6CBB8 | hairlines, bordes, separadores |
+| `--color-fondo` | #FFFFFF | fondo de página |
+| `--color-niebla` | #F1F3EF | fondo de tarjetas y franjas |
+| `--color-tinta` | #191E1B | texto principal, titulares |
+| `--color-tinta-2` | #525A54 | texto secundario, metadatos |
+| `--color-algarrobo` | #2E6B4F | acento único: enlaces, botones, un dato destacado por pantalla |
+| `--color-mar` | #11606F | color de datos en gráficos y mapa |
+| `--color-mar-2` | #062E36 | extremos de la escala de datos |
+| `--color-linea` | #DEE1DA | hairlines, bordes, separadores |
 
-Reglas de color: `sol` una sola vez por pantallazo, en algo que importe; nunca como fondo de sección. `mar` exclusivo de datos. Contraste AA verificado para `tinta` y `tinta-2` sobre `arena` y `arena-2`. Nada de degradados, sombras de colores ni glassmorphism.
+Reglas de color: `algarrobo` una sola vez por pantallazo, en algo que importe; nunca como fondo de sección. `mar`/`mar-2` exclusivos de datos (la escala del mapa va de `niebla` a `mar`, con extremos en `mar-2`; **el verde queda para la interfaz, nunca para datos**). Contraste AA verificado para `tinta` y `tinta-2` sobre `fondo` y `niebla`, y para `algarrobo` sobre `fondo`. Nada de degradados, sombras de colores ni glassmorphism.
 
-Tipografía, tres familias con rol fijo:
+Tipografía, tres familias con rol fijo (Fontsource, variable cuando exista):
 
-- **Display**: Fraunces (variable). Titulares grandes con `opsz` alto y tracking −0.02em.
-- **Texto**: IBM Plex Sans. Cuerpo 18px escritorio / 17px móvil, interlineado 1.6, máximo 68 caracteres por línea.
-- **Datos y metadatos**: IBM Plex Mono. Etiquetas del mapa, fechas, estados de los papers, números grandes; en etiquetas, mayúsculas pequeñas con tracking 0.06em.
+- **Display**: Piazzolla (variable, con eje óptico). Titulares con peso 600–700 y tracking −0.02em; la itálica para las frases separadoras.
+- **Texto**: Archivo. Cuerpo 17px escritorio / 16px móvil, interlineado 1.6, máximo 68 caracteres por línea.
+- **Datos y metadatos**: Spline Sans Mono. Etiquetas del mapa, fechas, estados, números grandes; en etiquetas, mayúsculas con tracking 0.06em.
 
-Escala fluida con `clamp()`: titular de portada entre 56px y 112px. Nada de Inter, Roboto, Arial, Helvetica, Montserrat, Poppins ni Georgia como display.
+Escala fluida con `clamp()`: titular de portada entre 56px y 112px. Nada de Inter, Roboto, Arial, Helvetica, Montserrat, Poppins ni Georgia como display; Fraunces prohibida.
 
 Espacio: retícula de 12 columnas, canal 24px, contenedor máximo 1200px, márgenes 24px en móvil, espaciado en múltiplos de 8px. Secciones separadas por aire (96–128px) y una hairline, no por cambios de fondo.
 
 Movimiento:
 
 1. Una sola entrada por sección al hacer scroll (`IntersectionObserver`): opacidad 0→1 y `translateY` 12px→0, 400ms, `cubic-bezier(0.2, 0.8, 0.2, 1)`; hijos escalonados 40ms.
-2. Hover en tarjetas y enlaces: elevación 2px + regla en `sol`, 180ms. Sin zooms ni rotaciones.
-3. Barra fija y compacta tras 120px de scroll, fondo `arena` al 92% con `backdrop-filter` suave.
+2. Hover en tarjetas y enlaces: elevación 2px + regla en `algarrobo`, 180ms. Sin zooms ni rotaciones.
+3. Barra fija y compacta tras 120px de scroll, fondo `fondo` al 92% con `backdrop-filter` suave.
 4. La única animación ambiciosa es el mapa de portada (sección 8).
 5. `prefers-reduced-motion: reduce` apaga todo: sin transiciones, mapa resuelto, barra sin cambios.
 6. Prohibido: parallax, scroll-jacking, carruseles, cursores personalizados, partículas, texto que se escribe solo.
 
 Iconos: Lucide inline SVG, trazo 1.5px, color `tinta-2`. Nunca emoji. Fotografía: máximo tres fotos de Luis, blanco y negro con tinte cálido; paisajes de Piura solo si él los aporta. Nada de banco de imágenes ni imágenes generadas por IA.
 
-**Convención de cifras** (vale para todo el sitio y para `theme_litoral`): cifra exacta con separador de miles en fichas, CV y cuerpo («747,836 titulares», «60,214 obras» — la exacta que salga de los datos); redondeo («747 mil», «60 mil») solo en titulares y números grandes de portada. Documentarla en `CLAUDE.md`.
+**Convención de cifras** (vale para todo el sitio y para `theme_puerto`): cifra exacta con separador de miles en fichas, CV y cuerpo («747,836 titulares», «60,214 obras» — la exacta que salga de los datos); redondeo («747 mil», «60 mil») solo en titulares y números grandes de portada. Documentarla en `CLAUDE.md`.
 
 ## 6. Arquitectura del sitio
 
@@ -145,7 +144,7 @@ Iconos: Lucide inline SVG, trazo 1.5px, color `tinta-2`. Nunca emoji. Fotografí
 
 **Navegación principal (6 ítems)**: Investigación · Proyectos · Debate · Servicios · Blog · CV, más el conmutador ES/EN a la derecha. Medios y Contacto van en el pie y en el menú móvil; Medios además se enlaza desde la franja de social proof de /servicios/ (y viceversa), y Contacto como CTA en portada y en cada página orientada a clientes.
 
-**Logotipo**: nombre completo en Fraunces; en barra compacta, «LVR» en Plex Mono.
+**Logotipo**: nombre completo en Piazzolla; en barra compacta, «LVR» en Spline Sans Mono.
 
 **Pie**, tres columnas: enlaces secundarios (Medios, Contacto, CV PDF, RSS); perfiles (GitHub, LinkedIn, ORCID y Google Scholar — se crean en Fase 0, sección 14) como texto con icono; colofón: «Hecho con Astro, R y D3. Código en GitHub. Textos bajo CC BY 4.0» con enlaces.
 
@@ -206,27 +205,27 @@ Las URLs basura del tema viejo (`/publications/my-first-blog/`, `/experience/exp
 
 ## 7. La portada, sección por sección
 
-Siete actos de 60–100vh; hairlines y aire entre ellos; tres frases separadoras (centradas, Fraunces itálica 32px, hairline corta encima en `sol`). Nunca superlativos sobre él mismo.
+Siete actos de 60–100vh; hairlines y aire entre ellos; tres frases separadoras (centradas, Piazzolla itálica 32px, hairline corta encima en `algarrobo`). Nunca superlativos sobre él mismo.
 
 **Jerarquía por idioma** (contenido igual, énfasis distinto):
-- **ES** (lector prioritario: contratante): botón primario relleno `sol` = **«Trabajemos juntos»** (→ /servicios/); secundario de borde = «Ver investigación». Acto 5 completo.
-- **EN** (lector prioritario: comité): botón primario relleno `sol` = **"View research"**; secundario = "Work with me" (→ /en/consulting/). El acto 5 se condensa a una franja breve de dos líneas con enlace.
+- **ES** (lector prioritario: contratante): botón primario relleno `algarrobo` = **«Trabajemos juntos»** (→ /servicios/); secundario de borde = «Ver investigación». Acto 5 completo.
+- **EN** (lector prioritario: comité): botón primario relleno `algarrobo` = **"View research"**; secundario = "Work with me" (→ /en/consulting/). El acto 5 se condensa a una franja breve de dos líneas con enlace.
 
-**Acto 1 · Visualización y titular.** Pantalla completa. El mapa ocupa el 55% del ancho a la derecha en escritorio y el fondo completo atenuado en móvil. A la izquierda, en Fraunces a tamaño máximo, el titular — cubre las dos líneas maestras; propuesta base, afinable en el style tile: **«Estudio cómo vota el Perú y cómo el Estado cumple lo que promete»**. Debajo, línea de método: «Politólogo (PUCP). Ciencia social computacional sobre elecciones, prensa e infraestructura pública; formación en debate competitivo». Los dos botones según idioma. Debajo, en Plex Mono pequeña, la leyenda de la variable activa y su fuente.
+**Acto 1 · Visualización y titular.** Pantalla completa. El mapa ocupa el 55% del ancho a la derecha en escritorio y el fondo completo atenuado en móvil. A la izquierda, en Piazzolla a tamaño máximo, el titular — cubre las dos líneas maestras; propuesta base, afinable en el style tile: **«Estudio cómo vota el Perú y cómo el Estado cumple lo que promete»**. Debajo, línea de método: «Politólogo (PUCP). Ciencia social computacional sobre elecciones, prensa e infraestructura pública; formación en debate competitivo». Los dos botones según idioma. Debajo, en Spline Sans Mono pequeña, la leyenda de la variable activa y su fuente.
 
-**Acto 2 · Tres preguntas + escritos.** Título: «Lo que intento responder». Tres columnas (numeral Plex Mono, pregunta Fraunces, dos líneas, enlace a su línea): «¿Cómo vota la gente cuando los partidos no existen?» · «¿Qué decide nombrar la prensa, y qué calla?» · «¿Por qué lo que el Estado promete llega tarde o no llega?». Corresponden a las líneas 1–3 de 9.3a; la línea 4 (debate y educación cívica) tiene su propio acto, el 4. Debajo de las columnas, una mini-lista **«Escritos seleccionados»**: tres entradas en una línea cada una (la tesis, el informe JNE, una columna) con enlace a /investigacion/ — el comité encuentra evidencia escrita sin navegar.
+**Acto 2 · Tres preguntas + escritos.** Título: «Lo que intento responder». Tres columnas (numeral Spline Sans Mono, pregunta Piazzolla, dos líneas, enlace a su línea): «¿Cómo vota la gente cuando los partidos no existen?» · «¿Qué decide nombrar la prensa, y qué calla?» · «¿Por qué lo que el Estado promete llega tarde o no llega?». Corresponden a las líneas 1–3 de 9.3a; la línea 4 (debate y educación cívica) tiene su propio acto, el 4. Debajo de las columnas, una mini-lista **«Escritos seleccionados»**: tres entradas en una línea cada una (la tesis, el informe JNE, una columna) con enlace a /investigacion/ — el comité encuentra evidencia escrita sin navegar.
 
 **Frase separadora 1**: «Del distrito al Congreso, y de vuelta.»
 
-**Acto 3 · Proyectos.** Título: **«Proyectos con datos públicos»** (EN: "Selected projects"). Cuatro tarjetas 2×2: número grande Plex Mono, nombre, una línea, etiqueta de estado. Las cuatro (sección 9.5): brechas de obras municipales con ML · tipología del elector peruano (informe JNE publicado) · analítica del debate escolar LPDE · voto joven 2026. Hover: regla `sol` + «Abrir proyecto». Enlace: «Todos los proyectos».
+**Acto 3 · Proyectos.** Título: **«Proyectos con datos públicos»** (EN: "Selected projects"). Cuatro tarjetas 2×2: número grande Spline Sans Mono, nombre, una línea, etiqueta de estado. Las cuatro (sección 9.5): brechas de obras municipales con ML · tipología del elector peruano (informe JNE publicado) · analítica del debate escolar LPDE · voto joven 2026. Hover: regla `algarrobo` + «Abrir proyecto». Enlace: «Todos los proyectos».
 
-**Acto 4 · Debate.** Franja `arena-2`. Título: «Entrenar a discutir». Izquierda: párrafo de cuatro líneas sobre su trabajo como entrenador y juez. Derecha: tres datos en números grandes **rotulados como logros del equipo cuando lo son**: «4.º título consecutivo del Mundial de Debate Escolar en Español — MED (Panamá 2026) de la selección que entrena» · «Campeón nacional universitario (CNDI 2025)» · «países donde ha competido, juzgado o entrenado» (contar honesto desde 9.4). Dos enlaces: «Más sobre debate» y el de acción: **«¿Quieres entrenar a tu equipo? →»** (→ /debate/ bloque de conversión).
+**Acto 4 · Debate.** Franja `niebla`. Título: «Entrenar a discutir». Izquierda: párrafo de cuatro líneas sobre su trabajo como entrenador y juez. Derecha: tres datos en números grandes **rotulados como logros del equipo cuando lo son**: «4.º título consecutivo del Mundial de Debate Escolar en Español — MED (Panamá 2026) de la selección que entrena» · «Campeón nacional universitario (CNDI 2025)» · «países donde ha competido, juzgado o entrenado» (contar honesto desde 9.4). Dos enlaces: «Más sobre debate» y el de acción: **«¿Quieres entrenar a tu equipo? →»** (→ /debate/ bloque de conversión).
 
 **Frase separadora 2**: «Enseñar a discutir es enseñar a pensar.»
 
-**Acto 5 · Trabaja conmigo.** (ES completo; EN condensado.) Título: «En qué puedo ayudarte». Los cuatro servicios en dos columnas, título en Fraunces + dos líneas. Botón «Escríbeme» (mailto) y enlace «Ver servicios y casos».
+**Acto 5 · Trabaja conmigo.** (ES completo; EN condensado.) Título: «En qué puedo ayudarte». Los cuatro servicios en dos columnas, título en Piazzolla + dos líneas. Botón «Escríbeme» (mailto) y enlace «Ver servicios y casos».
 
-**Acto 6 · Del blog.** Título: «Último publicado». Tres entradas: fecha Plex Mono, título Fraunces, una línea, etiquetas; miniatura del gráfico si existe. Enlace «Todo el blog».
+**Acto 6 · Del blog.** Título: «Último publicado». Tres entradas: fecha Spline Sans Mono, título Piazzolla, una línea, etiquetas; miniatura del gráfico si existe. Enlace «Todo el blog».
 
 **Frase separadora 3**: «Los datos públicos del Perú cuentan más de lo que solemos preguntarles.»
 
@@ -238,7 +237,7 @@ Las frases separadoras en `/en/` se reescriben en inglés académico neutro y so
 
 Objeto gráfico, no dashboard. Tres capas: datos en R, JSON compacto, módulo D3.
 
-**Concepto.** Cada distrito es un punto en su centroide. Tamaño = electores hábiles (escala raíz cuadrada, radio 1.2–9px). Color = variable activa en escala continua `arena-2` → `mar`, extremos tocando `sol`. El Perú dibujado solo con puntos, sin fronteras ni fondo. **Cuatro estados**: participación electoral · votos nulos y blancos · fragmentación del voto (número efectivo de candidatos) · **ejecución de inversión pública** (devengado/PIM distrital) — el cuarto estado es el puente entre las dos líneas maestras.
+**Concepto.** Cada distrito es un punto en su centroide. Tamaño = electores hábiles (escala raíz cuadrada, radio 1.2–9px). Color = variable activa en escala continua `niebla` → `mar`, con extremos en `mar-2` (el verde `algarrobo` queda para la interfaz, nunca para datos). El Perú dibujado solo con puntos, sin fronteras ni fondo. **Cuatro estados**: participación electoral · votos nulos y blancos · fragmentación del voto (número efectivo de candidatos) · **ejecución de inversión pública** (devengado/PIM distrital) — el cuarto estado es el puente entre las dos líneas maestras.
 
 **Datos.** Electoral: resultados oficiales ONPE (datosabiertos.gob.pe) o INFOgob/JNE de la elección más reciente con cobertura distrital completa (ERM 2022 o EG 2021 primera vuelta). Inversión: MEF–Consulta Amigable `[CONFIRMAR: base exacta y año]` — este estado puede entrar después sin bloquear los otros tres. Centroides: shapefile INEI o GeoJSON público, verificando el cruce de ubigeos. Distritos sin cruce: reportar y excluir con nota; no inventar coordenadas. El conteo del titular se calcula de los datos.
 
@@ -250,7 +249,7 @@ Objeto gráfico, no dashboard. Tres capas: datos en R, JSON compacto, módulo D3
 
 1. Entrada de puntos desde radio 0, escalonada por coordenada y (norte a sur), 1,200ms, `easeCubicOut`.
 2. Cada 6 segundos, o al pulsar los botones de la leyenda, el color transiciona al siguiente estado en 900ms. La leyenda indica variable, rango y fuente, y enlaza a `/datos-del-mapa/`. La alternancia se detiene al primer hover o clic.
-3. Hover/tap: anillo `tinta` + rótulo Plex Mono con distrito, provincia y valor.
+3. Hover/tap: anillo `tinta` + rótulo Spline Sans Mono con distrito, provincia y valor.
 4. Fuera de viewport, la animación se pausa.
 5. Con `prefers-reduced-motion`: el SVG estático se queda; sin alternancia.
 
@@ -386,7 +385,7 @@ Primer puesto de la promoción PUCP; tesis con mención sobresaliente; primer pu
 - Code-folding: los bloques largos van envueltos en `<details><summary>Ver código</summary>` dentro del propio `.qmd` (sobrevive a gfm), o un plugin rehype que lo haga por clase. Citas: citeproc corre en el render (`bibliography` + `csl`).
 - Front matter mínimo: `title`, `description`, `date`, `categories`, `image`, `lang`, `draft`.
 - Pie de post: fecha de última actualización, enlace al fuente en GitHub, cómo citarlo.
-- Figuras ggplot2 con `R/theme_litoral.R`: paleta de la sección 5, fuentes del sitio, **títulos descriptivo-técnicos** (la variable y el universo, nunca el hallazgo como titular — convención de Luis), notas y fuente al pie, versiones color y escala de grises cuando el post lo pida, ggrepel para etiquetas de scatter.
+- Figuras ggplot2 con `R/theme_puerto.R`: paleta de la sección 5, fuentes del sitio, **títulos descriptivo-técnicos** (la variable y el universo, nunca el hallazgo como titular — convención de Luis), notas y fuente al pie, versiones color y escala de grises cuando el post lo pida, ggrepel para etiquetas de scatter.
 - Listado con filtro por categoría. RSS válido. Sin comentarios.
 
 **Calendario editorial** (los tres primeros ya tienen el material hecho — cero invención):
@@ -405,8 +404,8 @@ Primer puesto de la promoción PUCP; tesis con mención sobresaliente; primer pu
 - [ ] Imágenes AVIF/WebP con dimensiones explícitas
 
 **Accesibilidad** (axe DevTools sin errores + revisión manual):
-- [ ] Contraste AA en todo el texto, incluido `tinta-2` sobre `arena-2`
-- [ ] Navegación completa por teclado; foco visible en `sol`; orden lógico
+- [ ] Contraste AA en todo el texto, incluido `tinta-2` sobre `niebla`
+- [ ] Navegación completa por teclado; foco visible en `algarrobo`; orden lógico
 - [ ] Un solo `h1` por página; jerarquía sin saltos
 - [ ] Mapa con `role="img"`, `aria-label` y enlace a `/datos-del-mapa/`
 - [ ] `prefers-reduced-motion` respetado
@@ -435,7 +434,7 @@ Primer puesto de la promoción PUCP; tesis con mención sobresaliente; primer pu
 
 **Diseño** (capturas Playwright a 390, 768, 1280 y 1920px, ES y EN):
 - [ ] Sin scroll horizontal
-- [ ] `sol` una vez por pantallazo, en algo que importa
+- [ ] `algarrobo` una vez por pantallazo, en algo que importa
 - [ ] Frases separadoras presentes y centradas
 - [ ] Mapa legible en móvil sin tapar el titular
 - [ ] Nada que parezca plantilla o framework
@@ -486,9 +485,9 @@ Cada fase cierra con commit, capturas Playwright (escritorio y móvil) y resumen
 **Fase 4 · Portada.** Siete actos en ES y EN con su jerarquía por idioma; integración del mapa; scroll reveal, barra fija, hovers. Capturas a 390/768/1280/1920 en ambos idiomas.
 
 **Fase 5a · Páginas de contenido denso.** /investigacion/ (+ /en/research/), /proyectos/ + 7 fichas (+ EN; migrar el seed a la colección), /debate/ (+ EN, con bloque de conversión), /servicios/ (+ /en/consulting/). Bloqueante de /servicios/: ≥2 casos reales.
-**Fase 5b · Resto.** /medios/, /cv/ + PDFs Typst (`make cv`), /contacto/, /datos-del-mapa/, y **las imágenes OG**: endpoint estático con satori + `@resvg/resvg-js` (o astro-og-canvas), con instancias TTF estáticas de Fraunces SemiBold y Plex Sans committeadas en `src/assets/og-fonts/` (satori no come woff2 variable).
+**Fase 5b · Resto.** /medios/, /cv/ + PDFs Typst (`make cv`), /contacto/, /datos-del-mapa/, y **las imágenes OG**: endpoint estático con satori + `@resvg/resvg-js` (o astro-og-canvas), con instancias TTF estáticas de Piazzolla SemiBold y Archivo committeadas en `src/assets/og-fonts/` (satori no come woff2 variable).
 
-**Fase 6 · Blog.** Colección con el contrato de la sección 11, listado, plantilla con pie de cita, `theme_litoral.R`, pipeline `.qmd`→gfm de punta a punta. Publica el post 1 (metodología del mapa) **en ES y EN** y el post 2 (BCRP); el 3 (ESCALE) al menos como borrador.
+**Fase 6 · Blog.** Colección con el contrato de la sección 11, listado, plantilla con pie de cita, `theme_puerto.R`, pipeline `.qmd`→gfm de punta a punta. Publica el post 1 (metodología del mapa) **en ES y EN** y el post 2 (BCRP); el 3 (ESCALE) al menos como borrador.
 
 **Fase 7 · Calidad.** Checklist completa de la sección 12 (incluye auditoría de confidencialidad, auditoría de repos, pasada de inglés, panel de red, no-http). Corregir todo; listar pendientes.
 

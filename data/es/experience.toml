@@ -12,27 +12,51 @@
 
 [[experience]]
   role = "Investigador"
-  company = "Jurado Nacional de Elecciones (JNE)"
+  company = "Escuela Electoral y de Gobernabilidad (ESEG) — Jurado Nacional de Elecciones"
   period = "Jul. 2026 – Actualidad"
   country = "Lima, Perú"
   company_link = "https://www.jne.gob.pe"
-  description = "Contribuyo al diseño de la agenda de investigación de la institución mediante métodos cuantitativos y cualitativos, coordinando con autoridades académicas y jurídicas en el campo de los estudios electorales."
+  description = "Contribuyo al diseño de la agenda de investigación institucional con métodos cuantitativos y cualitativos, en el marco de las Elecciones Regionales y Municipales 2026."
   responsibilities = [
-    "Contribuyo al diseño de la agenda de investigación de la institución mediante métodos cuantitativos y cualitativos.",
-    "Enlace institucional y coordinación técnica con autoridades académicas y jurídicas en el campo de los estudios electorales."
+    "Contribuyo al diseño de la agenda de investigación institucional con métodos cuantitativos y cualitativos, en el marco de las Elecciones Regionales y Municipales 2026.",
+    "Enlace técnico con autoridades académicas y jurídicas en el campo de los estudios electorales."
   ]
   technologies = ["R", "Métodos mixtos", "Estudios electorales", "Diseño de investigación"]
 
 [[experience]]
+  role = "Consultor"
+  company = "Observatorio de Corrupción — Colegio de Abogados de Lima (CAL)"
+  period = "Sep. 2026 – Actualidad"
+  country = "Lima, Perú"
+  company_link = ""
+  description = "Asesoro al Observatorio en la primera entrega de su informe sobre contrataciones públicas 2016–2025: evaluación de factibilidad y validez de indicadores construidos con registros abiertos del SEACE/OECE."
+  responsibilities = [
+    "Asesoro al Observatorio en la primera entrega de su informe sobre contrataciones públicas 2016–2025: evaluación de factibilidad y validez de indicadores construidos con registros abiertos del SEACE/OECE."
+  ]
+  technologies = ["Contrataciones públicas", "Indicadores", "Datos abiertos"]
+
+[[experience]]
+  role = "Director Académico"
+  company = "Liga Peruana de Debate Escolar (LPDE)"
+  period = "Sep. 2026 – Actualidad"
+  country = "Perú"
+  company_link = ""
+  description = "Lidero el equipo académico de la LPDE: programas de capacitación, entrenamiento y consultoría en debate escolar."
+  responsibilities = [
+    "Lidero el equipo académico de la LPDE: programas de capacitación, entrenamiento y consultoría en debate escolar."
+  ]
+  technologies = ["Debate escolar", "Formación", "Gestión académica"]
+
+[[experience]]
   role = "Consultor de Investigación"
   company = "Liga Peruana de Debate Escolar (LPDE)"
-  period = "Feb. 2026 – Actualidad"
+  period = "Feb. 2026 – Ago. 2026"
   country = "Perú"
   company_link = ""
   description = "Investigación aplicada sobre el ecosistema de debate escolar en el Perú: diseño de estudios, análisis cuantitativo y cualitativo, e informes para las decisiones estratégicas de la LPDE."
   responsibilities = [
     "Investigación aplicada sobre el ecosistema de debate escolar en el Perú: diseño de estudios, análisis cuantitativo y cualitativo.",
-    "Producción de informes y policy briefs para informar las decisiones estratégicas de la LPDE y su posicionamiento ante audiencias del sector educativo y organismos multilaterales."
+    "Producción de informes y policy briefs para las decisiones estratégicas de la LPDE."
   ]
   technologies = ["R", "Web Scraping", "Diseño de encuestas", "Policy Briefs"]
 
@@ -42,10 +66,10 @@
   period = "Oct. 2025 – Feb. 2026"
   country = "Lima, Perú"
   company_link = "https://cisepa.pucp.edu.pe"
-  description = "Análisis econométrico de cinco proyectos sobre gobernanza subnacional, corrupción y comportamiento electoral; web scraping y análisis de más de 750,000 titulares de prensa (2016–2024) para medir la visibilidad mediática de las economías ilícitas en el Perú."
+  description = "Apoyo econométrico a proyectos de economía política con manuscritos en revisión en revistas internacionales; trabajé en la construcción de un corpus de 747,836 titulares de prensa (2016–2024)."
   responsibilities = [
-    "Asistí en el análisis econométrico de cinco proyectos — reelección subnacional y corrupción, reelección subnacional y gasto, cobertura mediática en elecciones, inseguridad percibida y migración, patrones de voto en el congreso — replicando modelos ITS, efectos fijos de dos vías e instrumentos de shift-share en R, con artículos enviados a revistas como Public Choice.",
-    "Medí la visibilidad mediática de cinco economías ilícitas en Perú web scrapeando y analizando 747,836 titulares únicos de El Comercio y La República (2016–2024) mediante un pipeline multicanal y un diccionario de búsqueda por proximidad en R."
+    "Apoyo econométrico a proyectos de economía política de investigadores del CISEPA, con manuscritos en revisión en revistas internacionales: modelos ITS, efectos fijos de dos vías e instrumentos shift-share en R.",
+    "Trabajé en la construcción de un corpus de 747,836 titulares únicos de El Comercio y La República (2016–2024), recopilados mediante web scraping, para medir la visibilidad mediática de economías ilícitas en el Perú."
   ]
   technologies = ["R", "fixest", "rdrobust", "K-means", "Web Scraping", "Econometría"]
 
@@ -55,10 +79,10 @@
   period = "Nov. 2025 – Dic. 2025"
   country = "Lima, Perú"
   company_link = "https://www.jne.gob.pe"
-  description = "Fui parte del equipo técnico de tres instrumentos de medición conductual para el contexto electoral peruano, brindando insumos estratégicos para la política institucional del JNE."
+  description = "Fui parte del equipo técnico de tres instrumentos de medición conductual para el contexto electoral peruano."
   responsibilities = [
-    "Fui parte del equipo técnico de tres instrumentos de medición conductual para el contexto electoral peruano: la Encuesta de Perfil Electoral 2026, dos experimentos de encuesta y un mapa conductual, brindando insumos estratégicos para la política institucional del JNE.",
-    "Segmenté el electorado peruano aplicando clustering a datos de encuestas de tres ciclos electorales (2011, 2016, 2021), generando perfiles tipológicos del votante como insumos para políticas del JNE."
+    "Fui parte del equipo técnico de tres instrumentos de medición conductual para el contexto electoral peruano: la Encuesta de Perfil Electoral 2026, dos experimentos de encuesta y un mapa conductual.",
+    "Participé en la segmentación del electorado peruano con análisis de conglomerados sobre encuestas de tres ciclos electorales (2011, 2016 y 2021)."
   ]
   technologies = ["R", "Clustering", "Experimentos de encuesta", "Investigación conductual"]
 
@@ -68,36 +92,35 @@
   period = "Sep. 2024 – Sep. 2025"
   country = "Lima, Perú"
   company_link = "https://qlab.pucp.edu.pe"
-  description = "Analicé brechas de implementación en más de 60,000 obras públicas municipales (2018–2024) para un proyecto en colaboración con la Agencia Suiza de Cooperación."
+  description = "Como asistente de investigación, trabajé en el análisis de brechas de implementación en obras públicas municipales (2018–2024) para un proyecto con la Cooperación Suiza."
   responsibilities = [
-    "Analicé brechas de implementación en más de 60,000 obras públicas municipales (2018–2024) para un proyecto en colaboración con la Agencia Suiza de Cooperación, aplicando machine learning supervisado (XGBoost, valores SHAP) para predecir déficits de ejecución subnacional e identificar factores clave de bajo desempeño.",
+    "Trabajé en un modelo de machine learning supervisado (XGBoost, valores SHAP) sobre retrasos en la ejecución de obras públicas municipales (2018–2024), en un proyecto con la Cooperación Suiza.",
     "Construí y limpié bases de datos a nivel distrital y regional integrando registros administrativos del MEF, RENAMU e INEI para investigaciones sobre corrupción, desempeño municipal y migración."
   ]
   technologies = ["R", "Python", "XGBoost", "SHAP", "scikit-learn", "tidymodels", "Procesamiento de datos"]
 
 [[experience]]
   role = "Consultor de Análisis de Datos"
-  company = "Sapienza — proyecto para Roche Pharma Perú"
+  company = "Sapienza Consultora — proyecto para Roche Pharma Perú"
   period = "Jul. 2025 – Sep. 2025"
   country = "Lima, Perú"
   company_link = ""
-  description = "Analicé más de 8 mil registros administrativos sobre enfermedades raras, cáncer y medicamentos de alto costo en Perú (2019–2025)."
+  description = "Consultoría de análisis de datos administrativos del sector salud."
   responsibilities = [
-    "Analicé más de 8 mil registros administrativos sobre enfermedades raras, cáncer y medicamentos de alto costo en Perú (2019–2025), identificando patrones de prevalencia regional y tendencias de contratación pública.",
-    "Produje 3 informes analíticos como insumos estratégicos para las decisiones de Roche Perú."
+    "Consultoría de análisis de datos administrativos del sector salud para Roche Pharma Perú, vía Sapienza Consultora."
   ]
-  technologies = ["R", "Python", "Datos administrativos", "Análisis de política de salud"]
+  technologies = ["R", "Datos administrativos", "Salud"]
 
 [[experience]]
   role = "Asistente de Investigación"
-  company = "Daniel Encinas (Ph.D. Candidate, Northwestern) y Rodrigo Barrenechea (Ph.D.)"
+  company = "Daniel Encinas (Northwestern University) y Rodrigo Barrenechea"
   period = "May. 2024 – Ago. 2024"
   country = "Lima, Perú"
   company_link = ""
   description = "Asistí en el procesamiento y análisis de datos para la identificación de patrones geográficos del voto populista en Perú."
   responsibilities = [
     "Asistí en el procesamiento y análisis de datos para la identificación de patrones geográficos del voto populista en Perú analizando resultados a nivel provincial en 10 elecciones presidenciales (1980–2021).",
-    "Produje análisis descriptivo del comportamiento electoral andino usando datos LAPOP, como insumos para artículos enviados a revistas internacionales indexadas."
+    "Produje análisis descriptivo del comportamiento electoral andino usando datos LAPOP, como insumo para la investigación de los autores."
   ]
   technologies = ["R", "ggplot2", "Datos LAPOP", "Análisis electoral"]
 
@@ -110,6 +133,6 @@
   description = "Participé en el diseño e implementación de proyectos de investigación sobre derechos humanos, democracia y migración, coordinando con organismos internacionales."
   responsibilities = [
     "Participé en el diseño e implementación de proyectos de investigación sobre derechos humanos, democracia y migración, coordinando con organismos internacionales, y apoyé el proceso editorial del volumen conmemorativo del 20° aniversario del Informe Final de la CVR del Perú.",
-    "Escribí 6 columnas de opinión para el boletín del IDEHPUCP sobre memoria, cambio climático y democracia."
+    "Coescribí seis columnas de opinión para el boletín del IDEHPUCP sobre memoria, cambio climático y democracia."
   ]
   technologies = ["Investigación de políticas", "Escritura académica", "Métodos cualitativos"]

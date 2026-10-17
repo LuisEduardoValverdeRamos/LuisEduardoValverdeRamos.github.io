@@ -3,32 +3,32 @@
   description = "Tesis de pregrado (mención sobresaliente). Estudió el proceso de reconstrucción de infraestructura educativa en Piura (jul 2020 – ene 2023) tras el Fenómeno El Niño Costero, analizando los factores que explican las brechas de implementación en obras públicas post-desastre."
   tech = "R, Process Tracing, Análisis Comparativo Cualitativo, Política Pública"
   image = "/images/projects/disaster-reconstruction.jpg"
-  link = "http://hdl.handle.net/20.500.12404/32370"
+  link = "https://hdl.handle.net/20.500.12404/32370"
 
 [[projects]]
   title = "Brechas en Obras Municipales — Predicción ML"
-  description = "Lideré el análisis de brechas de implementación en más de 60,000 obras públicas municipales (2018–2024). Apliqué Machine Learning supervisado (XGBoost, valores SHAP) para predecir brechas de implementación a nivel subnacional e identificar factores clave de bajo desempeño."
+  description = "Proyecto iniciado como asistente de investigación en Q-LAB-PUCP: modelo de machine learning supervisado (XGBoost, valores SHAP) sobre brechas de implementación en obras públicas municipales (2018–2024). El sitio del proyecto reporta 40,243 obras analizadas."
   tech = "R, Python, XGBoost, SHAP, tidymodels, datos MEF/RENAMU/INEI"
   image = "/images/projects/public-works.jpg"
   link = "https://luiseduardovalverderamos.github.io/public_infrastructure_gaps/"
 
 [[projects]]
   title = "Tipología Electoral del Votante Peruano — JNE/ProDiálogo"
-  description = "Segmenté el electorado peruano aplicando clustering a datos de encuestas de tres ciclos electorales (2011, 2016 y 2021), generando perfiles tipológicos de votantes como insumos para las políticas de educación cívica del JNE."
+  description = "Como parte del equipo técnico del informe JNE/ProDiálogo, participé en la segmentación del electorado peruano con análisis de conglomerados sobre encuestas de tres ciclos electorales (2011, 2016 y 2021), como insumo para la educación cívica del JNE."
   tech = "R, Clustering, Experimentos de Encuesta, Investigación Conductual"
   image = "/images/projects/electoral-typology.jpg"
-  link = "https://github.com/LuisEduardoValverdeRamos/clustering-profile-peruvian-voter"
+  link = ""
 
 [[projects]]
-  title = "LPDE Debate Analytics — Seguimiento de Rendimiento en Debate Escolar en Perú"
-  description = "Pipeline de scraping, procesamiento y análisis estadístico que cubre 16 torneos de debate escolar en Perú (temporada 2025), con análisis longitudinal del TNDE 2023–2025. Hallazgos sobre paridad de género, brechas de acceso público vs. privado y concentración geográfica del debate competitivo."
+  title = "Analítica Agregada del Debate Escolar (LPDE)"
+  description = "Análisis de resultados públicos de 16 torneos de debate escolar en Perú (temporada 2025), con análisis longitudinal del TNDE 2023–2025. Hallazgos agregados sobre paridad de género, brechas de acceso entre colegios públicos y privados y concentración geográfica del debate competitivo."
   tech = "R, Web Scraping, Tabbycat, Análisis Estadístico, Pipeline de Datos"
   image = "/images/projects/lpde-debate.jpg"
-  link = "https://github.com/LuisEduardoValverdeRamos/lpde-debate-analytics"
+  link = ""
 
 [[projects]]
-  title = "Joven Perú 2026 — Análisis Electoral Estratégico del Voto Joven"
-  description = "Pipeline de análisis electoral en R sobre el padrón RENIEC nacional, con foco en el voto joven (18–29), concentración territorial y análisis espacial de hot spots para las elecciones peruanas 2026. Hallazgo clave: 6.7M jóvenes (25.7% del padrón), con 71 distritos concentrando el 40% del electorado nacional."
+  title = "Voto Joven 2026 — Concentración Territorial del Electorado Joven"
+  description = "Análisis en R de agregados distritales del padrón RENIEC con foco en el electorado joven (18–29 años): concentración territorial y análisis espacial de hot spots para las elecciones de 2026. El padrón registra 6.7 millones de electores jóvenes, el 25.7% del total."
   tech = "R, Análisis Espacial, Datos RENIEC, Getis-Ord Gi*, Análisis Electoral"
   image = "/images/projects/voto-joven.jpg"
   link = "https://github.com/LuisEduardoValverdeRamos/voto-joven-peru-2026"

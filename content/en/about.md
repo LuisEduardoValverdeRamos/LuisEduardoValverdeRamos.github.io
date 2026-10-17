@@ -45,9 +45,3 @@ I work in person in Lima and online with the rest of Peru and Latin America. I r
 ## Outside work
 
 I train in muay thai. I was an electoral observer for Transparencia in both rounds of Peru's 2021 general election.
-
-## Short bio
-
-For event programmes and the media:
-
-> Luis Valverde Ramos is a Peruvian political scientist who graduated first in his class at the Pontificia Universidad Católica del Perú. He is a researcher at the Electoral and Governance School of Peru's National Elections Jury, a consultant to the Corruption Observatory of the Lima Bar Association and Director General of the Peruvian National Schools Debate Team, which he coached in the cycle that ended with its fourth consecutive title at the *Mundial de Debate Escolar en Español* (MED) in Panama in 2026. His research covers electoral behaviour and policy implementation in Peru.

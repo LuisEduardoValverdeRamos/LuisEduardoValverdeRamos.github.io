@@ -26,6 +26,12 @@ const c = home[lang];
         <a class="btn btn-solid" href={c.hero.primary.href}>{c.hero.primary.label}</a>
         <a class="btn btn-ghost" href={c.hero.secondary.href}>{c.hero.secondary.label}</a>
       </div>
+      <p class="hero-fuente kicker">
+        {lang === 'es'
+          ? 'Al fondo: 1,824 distritos del Perú · participación · EG 2021 (1.ª vuelta) · ONPE'
+          : 'In the background: 1,824 Peruvian districts · turnout · 2021 general election, first round · ONPE'}
+        <a href="/datos-del-mapa/">{lang === 'es' ? 'Ver la tabla de datos' : 'View the data table'}</a>
+      </p>
     </div>
     <div class="hero-map-slot">
       <HeroMap lang={lang} />
@@ -129,7 +135,9 @@ const c = home[lang];
       ))}
     </div>
     <div class="actions" data-child>
-      <a class="btn btn-ghost" href="mailto:luis.valverde@pucp.edu.pe">{c.services.mail}</a>
+      <a class={`btn ${lang === 'es' ? 'btn-solid' : 'btn-ghost'}`} href="mailto:luis.valverde@pucp.edu.pe">
+        {c.services.mail}
+      </a>
       <a class="more" href={lang === 'es' ? '/servicios/' : '/en/consulting/'}>{c.services.more} →</a>
     </div>
   </div>
@@ -167,6 +175,7 @@ const c = home[lang];
 
 <style>
   .acto { padding: var(--space-12) 0; }
+  .sep { padding-block: var(--space-6); }
   .sec-title { font-size: clamp(26px, 3vw, 34px); margin-bottom: var(--space-6); }
   .body { color: var(--color-tinta-2); }
   .more {
@@ -186,21 +195,36 @@ const c = home[lang];
   .hero { padding-top: var(--space-8); padding-bottom: var(--space-12); }
   .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
-    gap: var(--space-8);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.22fr);
+    gap: var(--space-6);
     align-items: center;
     min-height: min(78vh, 760px);
   }
-  .hero h1 { font-size: var(--type-headline); max-width: 15ch; margin: var(--space-3) 0; }
+  .hero h1 { font-size: var(--type-headline); max-width: 18ch; margin: var(--space-3) 0; }
   .hero .method { font-size: 18px; color: var(--color-tinta-2); max-width: 52ch; }
   .actions { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; margin-top: var(--space-6); }
+  /* La referencia de la fuente solo se muestra cuando el mapa es capa de fondo
+     (en escritorio la lleva la propia leyenda del componente). */
+  .hero-fuente { display: none; }
+  .hero-fuente a { margin-left: 6px; color: var(--color-tinta-2); }
 
+  /* En móvil y tableta el mapa es una capa de fondo atenuada DETRÁS del titular:
+     fuera del flujo, para que el texto empiece en la primera pantalla. La leyenda
+     se oculta aquí (no se puede leer ni operar al 20 %) y se repone a opacidad
+     plena bajo los botones, desde HeroMap.astro. */
   @media (max-width: 980px) {
-    .hero-grid { grid-template-columns: 1fr; gap: var(--space-6); min-height: 0; }
-    /* en móvil el mapa es fondo atenuado detrás del titular */
-    .hero-grid { position: relative; }
-    .hero-map-slot { opacity: 0.28; order: -1; pointer-events: none; margin-bottom: calc(-1 * var(--space-12)); }
-    .hero-copy { position: relative; z-index: 1; }
+    .hero-grid { grid-template-columns: 1fr; gap: 0; min-height: 0; position: relative; }
+    .hero-map-slot {
+      position: absolute;
+      inset: 0 -6vw auto auto;
+      width: min(86vw, 540px);
+      opacity: 0.2;
+      pointer-events: none;
+      z-index: 0;
+      margin: 0;
+    }
+    .hero-copy { position: relative; z-index: 1; padding-top: var(--space-4); }
+    .hero-fuente { display: block; margin-top: var(--space-4); max-width: 46ch; line-height: 1.7; }
   }
 
   /* ---------- acto 2 ---------- */
@@ -261,7 +285,7 @@ const c = home[lang];
   .cta { font-weight: 600; font-size: 15px; color: var(--color-algarrobo); text-decoration: none; }
   .cta:hover { text-decoration: underline; text-underline-offset: 4px; }
   .stats { display: flex; flex-direction: column; gap: var(--space-4); }
-  .stats .figure { font-size: 44px; font-weight: 500; line-height: 1; color: var(--color-mar); }
+  .stats .figure { font-size: 44px; font-weight: 500; line-height: 1; color: var(--color-tinta); letter-spacing: -0.01em; }
   .stats dd { font-size: 14.5px; color: var(--color-tinta-2); margin-top: 6px; max-width: 34ch; }
 
   /* ---------- acto 5 ---------- */

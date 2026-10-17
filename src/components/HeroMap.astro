@@ -12,10 +12,14 @@ const states = (meta.estados_mapa as any[]).filter((s) => !s.pendiente);
 const first = states[0];
 const box = meta.box as { w: number; h: number };
 const n = meta.n_distritos;
-const tabla = lang === 'es' ? '/datos-del-mapa/' : '/datos-del-mapa/';
+const tabla = '/datos-del-mapa/';
+// La fuente del mapa se rotula en el idioma de la página (antes salía «EG 2021
+// (1.ª vuelta)» también en inglés).
+const fuente =
+  lang === 'es' ? 'EG 2021 (1.ª vuelta) · ONPE' : '2021 general election, first round · ONPE';
 ---
 
-<figure class="hero-map" data-hero data-lang={lang}>
+<figure class="hero-map" data-hero data-lang={lang} data-fuente={fuente}>
   <div class="stage" data-stage style={`aspect-ratio: ${box.w} / ${box.h};`}>
     <img
       src={heroStatic.src}
@@ -30,7 +34,7 @@ const tabla = lang === 'es' ? '/datos-del-mapa/' : '/datos-del-mapa/';
   </div>
   <figcaption class="legend">
     <span class="mono" data-legend-label>
-      {first[lang]}{first.unidad ? ` · ${first.unidad}` : ''} · EG 2021 (1.ª vuelta) · ONPE
+      {first[lang]}{first.unidad ? ` · ${first.unidad}` : ''} · {fuente}
     </span>
     <span class="controls" role="group" aria-label={lang === 'es' ? 'Variable del mapa' : 'Map variable'}>
       {states.map((s, i) => (
@@ -87,9 +91,18 @@ const tabla = lang === 'es' ? '/datos-del-mapa/' : '/datos-del-mapa/';
     padding: 4px 10px;
     cursor: pointer;
   }
-  .controls button[aria-pressed='true'] { border-color: var(--color-mar); color: var(--color-mar); }
+  .controls button[aria-pressed='true'] { border-color: var(--color-tinta); background: var(--color-niebla); color: var(--color-tinta); }
   .controls button:hover { border-color: var(--color-tinta); color: var(--color-tinta); }
   .tabla { align-self: flex-start; color: var(--color-tinta-2); }
+
+  /* La atenuación de la capa de fondo en móvil se aplica a la escena, no a la
+     figura: la leyenda debe seguir legible y operable a opacidad plena. */
+  @media (max-width: 980px) {
+    .hero-map .stage { opacity: 0.2; }
+    /* La leyenda interactiva no cabe sobre una capa decorativa: se oculta aquí y
+       el acto 1 repone la referencia de la fuente a opacidad plena. */
+    .hero-map .legend { display: none; }
+  }
 </style>
 
 <script>

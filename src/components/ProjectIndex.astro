@@ -1,0 +1,60 @@
+---
+// Índice de /proyectos/ y /en/projects/ (PROMPT.md §6).
+import { getCollection } from 'astro:content';
+import { t } from '../i18n/pages';
+import type { Locale } from '../i18n/ui';
+
+interface Props { lang?: Locale }
+const { lang = 'es' } = Astro.props;
+const L = t[lang];
+
+const fichas = (await getCollection('proyectos', (p) => p.data.lang === lang)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const href = (d: { slug_es: string; slug_en: string }) =>
+  lang === 'es' ? `/proyectos/${d.slug_es}/` : `/en/projects/${d.slug_en}/`;
+---
+
+<section class="wrap head">
+  <p class="kicker">{lang === 'es' ? 'Herramientas, análisis y notas de datos' : 'Tools, analyses and data notes'}</p>
+  <h1>{L.projectsTitle}</h1>
+  <p class="intro">{L.projectsIntro}</p>
+</section>
+
+<section class="wrap block" data-reveal>
+  <div class="cards">
+    {fichas.map((f, i) => (
+      <a class="card" href={href(f.data)} data-child>
+        <span class="mono n">{String(i + 1).padStart(2, '0')}</span>
+        <h2>{f.data.title}</h2>
+        <p>{f.data.summary}</p>
+        <span class="tags">
+          <span class="chip mono">{f.data.status}</span>
+          {f.data.open_data && <span class="chip mono open">{L.openData}</span>}
+        </span>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .head { padding: var(--space-8) var(--space-3) var(--space-4); }
+  .head h1 { font-size: clamp(34px, 4.5vw, 52px); margin: var(--space-2) 0 var(--space-3); }
+  .intro { color: var(--color-tinta-2); font-size: 18px; }
+  .block { padding: var(--space-6) var(--space-3) var(--space-12); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: var(--space-3); }
+  @media (min-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+  .card .n { font-size: 26px; color: var(--color-tinta-2); }
+  .card h2 { font-size: 22px; margin: var(--space-2) 0 var(--space-1); }
+  .card p { font-size: 15px; color: var(--color-tinta-2); }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: var(--space-3); }
+  .chip {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid var(--color-linea);
+    padding: 3px 9px;
+    color: var(--color-tinta-2);
+  }
+  .chip.open { border-color: var(--color-mar); color: var(--color-mar); }
+</style>

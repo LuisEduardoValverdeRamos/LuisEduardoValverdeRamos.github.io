@@ -28,7 +28,9 @@
   /* tipografía (las familias --font-display / --font-text / --font-mono
      las inyecta la Fonts API de Astro) */
   --type-body: 17px;
-  --type-headline: clamp(56px, 8vw, 112px);
+  /* Techo bajado de 112px: con el mapa al 55 % del acto 1, 112px rompía el
+     titular en 7 líneas con viudas y desactivaba text-wrap: balance. */
+  --type-headline: clamp(42px, 5.6vw, 92px);
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
   --container: 1200px;
 }
@@ -110,7 +112,7 @@ img, svg, video { max-width: 100%; height: auto; }
   margin: 0 auto var(--space-4);
 }
 .sep p {
-  font-family: var(--font-display);
+  font-family: var(--font-display-italic), var(--font-display);
   font-style: italic;
   font-weight: 480;
   font-size: 32px;

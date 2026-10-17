@@ -1,0 +1,56 @@
+# media.yaml — seed de Fase 0 (esquema A.2 del PROMPT.md, sección 9.6)
+# Campo adicional source por entrada (regla de la sección 9: source: cv | <url de verificación>).
+# youtube_id presente solo cuando la URL es de YouTube; el build descarga y versiona el póster.
+
+- id: elsalto-keiko-2026
+  date: 2026-07-22
+  outlet: "El Salto (España)"
+  title: "Qué se puede esperar de los primeros meses de Keiko Fujimori como presidenta de Perú"
+  format: prensa
+  url: "https://www.elsaltodiario.com/peru/se-puede-esperar-primeros-meses-keiko-fujimori-presidenta-peru"
+  source: "https://www.elsaltodiario.com/peru/se-puede-esperar-primeros-meses-keiko-fujimori-presidenta-peru"
+
+- id: exitosa-retos-2026
+  date: 2026-07-04
+  outlet: "Radio Exitosa"
+  title: "Keiko Fujimori es la presidenta electa: ¿cuáles son los retos que debe enfrentar?"
+  format: radio
+  url: "https://www.youtube.com/watch?v=M2cBfmLUtGs&t=1690s"
+  youtube_id: "M2cBfmLUtGs"
+  source: "https://www.youtube.com/watch?v=M2cBfmLUtGs&t=1690s"
+
+- id: larepublica-beca18-2026
+  date: "2026-07" # [CONFIRMAR: día exacto de emisión]
+  outlet: "La República — Que No Se Te Olvide (Carlos Cornejo)"
+  title: "Beca 18: ¿solución o problema?"
+  format: panel
+  url: "https://www.youtube.com/watch?v=m5zQ97rbRJ8&t=1349s"
+  youtube_id: "m5zQ97rbRJ8"
+  source: "https://www.youtube.com/watch?v=m5zQ97rbRJ8&t=1349s"
+
+- id: exitosa-irregularidades-2026
+  date: 2026-06-18
+  outlet: "Radio Exitosa"
+  title: "Discurso de irregularidades deslegitima a las instituciones"
+  format: radio
+  url: "https://www.youtube.com/watch?v=wKjABJHgjHs"
+  youtube_id: "wKjABJHgjHs"
+  source: "https://www.youtube.com/watch?v=wKjABJHgjHs"
+
+- id: politologos-debate-2026
+  date: 2026-03-26
+  outlet: "Colegio de Politólogos del Perú"
+  title: "Panel del primer debate presidencial 2026"
+  format: panel
+  url: "https://www.youtube.com/watch?v=dJxkPe9QxE4"
+  youtube_id: "dJxkPe9QxE4"
+  source: "https://www.youtube.com/watch?v=dJxkPe9QxE4"
+
+- id: canal04-catacaos-2026
+  date: "2026" # [CONFIRMAR: fecha de la entrevista]
+  outlet: "Canal 04 Catacaos"
+  title: "Entrevista sobre coyuntura política nacional rumbo a las Elecciones Generales 2026"
+  format: tv
+  url: ""
+  nota: "[CONFIRMAR: enlace de la entrevista; sin URL, la regla de degradación omite la entrada del render]"
+  source: cv

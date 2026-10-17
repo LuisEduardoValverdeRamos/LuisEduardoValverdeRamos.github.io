@@ -1,0 +1,161 @@
+---
+// /investigacion/ y /en/research/ (PROMPT.md §6).
+// Orden: líneas como preguntas · escritos · formación y docencia · trabajos en curso.
+// Las categorías de escritos son solo las que existen: no hay «Artículos» hasta
+// que haya un artículo arbitrado (§6).
+import { getCollection } from 'astro:content';
+import { lineas, t, formacion } from '../i18n/pages';
+import type { Locale } from '../i18n/ui';
+
+interface Props { lang?: Locale }
+const { lang = 'es' } = Astro.props;
+const L = t[lang];
+
+const all = await getCollection('publications');
+const clean = (s: string) => (s && !s.includes('[CONFIRMAR') ? s : '');
+const byType = (type: string) =>
+  all
+    .filter((p) => p.data.type === type)
+    .sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0))
+    .map((p) => ({ ...p.data, url: clean(p.data.url), pdf: clean(p.data.pdf) }));
+
+const grupos = [
+  { key: 'thesis', title: L.gThesis },
+  { key: 'report', title: L.gReport },
+  { key: 'editorial', title: L.gEditorial },
+  { key: 'column', title: L.gColumn },
+].map((g) => ({ ...g, items: byType(g.key) })).filter((g) => g.items.length);
+
+const wip = byType('wip');
+const estados: Record<string, Record<Locale, string>> = {
+  preparacion: { es: 'en preparación', en: 'in preparation' },
+  enviado: { es: 'enviado', en: 'submitted' },
+  revision: { es: 'en revisión', en: 'under review' },
+  aceptado: { es: 'aceptado', en: 'accepted' },
+};
+const autores = (a: Array<{ name: string; role?: string }>) => a.map((x) => x.name).join(', ');
+---
+
+<section class="wrap head">
+  <p class="kicker">{lang === 'es' ? 'Líneas, escritos y trabajos en curso' : 'Lines of work, writing and work in progress'}</p>
+  <h1>{L.researchTitle}</h1>
+  <p class="intro">{L.researchIntro}</p>
+</section>
+
+<section class="wrap block" data-reveal>
+  <div class="lineas">
+    {lineas[lang].map((l, i) => (
+      <article id={l.id} data-child>
+        <p class="mono n">{String(i + 1).padStart(2, '0')}</p>
+        <h2>{l.pregunta}</h2>
+        <dl>
+          <dt class="kicker">{L.method}</dt>
+          <dd>{l.metodo}</dd>
+          <dt class="kicker">{L.evidence}</dt>
+          <dd>{l.evidencia}</dd>
+          <dt class="kicker">{L.state}</dt>
+          <dd><span class="chip mono">{l.estado}</span></dd>
+        </dl>
+      </article>
+    ))}
+  </div>
+</section>
+
+<hr class="hairline wrap" />
+
+<section class="wrap block" data-reveal>
+  <h2 class="sec">{L.writingsTitle}</h2>
+  {grupos.map((g) => (
+    <div class="grupo" data-child>
+      <h3 class="kicker">{g.title}</h3>
+      <ul class="pubs">
+        {g.items.map((p) => (
+          <li>
+            <span class="mono yr">{p.year}</span>
+            <span>
+              <b>{p.url ? <a href={p.url}>{p.title}</a> : p.title}</b>
+              <small>
+                {autores(p.authors)}{p.authors.length ? ' · ' : ''}{p.venue}
+              </small>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+
+  {wip.length > 0 && (
+    <div class="grupo" data-child>
+      <h3 class="kicker">{L.gWip}</h3>
+      <ul class="pubs">
+        {wip.map((p) => (
+          <li>
+            <span class="mono yr">—</span>
+            <span>
+              <b>{p.title}</b>
+              <small>
+                {autores(p.authors)}
+                {p.status && <span class="chip mono">{estados[p.status][lang]}</span>}
+              </small>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</section>
+
+<hr class="hairline wrap" />
+
+<section class="wrap block" data-reveal>
+  <h2 class="sec">{L.trainingTitle}</h2>
+  <ul class="formacion">
+    {formacion[lang].map((f) => <li data-child>{f}</li>)}
+  </ul>
+</section>
+
+<style>
+  .head { padding: var(--space-8) var(--space-3) var(--space-4); }
+  .head h1 { font-size: clamp(34px, 4.5vw, 52px); margin: var(--space-2) 0 var(--space-3); }
+  .intro { color: var(--color-tinta-2); font-size: 18px; }
+  .block { padding: var(--space-8) var(--space-3); }
+  .sec { font-size: clamp(24px, 2.6vw, 30px); margin-bottom: var(--space-4); }
+
+  .lineas { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: var(--space-8); }
+  @media (min-width: 900px) { .lineas { grid-template-columns: repeat(2, 1fr); } }
+  .lineas .n { font-size: 13px; color: var(--color-tinta-2); letter-spacing: 0.06em; }
+  .lineas h2 { font-size: 25px; margin: var(--space-2) 0 var(--space-3); }
+  .lineas dt { margin-top: var(--space-2); }
+  .lineas dd { font-size: 15.5px; color: var(--color-tinta-2); margin-top: 4px; }
+
+  .chip {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid var(--color-linea);
+    padding: 3px 9px;
+    color: var(--color-mar);
+    border-color: var(--color-mar);
+  }
+
+  .grupo { margin-bottom: var(--space-6); }
+  .pubs { list-style: none; border-top: 1px solid var(--color-linea); margin-top: var(--space-2); max-width: 820px; }
+  .pubs li {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: var(--space-2);
+    padding: 13px 0;
+    border-bottom: 1px solid var(--color-linea);
+    align-items: baseline;
+  }
+  .pubs .yr { font-size: 13px; color: var(--color-tinta-2); }
+  .pubs b { font-weight: 600; font-size: 16px; line-height: 1.4; display: block; }
+  .pubs b a { color: var(--color-tinta); }
+  .pubs small { display: block; color: var(--color-tinta-2); font-size: 13.5px; margin-top: 4px; }
+  .pubs small .chip { margin-left: 8px; }
+
+  .formacion { list-style: none; max-width: 76ch; display: flex; flex-direction: column; gap: var(--space-2); }
+  .formacion li { color: var(--color-tinta-2); padding-left: var(--space-3); position: relative; }
+  .formacion li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 12px; height: 1px; background: var(--color-linea); }
+</style>

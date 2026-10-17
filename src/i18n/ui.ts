@@ -44,7 +44,7 @@ export const strings: Record<Locale, Record<string, string>> = {
   en: {
     switcher: 'ES',
     switcherLabel: 'Leer en español',
-    switcherHomeLabel: 'This page has no English version pair; go to the Spanish home',
+    switcherHomeLabel: 'This page has no Spanish version; go to the Spanish home page',
     skip: 'Skip to content',
     colophon: 'Built with Astro, R and D3.',
     license: 'Texts under CC BY 4.0',

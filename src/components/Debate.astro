@@ -1,0 +1,76 @@
+---
+// /debate/ y /en/debate/ (PROMPT.md §6): entrenador · juez · LPDE · trabaja conmigo.
+// El bloque de conversión vive en esta misma página: quien llega aquí no debe
+// necesitar otro clic para escribir. Sin WhatsApp (decisión de Luis).
+import { debate, t, mailto } from '../i18n/pages';
+import type { Locale } from '../i18n/ui';
+
+interface Props { lang?: Locale }
+const { lang = 'es' } = Astro.props;
+const L = t[lang];
+const d = debate[lang];
+const anchor = lang === 'es' ? 'trabaja-conmigo' : 'work-with-me';
+---
+
+<section class="wrap head">
+  <p class="kicker">{lang === 'es' ? 'Entrenador · juez · formación de entrenadores' : 'Coach · adjudicator · coach training'}</p>
+  <h1>{L.debateTitle}</h1>
+  <p class="intro">{d.intro}</p>
+</section>
+
+<section class="wrap block" data-reveal>
+  <h2 class="sec">{L.coachTitle}</h2>
+  <ul class="lista">{d.coach.map((x) => <li data-child>{x}</li>)}</ul>
+</section>
+
+<hr class="hairline wrap" />
+
+<section class="wrap block" data-reveal>
+  <h2 class="sec">{L.judgeTitle}</h2>
+  <ul class="lista">{d.judge.map((x) => <li data-child>{x}</li>)}</ul>
+</section>
+
+<hr class="hairline wrap" />
+
+<section class="wrap block" data-reveal>
+  <h2 class="sec">{L.lpdeTitle}</h2>
+  <ul class="lista">{d.lpde.map((x) => <li data-child>{x}</li>)}</ul>
+</section>
+
+<section class="banda" id={anchor} data-reveal>
+  <div class="wrap block">
+    <h2 class="sec">{L.workTitle}</h2>
+    <div class="dos">
+      <article data-child>
+        <h3>{L.forSchools}</h3>
+        <p>{d.schools.body}</p>
+        <a class="btn btn-solid" href={mailto(d.schools.mail)}>{L.writeMe}</a>
+      </article>
+      <article data-child>
+        <h3>{L.forUni}</h3>
+        <p>{d.uni.body}</p>
+        <a class="btn btn-ghost" href={mailto(d.uni.mail)}>{L.writeMe}</a>
+      </article>
+    </div>
+    <p class="correo mono" data-child>
+      luis.valverde@pucp.edu.pe ·
+      {lang === 'es' ? 'respondo en 24 horas' : 'I reply within 24 hours'}
+    </p>
+  </div>
+</section>
+
+<style>
+  .head { padding: var(--space-8) var(--space-3) var(--space-4); }
+  .head h1 { font-size: clamp(34px, 4.5vw, 52px); margin: var(--space-2) 0 var(--space-3); }
+  .intro { color: var(--color-tinta-2); font-size: 18px; max-width: 70ch; }
+  .block { padding: var(--space-8) var(--space-3); }
+  .sec { font-size: clamp(24px, 2.6vw, 30px); margin-bottom: var(--space-4); }
+  .lista { list-style: none; max-width: 80ch; display: flex; flex-direction: column; gap: var(--space-3); }
+  .lista li { color: var(--color-tinta-2); padding-left: var(--space-3); position: relative; }
+  .lista li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 12px; height: 1px; background: var(--color-linea); }
+  .banda { background: var(--color-niebla); border-block: 1px solid var(--color-linea); margin-top: var(--space-8); }
+  .dos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6); }
+  .dos h3 { font-size: 21px; margin-bottom: var(--space-2); }
+  .dos p { color: var(--color-tinta-2); font-size: 15.5px; margin-bottom: var(--space-3); }
+  .correo { margin-top: var(--space-6); font-size: 13px; letter-spacing: 0.04em; color: var(--color-tinta-2); }
+</style>

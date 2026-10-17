@@ -99,11 +99,12 @@ const current = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.ur
   }
   .switcher a:hover { border-color: var(--color-algarrobo); color: var(--color-algarrobo); }
 
-  /* barra compacta tras 120px de scroll (PROMPT §5) */
-  .site-header[data-compact] .bar { min-height: 52px; }
+  /* Barra compacta tras 120px de scroll (§5). La ALTURA DEL HUECO no cambia
+     —si cambiara, cada scroll empujaría el contenido y el CLS dejaría de ser 0—:
+     solo se compacta el logotipo y se afina la hairline. */
   .site-header[data-compact] .logo-full { display: none; }
   .site-header[data-compact] .logo-compact { display: inline; }
-  .bar { transition: min-height 180ms var(--ease); }
+  .site-header[data-compact] { border-bottom-color: var(--color-tinta); }
 
   @media (max-width: 880px) {
     .logo-full { display: none; }

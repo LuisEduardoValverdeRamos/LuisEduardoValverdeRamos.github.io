@@ -1,0 +1,69 @@
+# Casos para /servicios/ — formato: problema → qué hizo → resultado.
+# BORRADORES redactados el 16-oct-2026 a partir de material confirmado; Luis aprueba o edita
+# el texto antes de publicar. Regla §10: cero cifras de encargos no publicados.
+# El bloqueante de la Fase 5a exige ≥2 casos aprobados para publicar /servicios/.
+
+- id: caso-cal
+  cliente: "Observatorio de Corrupción — Colegio de Abogados de Lima"
+  anio: "2026"
+  servicio: "Acompañamiento metodológico"
+  estado: borrador  # borrador | aprobado
+  problema:
+    es: >-
+      El Observatorio preparaba su primer informe sobre contrataciones públicas
+      (2016–2025) a partir de los registros abiertos del SEACE y necesitaba saber
+      qué indicadores de riesgo eran calculables con la base — y cuáles medían
+      realmente lo que prometían medir.
+  que_hizo:
+    es: >-
+      Evaluación de factibilidad y validez indicador por indicador: qué registra
+      de verdad cada campo de la base, dónde la unidad de análisis engaña y qué
+      decisiones metodológicas debía tomar el equipo antes de calcular nada.
+  resultado:
+    es: >-
+      Una matriz de viabilidad que define el alcance de la primera entrega del
+      informe del Observatorio y evita publicar indicadores inválidos.
+
+- id: caso-jne-prodialogo
+  cliente: "ProDiálogo — encargo del Jurado Nacional de Elecciones"
+  anio: "2025–2026"
+  servicio: "Análisis electoral y de opinión pública"
+  estado: borrador
+  problema:
+    es: >-
+      La Escuela Electoral del JNE necesitaba perfiles del elector peruano basados
+      en evidencia para orientar sus estrategias de educación cívica rumbo a las
+      Elecciones Generales 2026.
+  que_hizo:
+    es: >-
+      Segmentación del electorado con clustering sobre tres ciclos de encuestas
+      postelectorales del JNE (2011, 2016 y 2021), con validación de robustez por
+      remuestreo y perfilamiento de cada segmento.
+  resultado:
+    es: >-
+      La tipología integra el informe institucional «Análisis del elector peruano:
+      aportes desde las ciencias del comportamiento» (JNE/ProDiálogo, 2026).
+
+- id: caso-lpde
+  cliente: "Liga Peruana de Debate Escolar (LPDE)"
+  anio: "2026"
+  servicio: "Análisis de datos + formación en debate"
+  estado: borrador
+  problema:
+    es: >-
+      El circuito peruano de debate escolar crecía sin ninguna línea base: nadie
+      sabía cuántas instituciones participaban, con qué perfiles ni con qué brechas
+      de acceso.
+  que_hizo:
+    es: >-
+      Primer informe del ecosistema de debate escolar en el Perú (70 instituciones)
+      y siete policy briefs; analítica de resultados públicos de 16 torneos de la
+      temporada 2025.
+  resultado:
+    es: >-
+      Evidencia agregada sobre equidad de acceso (brecha público/privado,
+      concentración geográfica) que hoy orienta el programa de expansión y la
+      estrategia institucional de la Liga.
+
+# Roche Pharma Perú (vía Sapienza Consultora, 2025): nombrable en la franja de
+# instituciones (§10), pero SIN caso narrado — los datos del encargo no son publicables.

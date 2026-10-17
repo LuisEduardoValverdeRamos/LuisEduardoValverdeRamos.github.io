@@ -1,0 +1,144 @@
+---
+// /servicios/ (PROMPT.md §6): servicios con los cinco campos obligatorios,
+// «cómo trabajo», instituciones y casos. Los casos solo se publican cuando Luis
+// los aprueba (estado: aprobado) — mientras no haya dos aprobados, la sección se
+// omite y el aviso queda en el resumen de fase, nunca en la página.
+import { getCollection } from 'astro:content';
+import { servicios, comoTrabajo, instituciones, t, mailto } from '../i18n/pages';
+import type { Locale } from '../i18n/ui';
+
+interface Props { lang?: Locale }
+const { lang = 'es' } = Astro.props;
+const L = t[lang];
+const items = servicios[lang];
+const proc = comoTrabajo[lang];
+
+const casos = (await getCollection('casos', (c) => c.data.estado === 'aprobado')).sort((a, b) =>
+  a.data.anio < b.data.anio ? 1 : -1,
+);
+---
+
+<section class="wrap head">
+  <p class="kicker">
+    {lang === 'es'
+      ? 'Análisis de datos · formación en debate · talleres · metodología'
+      : 'Data analysis · debate coaching · workshops · methodology'}
+  </p>
+  <h1>{L.servicesTitle}</h1>
+  <p class="intro">
+    {lang === 'es'
+      ? 'Cuatro formas de trabajar juntos. Cada una dice para quién es, en qué formato se hace, qué se entrega y cuál es el siguiente paso.'
+      : 'Four ways to work together. Each says who it is for, the format, what is delivered and the next step.'}
+  </p>
+</section>
+
+<section class="wrap block" data-reveal>
+  <div class="servicios">
+    {items.map((s) => (
+      <article id={s.id} data-child>
+        <h2>{s.title}</h2>
+        <dl>
+          <dt class="kicker">{L.forWho}</dt>
+          <dd>{s.forWho}</dd>
+          <dt class="kicker">{L.format}</dt>
+          <dd>{s.format}</dd>
+          <dt class="kicker">{L.deliverables}</dt>
+          <dd>{s.deliverables}</dd>
+          <dt class="kicker">{L.nextStep}</dt>
+          <dd>{s.next}</dd>
+        </dl>
+        <a class="btn btn-ghost" href={mailto(s.mailSubject)}>{L.writeMe}</a>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="banda" data-reveal>
+  <div class="wrap block">
+    <h2 class="sec">{L.howIWork}</h2>
+    <div class="pasos">
+      {proc.steps.map((p) => (
+        <article data-child>
+          <p class="mono n">{p.n}</p>
+          <h3>{p.title}</h3>
+          <p class="body">{p.body}</p>
+        </article>
+      ))}
+    </div>
+    <p class="nota" data-child>{proc.note}</p>
+  </div>
+</section>
+
+{casos.length >= 2 && (
+  <section class="wrap block" data-reveal>
+    <h2 class="sec">{L.casesTitle}</h2>
+    <div class="casos">
+      {casos.map((c) => (
+        <article data-child>
+          <p class="kicker">{c.data.cliente} · {c.data.anio}</p>
+          <p class="body"><b>{lang === 'es' ? 'El problema.' : 'The problem.'}</b> {c.data.problema.es}</p>
+          <p class="body"><b>{lang === 'es' ? 'Qué hice.' : 'What I did.'}</b> {c.data.que_hizo.es}</p>
+          <p class="body"><b>{lang === 'es' ? 'Resultado.' : 'Outcome.'}</b> {c.data.resultado.es}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+)}
+
+<section class="wrap block" data-reveal>
+  <h2 class="sec">{L.institutionsTitle}</h2>
+  <ul class="instituciones">
+    {instituciones.map((i) => <li class="mono" data-child>{i}</li>)}
+  </ul>
+  <p class="contacto" data-child>
+    <a class="btn btn-solid" href={mailto(lang === 'es' ? 'Consulta desde la web' : 'Enquiry from the website')}>
+      {L.writeMe}
+    </a>
+    <span class="mono correo">luis.valverde@pucp.edu.pe</span>
+  </p>
+  <p class="mono small" data-child>
+    <a href={lang === 'es' ? '/medios/' : '/medios/'}>
+      {lang === 'es' ? 'Ver apariciones en medios →' : 'See media appearances →'}
+    </a>
+  </p>
+</section>
+
+<style>
+  .head { padding: var(--space-8) var(--space-3) var(--space-4); }
+  .head h1 { font-size: clamp(34px, 4.5vw, 52px); margin: var(--space-2) 0 var(--space-3); }
+  .intro { color: var(--color-tinta-2); font-size: 18px; max-width: 70ch; }
+  .block { padding: var(--space-8) var(--space-3); }
+  .sec { font-size: clamp(24px, 2.6vw, 30px); margin-bottom: var(--space-4); }
+  .body { color: var(--color-tinta-2); }
+
+  .servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: var(--space-8); }
+  @media (min-width: 980px) { .servicios { grid-template-columns: repeat(2, 1fr); } }
+  .servicios h2 { font-size: 24px; margin-bottom: var(--space-3); }
+  .servicios dt { margin-top: var(--space-2); }
+  .servicios dd { font-size: 15.5px; color: var(--color-tinta-2); margin-top: 4px; }
+  .servicios .btn { margin-top: var(--space-4); }
+
+  .banda { background: var(--color-niebla); border-block: 1px solid var(--color-linea); }
+  .pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-6); }
+  .pasos .n { font-size: 24px; color: var(--color-tinta-2); }
+  .pasos h3 { font-size: 20px; margin: var(--space-1) 0 var(--space-1); }
+  .pasos .body { font-size: 15px; }
+  .nota { margin-top: var(--space-6); color: var(--color-tinta-2); max-width: 74ch; }
+
+  .casos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6); }
+  .casos .body { font-size: 15px; margin-top: var(--space-2); }
+  .casos b { color: var(--color-tinta); }
+
+  .instituciones { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; max-width: 860px; }
+  .instituciones li {
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid var(--color-linea);
+    padding: 6px 11px;
+    color: var(--color-tinta-2);
+  }
+  .contacto { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-6); }
+  .correo { font-size: 13px; letter-spacing: 0.03em; color: var(--color-tinta-2); user-select: all; }
+  .small { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; margin-top: var(--space-3); }
+</style>

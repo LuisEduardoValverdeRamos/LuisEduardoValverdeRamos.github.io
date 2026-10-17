@@ -158,15 +158,15 @@ export const home: Record<Locale, HomeCopy> = {
     debate: {
       title: 'Entrenar a discutir',
       body:
-        'Entrena a la selección peruana de debate escolar y dirige el área académica de la Liga Peruana de Debate Escolar, donde diseña la formación de entrenadores. Como juez ha estado en la gran final del mundial universitario en español y en los paneles de adjudicación del circuito nacional. También prepara duplas universitarias fuera del Perú: las que entrenó en República Dominicana llegaron por primera vez a octavos del mundial.',
+        'Entreno a la selección peruana de debate escolar y dirijo el área académica de la Liga Peruana de Debate Escolar, donde diseño la formación de entrenadores. Como juez he estado en la gran final del Campeonato Mundial Universitario de Debate en Español (CMUDE) y en los paneles de adjudicación del circuito nacional. También preparo duplas universitarias fuera del Perú: las que entrené en República Dominicana llegaron por primera vez a octavos de final del mundial universitario (WUDC).',
       stats: [
         {
           figure: '4.º',
           label:
-            'título consecutivo del Mundial de Debate Escolar en Español (MED, Panamá 2026) de la selección que entrena',
+            'título consecutivo del Mundial de Debate Escolar en Español (MED, Panamá 2026) de la selección que entreno',
         },
         { figure: '2025', label: 'campeón nacional interuniversitario de debate (CNDI)' },
-        { figure: '6', label: 'países donde ha competido, juzgado o entrenado' },
+        { figure: '6', label: 'países donde he competido, juzgado o entrenado' },
       ],
       more: 'Más sobre debate',
       cta: '¿Quieres entrenar a tu equipo? →',
@@ -240,7 +240,7 @@ export const home: Record<Locale, HomeCopy> = {
           n: '02',
           q: 'What does the press choose to name, and what does it leave out?',
           body:
-            'Text analysis at scale over a corpus of 747,836 headlines, built as a research assistant at CISEPA-PUCP.',
+            'Text analysis at scale on a corpus of 747,836 headlines, which I helped build as a research assistant at CISEPA-PUCP.',
           href: '/en/research/#press-agenda',
         },
         {
@@ -317,15 +317,15 @@ export const home: Record<Locale, HomeCopy> = {
     debate: {
       title: 'Teaching people to argue',
       body:
-        "He coaches Peru's national school debating team and leads the academic area of the Peruvian School Debate League, where he designs coach training. As an adjudicator he has judged the grand final of the Spanish-language university world championship and sat on panels across the national circuit. He also prepares university pairs abroad: the Dominican teams he coached reached the octofinals of the world championship for the first time.",
+        "I coach Peru's national school debating team and direct the academic programme of the Peruvian School Debate League, where I design its coach training. As an adjudicator I have judged the grand final of the Spanish-language university world championship (CMUDE) and served on adjudication panels across the national circuit. I also coach university pairs abroad: the Dominican pairs I prepared reached the last sixteen of the World Universities Debating Championship (WUDC) for the first time in the country's history.",
       stats: [
         {
           figure: '4th',
           label:
-            'consecutive title at the World Schools Debating Championship in Spanish (MED, Panama 2026) won by the team he coaches',
+            'consecutive title at the Mundial de Debate Escolar en Español (MED, Panama 2026) — the Spanish-language world schools championship — won by the national team I coach',
         },
         { figure: '2025', label: 'national inter-university debating champion (CNDI)' },
-        { figure: '6', label: 'countries where he has competed, judged or coached' },
+        { figure: '6', label: 'countries where I have competed, judged or coached' },
       ],
       more: 'More on debate',
       cta: 'Want coaching for your team? →',
@@ -363,7 +363,7 @@ export const home: Record<Locale, HomeCopy> = {
       title: 'Who writes here',
       lines: [
         'I am from Pedregal Grande, in Catacaos, Piura.',
-        'I work between Piura and Lima: research at the Electoral School of the JNE, teaching Political Economy at PUCP, and leading the academic area of the Peruvian School Debate League.',
+        "I work between Piura and Lima: researching at the Electoral School of Peru's National Jury of Elections (JNE), teaching political economy at PUCP, and directing the academic programme of the Peruvian School Debate League.",
         'This quarter: the district-level map that opens this page, a paper on vote choice in the 2021 run-off, and coach training ahead of the next school world championship.',
       ],
       photoAlt: 'Portrait of Luis Valverde Ramos',

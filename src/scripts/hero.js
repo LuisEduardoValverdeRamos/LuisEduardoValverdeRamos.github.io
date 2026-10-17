@@ -99,7 +99,8 @@ export function initHero(root) {
       else dots.attr('fill', col);
       buttons.forEach((b, j) => b.setAttribute('aria-pressed', j === i ? 'true' : 'false'));
       if (legendLabel) {
-        legendLabel.textContent = `${st[lang]}${st.unidad ? ' · ' + st.unidad : ''} · EG 2021 (1.ª vuelta) · ONPE`;
+        const fuente = root.dataset.fuente ?? '';
+        legendLabel.textContent = `${st[lang]}${st.unidad ? ' · ' + st.unidad : ''} · ${fuente}`;
       }
     }
     setState(0, false);

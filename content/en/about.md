@@ -7,7 +7,7 @@ photo_alt: "Portrait of Luis Valverde Ramos"
 
 I am a political scientist trained at the Pontificia Universidad Católica del Perú (PUCP). I graduated first in my class, and my licentiate thesis received a distinction (*mención sobresaliente*) in 2025. I studied on a Beca 18 scholarship, Peru's national merit award, and spent an exchange semester at Ghent University (Belgium) with a DARI scholarship. I am from Pedregal Grande (Catacaos, Piura) and work from Lima.
 
-I am currently a researcher at the Electoral and Governance School (ESEG) of Peru's National Elections Jury (JNE), a consultant to the Corruption Observatory of the Lima Bar Association, Academic Director of the Peruvian School Debate League (LPDE) and a teaching assistant in Political Economy at PUCP.
+I am currently a researcher at the Electoral and Governance School (ESEG) of Peru's National Elections Jury (JNE), a consultant to the Corruption Observatory of the Lima Bar Association, a teaching assistant in Political Economy at PUCP, Director General of the Peruvian National Schools Debate Team and Academic Director of the Peruvian School Debate League (LPDE).
 
 ## Research
 
@@ -25,7 +25,7 @@ I work in person in Lima and online with the rest of Peru and Latin America. I r
 
 ## Debate
 
-- Coach of the Peruvian national team that won its fourth consecutive title at the *Mundial de Debate Escolar en Español* (MED), the world schools championship held in Spanish, in Panama in 2026.
+- Director General of the Peruvian National Schools Debate Team. Before that I was its coach: in Panama in 2026 the team won its fourth consecutive title at the *Mundial de Debate Escolar en Español* (MED), the world schools championship held in Spanish.
 - Head coach of the PUCP Debate Society and debate coach at Colegio Alpamayo, both since 2026.
 - Since 2024, I have coached university debaters from the Dominican Republic online. I prepared the pairs that reached the octofinals of WUDC 2025, a first for the country, and the quarterfinals of CMUDE Ecuador 2026.
 - As Academic Director of the LPDE, I lead the team in charge of its training, coaching and consultancy programmes in school debate.
@@ -51,4 +51,4 @@ I train in muay thai. I was an electoral observer for Transparencia in both roun
 
 For event programmes and the media:
 
-> Luis Valverde Ramos is a Peruvian political scientist who graduated first in his class at the Pontificia Universidad Católica del Perú. He is a researcher at the Electoral and Governance School of Peru's National Elections Jury, a consultant to the Corruption Observatory of the Lima Bar Association and Academic Director of the Peruvian School Debate League. His research covers electoral behaviour and policy implementation in Peru. He coached the Peruvian national team that won its fourth consecutive title at the *Mundial de Debate Escolar en Español* (MED) in Panama in 2026.
+> Luis Valverde Ramos is a Peruvian political scientist who graduated first in his class at the Pontificia Universidad Católica del Perú. He is a researcher at the Electoral and Governance School of Peru's National Elections Jury, a consultant to the Corruption Observatory of the Lima Bar Association and Academic Director of the Peruvian School Debate League. His research covers electoral behaviour and policy implementation in Peru. He leads the Peruvian National Schools Debate Team, which he coached in the cycle that ended with its fourth consecutive title at the *Mundial de Debate Escolar en Español* (MED) in Panama in 2026.

@@ -1,46 +1,47 @@
-{{- /* Footer: a contained block («rectángulo») with the invitation to write, the
-       email as copyable text, site links, profiles and the colophon. */ -}}
+{{- /* Footer: a full-width band at the bottom of the page with the invitation to
+       write, the email as copyable text, site links and profiles, closed by a
+       bar with the colophon. */ -}}
 {{- $a := partial "author.html" . -}}
 {{- $p := . -}}
-<div class="s-footer-zone">
-  <footer class="s-footer" aria-labelledby="footer-cta">
-    <div class="top">
-      <div>
-        <h2 id="footer-cta" class="cta-title">{{ T "footerCtaTitle" }}</h2>
-        <p>{{ T "footerCtaText" }}</p>
-        {{- with $a.email }}
-        {{ partial "email-block.html" (dict "email" . "subject" (T "footerMailSubject")) }}
-        {{- end }}
-      </div>
-      <nav aria-labelledby="footer-site">
-        <h3 id="footer-site">{{ T "footerSite" }}</h3>
-        <ul>
-          {{- range site.Menus.main }}{{ if ne .Identifier "cv" }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-          {{- end }}{{ end }}
-        </ul>
-      </nav>
-      <nav aria-labelledby="footer-more">
-        <h3 id="footer-more">{{ T "footerMore" }}</h3>
-        <ul>
-          {{- with site.GetPage "/media" }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
-          {{- with site.GetPage "/cv" }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
-          <li>{{ partial "lang-switch.html" (dict "page" $p "long" true) }}</li>
-        </ul>
-      </nav>
-      <nav aria-labelledby="footer-profiles">
-        <h3 id="footer-profiles">{{ T "footerProfiles" }}</h3>
-        <ul>
-          {{- with $a.linkedin }}<li><a href="{{ . }}" rel="me noopener">LinkedIn</a></li>{{ end }}
-          {{- with $a.github }}<li><a href="{{ . }}" rel="me noopener">GitHub</a></li>{{ end }}
-          {{- with $a.orcid }}<li><a href="{{ . }}" rel="me noopener">ORCID</a></li>{{ end }}
-          {{- with $a.scholar }}<li><a href="{{ . }}" rel="me noopener">Google Scholar</a></li>{{ end }}
-        </ul>
-      </nav>
+<footer class="s-footer" aria-labelledby="footer-cta">
+  <div class="wrap top">
+    <div>
+      <h2 id="footer-cta" class="cta-title">{{ T "footerCtaTitle" }}</h2>
+      <p>{{ T "footerCtaText" }}</p>
+      {{- with $a.email }}
+      {{ partial "email-block.html" (dict "email" . "subject" (T "footerMailSubject")) }}
+      {{- end }}
     </div>
-    <div class="bottom">
+    <nav aria-labelledby="footer-site">
+      <h3 id="footer-site">{{ T "footerSite" }}</h3>
+      <ul>
+        {{- range site.Menus.main }}{{ if ne .Identifier "cv" }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{- end }}{{ end }}
+      </ul>
+    </nav>
+    <nav aria-labelledby="footer-more">
+      <h3 id="footer-more">{{ T "footerMore" }}</h3>
+      <ul>
+        {{- with site.GetPage "/media" }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+        {{- with site.GetPage "/cv" }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+        <li>{{ partial "lang-switch.html" (dict "page" $p "long" true) }}</li>
+      </ul>
+    </nav>
+    <nav aria-labelledby="footer-profiles">
+      <h3 id="footer-profiles">{{ T "footerProfiles" }}</h3>
+      <ul>
+        {{- with $a.linkedin }}<li><a href="{{ . }}" rel="me noopener">LinkedIn</a></li>{{ end }}
+        {{- with $a.github }}<li><a href="{{ . }}" rel="me noopener">GitHub</a></li>{{ end }}
+        {{- with $a.orcid }}<li><a href="{{ . }}" rel="me noopener">ORCID</a></li>{{ end }}
+        {{- with $a.scholar }}<li><a href="{{ . }}" rel="me noopener">Google Scholar</a></li>{{ end }}
+      </ul>
+    </nav>
+  </div>
+  <div class="s-footer-bar">
+    <div class="wrap bottom">
       <span>© {{ now.Year }} {{ $a.name }}{{ with $a.location }} · {{ . }}{{ end }}</span>
       <span>{{ T "builtUsing" }} <a href="https://gohugo.io/">Hugo</a>{{ with $a.github }} · <a href="{{ . }}/LuisEduardoValverdeRamos.github.io">{{ T "footerCode" }}</a>{{ end }} · {{ T "footerUpdated" }} {{ now | time.Format (T "footerDateLayout") }}</span>
     </div>
-  </footer>
-</div>
+  </div>
+</footer>

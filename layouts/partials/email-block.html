@@ -2,6 +2,7 @@
        client the mailto: link does nothing, so the address is always visible. */ -}}
 <div class="s-mail">
   <a class="s-btn primary small" href="{{ partial "mailto.html" . }}">{{ T "writeEmail" }}</a>
+  <span class="s-mail-break" aria-hidden="true"></span>
   <code>{{ .email }}</code>
   <button type="button" class="s-copy" data-copy="{{ .email }}" data-done="{{ T "copied" }}">{{ T "copyEmail" }}</button>
 </div>

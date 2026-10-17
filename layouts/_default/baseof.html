@@ -49,10 +49,10 @@
         <!-- Tailwind CSS compiled by Hugo; palette, fonts and site styles live in assets/css/main.css -->
         {{ with (templates.Defer (dict "key" "global")) }}{{ partial "css.html" . }}{{ end }}
     </head>
-    <body class="min-h-screen bg-bg-primary-light text-text-primary-light">
+    <body class="min-h-screen flex flex-col bg-bg-primary-light text-text-primary-light">
         <a href="#main" class="skip-link">{{ if eq .Language.Lang "es" }}Saltar al contenido{{ else }}Skip to content{{ end }}</a>
         {{ partial "header" . }}
-        <main id="main">
+        <main id="main" class="flex-1">
             {{ block "main" . }}{{ end }}
         </main>
         {{ partial "footer" . }}

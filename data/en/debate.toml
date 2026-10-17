@@ -3,18 +3,18 @@
 # individual about school debaters (they are minors).
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
-lead = "I coach school and university teams, adjudicate tournaments held in Spanish and lead the academic team of the Peruvian School Debate League (LPDE)."
+lead = "I lead the Peruvian National Schools Debate Team and the academic team of the Peruvian School Debate League (LPDE). I coach school and university teams and adjudicate tournaments held in Spanish."
 glossary = "MED is the Mundial de Debate Escolar en Español, the world schools championship held in Spanish; CMUDE is the world universities championship held in Spanish; WUDC is the World Universities Debating Championship, held in English."
 
 [home]
   eyebrow = "Debate"
   title = "I coach school and university teams and adjudicate tournaments in Spanish"
-  text = "Head coach of the PUCP Debate Society and debate coach at Colegio Alpamayo; judge of the CMUDE 2026 grand final and chief adjudicator of TNDE 2025."
+  text = "Director General of the Peruvian National Schools Debate Team, head coach of the PUCP Debate Society and debate coach at Colegio Alpamayo; judge of the CMUDE 2026 grand final."
   more = "More on debate"
   cta = "Coaching for your team"
 
 [toc]
-  coach = "Coaching"
+  coach = "Leading and coaching"
   judge = "Adjudication"
   compete = "Competing"
   lpde = "LPDE"
@@ -39,7 +39,13 @@ glossary = "MED is the Mundial de Debate Escolar en Español, the world schools 
   text = "Judge of the CMUDE 2026 grand final (Ecuador) and chief adjudicator of TNDE 2025."
 
 [coach]
-  title = "Coaching"
+  title = "Leading and coaching"
+  # cv_current: on the CV it goes under «Current positions», not again under «Debate»
+  [[coach.items]]
+    period = "2026–"
+    role = "Director General"
+    org = "Peruvian National Schools Debate Team"
+    cv_current = true
   [[coach.items]]
     period = "2025–2026"
     role = "Coach"

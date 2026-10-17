@@ -7,7 +7,7 @@ photo_alt: "Retrato de Luis Valverde Ramos"
 
 Soy politólogo por la Pontificia Universidad Católica del Perú (PUCP). Egresé en el primer puesto de mi promoción y mi tesis de licenciatura fue aprobada con mención sobresaliente en 2025. Estudié la carrera con Beca 18 y pasé un semestre de intercambio en Ghent University (Bélgica) con una beca DARI. Soy de Pedregal Grande (Catacaos, Piura) y trabajo desde Lima.
 
-Hoy soy investigador en la Escuela Electoral y de Gobernabilidad (ESEG) del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima, director académico de la Liga Peruana de Debate Escolar (LPDE) y jefe de práctica de Economía Política en la PUCP.
+Hoy soy investigador en la Escuela Electoral y de Gobernabilidad (ESEG) del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima, jefe de práctica de Economía Política en la PUCP, director general de la Selección Nacional de Debate Escolar del Perú y director académico de la Liga Peruana de Debate Escolar (LPDE).
 
 ## Qué investigo
 
@@ -25,7 +25,7 @@ Trabajo de forma presencial en Lima y a distancia con el resto del país y Amér
 
 ## Debate
 
-- Entrenador de la selección peruana que en Panamá 2026 obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED).
+- Director general de la Selección Nacional de Debate Escolar del Perú. Antes fui su entrenador: en Panamá 2026, la selección obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED).
 - Entrenador general de la Sociedad de Debate PUCP y entrenador de debate del Colegio Alpamayo, desde 2026.
 - Desde 2024 entreno a distancia a debatientes universitarios de República Dominicana. Preparé a las duplas que llegaron a los octavos de final del WUDC 2025, la primera vez para el país, y a los cuartos de final del CMUDE Ecuador 2026.
 - Como director académico de la LPDE, lidero el equipo a cargo de sus programas de capacitación, entrenamiento y consultoría en debate escolar.
@@ -51,4 +51,4 @@ Practico muay thai. Fui observador electoral de Transparencia en las dos vueltas
 
 Para programas de eventos y medios:
 
-> Luis Valverde Ramos es politólogo por la Pontificia Universidad Católica del Perú, donde egresó en el primer puesto de su promoción. Es investigador en la Escuela Electoral y de Gobernabilidad del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima y director académico de la Liga Peruana de Debate Escolar. Investiga el comportamiento electoral y la implementación de políticas públicas en el Perú. Fue entrenador de la selección peruana que en Panamá 2026 obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED).
+> Luis Valverde Ramos es politólogo por la Pontificia Universidad Católica del Perú, donde egresó en el primer puesto de su promoción. Es investigador en la Escuela Electoral y de Gobernabilidad del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima y director académico de la Liga Peruana de Debate Escolar. Investiga el comportamiento electoral y la implementación de políticas públicas en el Perú. Dirige la Selección Nacional de Debate Escolar del Perú, de la que fue entrenador en el ciclo en que obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED, Panamá 2026).

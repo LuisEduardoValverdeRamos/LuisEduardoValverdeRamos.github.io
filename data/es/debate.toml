@@ -4,15 +4,22 @@
 # nada individual de debatientes escolares (son menores de edad).
 # Correcciones de Luis (17-oct-2026): no entrenó equipos en el WUDC, solo en el
 # CMUDE, y nunca fue director académico de la LPDE (fue consultor, feb.–ago. 2026).
+# Correcciones de Luis (18-oct-2026): la selección opera con un staff de entrenadores
+# y cada uno prepara a un equipo de la delegación (su equipo: cuartos de final en
+# Panamá 2026, tres debatientes entre los mejores oradores; también entrenó para el
+# MED de Chile 2025); es COentrenador general de la Sociedad de Debate PUCP; el
+# jueceo suelto no vende: lo que posiciona son los equipos de adjudicación en
+# torneos escolares y universitarios de Costa Rica, Ecuador, Perú y Venezuela; en
+# 2025 preparó a la primera dupla íntegramente dominicana en octavos del CMUDE.
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
-lead = "Dirijo la Selección Nacional de Debate Escolar del Perú, entreno equipos escolares y universitarios y juzgo torneos en español."
+lead = "Dirijo la Selección Nacional de Debate Escolar del Perú, entreno equipos escolares y universitarios y he integrado equipos de adjudicación en torneos de Costa Rica, Ecuador, Perú y Venezuela."
 glossary = "El MED es el Mundial de Debate Escolar en Español, y el CMUDE, el Campeonato Mundial Universitario de Debate en Español."
 
 [home]
   eyebrow = "Debate"
-  title = "Entreno equipos escolares y universitarios, y juzgo torneos en español"
-  text = "Director general de la Selección Nacional de Debate Escolar del Perú, entrenador general de la Sociedad de Debate PUCP y entrenador del Colegio Alpamayo; juez de la Gran Final del CMUDE 2026."
+  title = "Entreno equipos escolares y universitarios, y formo jueces de debate"
+  text = "Director general de la Selección Nacional de Debate Escolar del Perú, coentrenador general de la Sociedad de Debate PUCP y entrenador del Colegio Alpamayo; he integrado equipos de adjudicación en torneos de Costa Rica, Ecuador, Perú y Venezuela."
   more = "Más sobre debate"
   cta = "¿Quieres entrenar a tu equipo?"
 
@@ -25,21 +32,21 @@ glossary = "El MED es el Mundial de Debate Escolar en Español, y el CMUDE, el C
 
 [[highlights]]
   label = "MED · Panamá 2026"
-  text = "Entrené a la selección peruana que obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español."
+  text = "Integré el equipo de entrenadores de la selección peruana que obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español; mi equipo llegó a cuartos de final y sus tres debatientes figuraron entre los mejores oradores del torneo."
   src = "Andina ↗"
   url = "https://andina.pe/agencia/noticia-peru-se-corona-tetracampeon-el-mundial-debate-escolar-espanol-2026-1091241.aspx"
 
 [[highlights]]
-  label = "CMUDE · Ecuador 2026"
-  text = "Preparé a las duplas dominicanas que llegaron a cuartos de final del Campeonato Mundial Universitario de Debate en Español."
+  label = "CMUDE · 2025–2026"
+  text = "Preparé a las duplas dominicanas que llegaron a cuartos de final del Campeonato Mundial Universitario de Debate en Español (Ecuador 2026) y, en 2025, a la primera dupla íntegramente dominicana en alcanzar octavos de final."
 
 [[highlights]]
   label = "CNDI 2025"
   text = "Campeón nacional interuniversitario de debate, como debatiente."
 
 [[highlights]]
-  label = "CMUDE 2026 · TNDE 2025"
-  text = "Juez de la Gran Final del CMUDE 2026 (Ecuador) y jefe de adjudicación del TNDE 2025."
+  label = "Adjudicación internacional"
+  text = "He integrado equipos de adjudicación de torneos escolares y universitarios en Costa Rica, Ecuador, Perú y Venezuela: juez de la Gran Final del CMUDE 2026 y jefe de adjudicación del TNDE 2025."
 
 [coach]
   title = "Dirijo y entreno"
@@ -53,10 +60,10 @@ glossary = "El MED es el Mundial de Debate Escolar en Español, y el CMUDE, el C
     period = "2025–2026"
     role = "Entrenador"
     org = "Selección Nacional de Debate Escolar del Perú"
-    text = "Sesiones de contenido, estilo y estrategia en el ciclo que terminó con el cuarto título consecutivo del MED (Panamá 2026)."
+    text = "Integré el staff de entrenadores de la selección, donde cada entrenador prepara a un equipo de la delegación. Entrené equipos para el MED de Chile 2025 y el de Panamá 2026, donde mi equipo llegó a cuartos de final y sus tres debatientes figuraron entre los mejores oradores."
   [[coach.items]]
     period = "Jul. 2026–"
-    role = "Entrenador general"
+    role = "Coentrenador general"
     org = "Sociedad de Debate PUCP"
     text = "Planificación de sesiones y preparación competitiva en formato parlamentario británico. Antes, instructor de novatos (ago.–dic. 2025)."
   [[coach.items]]
@@ -68,7 +75,7 @@ glossary = "El MED es el Mundial de Debate Escolar en Español, y el CMUDE, el C
     period = "2024–"
     role = "Entrenador universitario, a distancia"
     org = "República Dominicana"
-    text = "Formato parlamentario británico. Las duplas que preparé llegaron a cuartos de final del CMUDE Ecuador 2026."
+    text = "Formato parlamentario británico. En 2025 preparé a la primera dupla íntegramente dominicana en llegar a octavos de final del CMUDE; en 2026, las duplas que preparé llegaron a cuartos de final (CMUDE Ecuador)."
 
 [judge]
   title = "Juzgo"

@@ -18,11 +18,11 @@
   github_username = "LuisEduardoValverdeRamos"
 
   # Perfil del CV (página /cv/), sin adjetivos sobre sí mismo
-  profile = "Politólogo por la PUCP, primer puesto de su promoción, con tesis de licenciatura aprobada con mención sobresaliente. Investiga comportamiento electoral y brechas de implementación en infraestructura pública con métodos mixtos y ciencia social computacional en R. Investigador de la Escuela Electoral y de Gobernabilidad (ESEG) del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima y director general de la Selección Nacional de Debate Escolar del Perú."
+  profile = "Politólogo por la PUCP, primer puesto de su promoción de egreso, con tesis de licenciatura aprobada con mención sobresaliente. Investiga comportamiento electoral y brechas de implementación en infraestructura pública con métodos mixtos y ciencia social computacional en R. Investigador de la Escuela Electoral y de Gobernabilidad (ESEG) del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima y director general de la Selección Nacional de Debate Escolar del Perú."
 
 # --- Reconocimientos (fuente: CV de oct-2026) ---
 [[honors]]
-  title = "Primer puesto de la promoción, Ciencia Política y Gobierno"
+  title = "Primer puesto de la promoción de egreso, Ciencia Política y Gobierno"
   institution = "Pontificia Universidad Católica del Perú"
   date = "2024"
 

@@ -25,16 +25,16 @@ Trabajo de forma presencial en Lima y a distancia con el resto del país y Amér
 
 ## Debate
 
-- Director general de la Selección Nacional de Debate Escolar del Perú. Antes fui su entrenador: en Panamá 2026, la selección obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED).
-- Entrenador general de la Sociedad de Debate PUCP y entrenador de debate del Colegio Alpamayo, desde 2026.
-- Desde 2024 entreno a distancia a debatientes universitarios de República Dominicana; preparé a las duplas que llegaron a los cuartos de final del CMUDE Ecuador 2026.
-- Como debatiente: campeón nacional interuniversitario (CNDI 2025), semifinalista del CMUDE Madrid 2022, cuartofinalista del CMUDE Panamá 2023 y subcampeón del Torneo Rosarista (Bogotá, 2023). Como juez: juez de la gran final del CMUDE 2026 (Ecuador) y jefe de adjudicación del TNDE 2025.
+- Director general de la Selección Nacional de Debate Escolar del Perú. Antes integré su equipo de entrenadores: en Panamá 2026, la selección obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED); mi equipo llegó a cuartos de final y sus tres debatientes figuraron entre los mejores oradores del torneo.
+- Coentrenador general de la Sociedad de Debate PUCP y entrenador de debate del Colegio Alpamayo, desde 2026.
+- Desde 2024 entreno a distancia a debatientes universitarios de República Dominicana: en 2025 preparé a la primera dupla íntegramente dominicana en llegar a octavos de final del CMUDE y, en 2026, a las duplas que llegaron a cuartos de final (CMUDE Ecuador).
+- Como debatiente: campeón nacional interuniversitario (CNDI 2025), semifinalista del CMUDE Madrid 2022, cuartofinalista del CMUDE Panamá 2023 y subcampeón del Torneo Rosarista (Bogotá, 2023). Como juez: he integrado equipos de adjudicación de torneos escolares y universitarios en Costa Rica, Ecuador, Perú y Venezuela; juez de la Gran Final del CMUDE 2026 (Ecuador) y jefe de adjudicación del TNDE 2025.
 
 [Ver debate →]({{< relref "/debate" >}})
 
 ## Formación
 
-- Licenciatura en Ciencia Política y Gobierno, PUCP (2019–2024). Primer puesto de la promoción; tesis con mención sobresaliente (2025). Becario de Beca 18 (PRONABEC).
+- Licenciatura en Ciencia Política y Gobierno, PUCP (2019–2024). Primer puesto de la promoción de egreso; tesis con mención sobresaliente (2025). Becario de Beca 18 (PRONABEC).
 - Intercambio en Ghent University, Bélgica (2024), con beca DARI-PUCP y cursos de nivel de maestría, entre ellos Quantitative Methods for Social Research.
 - Diploma del Bachillerato Internacional, COAR Amazonas (2016–2018).
 - Primer puesto del Concurso de Investigación de la Facultad de Ciencias Sociales de la PUCP (2023).

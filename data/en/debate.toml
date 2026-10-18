@@ -3,15 +3,22 @@
 # individual about school debaters (they are minors).
 # Luis's corrections (17 Oct 2026): he did not coach teams at WUDC, only at
 # CMUDE, and he was never Academic Director of the LPDE (consultant, Feb–Aug 2026).
+# Luis's corrections (18 Oct 2026): the national squad works with a coaching staff
+# and each coach prepares one of the delegation's teams (his team: quarterfinals in
+# Panama 2026, its three debaters among the top speakers; he also coached for MED
+# Chile 2025); he is CO-head coach of the PUCP Debate Society; judging alone does
+# not sell — what positions him is serving on adjudication teams of school and
+# university tournaments in Costa Rica, Ecuador, Peru and Venezuela; in 2025 he
+# prepared the first all-Dominican pair to reach the round of 16 at CMUDE.
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
-lead = "I lead the Peruvian National Schools Debate Team, coach school and university teams and adjudicate tournaments held in Spanish."
+lead = "I lead the Peruvian National Schools Debate Team, coach school and university teams and have served on adjudication teams at tournaments in Costa Rica, Ecuador, Peru and Venezuela."
 glossary = "MED is the Mundial de Debate Escolar en Español, the world schools championship held in Spanish, and CMUDE is the world universities championship held in Spanish."
 
 [home]
   eyebrow = "Debate"
-  title = "I coach school and university teams and adjudicate tournaments in Spanish"
-  text = "Director General of the Peruvian National Schools Debate Team, head coach of the PUCP Debate Society and debate coach at Colegio Alpamayo; judge of the CMUDE 2026 grand final."
+  title = "I coach school and university teams, and train adjudicators"
+  text = "Director General of the Peruvian National Schools Debate Team, co-head coach of the PUCP Debate Society and debate coach at Colegio Alpamayo; I have served on adjudication teams in Costa Rica, Ecuador, Peru and Venezuela."
   more = "More on debate"
   cta = "Coaching for your team"
 
@@ -24,21 +31,21 @@ glossary = "MED is the Mundial de Debate Escolar en Español, the world schools 
 
 [[highlights]]
   label = "MED · Panama 2026"
-  text = "I coached the Peruvian national team that won its fourth consecutive title at the Mundial de Debate Escolar en Español."
+  text = "I was part of the coaching staff of the Peruvian team that won its fourth consecutive title at the Mundial de Debate Escolar en Español; my team reached the quarterfinals and its three debaters ranked among the tournament's top speakers."
   src = "Andina (in Spanish) ↗"
   url = "https://andina.pe/agencia/noticia-peru-se-corona-tetracampeon-el-mundial-debate-escolar-espanol-2026-1091241.aspx"
 
 [[highlights]]
-  label = "CMUDE · Ecuador 2026"
-  text = "I prepared the Dominican pairs that reached the quarterfinals of the world universities championship held in Spanish."
+  label = "CMUDE · 2025–2026"
+  text = "I prepared the Dominican pairs that reached the quarterfinals of the world universities championship held in Spanish (Ecuador 2026) and, in 2025, the first all-Dominican pair to reach the round of 16."
 
 [[highlights]]
   label = "CNDI 2025"
   text = "National inter-university debate champion, as a debater."
 
 [[highlights]]
-  label = "CMUDE 2026 · TNDE 2025"
-  text = "Judge of the CMUDE 2026 grand final (Ecuador) and chief adjudicator of TNDE 2025."
+  label = "International adjudication"
+  text = "I have served on the adjudication teams of school and university tournaments in Costa Rica, Ecuador, Peru and Venezuela: judge of the CMUDE 2026 grand final and chief adjudicator of TNDE 2025."
 
 [coach]
   title = "Leading and coaching"
@@ -52,10 +59,10 @@ glossary = "MED is the Mundial de Debate Escolar en Español, the world schools 
     period = "2025–2026"
     role = "Coach"
     org = "Peruvian National Schools Debate Team"
-    text = "Content, style and strategy sessions in the cycle that ended with the team's fourth consecutive MED title (Panama 2026)."
+    text = "Part of the squad's coaching staff, where each coach prepares one of the delegation's teams. I trained teams for MED Chile 2025 and MED Panama 2026, where my team reached the quarterfinals and its three debaters ranked among the top speakers."
   [[coach.items]]
     period = "Jul 2026–"
-    role = "Head coach"
+    role = "Co-head coach"
     org = "PUCP Debate Society"
     text = "Session planning and competitive preparation in British Parliamentary format. Previously novice instructor (Aug–Dec 2025)."
   [[coach.items]]
@@ -67,7 +74,7 @@ glossary = "MED is the Mundial de Debate Escolar en Español, the world schools 
     period = "2024–"
     role = "University coach, online"
     org = "Dominican Republic"
-    text = "British Parliamentary format. The pairs I prepared reached the quarterfinals of CMUDE Ecuador 2026."
+    text = "British Parliamentary format. In 2025 I prepared the first all-Dominican pair to reach the round of 16 at CMUDE; in 2026 the pairs I prepared reached the quarterfinals (CMUDE Ecuador)."
 
 [judge]
   title = "Adjudication"

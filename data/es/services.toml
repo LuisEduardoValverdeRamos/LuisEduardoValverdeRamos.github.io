@@ -45,11 +45,11 @@ router_label = "¿Qué necesitas?"
 [[pillars]]
   id = "debate"
   name = "Debate"
-  title = "Entrenamiento de equipos y organización de torneos"
-  intro = "Entreno equipos escolares y universitarios en formato World Schools y parlamentario británico, y organizo y adjudico torneos."
+  title = "Entrenamiento de equipos y asesoría de torneos"
+  intro = "Entreno equipos escolares y universitarios en formato World Schools y parlamentario británico, y asesoro en la adjudicación y organización de torneos."
   proof = "Director general de la Selección Nacional de Debate Escolar del Perú y, antes, parte de su equipo de entrenadores: en Panamá 2026 la selección obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED) y mi equipo llegó a cuartos de final. Preparé a las duplas dominicanas que llegaron a cuartos y a octavos de final del CMUDE Ecuador 2026."
-  home_title = "Entrenamiento de equipos y organización de torneos"
-  home_text = "Colegios, universidades y selecciones: preparación de equipos y organización de torneos de debate."
+  home_title = "Entrenamiento de equipos y asesoría de torneos"
+  home_text = "Colegios, universidades y selecciones: preparación de equipos y asesoría en la adjudicación y organización de torneos."
   home_cta = "Entrenar a mi equipo"
 
   [[pillars.services]]
@@ -73,12 +73,12 @@ router_label = "¿Qué necesitas?"
     nopromise = "Pasar a rondas eliminatorias. Tampoco acompaño a un equipo en un torneo donde soy juez o formo parte de la adjudicación."
 
   [[pillars.services]]
-    title = "Organización y adjudicación de torneos"
-    for = "Ligas, organizadores, universidades y colegios que montan un torneo y necesitan resolver el lado competitivo: jueces, criterios y rondas."
-    format = "Según el torneo: diseño del equipo de adjudicación, taller «¿Cómo se evalúa un debate?» y, antes del torneo, una sesión de calibración con rondas de ejemplo."
+    title = "Asesoría en adjudicación y organización de torneos"
+    for = "Ligas, organizadores, universidades y colegios que preparan un torneo y quieren asesoría en su lado competitivo: equipo de jueces, criterios de evaluación y organización de las rondas."
+    format = "Según el torneo: asesoría en el diseño del equipo de adjudicación y en la organización, taller «¿Cómo se evalúa un debate?» y, antes del torneo, una sesión de calibración con rondas de ejemplo."
     deliverables = "Guía de evaluación por formato, criterios comunes para el equipo de jueces, materiales del taller y ejercicios de calibración."
     proof = "He integrado equipos de adjudicación de torneos escolares y universitarios en Costa Rica, Ecuador, Perú y Venezuela; juez de la Gran Final del CMUDE 2026 (Ecuador) y jefe de adjudicación del TNDE 2025."
-    subject = "Organización y adjudicación de torneo de debate"
+    subject = "Asesoría de torneo de debate (adjudicación y organización)"
     body = "Organización o torneo:\nFecha del torneo:\nFormato:\nNúmero de equipos y de jueces (y su experiencia):\n"
     nopromise = "Acreditaciones o certificados a título personal: solo los emite una liga o institución."
 

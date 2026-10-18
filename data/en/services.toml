@@ -42,11 +42,11 @@ router_label = "What do you need?"
 [[pillars]]
   id = "debate"
   name = "Debate"
-  title = "Team coaching and tournament organisation"
-  intro = "I coach school and university teams in World Schools and British Parliamentary formats, and I organise and adjudicate tournaments."
+  title = "Team coaching and tournament advice"
+  intro = "I coach school and university teams in World Schools and British Parliamentary formats, and I advise on tournament adjudication and organisation."
   proof = "Director General of the Peruvian National Schools Debate Team and previously part of its coaching staff: in Panama in 2026 the team won its fourth consecutive title at the Mundial de Debate Escolar en Español (MED), the world schools championship held in Spanish, and my team reached the quarterfinals. I prepared the Dominican pairs that reached the quarterfinals and the round of 16 of CMUDE Ecuador 2026."
-  home_title = "Team coaching and tournament organisation"
-  home_text = "Schools, universities and national teams: team preparation and debate tournament organisation."
+  home_title = "Team coaching and tournament advice"
+  home_text = "Schools, universities and national teams: team preparation and advice on tournament adjudication and organisation."
   home_cta = "Coach my team"
 
   [[pillars.services]]
@@ -70,12 +70,12 @@ router_label = "What do you need?"
     nopromise = "Breaking to the elimination rounds. I also do not accompany a team at a tournament where I judge or sit on the adjudication core."
 
   [[pillars.services]]
-    title = "Tournament organisation and adjudication"
-    for = "Leagues, organisers, universities and schools putting on a tournament that need the competitive side solved: adjudicators, criteria and rounds."
-    format = "Depending on the tournament: adjudication-team design, the two-hour workshop «How is a debate judged?» and a calibration session with sample rounds before the tournament."
+    title = "Advice on tournament adjudication and organisation"
+    for = "Leagues, organisers, universities and schools preparing a tournament that want advice on its competitive side: the judging team, assessment criteria and how the rounds are organised."
+    format = "Depending on the tournament: advice on designing the adjudication team and on the organisation, the two-hour workshop «How is a debate judged?» and a calibration session with sample rounds before the tournament."
     deliverables = "A judging guide per format, shared criteria for the judging team, workshop materials and calibration exercises."
     proof = "I have served on the adjudication teams of school and university tournaments in Costa Rica, Ecuador, Peru and Venezuela; judge of the CMUDE 2026 grand final (Ecuador) and chief adjudicator of TNDE 2025."
-    subject = "Debate tournament organisation and adjudication"
+    subject = "Debate tournament advice (adjudication and organisation)"
     body = "Organisation or tournament:\nTournament date:\nFormat:\nNumber of teams and adjudicators (and their experience):\n"
     nopromise = "Personal accreditations or certificates: only a league or institution can issue them."
 

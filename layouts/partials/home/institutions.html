@@ -1,4 +1,13 @@
-{{- /* Home: one line with the institutions (the grouped list lives in Work with me). */ -}}
+{{- /* Home: the institutions as typographic «logos» — names in the display face,
+       their units in parentheses muted. The grouped list lives in Work with me. */ -}}
 {{- with .d.services.institutions }}
-<p class="s-inst-line"><span class="s-eyebrow">{{ .home_label }}</span> {{ .home_line }}</p>
+<div class="s-inst-band">
+  <span class="s-eyebrow">{{ .home_label }}</span>
+  <ul class="s-inst-row">
+    {{- range split .home_line " · " }}
+    {{- $p := split . " (" }}
+    <li>{{ index $p 0 }}{{ if gt (len $p) 1 }} <span>({{ index $p 1 }}</span>{{ end }}</li>
+    {{- end }}
+  </ul>
+</div>
 {{- end }}

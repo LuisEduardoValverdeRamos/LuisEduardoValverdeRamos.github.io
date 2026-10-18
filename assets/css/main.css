@@ -226,8 +226,12 @@
 .s-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .s-pillar { background: var(--s-bg2); padding: 24px; display: grid; gap: 10px; align-content: start; border-radius: var(--s-radius); }
 .s-pillar p:not(.s-eyebrow) { font-size: 15px; color: var(--s-ink2); }
-.s-inst-line { margin-top: 32px; font-size: 14px; line-height: 1.7; color: var(--s-ink2); }
-.s-inst-line .s-eyebrow, .s-media-line .s-eyebrow { margin-right: 8px; }
+/* Institutions band: names set in the display face as quiet text «logos» */
+.s-inst-band { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--s-line); display: grid; gap: 14px; }
+.s-inst-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 34px; margin: 0; padding: 0; list-style: none; }
+.s-inst-row li { font-family: var(--s-text); font-weight: 400; font-size: 16px; color: var(--s-ink); }
+.s-inst-row li span { font-family: var(--s-text); font-weight: 400; font-size: 13px; letter-spacing: 0; color: var(--s-ink2); white-space: nowrap; }
+.s-media-line .s-eyebrow { margin-right: 8px; }
 .s-media-line { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; font-size: 14.5px; color: var(--s-ink); border-block: 1px solid var(--s-line); padding-block: 14px; }
 .s-media-line .s-link { margin-left: auto; font-size: 14px; }
 .s-doors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--s-line); }

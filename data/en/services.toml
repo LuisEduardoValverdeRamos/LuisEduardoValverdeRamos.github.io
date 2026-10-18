@@ -21,7 +21,7 @@ router_label = "What do you need?"
 [home]
   title = "What I can help with"
   more = "All services"
-  pillars = ["consulting", "debate", "research"]
+  pillars = ["consulting", "research", "debate"]
 
 [[router]]
   label = "Prepare a debate team"
@@ -94,7 +94,7 @@ router_label = "What do you need?"
   title = "Data analysis for institutions"
   intro = "I analyse data for institutions that need a specific question answered: mixed methods, documented decisions and reproducible results."
   home_title = "Data analysis for institutions"
-  home_text = "Surveys, administrative records and interviews, with mixed methods and reproducible results."
+  home_text = "Surveys, administrative records and interviews, with quantitative and qualitative methods."
   home_cta = "Email me about a project"
 
   [[pillars.services]]
@@ -134,7 +134,7 @@ router_label = "What do you need?"
   intro = "I collaborate on projects on electoral behaviour, subnational politics, policy implementation and legislative analysis in Peru and Latin America."
   limit = "I do not write theses, papers or assignments for others to submit as their own. I review, explain and teach; the text and the decisions belong to whoever signs them."
   home_title = "Research collaboration"
-  home_text = "Co-authorship, research assistance, dataset building and methods review."
+  home_text = "Co-authorship, research assistance, dataset building and methods support."
   home_cta = "Propose a collaboration"
 
   [[pillars.services]]

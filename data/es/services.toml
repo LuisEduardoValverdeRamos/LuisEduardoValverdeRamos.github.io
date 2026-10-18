@@ -45,11 +45,11 @@ router_label = "¿Qué necesitas?"
 [[pillars]]
   id = "debate"
   name = "Debate"
-  title = "Entrenamiento de equipos y formación de jueces"
-  intro = "Entreno equipos escolares y universitarios en formato World Schools y parlamentario británico, y formo jueces."
+  title = "Entrenamiento de equipos y organización de torneos"
+  intro = "Entreno equipos escolares y universitarios en formato World Schools y parlamentario británico, y organizo y adjudico torneos."
   proof = "Director general de la Selección Nacional de Debate Escolar del Perú y, antes, parte de su equipo de entrenadores: en Panamá 2026 la selección obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED) y mi equipo llegó a cuartos de final. Preparé a las duplas dominicanas que llegaron a cuartos de final del CMUDE Ecuador 2026."
-  home_title = "Entrenamiento de equipos y jueces"
-  home_text = "Colegios, universidades y selecciones: preparación de torneos y formación de jueces."
+  home_title = "Entrenamiento de equipos y organización de torneos"
+  home_text = "Colegios, universidades y selecciones: preparación de equipos y organización de torneos de debate."
   home_cta = "Entrenar a mi equipo"
 
   [[pillars.services]]
@@ -73,13 +73,13 @@ router_label = "¿Qué necesitas?"
     nopromise = "Pasar a rondas eliminatorias. Tampoco acompaño a un equipo en un torneo donde soy juez o formo parte de la adjudicación."
 
   [[pillars.services]]
-    title = "Formación de jueces"
-    for = "Ligas, organizadores de torneos, universidades y colegios que necesitan jueces con criterios comunes."
-    format = "Taller de 2 horas «¿Cómo se evalúa un debate?» y, antes del torneo, una sesión de calibración con rondas de ejemplo."
-    deliverables = "Materiales del taller, guía de evaluación por formato y ejercicios de calibración."
+    title = "Organización y adjudicación de torneos"
+    for = "Ligas, organizadores, universidades y colegios que montan un torneo y necesitan resolver el lado competitivo: jueces, criterios y rondas."
+    format = "Según el torneo: diseño del equipo de adjudicación, taller «¿Cómo se evalúa un debate?» y, antes del torneo, una sesión de calibración con rondas de ejemplo."
+    deliverables = "Guía de evaluación por formato, criterios comunes para el equipo de jueces, materiales del taller y ejercicios de calibración."
     proof = "He integrado equipos de adjudicación de torneos escolares y universitarios en Costa Rica, Ecuador, Perú y Venezuela; juez de la Gran Final del CMUDE 2026 (Ecuador) y jefe de adjudicación del TNDE 2025."
-    subject = "Formación de jueces de debate"
-    body = "Organización o torneo:\nFecha del torneo:\nNúmero de jueces y experiencia:\nFormato:\n"
+    subject = "Organización y adjudicación de torneo de debate"
+    body = "Organización o torneo:\nFecha del torneo:\nFormato:\nNúmero de equipos y de jueces (y su experiencia):\n"
     nopromise = "Acreditaciones o certificados a título personal: solo los emite una liga o institución."
 
   [[pillars.services]]
@@ -95,10 +95,10 @@ router_label = "¿Qué necesitas?"
 [[pillars]]
   id = "consultoria"
   name = "Consultoría y análisis"
-  title = "Datos electorales y administrativos para instituciones"
-  intro = "Analizo datos para instituciones que necesitan responder una pregunta concreta, con métodos documentados y código reproducible en R."
-  home_title = "Análisis electoral y de datos públicos"
-  home_text = "Encuestas, padrones y bases administrativas, con método declarado y código en R."
+  title = "Análisis de datos para instituciones"
+  intro = "Analizo datos para instituciones que necesitan responder una pregunta concreta: métodos mixtos, decisiones documentadas y resultados reproducibles."
+  home_title = "Análisis de datos para instituciones"
+  home_text = "Encuestas, registros administrativos y entrevistas, con métodos mixtos y resultados reproducibles."
   home_cta = "Escríbeme sobre un proyecto"
 
   [[pillars.services]]
@@ -138,8 +138,8 @@ router_label = "¿Qué necesitas?"
   title = "Colaboración, asistencia y revisión metodológica"
   intro = "Colaboro en proyectos sobre comportamiento electoral, política subnacional, implementación de políticas y educación electoral."
   limit = "No escribo tesis, artículos ni trabajos por encargo para que otra persona los presente como propios. Reviso, explico y enseño; el texto y las decisiones son de quien firma."
-  home_title = "Colaboración y revisión metodológica"
-  home_text = "Diseño, validez de indicadores y análisis en R. No escribo tesis ni papers por encargo."
+  home_title = "Colaboración en investigación"
+  home_text = "Coautorías, asistencia de investigación, construcción de bases de datos y revisión de métodos."
   home_cta = "Proponer una colaboración"
 
   [[pillars.services]]

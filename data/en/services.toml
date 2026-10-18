@@ -42,11 +42,11 @@ router_label = "What do you need?"
 [[pillars]]
   id = "debate"
   name = "Debate"
-  title = "Team coaching and adjudicator training"
-  intro = "I coach school and university teams in World Schools and British Parliamentary formats, and I train adjudicators."
+  title = "Team coaching and tournament organisation"
+  intro = "I coach school and university teams in World Schools and British Parliamentary formats, and I organise and adjudicate tournaments."
   proof = "Director General of the Peruvian National Schools Debate Team and previously part of its coaching staff: in Panama in 2026 the team won its fourth consecutive title at the Mundial de Debate Escolar en Español (MED), the world schools championship held in Spanish, and my team reached the quarterfinals. I prepared the Dominican pairs that reached the quarterfinals of CMUDE Ecuador 2026."
-  home_title = "Team coaching and adjudication"
-  home_text = "Schools, universities and national teams: tournament preparation and adjudicator training."
+  home_title = "Team coaching and tournament organisation"
+  home_text = "Schools, universities and national teams: team preparation and debate tournament organisation."
   home_cta = "Coach my team"
 
   [[pillars.services]]
@@ -70,13 +70,13 @@ router_label = "What do you need?"
     nopromise = "Breaking to the elimination rounds. I also do not accompany a team at a tournament where I judge or sit on the adjudication core."
 
   [[pillars.services]]
-    title = "Adjudicator training"
-    for = "Leagues, tournament organisers, universities and schools that need adjudicators with shared criteria."
-    format = "A two-hour workshop, «How is a debate judged?», plus a calibration session with sample rounds before the tournament."
-    deliverables = "Workshop materials, a judging guide per format and calibration exercises."
+    title = "Tournament organisation and adjudication"
+    for = "Leagues, organisers, universities and schools putting on a tournament that need the competitive side solved: adjudicators, criteria and rounds."
+    format = "Depending on the tournament: adjudication-team design, the two-hour workshop «How is a debate judged?» and a calibration session with sample rounds before the tournament."
+    deliverables = "A judging guide per format, shared criteria for the judging team, workshop materials and calibration exercises."
     proof = "I have served on the adjudication teams of school and university tournaments in Costa Rica, Ecuador, Peru and Venezuela; judge of the CMUDE 2026 grand final (Ecuador) and chief adjudicator of TNDE 2025."
-    subject = "Adjudicator training"
-    body = "Organisation or tournament:\nTournament date:\nNumber of adjudicators and experience:\nFormat:\n"
+    subject = "Debate tournament organisation and adjudication"
+    body = "Organisation or tournament:\nTournament date:\nFormat:\nNumber of teams and adjudicators (and their experience):\n"
     nopromise = "Personal accreditations or certificates: only a league or institution can issue them."
 
   [[pillars.services]]
@@ -91,10 +91,10 @@ router_label = "What do you need?"
 [[pillars]]
   id = "consulting"
   name = "Consulting and data analysis"
-  title = "Electoral and administrative data for institutions"
-  intro = "I analyse data for institutions that need a specific question answered, with documented methods and reproducible code in R."
-  home_title = "Electoral and public data analysis"
-  home_text = "Surveys, voter registers and administrative records, with stated methods and code in R."
+  title = "Data analysis for institutions"
+  intro = "I analyse data for institutions that need a specific question answered: mixed methods, documented decisions and reproducible results."
+  home_title = "Data analysis for institutions"
+  home_text = "Surveys, administrative records and interviews, with mixed methods and reproducible results."
   home_cta = "Email me about a project"
 
   [[pillars.services]]
@@ -133,8 +133,8 @@ router_label = "What do you need?"
   title = "Collaboration and methods review"
   intro = "I collaborate on projects on electoral behaviour, subnational politics, policy implementation and electoral education in Peru and Latin America."
   limit = "I do not write theses, papers or assignments for others to submit as their own. I review, explain and teach; the text and the decisions belong to whoever signs them."
-  home_title = "Collaboration and methods review"
-  home_text = "Research design, indicator validity and analysis in R. No ghost-writing of theses or papers."
+  home_title = "Research collaboration"
+  home_text = "Co-authorship, research assistance, dataset building and methods review."
   home_cta = "Propose a collaboration"
 
   [[pillars.services]]

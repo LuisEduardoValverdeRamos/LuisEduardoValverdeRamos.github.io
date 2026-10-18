@@ -23,3 +23,7 @@ pdf_other = "CV in English (PDF)"
   more_debate = "Más en Debate →"
   coaching = "Entrenamiento"
   competing = "Como debatiente"
+  # Resúmenes de los pliegues de la web; en el PDF salen todas las entradas
+  fold_columns = "Ver las %d columnas de opinión (2023)"
+  fold_compete = "Como debatiente: %d torneos (2022–2025)"
+  fold_civic = "Ver membresías y voluntariado (%d)"

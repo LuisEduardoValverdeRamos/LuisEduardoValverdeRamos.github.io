@@ -23,3 +23,7 @@ pdf_other = "CV en español (PDF)"
   more_debate = "More on the Debate page →"
   coaching = "Coaching"
   competing = "As a debater"
+  # Summaries for the web folds; the PDF prints every entry
+  fold_columns = "Show the %d opinion columns (2023)"
+  fold_compete = "As a debater: %d tournaments (2022–2025)"
+  fold_civic = "Show memberships and volunteering (%d)"

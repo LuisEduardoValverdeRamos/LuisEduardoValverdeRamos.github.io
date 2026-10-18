@@ -48,12 +48,12 @@ cta_anchor = "investigacion"
   status = "Activa"
 
 [[lines]]
-  id = "educacion-civica"
-  name = "Educación electoral y debate"
-  question = "¿Cómo se enseñan los temas electorales y el debate en el Perú?"
-  summary = "Para la ESEG participo en un censo de la enseñanza electoral universitaria (en curso); para la LPDE analicé en agregado los resultados públicos del debate escolar (2026)."
-  method = "Analítica de resultados públicos de torneos escolares, siempre en agregado; censo de la enseñanza electoral universitaria (ESEG-JNE)."
-  evidence = "Informe y policy briefs de la LPDE (2026). El censo de la ESEG está en curso y aún no tiene resultados publicables."
+  id = "analisis-legislativo"
+  name = "Análisis legislativo y regulatorio"
+  question = "¿Quién vota qué en el Congreso peruano?"
+  summary = "Sistematizo cómo vota el Congreso: votaciones nominales y seguimiento de proyectos de ley para el portal cívico hechosynopalabras.pe (GIES-PUCP), con las reformas de género y de educación superior (SUNEDU) como casos, de cara a las elecciones de 2026."
+  method = "Scraping y sistematización de proyectos de ley y votaciones nominales del Congreso peruano (2021–2026); bases de datos documentadas y análisis en R."
+  evidence = "Portal cívico hechosynopalabras.pe, del Grupo de Investigación en Estado y Sociedad (GIES-PUCP)."
   status = "Activa"
 
 [[wip]]

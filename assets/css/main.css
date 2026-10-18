@@ -347,6 +347,12 @@
 .s-entry details { margin-top: 6px; font-size: 14px; color: var(--s-ink2); }
 .s-entry summary { cursor: pointer; font-size: 13.5px; font-weight: 600; color: var(--s-ink); }
 .s-entry details ul { display: grid; gap: 4px; margin-top: 6px; padding-left: 18px; list-style: disc; }
+/* Folded tails of the CV page (opinion columns, debating, civic participation):
+   closed on the web, printed in full in the PDF */
+.s-cv-fold > summary { cursor: pointer; padding-block: 10px; font-size: 14px; font-weight: 600; color: var(--s-accent); }
+.s-cv-fold > summary:hover { text-decoration: underline; text-underline-offset: 4px; }
+.s-cv-fold[open] > summary { color: var(--s-ink2); }
+.s-cv-fold > .s-entry:first-of-type, .s-cv-fold + .s-entry { border-top: 1px dashed var(--s-line); }
 
 /* Footer: a full-width band at the bottom of the window, closed by a darker
    bar with the colophon (the body is a flex column, so it stays at the bottom
@@ -453,6 +459,10 @@
   .s-entry .when { font-size: 8.5pt; }
   .s-entry .what p, .s-entry .s-bullets { font-size: 9pt; }
   .s-entry details { display: none; }
+  /* The CV folds print in full: pdf_cv.mjs opens them, and for a browser's own
+     print the ::details-content override reveals closed ones (Chromium 131+) */
+  .s-cv-fold > summary { display: none; }
+  .s-cv-fold::details-content { content-visibility: visible !important; display: block !important; }
   .s-entry .s-bullets { margin-top: 2px !important; gap: 1px; }
   a { color: inherit !important; text-decoration: none !important; }
 }

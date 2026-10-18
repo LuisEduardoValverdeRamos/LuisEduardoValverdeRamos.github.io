@@ -75,8 +75,18 @@
 
       <section id="writing" aria-labelledby="h-writing">
         <h2 id="h-writing" class="s-h2">{{ $s.writing }}</h2>
-        {{- range $d.blogs.blogs }}
+        {{- /* On the web the six opinion columns stay folded (they are all on the
+               Research page); the PDF prints them all (pdf_cv.mjs opens the folds). */ -}}
+        {{- range where $d.blogs.blogs "group" "!=" "columnas" }}
         {{ partial "cv-entry.html" (dict "when" .year "title" .title "org" (cond (in (lower .outlet) (lower .type)) .outlet (printf "%s · %s" .type .outlet)) "link" .link) }}
+        {{- end }}
+        {{- with where $d.blogs.blogs "group" "columnas" }}
+        <details class="s-cv-fold">
+          <summary>{{ printf $l.fold_columns (len .) }}</summary>
+          {{- range . }}
+          {{ partial "cv-entry.html" (dict "when" .year "title" .title "org" (cond (in (lower .outlet) (lower .type)) .outlet (printf "%s · %s" .type .outlet)) "link" .link) }}
+          {{- end }}
+        </details>
         {{- end }}
         {{- range $d.research.wip }}
         {{ partial "cv-entry.html" (dict "when" .status "title" .title "org" .with) }}
@@ -99,8 +109,13 @@
         {{- range $d.debate.judge.items }}
         {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .org) }}
         {{- end }}
-        {{- range $d.debate.compete.items }}
-        {{ partial "cv-entry.html" (dict "when" .period "title" (printf "%s (%s)" .role (lower $l.competing)) "org" .org) }}
+        {{- with $d.debate.compete.items }}
+        <details class="s-cv-fold">
+          <summary>{{ printf $l.fold_compete (len .) }}</summary>
+          {{- range . }}
+          {{ partial "cv-entry.html" (dict "when" .period "title" (printf "%s (%s)" .role (lower $l.competing)) "org" .org) }}
+          {{- end }}
+        </details>
         {{- end }}
         {{- with site.GetPage "/debate" }}<p class="s-note s-noprint" style="margin-top:8px"><a class="s-go" href="{{ .RelPermalink }}">{{ $l.more_debate }}</a></p>{{ end }}
       </section>
@@ -114,8 +129,13 @@
 
       <section id="civic" aria-labelledby="h-civic">
         <h2 id="h-civic" class="s-h2">{{ $s.civic }}</h2>
-        {{- range $d.author.voluntary }}
-        {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .organization "text" .description) }}
+        {{- with $d.author.voluntary }}
+        <details class="s-cv-fold">
+          <summary>{{ printf $l.fold_civic (len .) }}</summary>
+          {{- range . }}
+          {{ partial "cv-entry.html" (dict "when" .period "title" .role "org" .organization "text" .description) }}
+          {{- end }}
+        </details>
         {{- end }}
       </section>
     </div>

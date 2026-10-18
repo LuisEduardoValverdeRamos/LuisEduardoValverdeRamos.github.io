@@ -49,12 +49,12 @@ cta_anchor = "investigacion"
 
 [[lines]]
   id = "analisis-legislativo"
-  name = "Análisis legislativo y regulatorio"
+  name = "Comportamiento legislativo"
   question = "¿Quién vota qué en el Congreso peruano?"
-  summary = "Sistematizo cómo vota el Congreso: votaciones nominales y seguimiento de proyectos de ley para el portal cívico hechosynopalabras.pe (GIES-PUCP), con las reformas de género y de educación superior (SUNEDU) como casos, de cara a las elecciones de 2026."
+  summary = "Línea en desarrollo: estudio el comportamiento de las bancadas y las reformas de educación superior y de minería en el Congreso. Para el portal cívico hechosynopalabras.pe (GIES-PUCP) sistematicé votaciones nominales y seguimiento de proyectos de ley."
   method = "Scraping y sistematización de proyectos de ley y votaciones nominales del Congreso peruano (2021–2026); bases de datos documentadas y análisis en R."
   evidence = "Portal cívico hechosynopalabras.pe, del Grupo de Investigación en Estado y Sociedad (GIES-PUCP)."
-  status = "Activa"
+  status = "En desarrollo"
 
 [[wip]]
   title = "Censo de la enseñanza electoral universitaria"

@@ -23,7 +23,7 @@ router_label = "¿Qué necesitas?"
 [home]
   title = "En qué puedo ayudarte"
   more = "Ver todos los servicios"
-  pillars = ["consultoria", "debate", "investigacion"]
+  pillars = ["consultoria", "investigacion", "debate"]
 
 [[router]]
   label = "Preparar a un equipo de debate"
@@ -98,7 +98,7 @@ router_label = "¿Qué necesitas?"
   title = "Análisis de datos para instituciones"
   intro = "Analizo datos para instituciones que necesitan responder una pregunta concreta: métodos mixtos, decisiones documentadas y resultados reproducibles."
   home_title = "Análisis de datos para instituciones"
-  home_text = "Encuestas, registros administrativos y entrevistas, con métodos mixtos y resultados reproducibles."
+  home_text = "Encuestas, registros administrativos y entrevistas, con métodos cuantitativos y cualitativos."
   home_cta = "Escríbeme sobre un proyecto"
 
   [[pillars.services]]
@@ -139,7 +139,7 @@ router_label = "¿Qué necesitas?"
   intro = "Colaboro en proyectos sobre comportamiento electoral, política subnacional, implementación de políticas y análisis legislativo."
   limit = "No escribo tesis, artículos ni trabajos por encargo para que otra persona los presente como propios. Reviso, explico y enseño; el texto y las decisiones son de quien firma."
   home_title = "Colaboración en investigación"
-  home_text = "Coautorías, asistencia de investigación, construcción de bases de datos y revisión de métodos."
+  home_text = "Coautorías, asistencia de investigación, construcción de bases de datos y apoyo metodológico."
   home_cta = "Proponer una colaboración"
 
   [[pillars.services]]

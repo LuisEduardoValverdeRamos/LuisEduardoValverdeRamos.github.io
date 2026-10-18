@@ -4,7 +4,6 @@
 # Regla: lo que está en curso se nombra sin resultados ni cifras.
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
-lead = "Tres líneas formuladas como preguntas; para cada una, el método, la evidencia y su estado."
 cta_title = "¿Una colaboración o asistencia de investigación?"
 cta_label = "Trabajemos"
 cta_anchor = "investigacion"
@@ -19,14 +18,13 @@ cta_anchor = "investigacion"
 [labels]
   method = "Método"
   evidence = "Evidencia"
-  status = "Estado"
+  status = "Situación"
   tools = "Herramientas"
   see = "Ver proyecto ↗"
 
 [groups_titles]
   tesis = "Tesis"
   informes = "Informes técnicos e institucionales"
-  editorial = "Colaboraciones editoriales"
   columnas = "Columnas y divulgación"
 
 [[lines]]

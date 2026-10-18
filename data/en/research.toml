@@ -3,7 +3,6 @@
 # Rule: work in progress is named without results or figures.
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
-lead = "Three research lines framed as questions; for each, the method, the evidence and where it stands."
 cta_title = "Research collaboration or assistance?"
 cta_label = "Work with me"
 cta_anchor = "research"
@@ -25,7 +24,6 @@ cta_anchor = "research"
 [groups_titles]
   tesis = "Thesis"
   informes = "Technical and institutional reports"
-  editorial = "Editorial contributions"
   columnas = "Columns and outreach"
 
 [[lines]]

@@ -1,5 +1,5 @@
 # Escritos (página Investigación, sección «Escritos»; la portada muestra los que
-# nombra data/es/home.toml por id). group: tesis | informes | editorial | columnas.
+# nombra data/es/home.toml por id). group: tesis | informes | columnas.
 # Atribución: «Equipo editor», nunca «(Eds.)»; el informe del JNE es institucional
 # y Luis integró su equipo técnico. Sin enlace hasta que el JNE lo publique.
 
@@ -32,7 +32,7 @@
 
 [[blogs]]
   id = "clinicas-cidh-2023"
-  group = "editorial"
+  group = "informes"
   type = "Equipo editor"
   year = "2023"
   date = "2023"

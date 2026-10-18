@@ -19,7 +19,7 @@ I also teach: I am a teaching assistant in Political Economy at PUCP (since 2026
 
 ## Consulting
 
-I analyse public, electoral and administrative data for organisations that need a specific question answered, with mixed methods — quantitative and qualitative: what can be measured with the data at hand, how to design an instrument, or what a set of records actually shows. I have worked with the Corruption Observatory of the Lima Bar Association (assessing public procurement indicators, since 2026); with ProDiálogo for the JNE (technical team for the report on the Peruvian voter, 2026); with the LPDE (the League's first report on the school debate ecosystem, covering 70 institutions, and seven policy briefs, 2026); and with Roche Pharma Peru through Sapienza Consultora (administrative health data, 2025).
+I advise public, private and civil-society organisations on applied research, using mixed methods, both quantitative and qualitative: what can be measured with the information available, how to design an instrument, or how to read a set of records. I have worked with the Corruption Observatory of the Lima Bar Association (assessing public procurement indicators, since 2026); with ProDiálogo for the JNE (technical team for the report on the Peruvian voter, 2026); with the LPDE (the League's first report on the school debate ecosystem, covering 70 institutions, and seven policy briefs, 2026); and with Roche Pharma Peru through Sapienza Consultora (administrative health data, 2025).
 
 I work in person in Lima and online with the rest of Peru and Latin America.
 

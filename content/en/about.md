@@ -44,4 +44,4 @@ I work in person in Lima and online with the rest of Peru and Latin America.
 
 ## Outside work
 
-I enjoy muay thai and trying to understand how the world works: I read macroeconomics and international relations for fun. I was an electoral observer for Transparencia in both rounds of Peru's 2021 general election.
+I enjoy muay thai and travelling to connect with people and the world.

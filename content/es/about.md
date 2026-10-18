@@ -44,4 +44,4 @@ Trabajo de forma presencial en Lima y a distancia con el resto del país y Amér
 
 ## Fuera del trabajo
 
-Me gusta el muay thai y entender cómo funciona el mundo: leo macroeconomía y relaciones internacionales por gusto. Fui observador electoral de Transparencia en las dos vueltas de 2021.
+Me gusta el muay thai y viajar para conectar con personas y con el mundo.

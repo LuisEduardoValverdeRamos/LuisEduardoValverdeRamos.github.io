@@ -243,8 +243,7 @@
 
 /* An odd last card in a two-column grid spans the full width instead of
    leaving a hole (text cards only: a stretched image card would blur) */
-.s-svcs > .s-svc:last-child:nth-child(odd),
-.s-cards > .s-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.s-svcs > .s-svc:last-child:nth-child(odd) { grid-column: 1 / -1; }
 
 /* Lists of entries (writing, media) */
 .s-list { display: grid; }
@@ -299,15 +298,20 @@
 .s-copy { font-size: 13px; font-weight: 600; color: var(--s-ink); background: transparent; border: 1px solid var(--s-ink2); border-radius: var(--s-radius); padding: 6px 12px; }
 .s-contact { padding-block: 48px 8px; display: grid; gap: 14px; scroll-margin-top: 16px; }
 
-/* Research: line cards and projects */
-.s-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+/* Research: line cards and projects. The three lines sit in one row of three;
+   below 1000px they stack, since two columns would leave an orphan card. */
+.s-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 1000px) { .s-cards { grid-template-columns: minmax(0, 1fr); } }
 .s-card { display: grid; gap: 12px; align-content: start; padding: 22px; background: var(--s-bg); border: 1px solid var(--s-line); border-radius: var(--s-radius); scroll-margin-top: 16px; }
 .s-card .q { font-family: var(--s-display); font-weight: 650; font-size: 21px; line-height: 1.22; letter-spacing: -.02em; color: var(--s-ink); }
 .s-card dl { margin: 0; display: grid; gap: 10px; font-size: 14.5px; }
 .s-card dt { font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--s-ink2); }
 .s-card dd { margin: 2px 0 0; color: var(--s-ink); }
-.s-status { width: fit-content; font-size: 12px; font-weight: 600; color: var(--s-accent); border: 1px solid currentColor; border-radius: 999px; padding: 1px 9px; }
 .s-projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+/* An odd last project lies across both columns, image beside the text,
+   so the grid closes without a hole */
+.s-projects > .s-project:last-child:nth-child(odd) { grid-column: 1 / -1; grid-template-rows: none; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+.s-projects > .s-project:last-child:nth-child(odd) img { height: 100%; aspect-ratio: auto; }
 .s-project { display: grid; grid-template-rows: auto 1fr; overflow: hidden; background: var(--s-bg); border: 1px solid var(--s-line); border-radius: var(--s-radius); }
 .s-project img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; background: var(--s-bg2); }
 .s-project .body { display: grid; gap: 8px; align-content: start; padding: 18px 20px 20px; }
@@ -413,6 +417,8 @@
   .s-bio, .s-lead { font-size: 16.5px; }
   .s-section { padding-block: 44px 4px; }
   .s-questions, .s-pillars, .s-doors, .s-svcs, .s-twocol, .s-cards, .s-projects, .s-steps { grid-template-columns: minmax(0, 1fr); }
+  .s-projects > .s-project:last-child:nth-child(odd) { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; }
+  .s-projects > .s-project:last-child:nth-child(odd) img { height: auto; aspect-ratio: 2 / 1; }
   .s-questions { gap: 14px; }
   .s-q b { font-size: 19px; }
   .s-band { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 22px; margin-top: 44px; }

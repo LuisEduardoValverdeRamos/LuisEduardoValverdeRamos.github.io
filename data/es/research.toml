@@ -50,7 +50,7 @@ cta_anchor = "investigacion"
 [[lines]]
   id = "analisis-legislativo"
   name = "Comportamiento legislativo"
-  question = "¿Quién vota qué en el Congreso peruano?"
+  question = "¿Cómo votan los congresistas y sus bancadas en el Perú?"
   summary = "Línea en desarrollo: estudio el comportamiento de las bancadas y las reformas de educación superior y de minería en el Congreso. Para el portal cívico hechosynopalabras.pe (GIES-PUCP) sistematicé votaciones nominales y seguimiento de proyectos de ley."
   method = "Scraping y sistematización de proyectos de ley y votaciones nominales del Congreso peruano (2021–2026); bases de datos documentadas y análisis en R."
   evidence = "Portal cívico hechosynopalabras.pe, del Grupo de Investigación en Estado y Sociedad (GIES-PUCP)."

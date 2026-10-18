@@ -49,7 +49,7 @@ cta_anchor = "research"
 [[lines]]
   id = "legislative-analysis"
   name = "Legislative behaviour"
-  question = "Who votes for what in Peru's Congress?"
+  question = "How do legislators and their blocs vote in Peru's Congress?"
   summary = "A line in development: I study the behaviour of parliamentary blocs and the higher-education and mining reforms in Congress. For the civic portal hechosynopalabras.pe (GIES-PUCP) I systematised roll-call votes and bill tracking."
   method = "Scraping and systematisation of bills and roll-call votes of Peru's Congress (2021–2026); documented databases and analysis in R."
   evidence = "Civic portal hechosynopalabras.pe, by the State and Society Research Group (GIES-PUCP)."

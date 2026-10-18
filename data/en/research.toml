@@ -23,7 +23,7 @@ cta_anchor = "research"
 
 [groups_titles]
   tesis = "Thesis"
-  informes = "Technical and institutional reports"
+  informes = "Reports and institutional submissions"
   columnas = "Columns and outreach"
 
 [[lines]]

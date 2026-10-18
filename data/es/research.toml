@@ -24,7 +24,7 @@ cta_anchor = "investigacion"
 
 [groups_titles]
   tesis = "Tesis"
-  informes = "Informes técnicos e institucionales"
+  informes = "Informes y escritos institucionales"
   columnas = "Columnas y divulgación"
 
 [[lines]]

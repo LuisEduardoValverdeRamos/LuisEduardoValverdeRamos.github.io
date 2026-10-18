@@ -47,12 +47,12 @@ cta_anchor = "research"
   status = "Active"
 
 [[lines]]
-  id = "civic-education"
-  name = "Electoral education and debate"
-  question = "How are electoral topics and debating taught in Peru?"
-  summary = "For the ESEG, I work on a census of electoral education in Peruvian universities (ongoing); for the LPDE, I analysed public results from school debate tournaments, in aggregate only (2026)."
-  method = "Analysis of public results from school tournaments, always in aggregate; census of electoral education in universities (ESEG-JNE)."
-  evidence = "LPDE report and policy briefs (2026). The ESEG census is ongoing and has no publishable results yet."
+  id = "legislative-analysis"
+  name = "Legislative and regulatory analysis"
+  question = "Who votes for what in Peru's Congress?"
+  summary = "I map how Congress votes: roll-call votes and bill tracking for the civic portal hechosynopalabras.pe (GIES-PUCP), with the gender and higher-education (SUNEDU) reforms as cases, ahead of the 2026 elections."
+  method = "Scraping and systematisation of bills and roll-call votes of Peru's Congress (2021–2026); documented databases and analysis in R."
+  evidence = "Civic portal hechosynopalabras.pe, by the State and Society Research Group (GIES-PUCP)."
   status = "Active"
 
 [[wip]]

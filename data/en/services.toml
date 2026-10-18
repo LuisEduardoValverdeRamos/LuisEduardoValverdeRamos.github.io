@@ -209,7 +209,7 @@ router_label = "What do you need?"
 [institutions]
   title = "Institutions I have worked with"
   home_label = "I have worked with"
-  home_line = "JNE (ESEG) · PUCP (Q-LAB, CISEPA, GIES) · ProDiálogo · Corruption Observatory of the Lima Bar Association · LPDE · Colegio Alpamayo · IDEHPUCP · Roche Pharma Peru (through Sapienza Consultora)"
+  home_line = "JNE (ESEG) · PUCP (Q-LAB, CISEPA, IDEHPUCP) · ProDiálogo · Lima Bar Association (Corruption Observatory) · Peruvian School Debate League · Colegio Alpamayo · Roche Pharma Peru (through Sapienza Consultora)"
   [[institutions.groups]]
     label = "Employment and affiliation"
     text = "Jurado Nacional de Elecciones, Peru's National Elections Jury (ESEG) · Pontificia Universidad Católica del Perú (CISEPA, Q-LAB, GIES) · IDEHPUCP"

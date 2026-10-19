@@ -308,15 +308,39 @@
 .s-card dt { font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--s-ink2); }
 .s-card dd { margin: 2px 0 0; color: var(--s-ink); }
 .s-projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-/* An odd last project lies across both columns, image beside the text,
-   so the grid closes without a hole */
-.s-projects > .s-project:last-child:nth-child(odd) { grid-column: 1 / -1; grid-template-rows: none; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
-.s-projects > .s-project:last-child:nth-child(odd) img { height: 100%; aspect-ratio: auto; }
+/* With an odd number of projects the first one is the featured card: it lies
+   across both columns, image beside the text, and the rest pair up below.
+   Image beside, not above: above, the 720px thumbnail would be stretched. */
+.s-projects > .s-project:first-child:nth-last-child(odd) { grid-column: 1 / -1; grid-template-rows: none; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+.s-projects > .s-project:first-child:nth-last-child(odd) img { height: 100%; aspect-ratio: auto; }
+.s-projects > .s-project:first-child:nth-last-child(odd) .body { align-content: center; padding: 26px 30px; }
+.s-projects > .s-project:first-child:nth-last-child(odd) .s-h3 { font-size: 23px; }
 .s-project { display: grid; grid-template-rows: auto 1fr; overflow: hidden; background: var(--s-bg); border: 1px solid var(--s-line); border-radius: var(--s-radius); }
 .s-project img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; background: var(--s-bg2); }
 .s-project .body { display: grid; gap: 8px; align-content: start; padding: 18px 20px 20px; }
 .s-project p { font-size: 14.5px; color: var(--s-ink2); }
 .s-project .tools { font-size: 12.5px; color: var(--s-ink2); }
+/* «In progress» strip under the line cards */
+.s-now { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--s-line); font-size: 15px; color: var(--s-ink2); }
+.s-now b { font-weight: 600; color: var(--s-ink); }
+/* Research and Debate pages: a rule, darker than the hairlines inside the
+   lists, marks where each section starts */
+.s-ruled > .s-section + .s-section { margin-top: 40px; padding-top: 44px; border-top: 1px solid var(--s-line2); }
+.s-ruled .s-list > .s-item:last-child { border-bottom: 0; }
+
+/* Debate: the four results are long sentences, so they go two by two rather
+   than in four narrow columns; the acronyms are spelled out right below them.
+   Adjudication and competing are two short lists, side by side. */
+.s-proof.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.s-proof.two > div { padding: 20px 28px 20px 0; gap: 6px; }
+.s-proof.two > div:nth-child(odd) { padding-left: 0; border-left: 0; }
+.s-proof.two > div:nth-child(even) { padding-left: 28px; border-left: 1px solid var(--s-line); }
+.s-proof.two > div:nth-child(n+3) { border-top: 1px solid var(--s-line); }
+.s-proof.two .fact { font-size: 15.5px; line-height: 1.5; }
+.s-gloss { margin-top: 12px; font-size: 13.5px; }
+.s-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
+.s-pair > section { scroll-margin-top: 16px; }
+.s-pair .s-item { grid-template-columns: 52px minmax(0, 1fr); gap: 14px; }
 
 /* About */
 .s-about { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 56px; padding-block: 56px 24px; }
@@ -417,8 +441,16 @@
   .s-bio, .s-lead { font-size: 16.5px; }
   .s-section { padding-block: 44px 4px; }
   .s-questions, .s-pillars, .s-doors, .s-svcs, .s-twocol, .s-cards, .s-projects, .s-steps { grid-template-columns: minmax(0, 1fr); }
-  .s-projects > .s-project:last-child:nth-child(odd) { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; }
-  .s-projects > .s-project:last-child:nth-child(odd) img { height: auto; aspect-ratio: 2 / 1; }
+  .s-projects > .s-project:first-child:nth-last-child(odd) { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; }
+  .s-projects > .s-project:first-child:nth-last-child(odd) img { height: auto; aspect-ratio: 2 / 1; }
+  .s-projects > .s-project:first-child:nth-last-child(odd) .body { padding: 18px 20px 20px; }
+  .s-projects > .s-project:first-child:nth-last-child(odd) .s-h3 { font-size: 20px; }
+  .s-ruled > .s-section + .s-section { margin-top: 28px; padding-top: 36px; }
+  .s-proof.two { grid-template-columns: minmax(0, 1fr); }
+  .s-proof.two > div, .s-proof.two > div:nth-child(even) { padding: 16px 0; border-left: 0; }
+  .s-proof.two > div + div { border-top: 1px solid var(--s-line); }
+  .s-pair { grid-template-columns: minmax(0, 1fr); gap: 44px; }
+  .s-pair .s-item { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .s-questions { gap: 14px; }
   .s-q b { font-size: 19px; }
   .s-band { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 22px; margin-top: 44px; }

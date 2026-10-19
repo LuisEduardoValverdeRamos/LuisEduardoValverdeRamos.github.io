@@ -1,6 +1,7 @@
 {{- /* One service of data/<lang>/services.toml. Context: dict "s" (the service),
-       "labels" and "email". A service with confirmar = "…" waits for Luis: it
-       shows only in local previews, marked, and never in production. */ -}}
+       "labels", "email" and optionally "noproof" (leaves out the experience row,
+       for pages that already show it). A service with confirmar = "…" waits for
+       Luis: it shows only in local previews, marked, and never in production. */ -}}
 {{- $s := .s -}}
 {{- $l := .labels -}}
 {{- if or (not $s.confirmar) (not hugo.IsProduction) }}
@@ -10,10 +11,10 @@
     {{- with $s.for }}<dt>{{ $l.for }}</dt><dd>{{ . }}</dd>{{ end }}
     {{- with $s.format }}<dt>{{ $l.format }}</dt><dd>{{ . }}</dd>{{ end }}
     {{- with $s.deliverables }}<dt>{{ $l.deliverables }}</dt><dd>{{ . }}</dd>{{ end }}
-    {{- with $s.proof }}<dt>{{ $l.proof }}</dt><dd>{{ . }}</dd>{{ end }}
+    {{- with and (not $.noproof) $s.proof }}<dt>{{ $l.proof }}</dt><dd>{{ . }}</dd>{{ end }}
   </dl>
   {{- with $s.subject }}
-  <p class="ask"><a href="{{ partial "mailto.html" (dict "email" $.email "subject" . "body" $s.body) }}">{{ $l.write }} →</a><span>{{ $l.subject }}: «{{ . }}»</span></p>
+  <p class="ask"><a href="{{ partial "mailto.html" (dict "email" $.email "subject" . "body" $s.body) }}">{{ $l.write }} →</a></p>
   {{- end }}
   {{- with $s.nopromise }}
   <details><summary>{{ $l.nopromise }}</summary><p>{{ . }}</p></details>

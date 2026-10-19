@@ -4,7 +4,7 @@
 {{- $d := index hugo.Data .Language.Lang -}}
 {{- $r := $d.research -}}
 {{- $t := $r.toc -}}
-<div class="wrap">
+<div class="wrap s-ruled">
   <header class="s-page-head">
     <h1 class="s-h1">{{ .Title }}</h1>
     {{- with $r.lead }}<p class="s-lead">{{ . }}</p>{{ end }}
@@ -12,7 +12,6 @@
       <a href="#lines">{{ $t.lines }}</a>
       <a href="#projects">{{ $t.projects }}</a>
       <a href="#writing">{{ $t.writing }}</a>
-      <a href="#in-progress">{{ $t.wip }}</a>
       <a href="#teaching">{{ $t.teaching }}</a>
     </nav>
   </header>
@@ -32,6 +31,14 @@
       </article>
       {{- end }}
     </div>
+    {{- with $r.wip }}
+    <div id="in-progress" class="s-now">
+      <span class="s-eyebrow">{{ $t.wip }}</span>
+      {{- range . }}
+      <p><b>{{ .title }}</b> · {{ .with }}</p>
+      {{- end }}
+    </div>
+    {{- end }}
   </section>
 
   {{- with $d.projects.projects }}
@@ -42,6 +49,7 @@
       <article class="s-project">
         {{- with .image }}{{ partial "thumb.html" . }}{{ end }}
         <div class="body">
+          {{- with .area }}<span class="s-eyebrow">{{ . }}</span>{{ end }}
           <h3 class="s-h3">{{ .title }}</h3>
           <p>{{ .description }}</p>
           <p class="tools">{{ .tech }}</p>
@@ -73,17 +81,6 @@
     {{- end }}
     {{- end }}
   </section>
-
-  {{- with $r.wip }}
-  <section id="in-progress" class="s-section" aria-labelledby="h-wip">
-    <div class="s-section-head"><h2 id="h-wip" class="s-h2">{{ $t.wip }}</h2></div>
-    <div class="s-list">
-      {{- range . }}
-      <div class="s-item"><span class="k">{{ .status }}</span><div><span class="t">{{ .title }}</span><span class="m">{{ .with }}</span></div></div>
-      {{- end }}
-    </div>
-  </section>
-  {{- end }}
 
   <section id="teaching" class="s-section" aria-labelledby="h-teaching">
     <div class="s-section-head"><h2 id="h-teaching" class="s-h2">{{ $t.teaching }}</h2></div>

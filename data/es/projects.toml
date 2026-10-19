@@ -1,34 +1,43 @@
+# Proyectos (página Investigación). El primero es el destacado: con un número
+# impar de proyectos ocupa todo el ancho, con la imagen al costado, y los demás
+# van de a dos, agrupados por línea. `area` es la etiqueta superior de la tarjeta.
+
 [[projects]]
-  title = "Reconstrucción Post-Desastre y Brechas de Implementación en Perú"
+  area = "Implementación de políticas"
+  title = "Reconstrucción posdesastre y brechas de implementación en el Perú"
   description = "Tesis de licenciatura (mención sobresaliente). Estudió el proceso de reconstrucción de infraestructura educativa en Piura (jul. 2020 – ene. 2023) tras El Niño Costero de 2017, analizando los factores que explican las brechas de implementación en obras públicas posdesastre."
   tech = "R, Process Tracing, Análisis Comparativo Cualitativo, Política Pública"
   image = "/images/projects/disaster-reconstruction.jpg"
   link = "https://hdl.handle.net/20.500.12404/32370"
 
 [[projects]]
-  title = "Brechas en Obras Municipales — Predicción ML"
-  description = "Proyecto iniciado como asistente de investigación en Q-LAB-PUCP: modelo de machine learning supervisado (XGBoost, valores SHAP) sobre brechas de implementación en obras públicas municipales (2018–2024). El sitio del proyecto reporta 40,243 obras analizadas."
-  tech = "R, Python, XGBoost, SHAP, tidymodels, datos MEF/RENAMU/INEI"
-  image = "/images/projects/public-works.jpg"
-  link = "https://luiseduardovalverderamos.github.io/public_infrastructure_gaps/"
-
-[[projects]]
-  title = "Tipología Electoral del Votante Peruano — JNE/ProDiálogo"
+  area = "Comportamiento electoral"
+  title = "Tipología electoral del votante peruano (JNE y ProDiálogo)"
   description = "Como parte del equipo técnico del informe JNE/ProDiálogo, participé en la segmentación del electorado peruano con análisis de conglomerados sobre encuestas de tres ciclos electorales (2011, 2016 y 2021), como insumo para la educación cívica del JNE."
   tech = "R, Clustering, Experimentos de Encuesta, Investigación Conductual"
   image = "/images/projects/electoral-typology.jpg"
   link = ""
 
 [[projects]]
-  title = "Analítica Agregada del Debate Escolar (LPDE)"
-  description = "Análisis de resultados públicos de 16 torneos de debate escolar en Perú (temporada 2025), con análisis longitudinal del TNDE 2023–2025. Hallazgos agregados sobre paridad de género, brechas de acceso entre colegios públicos y privados y concentración geográfica del debate competitivo."
-  tech = "R, Web Scraping, Tabbycat, Análisis Estadístico, Pipeline de Datos"
-  image = "/images/projects/lpde-debate.jpg"
-  link = ""
-
-[[projects]]
-  title = "Voto Joven 2026 — Concentración Territorial del Electorado Joven"
+  area = "Comportamiento electoral"
+  title = "Voto Joven 2026: concentración territorial del electorado joven"
   description = "Análisis en R de agregados distritales del padrón RENIEC con foco en el electorado joven (18–29 años): concentración territorial y análisis espacial de hot spots para las elecciones de 2026. El padrón registra 6.7 millones de electores jóvenes, el 25.7% del total."
   tech = "R, Análisis Espacial, Datos RENIEC, Getis-Ord Gi*, Análisis Electoral"
   image = "/images/projects/voto-joven.jpg"
   link = "https://github.com/LuisEduardoValverdeRamos/voto-joven-peru-2026"
+
+[[projects]]
+  area = "Implementación de políticas"
+  title = "Brechas en obras municipales: predicción con machine learning"
+  description = "Proyecto iniciado como asistente de investigación en Q-LAB-PUCP: modelo de machine learning supervisado (XGBoost, valores SHAP) sobre brechas de implementación en obras públicas municipales (2018–2024). El sitio del proyecto reporta 40,243 obras analizadas."
+  tech = "R, Python, XGBoost, SHAP, tidymodels, datos MEF/RENAMU/INEI"
+  image = "/images/projects/public-works.jpg"
+  link = "https://luiseduardovalverderamos.github.io/public_infrastructure_gaps/"
+
+[[projects]]
+  area = "Debate escolar"
+  title = "Analítica agregada del debate escolar (LPDE)"
+  description = "Análisis de resultados públicos de 16 torneos de debate escolar en Perú (temporada 2025), con análisis longitudinal del TNDE 2023–2025. Hallazgos agregados sobre paridad de género, brechas de acceso entre colegios públicos y privados y concentración geográfica del debate competitivo."
+  tech = "R, Web Scraping, Tabbycat, Análisis Estadístico, Pipeline de Datos"
+  image = "/images/projects/lpde-debate.jpg"
+  link = ""

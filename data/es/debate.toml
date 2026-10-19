@@ -14,7 +14,7 @@
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
 lead = "Dirijo la Selección Nacional de Debate Escolar del Perú, entreno equipos escolares y universitarios y he integrado equipos de adjudicación en torneos de Costa Rica, Ecuador, Perú y Venezuela."
-glossary = "El MED es el Mundial de Debate Escolar en Español, y el CMUDE, el Campeonato Mundial Universitario de Debate en Español."
+glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonato Mundial Universitario de Debate en Español; TNDE, Torneo Nacional de Debate Escolar."
 
 [home]
   eyebrow = "Debate"
@@ -109,7 +109,10 @@ glossary = "El MED es el Mundial de Debate Escolar en Español, y el CMUDE, el C
 
 [lpde]
   title = "Liga Peruana de Debate Escolar"
-  text = "Entre febrero y agosto de 2026, como consultor de investigación de la LPDE, preparé el primer informe de la Liga sobre el ecosistema de debate escolar (70 instituciones) y siete policy briefs. Trabajé solo con datos agregados: los debatientes son menores de edad."
+  period = "Feb.–ago. 2026"
+  role = "Consultor de investigación"
+  text = "Preparé el primer informe de la Liga sobre el ecosistema de debate escolar (70 instituciones) y siete policy briefs. Trabajé solo con datos agregados: los debatientes son menores de edad."
+  more = "Ver el proyecto en Investigación"
 
 [team]
   title = "Para tu equipo"

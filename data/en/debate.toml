@@ -13,7 +13,7 @@
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
 lead = "I lead the Peruvian National Schools Debate Team, coach school and university teams and have served on adjudication teams at tournaments in Costa Rica, Ecuador, Peru and Venezuela."
-glossary = "MED is the Mundial de Debate Escolar en Español, the world schools championship held in Spanish, and CMUDE is the world universities championship held in Spanish."
+glossary = "Acronyms: MED, the world schools championship held in Spanish (Mundial de Debate Escolar en Español); CMUDE, the world universities championship held in Spanish; TNDE, Peru's national schools tournament (Torneo Nacional de Debate Escolar)."
 
 [home]
   eyebrow = "Debate"
@@ -108,7 +108,10 @@ glossary = "MED is the Mundial de Debate Escolar en Español, the world schools 
 
 [lpde]
   title = "Peruvian School Debate League"
-  text = "Between February and August 2026, as a research consultant to the LPDE, I prepared the League's first report on the school debate ecosystem (70 institutions) and seven policy briefs. I worked only with aggregate data: the debaters are minors."
+  period = "Feb–Aug 2026"
+  role = "Research consultant"
+  text = "I prepared the League's first report on the school debate ecosystem (70 institutions) and seven policy briefs. I worked only with aggregate data: the debaters are minors."
+  more = "See the project under Research"
 
 [team]
   title = "For your team"

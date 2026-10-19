@@ -48,7 +48,7 @@
         <h2 class="s-h2">{{ .title }}</h2>
         <p>{{ .intro }}</p>
         {{- with .subject }}
-        <p class="s-note"><a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" . "body" $cp.body) }}">{{ $l.write }} →</a><span class="s-asksub">{{ $l.subject }}: «{{ . }}»</span></p>
+        <p class="s-note"><a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" . "body" $cp.body) }}">{{ $l.write }} →</a></p>
         {{- end }}
       </div>
       {{- end }}

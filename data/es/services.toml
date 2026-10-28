@@ -1,24 +1,25 @@
 # Página Trabajemos (/es/trabajemos/) y extractos de la portada y de Debate.
-# Cada servicio: title, for, format, deliverables, proof, subject (asunto del
-# correo), body (cuerpo del correo) y nopromise. Un servicio o una línea con
+# Tres pilares, en este orden: investigación, debate y consultoría (talleres de
+# R, prensa, «Cómo trabajo», «Lo que no hago», las filas Entregas y Lo que no
+# prometo y la ficha de revisión metodológica se retiraron el 28-oct-2026).
+# Cada servicio: title, for, format, subject (asunto del correo) y body
+# (cuerpo del correo); sin fila de Experiencia por ficha (la banda del pilar de
+# Debate y el bloque de Instituciones sustentan). Un servicio o una línea con
 # confirmar = "…" espera el visto bueno de Luis: solo se ve, marcado, en la
 # vista previa local; en producción no se publica.
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
 title = "Cómo puedo ayudarte"
-lead = "Junto a mi investigación, tomo encargos en cinco áreas. Escríbeme con lo que necesitas: respondo en 24 horas."
+lead = "Junto a mi investigación, tomo encargos en tres áreas. Escríbeme con lo que necesitas: respondo en 24 horas."
 router_label = "¿Qué necesitas?"
 
 [labels]
   for = "Para quién"
   format = "Formato"
-  deliverables = "Entregas"
-  proof = "Experiencia"
   write = "Escribir sobre esto"
-  subject = "Asunto"
-  nopromise = "Lo que no prometo"
   pillar_proof = "Experiencia"
   press = "Escribir como periodista"
+  details = "Detalles"
 
 [home]
   title = "En qué puedo ayudarte"
@@ -26,25 +27,48 @@ router_label = "¿Qué necesitas?"
   pillars = ["consultoria", "investigacion", "debate"]
 
 [[router]]
+  label = "Colaborar en una investigación"
+  anchor = "investigacion"
+[[router]]
   label = "Preparar a un equipo de debate"
   anchor = "debate"
 [[router]]
   label = "Analizar datos electorales o de mi institución"
   anchor = "consultoria"
-[[router]]
-  label = "Colaborar en una investigación"
-  anchor = "investigacion"
-[[router]]
-  label = "Un taller de R para mi equipo"
-  anchor = "talleres"
-[[router]]
-  label = "Soy periodista"
-  anchor = "prensa"
 
-# ── 1 · Debate ────────────────────────────────────────────────────────────────
+# ── 1 · Investigación y papers ────────────────────────────────────────────────
+[[pillars]]
+  id = "investigacion"
+  name = "Investigación y papers"
+  page = "/research"
+  page_label = "Mi investigación"
+  title = "Colaboración y asistencia de investigación"
+  intro = "Colaboro en proyectos sobre comportamiento electoral, política subnacional, implementación de políticas y análisis legislativo."
+  limit = "No escribo tesis, artículos ni trabajos por encargo para que otra persona los presente como propios. Reviso, explico y enseño; el texto y las decisiones son de quien firma."
+  home_title = "Colaboración en investigación"
+  home_text = "Coautorías, asistencia de investigación, construcción de bases de datos y apoyo metodológico."
+  home_cta = "Proponer una colaboración"
+
+  [[pillars.services]]
+    title = "Colaboración y coautoría"
+    for = "Investigadoras e investigadores que trabajan sobre el Perú o América Latina en estos temas."
+    format = "Roles acordados al inicio según la taxonomía CRediT: datos, análisis, software, visualización y redacción."
+    subject = "Colaboración de investigación"
+    body = "Tema y pregunta:\nEstado del proyecto:\nDatos:\nRol que imaginas para mí:\n"
+
+  [[pillars.services]]
+    title = "Asistencia de investigación"
+    for = "Investigadores y centros que necesitan construir bases, hacer análisis econométrico replicable en R o revisar literatura."
+    format = "Por proyecto y a distancia."
+    subject = "Asistencia de investigación"
+    body = "Proyecto e institución:\nTareas:\nHoras por semana y duración:\n"
+
+# ── 2 · Debate ────────────────────────────────────────────────────────────────
 [[pillars]]
   id = "debate"
   name = "Debate"
+  page = "/debate"
+  page_label = "Mi trayectoria en debate"
   title = "Entrenamiento de equipos y asesoría de torneos"
   intro = "Entreno equipos escolares y universitarios en formato World Schools y parlamentario británico, y asesoro en la adjudicación y organización de torneos."
   proof = "Director general de la Selección Nacional de Debate Escolar del Perú y, antes, parte de su equipo de entrenadores: en Panamá 2026 la selección obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED) y mi equipo llegó a cuartos de final. Preparé a las duplas dominicanas que llegaron a cuartos y a octavos de final del CMUDE Ecuador 2026."
@@ -56,48 +80,30 @@ router_label = "¿Qué necesitas?"
     title = "Programa de debate para colegios"
     for = "Colegios que quieren empezar un club de debate o preparar a su equipo para torneos escolares."
     format = "Programa semestral o anual, presencial en Lima o remoto; la frecuencia de las sesiones se acuerda con el colegio."
-    deliverables = "Plan de contenidos (argumentos, refutación, ponderación y fundamentos de economía), sesiones con retroalimentación individual, calendario de torneos sugerido e informe de cierre."
-    proof = "Entrenador de debate del Colegio Alpamayo desde junio de 2026; director general de la Selección Nacional de Debate Escolar del Perú, donde integré el equipo de entrenadores (2025–2026)."
     subject = "Programa de debate para colegio"
     body = "Colegio:\nCiudad:\nGrados y número de estudiantes:\n¿Ya tienen club de debate?:\nTorneos a los que apuntan:\nModalidad (presencial o remota):\nFecha de inicio deseada:\n"
-    nopromise = "Títulos, clasificaciones ni un lugar en la selección. No publico nombres, datos ni imágenes de estudiantes sin autorización escrita del colegio y de las familias."
 
   [[pillars.services]]
-    title = "Equipos universitarios y selecciones"
-    for = "Sociedades de debate y selecciones que preparan el CMUDE, un campeonato nacional u otros torneos en formato parlamentario británico."
-    format = "Ciclo de preparación antes del torneo, remoto, en formato parlamentario británico o World Schools."
-    deliverables = "Plan de preparación, sesiones con mociones y retroalimentación, material de contenido por área temática."
-    proof = "Duplas de República Dominicana: la primera dupla íntegramente dominicana en llegar a octavos de final del CMUDE (2025), y cuartos y octavos de final en Ecuador 2026. Coentrenador general de la Sociedad de Debate PUCP."
-    subject = "Coaching de debate - universidad o selección"
-    body = "Institución o equipo:\nFormato (BP o World Schools):\nTorneo objetivo y fecha:\nNúmero de debatientes y nivel:\nZona horaria y disponibilidad:\n"
-    nopromise = "Pasar a rondas eliminatorias. Tampoco acompaño a un equipo en un torneo donde soy juez o formo parte de la adjudicación."
+    title = "Equipos universitarios y talleres de argumentación"
+    for = "Sociedades de debate y selecciones que preparan un torneo, y colegios, universidades y organizaciones que quieren una introducción práctica al debate."
+    format = "Ciclo de preparación antes del torneo, en formato parlamentario británico o World Schools, o taller de 2 horas; presencial en Lima o remoto."
+    subject = "Coaching de debate o taller de argumentación"
+    body = "Institución o equipo:\nQué necesitas (preparación para un torneo o taller):\nFormato (BP o World Schools):\nNúmero de participantes y nivel:\nFechas y disponibilidad:\n"
 
   [[pillars.services]]
     title = "Asesoría en adjudicación y organización de torneos"
     for = "Ligas, organizadores, universidades y colegios que preparan un torneo y quieren asesoría en su lado competitivo: equipo de jueces, criterios de evaluación y organización de las rondas."
     format = "Según el torneo: asesoría en el diseño del equipo de adjudicación y en la organización, taller «¿Cómo se evalúa un debate?» y, antes del torneo, una sesión de calibración con rondas de ejemplo."
-    deliverables = "Guía de evaluación por formato, criterios comunes para el equipo de jueces, materiales del taller y ejercicios de calibración."
-    proof = "He integrado equipos de adjudicación de torneos escolares y universitarios en Costa Rica, Ecuador, Perú y Venezuela; juez de la Gran Final del CMUDE 2026 (Ecuador) y jefe de adjudicación del TNDE 2025."
     subject = "Asesoría de torneo de debate (adjudicación y organización)"
     body = "Organización o torneo:\nFecha del torneo:\nFormato:\nNúmero de equipos y de jueces (y su experiencia):\n"
-    nopromise = "Acreditaciones o certificados a título personal: solo los emite una liga o institución."
 
-  [[pillars.services]]
-    title = "Talleres de argumentación"
-    for = "Colegios, universidades, docentes y organizaciones que quieren una introducción práctica al debate."
-    format = "2 horas, presencial o remoto: argumentos de principios, refutación y ponderación, o cómo se evalúa un debate."
-    deliverables = "Diapositivas, guía de ejercicios y mociones del taller."
-    proof = "Instructor de novatos de la Sociedad de Debate PUCP (2025) y programa del Colegio Alpamayo."
-    subject = "Taller de debate (2 horas)"
-    body = "Institución:\nPúblico (edades y número):\nTema de interés:\nFecha tentativa:\nModalidad:\n"
-
-# ── 2 · Consultoría y análisis ────────────────────────────────────────────────
+# ── 3 · Consultoría y análisis ────────────────────────────────────────────────
 [[pillars]]
   id = "consultoria"
   name = "Consultoría y análisis"
-  title = "Análisis de datos para instituciones"
-  intro = "Asesoro a instituciones en investigación aplicada con métodos mixtos —cuantitativos y cualitativos—, documentando cada decisión metodológica."
-  home_title = "Análisis de datos para instituciones"
+  title = "Investigación aplicada para instituciones"
+  intro = "Diseño y analizo estudios para instituciones con métodos mixtos —cuantitativos y cualitativos—, documentando cada decisión metodológica."
+  home_title = "Investigación aplicada para instituciones"
   home_text = "Encuestas, registros administrativos y entrevistas, con métodos cuantitativos y cualitativos."
   home_cta = "Escríbeme sobre un proyecto"
 
@@ -105,112 +111,22 @@ router_label = "¿Qué necesitas?"
     title = "Análisis electoral y de opinión pública"
     for = "ONG, centros de investigación, cooperación internacional y medios con unidad de datos."
     format = "Por encargo, con el alcance acordado al inicio: desde una consulta puntual sobre una base hasta un informe con figuras."
-    deliverables = "Informe con metodología y limitaciones declaradas, figuras reproducibles, base documentada y scripts de R."
-    proof = "Equipo técnico del informe «Análisis del elector peruano» (JNE y ProDiálogo, 2026); asistente de investigación de Daniel Encinas y Rodrigo Barrenechea sobre la geografía del voto (1980–2021)."
     subject = "Análisis electoral o de opinión pública"
     body = "Organización:\nPregunta que quieren responder:\nDatos disponibles (resultados, padrón, encuesta):\nPlazo:\nUso previsto del análisis:\n"
-    nopromise = "Pronósticos de resultados, encuestas de intención de voto para difusión ni microsegmentación de votantes."
 
   [[pillars.services]]
     title = "Acompañamiento metodológico y validez de indicadores"
     for = "Observatorios, ONG y áreas de estudios que van a publicar indicadores construidos con datos administrativos."
     format = "Revisión de la base y de cada indicador, con sesiones de trabajo con el equipo."
-    deliverables = "Matriz de factibilidad y validez por indicador; memorando con las decisiones metodológicas pendientes y sus consecuencias."
-    proof = "Consultor del Observatorio de Corrupción del Colegio de Abogados de Lima desde septiembre de 2026, en su informe sobre contrataciones públicas (en curso)."
     subject = "Acompañamiento metodológico - validez de indicadores"
     body = "Organización:\nInforme o indicadores en preparación:\nFuente de datos:\nFecha de publicación prevista:\n"
-    nopromise = "Avalar conclusiones ya decididas ni firmar como autor el informe de la institución."
 
   [[pillars.services]]
     title = "Datos y visualización en R"
     for = "Equipos que trabajan con registros del MEF, el INEI, el MINEDU, el SEACE o el BCRP y necesitan integrarlos, documentarlos y visualizarlos."
     format = "Proyecto por entregables. Trabajo en R; también uso Python y Stata, a nivel intermedio."
-    deliverables = "Base integrada con diccionario de variables, scripts reproducibles, figuras listas para informe y nota de limitaciones."
-    proof = "Sitio y código del proyecto de brechas en obras municipales, iniciado como asistente de investigación en Q-LAB-PUCP."
     subject = "Análisis de datos y visualización en R"
     body = "Organización:\nFuentes de datos:\nProducto que necesitan (base, figuras, informe):\nPlazo:\n"
-    nopromise = "Aplicaciones en producción con mantenimiento ni administración de servidores."
-
-# ── 3 · Investigación y papers ────────────────────────────────────────────────
-[[pillars]]
-  id = "investigacion"
-  name = "Investigación y papers"
-  title = "Colaboración, asistencia y revisión metodológica"
-  intro = "Colaboro en proyectos sobre comportamiento electoral, política subnacional, implementación de políticas y análisis legislativo."
-  limit = "No escribo tesis, artículos ni trabajos por encargo para que otra persona los presente como propios. Reviso, explico y enseño; el texto y las decisiones son de quien firma."
-  home_title = "Colaboración en investigación"
-  home_text = "Coautorías, asistencia de investigación, construcción de bases de datos y apoyo metodológico."
-  home_cta = "Proponer una colaboración"
-
-  [[pillars.services]]
-    title = "Colaboración y coautoría"
-    for = "Investigadoras e investigadores que trabajan sobre el Perú o América Latina en estos temas."
-    format = "Roles acordados al inicio según la taxonomía CRediT: datos, análisis, software, visualización y redacción."
-    proof = "Tesis con mención sobresaliente (PUCP, 2025); equipo técnico del informe del JNE y ProDiálogo sobre el elector peruano (2026)."
-    subject = "Colaboración de investigación"
-    body = "Tema y pregunta:\nEstado del proyecto:\nDatos:\nRol que imaginas para mí:\n"
-    nopromise = "Autorías sin contribución sustantiva: ni las pido ni las acepto."
-
-  [[pillars.services]]
-    title = "Asistencia de investigación"
-    for = "Investigadores y centros que necesitan construir bases, hacer análisis econométrico replicable en R o revisar literatura."
-    format = "Por proyecto y a distancia."
-    deliverables = "Bases documentadas, scripts, tablas y figuras, y memos de resultados."
-    proof = "Asistente de investigación en CISEPA-PUCP y Q-LAB-PUCP, y de Daniel Encinas y Rodrigo Barrenechea."
-    subject = "Asistencia de investigación"
-    body = "Proyecto e institución:\nTareas:\nHoras por semana y duración:\n"
-
-  [[pillars.services]]
-    title = "Revisión metodológica"
-    for = "Tesistas y equipos que quieren una segunda lectura antes de entregar o enviar."
-    format = "Lectura del documento, memorando escrito y una sesión para revisarlo."
-    deliverables = "Memorando con observaciones priorizadas (pregunta, diseño, datos, método y reproducibilidad)."
-    proof = "Jefe de práctica de Economía Política (PUCP); asistente docente de Introducción a R para la Investigación Social y de Causal Machine Learning (Q-LAB-PUCP)."
-    subject = "Revisión metodológica"
-    body = "Tipo de documento (tesis, proyecto, informe, manuscrito):\nEtapa:\nPregunta y método:\nFecha límite:\n"
-    nopromise = "Redactar capítulos ni hacer el análisis para que otra persona lo firme. No trabajo con estudiantes de los cursos donde soy jefe de práctica."
-
-# ── 4 · Talleres y 5 · Prensa (se muestran lado a lado) ──────────────────────
-[[pillars]]
-  id = "talleres"
-  name = "Talleres"
-  compact = true
-  title = "Talleres de R (2 horas)"
-  intro = "Para equipos de investigación, ONG, redacciones y oficinas de estudios: R con datos administrativos peruanos, visualización para informes y datos públicos desde R (BCRP, ESCALE, resultados electorales). Presencial en Lima o remoto."
-  subject = "Taller de R (2 horas)"
-  body = "Institución:\nNúmero de participantes:\nNivel previo en R:\nTema:\nFecha y modalidad:\n"
-
-[[pillars]]
-  id = "prensa"
-  name = "Prensa"
-  compact = true
-  title = "Para periodistas"
-  intro = "Comportamiento electoral, reformas políticas, política subnacional, becas y educación cívica. Hablo a título personal, no en nombre del JNE ni de la PUCP."
-  subject = "Prensa - medio - tema"
-  body = "Medio y programa:\nTema:\nFormato (en vivo, grabado, escrito):\nFecha y hora:\n"
-
-[how]
-  title = "Cómo trabajo"
-  steps = [
-    "Me escribes con tu pregunta, el plazo y los datos o recursos con que cuentas.",
-    "En 24 horas te respondo con preguntas o con una propuesta de alcance.",
-    "Acordamos entregables, cronograma y honorarios.",
-    "Entrego con documentación y una sesión de cierre.",
-  ]
-  notes = [
-    "Presencial en Lima; a distancia para el resto del Perú y América Latina.",
-    "Emito recibos por honorarios electrónicos.",
-    "No publico datos ni resultados de un encargo sin autorización de la institución.",
-  ]
-
-[dont]
-  title = "Lo que no hago"
-  [[dont.items]]
-    text = "Escribir tesis o artículos para que otra persona los firme."
-  [[dont.items]]
-    text = "Encuestas de intención de voto para difusión."
-  [[dont.items]]
-    text = "Publicar datos o imágenes de menores de edad."
 
 [institutions]
   title = "Instituciones con las que he trabajado"

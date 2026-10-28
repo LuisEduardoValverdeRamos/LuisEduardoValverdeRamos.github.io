@@ -1,12 +1,12 @@
 {{ define "main" }}
-{{- /* Work with me / Trabajemos: a router, the pillars with their services, how
-       I work, what I don't do, institutions and contact. Data:
-       data/<lang>/services.toml. */ -}}
+{{- /* Work with me / Trabajemos: a router, the pillars as ruled sections (the
+       same section language as Research and Debate, with a cross link to the
+       pillar's own page) and the institutions. Data: data/<lang>/services.toml. */ -}}
 {{- $d := index hugo.Data .Language.Lang -}}
 {{- $s := $d.services -}}
 {{- $a := $d.author.author -}}
 {{- $l := $s.labels -}}
-<div class="wrap">
+<div class="wrap s-ruled">
   <header class="s-page-head">
     <p class="s-eyebrow">{{ .Title }}</p>
     <h1 class="s-h1">{{ $s.title }}</h1>
@@ -14,16 +14,24 @@
   </header>
 
   <nav class="s-router" aria-label="{{ $s.router_label }}">
-    {{- range $s.router }}
-    <a href="#{{ .anchor }}">{{ .label }} <b>→</b></a>
-    {{- end }}
+    <p class="s-eyebrow">{{ $s.router_label }}</p>
+    <div class="chips">
+      {{- range $s.router }}
+      <a href="#{{ .anchor }}">{{ .label }} <b>→</b></a>
+      {{- end }}
+    </div>
   </nav>
 
   {{- range $s.pillars }}{{ if not .compact }}
   {{- $p := . }}
-  <section id="{{ .id }}" class="s-pillar-sec" aria-labelledby="h-{{ .id }}">
-    <p class="s-eyebrow">{{ .name }}</p>
-    <h2 id="h-{{ .id }}" class="s-h2">{{ .title }}</h2>
+  <section id="{{ .id }}" class="s-section s-svc-sec" aria-labelledby="h-{{ .id }}">
+    <div class="s-section-head">
+      <div>
+        <p class="s-eyebrow">{{ .name }}</p>
+        <h2 id="h-{{ .id }}" class="s-h2">{{ .title }}</h2>
+      </div>
+      {{- with .page }}{{ with site.GetPage . }}<a class="s-link" href="{{ .RelPermalink }}">{{ or $p.page_label .Title }} →</a>{{ end }}{{ end }}
+    </div>
     {{- with .intro }}<p>{{ . }}</p>{{ end }}
     {{- with .note }}{{ if or (not $p.note_confirmar) (not hugo.IsProduction) }}
     <p{{ with $p.note_confirmar }} class="tbc" data-tbc="{{ . }}"{{ end }}>{{ . }}</p>
@@ -38,47 +46,12 @@
   </section>
   {{- end }}{{ end }}
 
-  {{- with where $s.pillars "compact" true }}
-  <section class="s-pillar-sec">
-    <div class="s-twocol">
-      {{- range . }}
-      {{- $cp := . }}
-      <div id="{{ .id }}">
-        <p class="s-eyebrow">{{ .name }}</p>
-        <h2 class="s-h2">{{ .title }}</h2>
-        <p>{{ .intro }}</p>
-        {{- with .subject }}
-        <p class="s-note"><a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" . "body" $cp.body) }}">{{ $l.write }} →</a></p>
-        {{- end }}
-      </div>
+  <section class="s-section s-svc-sec" aria-labelledby="h-inst">
+    <h2 id="h-inst" class="s-h2">{{ $s.institutions.title }}</h2>
+    <div class="s-inst">
+      {{- range $s.institutions.groups }}
+      <p><b>{{ .label }}:</b> {{ .text }}</p>
       {{- end }}
-    </div>
-  </section>
-  {{- end }}
-
-  <section id="{{ cond (eq .Language.Lang "es") "como-trabajo" "how-i-work" }}" class="s-pillar-sec" aria-labelledby="h-how">
-    <h2 id="h-how" class="s-h2">{{ $s.how.title }}</h2>
-    <ol class="s-steps">
-      {{- range $s.how.steps }}<li>{{ . }}</li>{{ end }}
-    </ol>
-    <div class="s-notes">
-      {{- range $s.how.notes }}<p>{{ . }}</p>{{ end }}
-    </div>
-    <div class="s-twocol">
-      <div>
-        <h3 class="s-h3">{{ $s.dont.title }}</h3>
-        <ul class="s-bullets">
-          {{- range $s.dont.items }}{{ if or (not .confirmar) (not hugo.IsProduction) }}
-          <li{{ with .confirmar }} class="tbc" data-tbc="{{ . }}"{{ end }}>{{ .text }}</li>
-          {{- end }}{{ end }}
-        </ul>
-      </div>
-      <div class="s-inst">
-        <h3 class="s-h3">{{ $s.institutions.title }}</h3>
-        {{- range $s.institutions.groups }}
-        <p><b>{{ .label }}:</b> {{ .text }}</p>
-        {{- end }}
-      </div>
     </div>
   </section>
 

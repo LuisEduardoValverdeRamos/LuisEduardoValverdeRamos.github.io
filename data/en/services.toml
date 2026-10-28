@@ -1,22 +1,24 @@
-# Work with me (/work-with-me/): a shorter version of the Spanish page, from the
-# same structure. A service or note with confirmar = "…" waits for Luis: it shows
+# Work with me (/work-with-me/): the English mirror of the Spanish page, from
+# the same structure. Three pillars, in this order: research, debate and
+# consulting (R workshops, press, "How I work", "What I don't do", the
+# Deliverables, no-promise and per-service track-record rows and the
+# methods-review card were removed on 28 Oct 2026; the debate pillar band and
+# the institutions block carry the proof). A service or note with
+# confirmar = "…" waits for Luis: it shows
 # only in local previews, marked, and is never published in production.
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
 title = "How I can help"
-lead = "Alongside my research, I take on projects in five areas. Email me with what you need: I reply within 24 hours."
+lead = "Alongside my research, I take on projects in three areas. Email me with what you need: I reply within 24 hours."
 router_label = "What do you need?"
 
 [labels]
   for = "For"
   format = "Format"
-  deliverables = "Deliverables"
-  proof = "Track record"
   write = "Email about this"
-  subject = "Subject"
-  nopromise = "What I don't promise"
   pillar_proof = "Track record"
   press = "Press enquiries"
+  details = "Details"
 
 [home]
   title = "What I can help with"
@@ -24,24 +26,46 @@ router_label = "What do you need?"
   pillars = ["consulting", "research", "debate"]
 
 [[router]]
+  label = "Collaborate on research"
+  anchor = "research"
+[[router]]
   label = "Prepare a debate team"
   anchor = "debate"
 [[router]]
   label = "Analyse electoral or institutional data"
   anchor = "consulting"
-[[router]]
-  label = "Collaborate on research"
-  anchor = "research"
-[[router]]
-  label = "An R workshop for my team"
-  anchor = "workshops"
-[[router]]
-  label = "I'm a journalist"
-  anchor = "media"
+
+[[pillars]]
+  id = "research"
+  name = "Research and papers"
+  page = "/research"
+  page_label = "My research"
+  title = "Collaboration and research assistance"
+  intro = "I collaborate on projects on electoral behaviour, subnational politics, policy implementation and legislative analysis in Peru and Latin America."
+  limit = "I do not write theses, papers or assignments for others to submit as their own. I review, explain and teach; the text and the decisions belong to whoever signs them."
+  home_title = "Research collaboration"
+  home_text = "Co-authorship, research assistance, dataset building and methods support."
+  home_cta = "Propose a collaboration"
+
+  [[pillars.services]]
+    title = "Collaboration and co-authorship"
+    for = "Researchers working on Peru or Latin America on these topics."
+    format = "Roles agreed at the start using the CRediT taxonomy: data curation, analysis, software, visualisation and writing."
+    subject = "Research: collaboration or methods support"
+    body = "Topic and question:\nStage of the project:\nData:\nThe role you have in mind for me:\n"
+
+  [[pillars.services]]
+    title = "Research assistance"
+    for = "Researchers and centres that need datasets built, replicable econometric analysis in R or literature reviews."
+    format = "By project, online."
+    subject = "Research assistance"
+    body = "Project and institution:\nTasks:\nHours per week and duration:\n"
 
 [[pillars]]
   id = "debate"
   name = "Debate"
+  page = "/debate"
+  page_label = "My debate track record"
   title = "Team coaching and tournament advice"
   intro = "I coach school and university teams in World Schools and British Parliamentary formats, and I advise on tournament adjudication and organisation."
   proof = "Director General of the Peruvian National Schools Debate Team and previously part of its coaching staff: in Panama in 2026 the team won its fourth consecutive title at the Mundial de Debate Escolar en Español (MED), the world schools championship held in Spanish, and my team reached the quarterfinals. I prepared the Dominican pairs that reached the quarterfinals and the round of 16 of CMUDE Ecuador 2026."
@@ -53,47 +77,29 @@ router_label = "What do you need?"
     title = "Debate programme for schools"
     for = "Schools that want to start a debate club or prepare their team for school tournaments."
     format = "A term or year-long programme, in person in Lima or online; session frequency agreed with the school."
-    deliverables = "A content plan (arguments, rebuttal, weighing and foundations of economics), sessions with individual feedback, a suggested tournament calendar and a closing report."
-    proof = "Debate coach at Colegio Alpamayo since June 2026; Director General of the Peruvian National Schools Debate Team, where I was part of the coaching staff in 2025–2026."
     subject = "Debate programme for a school"
     body = "School:\nCity:\nYear groups and number of students:\nDo you already have a debate club?:\nTournaments you are aiming for:\nFormat (in person or online):\nDesired start date:\n"
-    nopromise = "Titles, rankings or a place on the national team. I do not publish students' names, data or images without written consent from the school and the families."
 
   [[pillars.services]]
-    title = "University teams and national squads"
-    for = "Debating societies and national teams preparing for CMUDE, a national championship or other British Parliamentary tournaments."
-    format = "A preparation cycle before the tournament, online, in British Parliamentary or World Schools format."
-    deliverables = "Preparation plan, sessions with motions and feedback, and content material by topic."
-    proof = "Dominican pairs: the first all-Dominican pair to reach the round of 16 at CMUDE (2025), and the quarterfinals and round of 16 at CMUDE Ecuador 2026. Co-head coach of the PUCP Debate Society."
-    subject = "Debate coaching - university or national team"
-    body = "Institution or team:\nFormat (BP or World Schools):\nTarget tournament and date:\nNumber of debaters and level:\nTime zone and availability:\n"
-    nopromise = "Breaking to the elimination rounds. I also do not accompany a team at a tournament where I judge or sit on the adjudication core."
+    title = "University teams and argumentation workshops"
+    for = "Debating societies and national teams preparing for a tournament, and schools, universities and organisations that want a practical introduction to debate."
+    format = "A preparation cycle before the tournament, in British Parliamentary or World Schools format, or a two-hour workshop; in person in Lima or online."
+    subject = "Debate coaching or argumentation workshop"
+    body = "Institution or team:\nWhat you need (tournament preparation or a workshop):\nFormat (BP or World Schools):\nNumber of participants and level:\nDates and availability:\n"
 
   [[pillars.services]]
     title = "Advice on tournament adjudication and organisation"
     for = "Leagues, organisers, universities and schools preparing a tournament that want advice on its competitive side: the judging team, assessment criteria and how the rounds are organised."
     format = "Depending on the tournament: advice on designing the adjudication team and on the organisation, the two-hour workshop «How is a debate judged?» and a calibration session with sample rounds before the tournament."
-    deliverables = "A judging guide per format, shared criteria for the judging team, workshop materials and calibration exercises."
-    proof = "I have served on the adjudication teams of school and university tournaments in Costa Rica, Ecuador, Peru and Venezuela; judge of the CMUDE 2026 grand final (Ecuador) and chief adjudicator of TNDE 2025."
     subject = "Debate tournament advice (adjudication and organisation)"
     body = "Organisation or tournament:\nTournament date:\nFormat:\nNumber of teams and adjudicators (and their experience):\n"
-    nopromise = "Personal accreditations or certificates: only a league or institution can issue them."
-
-  [[pillars.services]]
-    title = "Argumentation workshops"
-    for = "Schools, universities, teachers and organisations that want a practical introduction to debate."
-    format = "Two hours, in person or online: principled arguments, rebuttal and weighing, or how a debate is judged."
-    deliverables = "Slides, an exercise guide and the workshop motions."
-    proof = "Novice instructor at the PUCP Debate Society (2025) and the Colegio Alpamayo programme."
-    subject = "Debate workshop (two hours)"
-    body = "Institution:\nAudience (ages and number):\nTopic of interest:\nTentative date:\nFormat:\n"
 
 [[pillars]]
   id = "consulting"
   name = "Consulting and data analysis"
-  title = "Data analysis for institutions"
-  intro = "I advise institutions on applied research with mixed methods, quantitative and qualitative, documenting every methodological decision."
-  home_title = "Data analysis for institutions"
+  title = "Applied research for institutions"
+  intro = "I design and analyse studies for institutions with mixed methods, quantitative and qualitative, documenting every methodological decision."
+  home_title = "Applied research for institutions"
   home_text = "Surveys, administrative records and interviews, with quantitative and qualitative methods."
   home_cta = "Email me about a project"
 
@@ -101,110 +107,22 @@ router_label = "What do you need?"
     title = "Electoral and public-opinion analysis"
     for = "NGOs, research centres, international cooperation and newsrooms with a data unit."
     format = "Scope agreed at the start: from a one-off question about a dataset to a report with figures."
-    deliverables = "Report with stated methods and limitations, reproducible figures, a documented dataset and R scripts."
-    proof = "Technical team of the JNE/ProDiálogo report on the Peruvian voter (2026); research assistant to Daniel Encinas and Rodrigo Barrenechea on the geography of the vote (1980–2021)."
     subject = "Consulting: data analysis"
     body = "Organisation:\nWhat you need analysed or assessed:\nData available:\nDeadline:\n"
-    nopromise = "Election forecasts, voting-intention polls for publication or voter micro-targeting."
 
   [[pillars.services]]
     title = "Methods support and indicator validity"
     for = "Observatories, NGOs and research units about to publish indicators built from administrative data."
     format = "A review of the dataset and of each indicator, with working sessions with the team."
-    deliverables = "A feasibility and validity matrix for each indicator, and a memo on the methodological decisions still open."
-    proof = "Consultant to the Corruption Observatory of the Lima Bar Association since September 2026, on its public procurement report (ongoing)."
     subject = "Methods support - indicator validity"
     body = "Organisation:\nReport or indicators in preparation:\nData source:\nPlanned publication date:\n"
-    nopromise = "Endorsing conclusions already reached, or signing the institution's report as an author."
 
   [[pillars.services]]
     title = "Data and visualisation in R"
     for = "Teams working with records from MEF, INEI, MINEDU, SEACE or BCRP that need them integrated, documented and visualised."
     format = "Project-based deliverables. I work in R; I also use Python and Stata at an intermediate level."
-    deliverables = "An integrated dataset with a data dictionary, reproducible scripts, report-ready figures and a note on limitations."
-    proof = "Public site and code of the municipal works project, started as a research assistant at Q-LAB-PUCP."
     subject = "Data analysis and visualisation in R"
     body = "Organisation:\nData sources:\nWhat you need (dataset, figures, report):\nDeadline:\n"
-    nopromise = "Production applications with maintenance, or server administration."
-
-[[pillars]]
-  id = "research"
-  name = "Research and papers"
-  title = "Collaboration and methods review"
-  intro = "I collaborate on projects on electoral behaviour, subnational politics, policy implementation and legislative analysis in Peru and Latin America."
-  limit = "I do not write theses, papers or assignments for others to submit as their own. I review, explain and teach; the text and the decisions belong to whoever signs them."
-  home_title = "Research collaboration"
-  home_text = "Co-authorship, research assistance, dataset building and methods support."
-  home_cta = "Propose a collaboration"
-
-  [[pillars.services]]
-    title = "Collaboration and co-authorship"
-    for = "Researchers working on Peru or Latin America on these topics."
-    format = "Roles agreed at the start using the CRediT taxonomy: data curation, analysis, software, visualisation and writing."
-    proof = "Licentiate thesis with distinction (PUCP, 2025); technical team of the JNE/ProDiálogo report on the Peruvian voter (2026)."
-    subject = "Research: collaboration or methods support"
-    body = "Topic and question:\nStage of the project:\nData:\nThe role you have in mind for me:\n"
-    nopromise = "Authorship without a substantive contribution: I neither ask for it nor accept it."
-
-  [[pillars.services]]
-    title = "Research assistance"
-    for = "Researchers and centres that need datasets built, replicable econometric analysis in R or literature reviews."
-    format = "By project, online."
-    deliverables = "Documented datasets, scripts, tables and figures, and results memos."
-    proof = "Research assistant at CISEPA-PUCP and Q-LAB-PUCP, and to Daniel Encinas and Rodrigo Barrenechea."
-    subject = "Research assistance"
-    body = "Project and institution:\nTasks:\nHours per week and duration:\n"
-
-  [[pillars.services]]
-    title = "Methods review"
-    for = "Thesis writers and teams that want a second reading before submitting."
-    format = "A reading of the document, a written memo and a session to discuss it."
-    deliverables = "A memo with prioritised observations: question, design, data, method and reproducibility."
-    proof = "Teaching assistant in Political Economy (PUCP); teaching assistant for Introduction to R for Social Research and Causal Machine Learning (Q-LAB-PUCP)."
-    subject = "Methods review"
-    body = "Type of document (thesis, project, report, manuscript):\nStage:\nQuestion and method:\nDeadline:\n"
-    nopromise = "Writing chapters or doing the analysis for someone else to sign. I do not work with students from the courses where I am a teaching assistant."
-
-[[pillars]]
-  id = "workshops"
-  name = "Workshops"
-  compact = true
-  title = "R workshops (two hours)"
-  intro = "For research teams, NGOs, newsrooms and research units: R with Peruvian administrative data, data visualisation for reports, and public data from R (BCRP, ESCALE, election results). In person in Lima or online."
-  subject = "Workshop: proposal"
-  body = "Institution:\nWorkshop topic:\nAudience and approximate number of participants:\nFormat (Lima or online) and tentative date:\n"
-
-[[pillars]]
-  id = "media"
-  name = "Media"
-  compact = true
-  title = "For journalists"
-  intro = "Electoral behaviour, political reform, subnational politics, scholarships and civic education, in Spanish. I speak in a personal capacity, not on behalf of the JNE or PUCP."
-  subject = "Press: interview request"
-  body = "Outlet and programme:\nTopic:\nFormat (interview, panel or written piece):\nDate and time:\n"
-
-[how]
-  title = "How I work"
-  steps = [
-    "You email me with your question, the deadline and the data or resources you have.",
-    "Within 24 hours I reply with questions or a proposal covering scope and deliverables.",
-    "We agree on deliverables, timeline and fees.",
-    "I deliver with documentation and a closing session.",
-  ]
-  notes = [
-    "In person in Lima; online for the rest of Peru and Latin America.",
-    "I issue Peruvian electronic fee receipts (recibos por honorarios).",
-    "I do not publish data or results from a project without the institution's permission.",
-  ]
-
-[dont]
-  title = "What I don't do"
-  [[dont.items]]
-    text = "Write theses or papers for someone else to sign."
-  [[dont.items]]
-    text = "Voting-intention polls for publication."
-  [[dont.items]]
-    text = "Publish data or images of minors."
 
 [institutions]
   title = "Institutions I have worked with"

@@ -2,8 +2,7 @@
 {{- /* Debate: results two by two (acronyms spelled out right below), coaching,
        adjudication and competing side by side, the LPDE and the debate services
        (same data as Work with me, so the visitor can write without another
-       click; the experience row is left out, since this page is the
-       experience). Data: debate and services. */ -}}
+       click). Data: debate and services. */ -}}
 {{- $d := index hugo.Data .Language.Lang -}}
 {{- $db := $d.debate -}}
 {{- $sv := $d.services -}}
@@ -71,7 +70,7 @@
     <p class="s-note{{ with $p.note_confirmar }} tbc{{ end }}"{{ with $p.note_confirmar }} data-tbc="{{ . }}"{{ end }}>{{ . }}</p>
     {{- end }}{{ end }}
     <div class="s-svcs" style="margin-top:20px">
-      {{- range $p.services }}{{ partial "service-card.html" (dict "s" . "labels" $sv.labels "email" $a.email "noproof" true) }}{{ end }}
+      {{- range $p.services }}{{ partial "service-card.html" (dict "s" . "labels" $sv.labels "email" $a.email) }}{{ end }}
     </div>
   </section>
   {{- end }}{{ end }}

@@ -2,8 +2,8 @@
 # the same structure. Three pillars, in this order: research, debate and
 # consulting (R workshops, press, "How I work", "What I don't do", the
 # Deliverables, no-promise and per-service track-record rows and the
-# methods-review card were removed on 28 Oct 2026; the debate pillar band and
-# the institutions block carry the proof). A service or note with
+# methods-review card were removed on 28 Oct 2026; the institutions block and
+# the linked pages carry the proof). A service or note with
 # confirmar = "…" waits for Luis: it shows
 # only in local previews, marked, and is never published in production.
 # Top-level keys first: in TOML, anything below a table header belongs to it.
@@ -14,7 +14,6 @@ router_label = "What do you need?"
 
 [labels]
   write = "Email about this"
-  pillar_proof = "Track record"
   press = "Press enquiries"
 
 [home]
@@ -62,7 +61,6 @@ router_label = "What do you need?"
   page_label = "My debate track record"
   title = "Team coaching and tournament advice"
   intro = "I coach school and university teams in World Schools and British Parliamentary formats, and I advise on tournament adjudication and organisation."
-  proof = "Director General of the Peruvian National Schools Debate Team and previously part of its coaching staff: in Panama in 2026 the team won its fourth consecutive title at the Mundial de Debate Escolar en Español (MED), the world schools championship held in Spanish, and my team reached the quarterfinals. I prepared the Dominican pairs that reached the quarterfinals and the round of 16 of CMUDE Ecuador 2026."
   home_title = "Team coaching and tournament advice"
   home_text = "Schools, universities and national teams: team preparation and advice on tournament adjudication and organisation."
   home_cta = "Coach my team"
@@ -96,19 +94,19 @@ router_label = "What do you need?"
 
   [[pillars.services]]
     title = "Electoral and public-opinion analysis"
-    text = "From a one-off question about a dataset to a report with figures."
+    text = "From a one-off question to a full report, with methods and limitations stated."
     subject = "Consulting: data analysis"
     body = "Organisation:\nWhat you need analysed or assessed:\nData available:\nDeadline:\n"
 
   [[pillars.services]]
     title = "Methods support and indicator validity"
-    text = "A review of datasets and indicators before they are published."
+    text = "An independent review of datasets and indicators before they are published."
     subject = "Methods support - indicator validity"
     body = "Organisation:\nReport or indicators in preparation:\nData source:\nPlanned publication date:\n"
 
   [[pillars.services]]
     title = "Data and visualisation in R"
-    text = "Integrated, documented datasets, reproducible scripts and report-ready figures."
+    text = "Scattered sources integrated into one documented dataset, with publication-ready figures."
     subject = "Data analysis and visualisation in R"
     body = "Organisation:\nData sources:\nWhat you need (dataset, figures, report):\nDeadline:\n"
 

@@ -255,6 +255,11 @@
 .s-item .m { display: block; margin-top: 2px; font-size: 14px; color: var(--s-ink2); }
 .s-item p { margin-top: 6px; font-size: 15px; color: var(--s-ink2); max-width: 70ch; }
 
+/* Media: entries with a thumbnail of the appearance at the side */
+.s-item.has-th { grid-template-columns: 120px minmax(0, 1fr) 232px; align-items: start; }
+.s-item .th { display: block; }
+.s-item .th img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--s-radius); background: var(--s-bg2); }
+
 /* Interior pages */
 .s-page-head { padding-block: 56px 28px; display: grid; gap: 14px; max-width: 780px; }
 .s-toc { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; }
@@ -461,7 +466,8 @@
   .s-band { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 22px; margin-top: 44px; }
   .s-doors a, .s-doors a + a { padding: 18px 0; border-left: 0; border-bottom: 1px solid var(--s-line); }
   .s-media-line .s-link { margin-left: 0; }
-  .s-item { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .s-item, .s-item.has-th { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .s-item .th { margin-top: 8px; max-width: 420px; }
   .s-svc dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
   .s-svc dd { margin-bottom: 6px; }
   .s-page-head { padding-block: 36px 20px; }

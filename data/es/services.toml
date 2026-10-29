@@ -10,7 +10,7 @@
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
 title = "Cómo puedo ayudarte"
-lead = "Junto a mi investigación, tomo encargos en tres áreas. Escríbeme con lo que necesitas: respondo en 24 horas."
+lead = "Junto a mi investigación, tomo encargos en tres áreas. Escríbeme con lo que necesitas."
 router_label = "¿Qué necesitas?"
 
 [labels]
@@ -144,4 +144,4 @@ router_label = "¿Qué necesitas?"
 
 [contact]
   title = "Escríbeme"
-  text = "Cuéntame qué necesitas y para cuándo. Respondo en 24 horas, en español o en inglés."
+  text = "Cuéntame qué necesitas y para cuándo. Escríbeme en español o en inglés."

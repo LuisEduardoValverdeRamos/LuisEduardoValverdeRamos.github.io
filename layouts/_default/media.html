@@ -17,13 +17,17 @@
   </header>
   <div class="s-list">
     {{- range $d.media.media }}
-    <div class="s-item">
+    {{- $it := . }}
+    <div class="s-item{{ with .image }} has-th{{ end }}">
       <span class="k">{{ .type }}</span>
       <div>
         <a class="t" href="{{ .url }}">{{ .title }}</a>
         <span class="m">{{ .outlet }} · {{ .date }}</span>
         <p>{{ .description }}</p>
       </div>
+      {{- with .image }}
+      <a class="th" href="{{ $it.url }}" tabindex="-1" aria-hidden="true">{{ partial "thumb.html" (dict "src" . "size" "480x270") }}</a>
+      {{- end }}
     </div>
     {{- end }}
   </div>

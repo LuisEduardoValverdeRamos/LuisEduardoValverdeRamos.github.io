@@ -13,7 +13,7 @@
   outlet = "Radio Exitosa"
   date = "4 de julio de 2026"
   url = "https://www.youtube.com/watch?v=M2cBfmLUtGs&t=1690s"
-  image = "https://img.youtube.com/vi/M2cBfmLUtGs/hqdefault.jpg"
+  image = "/images/media/exitosa-keiko-retos.jpg"
   description = "Análisis de los retos políticos y materiales que enfrenta la presidenta electa: \"El reto más grande de Keiko es realizar una coalición\"."
 
 [[media]]
@@ -23,7 +23,7 @@
   outlet_short = "La República"
   date = "julio de 2026"
   url = "https://www.youtube.com/watch?v=m5zQ97rbRJ8&t=1349s"
-  image = "https://img.youtube.com/vi/m5zQ97rbRJ8/hqdefault.jpg"
+  image = "/images/media/larepublica-beca18.jpg"
   description = "Debate sobre el programa bandera de becas del Perú en el programa de La República con Carlos Cornejo — como politólogo y exbecario de Beca 18."
 
 [[media]]
@@ -32,7 +32,7 @@
   outlet = "Radio Exitosa"
   date = "18 de junio de 2026"
   url = "https://www.youtube.com/watch?v=wKjABJHgjHs"
-  image = "https://img.youtube.com/vi/wKjABJHgjHs/hqdefault.jpg"
+  image = "/images/media/exitosa-instituciones.jpg"
   description = "Sobre cómo las narrativas de fraude sin sustento durante el conteo de votos de 2026 erosionan la confianza en las instituciones electorales."
 
 [[media]]
@@ -41,5 +41,5 @@
   outlet = "Colegio de Politólogos del Perú"
   date = "26 de marzo de 2026"
   url = "https://www.youtube.com/watch?v=dJxkPe9QxE4"
-  image = "https://img.youtube.com/vi/dJxkPe9QxE4/hqdefault.jpg"
+  image = "/images/media/politologos-elecciones.jpg"
   description = "Panel en vivo de análisis del debate presidencial peruano 2026, organizado por el Colegio de Politólogos del Perú."

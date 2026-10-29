@@ -1,9 +1,14 @@
-{{- /* Project thumbnail. Images under static/images are also mounted as assets
+{{- /* Thumbnail. Context: the image path as a string, or a dict "src" (path)
+       and "size" (an images.Fill spec; 720x360 when left out, the project
+       card size). Images under static/images are also mounted as assets
        (hugo.toml), so Hugo can serve a resized WebP; if the image is missing
-       from the assets, the original file is used. Decorative: the title follows. */ -}}
-{{- $src := . | relURL -}}
+       from the assets, the original file is used. Decorative: the title is
+       next to it. */ -}}
+{{- $p := . }}{{ $size := "720x360" -}}
+{{- if reflect.IsMap . }}{{ $p = .src }}{{ with .size }}{{ $size = . }}{{ end }}{{ end -}}
+{{- $src := $p | relURL -}}
 {{- $w := 0 }}{{ $h := 0 -}}
-{{- with resources.Get (strings.TrimPrefix "/" .) }}
-  {{- with .Fill "720x360 webp q78 Center" }}{{ $src = .RelPermalink }}{{ $w = .Width }}{{ $h = .Height }}{{ end }}
+{{- with resources.Get (strings.TrimPrefix "/" $p) }}
+  {{- with .Fill (printf "%s webp q78 Center" $size) }}{{ $src = .RelPermalink }}{{ $w = .Width }}{{ $h = .Height }}{{ end }}
 {{- end }}
 <img src="{{ $src }}" alt="" loading="lazy" decoding="async"{{ with $w }} width="{{ . }}" height="{{ $h }}"{{ end }}>

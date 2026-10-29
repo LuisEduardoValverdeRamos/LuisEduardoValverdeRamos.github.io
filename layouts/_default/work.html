@@ -37,10 +37,18 @@
     <p{{ with $p.note_confirmar }} class="tbc" data-tbc="{{ . }}"{{ end }}>{{ . }}</p>
     {{- end }}{{ end }}
     {{- with .proof }}<p class="s-proofline"><b>{{ $l.pillar_proof }}</b>{{ . }}</p>{{ end }}
-    {{- with .limit }}<p class="s-limit">{{ . }}</p>{{ end }}
     {{- with .services }}
-    <div class="s-svcs">
-      {{- range . }}{{ partial "service-card.html" (dict "s" . "labels" $l "email" $a.email) }}{{ end }}
+    {{- /* Services as light top-ruled entries (the home questions pattern):
+           title, one line and the mail CTA. */}}
+    <div class="s-minis">
+      {{- range . }}
+      {{- $svc := . }}
+      <div class="s-mini">
+        <b>{{ .title }}</b>
+        {{- with .text }}<p>{{ . }}</p>{{ end }}
+        {{- with .subject }}<a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" . "body" $svc.body) }}">{{ $l.write }} →</a>{{ end }}
+      </div>
+      {{- end }}
     </div>
     {{- end }}
   </section>

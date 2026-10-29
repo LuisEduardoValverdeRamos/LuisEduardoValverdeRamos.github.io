@@ -69,8 +69,15 @@
     {{- with $p.note }}{{ if or (not $p.note_confirmar) (not hugo.IsProduction) }}
     <p class="s-note{{ with $p.note_confirmar }} tbc{{ end }}"{{ with $p.note_confirmar }} data-tbc="{{ . }}"{{ end }}>{{ . }}</p>
     {{- end }}{{ end }}
-    <div class="s-svcs" style="margin-top:20px">
-      {{- range $p.services }}{{ partial "service-card.html" (dict "s" . "labels" $sv.labels "email" $a.email) }}{{ end }}
+    <div class="s-minis" style="margin-top:20px">
+      {{- range $p.services }}
+      {{- $svc := . }}
+      <div class="s-mini">
+        <b>{{ .title }}</b>
+        {{- with .text }}<p>{{ . }}</p>{{ end }}
+        {{- with .subject }}<a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" . "body" $svc.body) }}">{{ $sv.labels.write }} →</a>{{ end }}
+      </div>
+      {{- end }}
     </div>
   </section>
   {{- end }}{{ end }}

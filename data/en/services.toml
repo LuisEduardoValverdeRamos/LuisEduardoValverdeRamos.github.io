@@ -13,12 +13,9 @@ lead = "Alongside my research, I take on projects in three areas. Email me with 
 router_label = "What do you need?"
 
 [labels]
-  for = "For"
-  format = "Format"
   write = "Email about this"
   pillar_proof = "Track record"
   press = "Press enquiries"
-  details = "Details"
 
 [home]
   title = "What I can help with"
@@ -42,22 +39,19 @@ router_label = "What do you need?"
   page_label = "My research"
   title = "Collaboration and research assistance"
   intro = "I collaborate on projects on electoral behaviour, subnational politics, policy implementation and legislative analysis in Peru and Latin America."
-  limit = "I do not write theses, papers or assignments for others to submit as their own. I review, explain and teach; the text and the decisions belong to whoever signs them."
   home_title = "Research collaboration"
   home_text = "Co-authorship, research assistance, dataset building and methods support."
   home_cta = "Propose a collaboration"
 
   [[pillars.services]]
     title = "Collaboration and co-authorship"
-    for = "Researchers working on Peru or Latin America on these topics."
-    format = "Roles agreed at the start using the CRediT taxonomy: data curation, analysis, software, visualisation and writing."
+    text = "Roles agreed at the start using the CRediT taxonomy."
     subject = "Research: collaboration or methods support"
     body = "Topic and question:\nStage of the project:\nData:\nThe role you have in mind for me:\n"
 
   [[pillars.services]]
     title = "Research assistance"
-    for = "Researchers and centres that need datasets built, replicable econometric analysis in R or literature reviews."
-    format = "By project, online."
+    text = "Documented datasets, replicable analysis in R and literature reviews, by project and online."
     subject = "Research assistance"
     body = "Project and institution:\nTasks:\nHours per week and duration:\n"
 
@@ -75,22 +69,19 @@ router_label = "What do you need?"
 
   [[pillars.services]]
     title = "Debate programme for schools"
-    for = "Schools that want to start a debate club or prepare their team for school tournaments."
-    format = "A term or year-long programme, in person in Lima or online; session frequency agreed with the school."
+    text = "A term or year-long programme to start a club or prepare for tournaments, in person in Lima or online."
     subject = "Debate programme for a school"
     body = "School:\nCity:\nYear groups and number of students:\nDo you already have a debate club?:\nTournaments you are aiming for:\nFormat (in person or online):\nDesired start date:\n"
 
   [[pillars.services]]
     title = "University teams and argumentation workshops"
-    for = "Debating societies and national teams preparing for a tournament, and schools, universities and organisations that want a practical introduction to debate."
-    format = "A preparation cycle before the tournament, in British Parliamentary or World Schools format, or a two-hour workshop; in person in Lima or online."
+    text = "Tournament preparation in British Parliamentary or World Schools format, and two-hour workshops."
     subject = "Debate coaching or argumentation workshop"
     body = "Institution or team:\nWhat you need (tournament preparation or a workshop):\nFormat (BP or World Schools):\nNumber of participants and level:\nDates and availability:\n"
 
   [[pillars.services]]
     title = "Advice on tournament adjudication and organisation"
-    for = "Leagues, organisers, universities and schools preparing a tournament that want advice on its competitive side: the judging team, assessment criteria and how the rounds are organised."
-    format = "Depending on the tournament: advice on designing the adjudication team and on the organisation, the two-hour workshop «How is a debate judged?» and a calibration session with sample rounds before the tournament."
+    text = "The judging team, assessment criteria and how the rounds are organised."
     subject = "Debate tournament advice (adjudication and organisation)"
     body = "Organisation or tournament:\nTournament date:\nFormat:\nNumber of teams and adjudicators (and their experience):\n"
 
@@ -105,22 +96,19 @@ router_label = "What do you need?"
 
   [[pillars.services]]
     title = "Electoral and public-opinion analysis"
-    for = "NGOs, research centres, international cooperation and newsrooms with a data unit."
-    format = "Scope agreed at the start: from a one-off question about a dataset to a report with figures."
+    text = "From a one-off question about a dataset to a report with figures."
     subject = "Consulting: data analysis"
     body = "Organisation:\nWhat you need analysed or assessed:\nData available:\nDeadline:\n"
 
   [[pillars.services]]
     title = "Methods support and indicator validity"
-    for = "Observatories, NGOs and research units about to publish indicators built from administrative data."
-    format = "A review of the dataset and of each indicator, with working sessions with the team."
+    text = "A review of datasets and indicators before they are published."
     subject = "Methods support - indicator validity"
     body = "Organisation:\nReport or indicators in preparation:\nData source:\nPlanned publication date:\n"
 
   [[pillars.services]]
     title = "Data and visualisation in R"
-    for = "Teams working with records from MEF, INEI, MINEDU, SEACE or BCRP that need them integrated, documented and visualised."
-    format = "Project-based deliverables. I work in R; I also use Python and Stata at an intermediate level."
+    text = "Integrated, documented datasets, reproducible scripts and report-ready figures."
     subject = "Data analysis and visualisation in R"
     body = "Organisation:\nData sources:\nWhat you need (dataset, figures, report):\nDeadline:\n"
 

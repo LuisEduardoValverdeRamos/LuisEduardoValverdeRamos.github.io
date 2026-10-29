@@ -277,8 +277,6 @@
 .s-svc-sec .s-section-head > div { display: grid; gap: 8px; }
 .s-svc-sec > p { max-width: 70ch; color: var(--s-ink2); }
 .s-svc-sec .s-svcs { margin-top: 6px; }
-.s-proofline { max-width: 80ch; font-size: 14.5px; color: var(--s-ink); background: var(--s-bg2); padding: 12px 14px; border-radius: var(--s-radius); }
-.s-proofline b { margin-right: 6px; font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--s-ink2); }
 .s-asksub { display: block; margin-top: 2px; font-size: 13.5px; color: var(--s-ink2); }
 .s-bullets { margin: 0; padding-left: 18px; list-style: disc; display: grid; gap: 6px; font-size: 14.5px; }
 .s-inst p { margin-top: 6px; font-size: 14.5px; color: var(--s-ink2); }

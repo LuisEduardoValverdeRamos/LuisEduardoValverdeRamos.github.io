@@ -36,7 +36,6 @@
     {{- with .note }}{{ if or (not $p.note_confirmar) (not hugo.IsProduction) }}
     <p{{ with $p.note_confirmar }} class="tbc" data-tbc="{{ . }}"{{ end }}>{{ . }}</p>
     {{- end }}{{ end }}
-    {{- with .proof }}<p class="s-proofline"><b>{{ $l.pillar_proof }}</b>{{ . }}</p>{{ end }}
     {{- with .services }}
     {{- /* Services as light top-ruled entries (the home questions pattern):
            title, one line and the mail CTA. */}}

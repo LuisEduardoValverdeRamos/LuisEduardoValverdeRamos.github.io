@@ -3,8 +3,8 @@
 # R, prensa, «Cómo trabajo», «Lo que no hago», las filas Entregas y Lo que no
 # prometo y la ficha de revisión metodológica se retiraron el 28-oct-2026).
 # Cada servicio: title, text (una línea), subject (asunto del correo) y body
-# (cuerpo del correo), mostrado como entrada ligera, no tarjeta (la banda del
-# pilar de Debate y el bloque de Instituciones sustentan). Un servicio con
+# (cuerpo del correo), mostrado como entrada ligera, no tarjeta (el bloque de
+# Instituciones y las páginas enlazadas sustentan). Un servicio con
 # confirmar = "…" espera el visto bueno de Luis: solo se ve, marcado, en la
 # vista previa local; en producción no se publica.
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
@@ -15,7 +15,6 @@ router_label = "¿Qué necesitas?"
 
 [labels]
   write = "Escribir sobre esto"
-  pillar_proof = "Experiencia"
   press = "Escribir como periodista"
 
 [home]
@@ -65,7 +64,6 @@ router_label = "¿Qué necesitas?"
   page_label = "Mi trayectoria en debate"
   title = "Entrenamiento de equipos y asesoría de torneos"
   intro = "Entreno equipos escolares y universitarios en formato World Schools y parlamentario británico, y asesoro en la adjudicación y organización de torneos."
-  proof = "Director general de la Selección Nacional de Debate Escolar del Perú y, antes, parte de su equipo de entrenadores: en Panamá 2026 la selección obtuvo su cuarto título consecutivo del Mundial de Debate Escolar en Español (MED) y mi equipo llegó a cuartos de final. Preparé a las duplas dominicanas que llegaron a cuartos y a octavos de final del CMUDE Ecuador 2026."
   home_title = "Entrenamiento de equipos y asesoría de torneos"
   home_text = "Colegios, universidades y selecciones: preparación de equipos y asesoría en la adjudicación y organización de torneos."
   home_cta = "Entrenar a mi equipo"
@@ -100,19 +98,19 @@ router_label = "¿Qué necesitas?"
 
   [[pillars.services]]
     title = "Análisis electoral y de opinión pública"
-    text = "Desde una consulta puntual sobre una base hasta un informe con figuras."
+    text = "Del encargo puntual al informe completo, con metodología y limitaciones declaradas."
     subject = "Análisis electoral o de opinión pública"
     body = "Organización:\nPregunta que quieren responder:\nDatos disponibles (resultados, padrón, encuesta):\nPlazo:\nUso previsto del análisis:\n"
 
   [[pillars.services]]
     title = "Acompañamiento metodológico y validez de indicadores"
-    text = "Revisión de bases e indicadores antes de publicarlos."
+    text = "Revisión independiente de bases e indicadores antes de publicarlos."
     subject = "Acompañamiento metodológico - validez de indicadores"
     body = "Organización:\nInforme o indicadores en preparación:\nFuente de datos:\nFecha de publicación prevista:\n"
 
   [[pillars.services]]
     title = "Datos y visualización en R"
-    text = "Bases integradas y documentadas, scripts reproducibles y figuras listas para informe."
+    text = "Fuentes dispersas integradas en una base documentada, con figuras listas para publicar."
     subject = "Análisis de datos y visualización en R"
     body = "Organización:\nFuentes de datos:\nProducto que necesitan (base, figuras, informe):\nPlazo:\n"
 

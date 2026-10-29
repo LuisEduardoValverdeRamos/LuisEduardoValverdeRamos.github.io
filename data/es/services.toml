@@ -2,9 +2,9 @@
 # Tres pilares, en este orden: investigación, debate y consultoría (talleres de
 # R, prensa, «Cómo trabajo», «Lo que no hago», las filas Entregas y Lo que no
 # prometo y la ficha de revisión metodológica se retiraron el 28-oct-2026).
-# Cada servicio: title, for, format, subject (asunto del correo) y body
-# (cuerpo del correo); sin fila de Experiencia por ficha (la banda del pilar de
-# Debate y el bloque de Instituciones sustentan). Un servicio o una línea con
+# Cada servicio: title, text (una línea), subject (asunto del correo) y body
+# (cuerpo del correo), mostrado como entrada ligera, no tarjeta (la banda del
+# pilar de Debate y el bloque de Instituciones sustentan). Un servicio con
 # confirmar = "…" espera el visto bueno de Luis: solo se ve, marcado, en la
 # vista previa local; en producción no se publica.
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
@@ -14,12 +14,9 @@ lead = "Junto a mi investigación, tomo encargos en tres áreas. Escríbeme con 
 router_label = "¿Qué necesitas?"
 
 [labels]
-  for = "Para quién"
-  format = "Formato"
   write = "Escribir sobre esto"
   pillar_proof = "Experiencia"
   press = "Escribir como periodista"
-  details = "Detalles"
 
 [home]
   title = "En qué puedo ayudarte"
@@ -44,22 +41,19 @@ router_label = "¿Qué necesitas?"
   page_label = "Mi investigación"
   title = "Colaboración y asistencia de investigación"
   intro = "Colaboro en proyectos sobre comportamiento electoral, política subnacional, implementación de políticas y análisis legislativo."
-  limit = "No escribo tesis, artículos ni trabajos por encargo para que otra persona los presente como propios. Reviso, explico y enseño; el texto y las decisiones son de quien firma."
   home_title = "Colaboración en investigación"
   home_text = "Coautorías, asistencia de investigación, construcción de bases de datos y apoyo metodológico."
   home_cta = "Proponer una colaboración"
 
   [[pillars.services]]
     title = "Colaboración y coautoría"
-    for = "Investigadoras e investigadores que trabajan sobre el Perú o América Latina en estos temas."
-    format = "Roles acordados al inicio según la taxonomía CRediT: datos, análisis, software, visualización y redacción."
+    text = "Roles acordados al inicio según la taxonomía CRediT."
     subject = "Colaboración de investigación"
     body = "Tema y pregunta:\nEstado del proyecto:\nDatos:\nRol que imaginas para mí:\n"
 
   [[pillars.services]]
     title = "Asistencia de investigación"
-    for = "Investigadores y centros que necesitan construir bases, hacer análisis econométrico replicable en R o revisar literatura."
-    format = "Por proyecto y a distancia."
+    text = "Bases documentadas, análisis replicable en R y revisión de literatura, por proyecto y a distancia."
     subject = "Asistencia de investigación"
     body = "Proyecto e institución:\nTareas:\nHoras por semana y duración:\n"
 
@@ -78,22 +72,19 @@ router_label = "¿Qué necesitas?"
 
   [[pillars.services]]
     title = "Programa de debate para colegios"
-    for = "Colegios que quieren empezar un club de debate o preparar a su equipo para torneos escolares."
-    format = "Programa semestral o anual, presencial en Lima o remoto; la frecuencia de las sesiones se acuerda con el colegio."
+    text = "Programa semestral o anual para empezar un club o preparar torneos, presencial en Lima o remoto."
     subject = "Programa de debate para colegio"
     body = "Colegio:\nCiudad:\nGrados y número de estudiantes:\n¿Ya tienen club de debate?:\nTorneos a los que apuntan:\nModalidad (presencial o remota):\nFecha de inicio deseada:\n"
 
   [[pillars.services]]
     title = "Equipos universitarios y talleres de argumentación"
-    for = "Sociedades de debate y selecciones que preparan un torneo, y colegios, universidades y organizaciones que quieren una introducción práctica al debate."
-    format = "Ciclo de preparación antes del torneo, en formato parlamentario británico o World Schools, o taller de 2 horas; presencial en Lima o remoto."
+    text = "Preparación para torneos en formato parlamentario británico o World Schools, y talleres de 2 horas."
     subject = "Coaching de debate o taller de argumentación"
     body = "Institución o equipo:\nQué necesitas (preparación para un torneo o taller):\nFormato (BP o World Schools):\nNúmero de participantes y nivel:\nFechas y disponibilidad:\n"
 
   [[pillars.services]]
     title = "Asesoría en adjudicación y organización de torneos"
-    for = "Ligas, organizadores, universidades y colegios que preparan un torneo y quieren asesoría en su lado competitivo: equipo de jueces, criterios de evaluación y organización de las rondas."
-    format = "Según el torneo: asesoría en el diseño del equipo de adjudicación y en la organización, taller «¿Cómo se evalúa un debate?» y, antes del torneo, una sesión de calibración con rondas de ejemplo."
+    text = "Equipo de jueces, criterios de evaluación y organización de las rondas."
     subject = "Asesoría de torneo de debate (adjudicación y organización)"
     body = "Organización o torneo:\nFecha del torneo:\nFormato:\nNúmero de equipos y de jueces (y su experiencia):\n"
 
@@ -109,22 +100,19 @@ router_label = "¿Qué necesitas?"
 
   [[pillars.services]]
     title = "Análisis electoral y de opinión pública"
-    for = "ONG, centros de investigación, cooperación internacional y medios con unidad de datos."
-    format = "Por encargo, con el alcance acordado al inicio: desde una consulta puntual sobre una base hasta un informe con figuras."
+    text = "Desde una consulta puntual sobre una base hasta un informe con figuras."
     subject = "Análisis electoral o de opinión pública"
     body = "Organización:\nPregunta que quieren responder:\nDatos disponibles (resultados, padrón, encuesta):\nPlazo:\nUso previsto del análisis:\n"
 
   [[pillars.services]]
     title = "Acompañamiento metodológico y validez de indicadores"
-    for = "Observatorios, ONG y áreas de estudios que van a publicar indicadores construidos con datos administrativos."
-    format = "Revisión de la base y de cada indicador, con sesiones de trabajo con el equipo."
+    text = "Revisión de bases e indicadores antes de publicarlos."
     subject = "Acompañamiento metodológico - validez de indicadores"
     body = "Organización:\nInforme o indicadores en preparación:\nFuente de datos:\nFecha de publicación prevista:\n"
 
   [[pillars.services]]
     title = "Datos y visualización en R"
-    for = "Equipos que trabajan con registros del MEF, el INEI, el MINEDU, el SEACE o el BCRP y necesitan integrarlos, documentarlos y visualizarlos."
-    format = "Proyecto por entregables. Trabajo en R; también uso Python y Stata, a nivel intermedio."
+    text = "Bases integradas y documentadas, scripts reproducibles y figuras listas para informe."
     subject = "Análisis de datos y visualización en R"
     body = "Organización:\nFuentes de datos:\nProducto que necesitan (base, figuras, informe):\nPlazo:\n"
 

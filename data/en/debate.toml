@@ -13,13 +13,11 @@
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
 lead = "I lead the Peruvian National Schools Debate Team, coach school and university teams and have served on adjudication teams at tournaments in Costa Rica, Ecuador, Peru and Venezuela."
-glossary = "Acronyms: MED, the world schools championship held in Spanish (Mundial de Debate Escolar en Español); CMUDE, the world universities championship held in Spanish; TNDE, Peru's national schools tournament (Torneo Nacional de Debate Escolar)."
 
-# Home page: a single block, apart from the research and consulting profile
-# (11 Nov 2026): this sentence and the [coach] roles marked home = true.
+# Home page: a one-line band, apart from the research and consulting
+# profile: the organisations of the [coach] roles marked home = true.
 [home]
   title = "Debate"
-  text = "I coach school and university teams, and advise on tournament adjudication and organisation."
   more = "See debate"
 
 # Page: the director role is set apart at the top (wording confirmed by Luis on
@@ -32,15 +30,19 @@ glossary = "Acronyms: MED, the world schools championship held in Spanish (Mundi
 [labels]
   trajectory = "Track record"
 
+# Results: label (place and year), title (the tournament's full name, with the
+# acronym the lists below use), text and an optional source.
 [[highlights]]
-  label = "MED · Panama 2026"
-  text = "I was part of the coaching staff of the Peruvian team that won its fourth consecutive title at the Mundial de Debate Escolar en Español; the team I coached reached the quarterfinals and placed among the tournament's top 10 speakers."
+  label = "Panama 2026"
+  title = "World Schools Debating Championship in Spanish (MED)"
+  text = "I was part of the coaching staff of the Peruvian team that won its fourth consecutive title; the team I coached reached the quarterfinals and placed among the tournament's top 10 speakers."
   src = "Andina (in Spanish) ↗"
   url = "https://andina.pe/agencia/noticia-peru-se-corona-tetracampeon-el-mundial-debate-escolar-espanol-2026-1091241.aspx"
 
 [[highlights]]
-  label = "CMUDE · 2025–2026"
-  text = "I prepared the Dominican pairs that reached the quarterfinals and the round of 16 of the world universities championship held in Spanish (Dominican Republic 2025 and Ecuador 2026)."
+  label = "Dominican Republic 2025 · Ecuador 2026"
+  title = "World Universities Debating Championship in Spanish (CMUDE)"
+  text = "I prepared the Dominican pairs that reached the quarterfinals and the round of 16; in 2025, the first all-Dominican pair to reach the round of 16."
 
 [coach]
   title = "Coaching"
@@ -71,7 +73,6 @@ glossary = "Acronyms: MED, the world schools championship held in Spanish (Mundi
     period = "2024–"
     role = "University coach, online"
     org = "Dominican Republic"
-    home = true
     text = "British Parliamentary format. In 2025 I prepared the first all-Dominican pair to reach the round of 16 at CMUDE; in 2026 my pairs reached the quarterfinals and the round of 16 (CMUDE Ecuador)."
 
 [judge]
@@ -83,7 +84,7 @@ glossary = "Acronyms: MED, the world schools championship held in Spanish (Mundi
   [[judge.items]]
     period = "2025"
     role = "Chief adjudicator"
-    org = "TNDE 2025"
+    org = "Peru's National Schools Debating Tournament (TNDE) 2025"
 
 [compete]
   title = "Competing"

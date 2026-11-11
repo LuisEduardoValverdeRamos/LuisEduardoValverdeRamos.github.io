@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{- /* Debate: the director role in a band, the two coaching results as cards
-       (acronyms spelled out right below), the track record in four short
+       (each titled with the tournament's full name), the track record in four short
        groups (coaching, adjudication, competing, research) and the services for
        teams as cards. Data: debate, and the mail label from services. */ -}}
 {{- $d := index hugo.Data .Language.Lang -}}
@@ -26,12 +26,12 @@
     {{- $src := .src }}
     <article class="s-result">
       <p class="s-eyebrow">{{ .label }}</p>
+      {{- with .title }}<h2 class="s-h3">{{ . }}</h2>{{ end }}
       <p>{{ .text }}</p>
       {{- with .url }}<a class="s-go" href="{{ . }}">{{ $src }}</a>{{ end }}
     </article>
     {{- end }}
   </div>
-  <p class="s-note s-gloss">{{ $db.glossary }}</p>
 
   <section class="s-section" aria-labelledby="h-record">
     <div class="s-section-head"><h2 id="h-record" class="s-h2">{{ $db.labels.trajectory }}</h2></div>

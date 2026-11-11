@@ -1,16 +1,9 @@
-{{- /* Home: debate in a single block, apart from the research and consulting
-       profile: one sentence, the roles marked home = true in the coaching list
-       and a link to the Debate page. Data: data/<lang>/debate.toml. */ -}}
+{{- /* Home: debate as a short typographic band, apart from the research and
+       consulting profile: the organisations of the [coach] roles marked
+       home = true, each with its role muted, and a link to the Debate page.
+       Data: data/<lang>/debate.toml. */ -}}
 {{- $db := .d.debate -}}
-<section class="s-section" aria-labelledby="h-debate">
-  <div class="s-section-head">
-    <h2 id="h-debate" class="s-h2">{{ $db.home.title }}</h2>
-    {{- with site.GetPage "/debate" }}<a class="s-link" href="{{ .RelPermalink }}">{{ $db.home.more }}</a>{{ end }}
-  </div>
-  <p class="s-brief-lead">{{ $db.home.text }}</p>
-  <ul class="s-brief">
-    {{- range where $db.coach.items "home" true }}
-    <li><span class="s-eyebrow">{{ .period }}</span><span class="t">{{ .role }}</span><span class="m">{{ .org }}</span></li>
-    {{- end }}
-  </ul>
-</section>
+{{- $items := slice }}
+{{- range where $db.coach.items "home" true }}{{ $items = $items | append (dict "name" .org "unit" (lower .role)) }}{{ end }}
+{{- $link := "" }}{{ with site.GetPage "/debate" }}{{ $link = .RelPermalink }}{{ end }}
+{{ partial "band.html" (dict "label" $db.home.title "items" $items "link" $link "more" $db.home.more) }}

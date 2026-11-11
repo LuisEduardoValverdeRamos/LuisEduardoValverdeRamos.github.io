@@ -1,16 +1,15 @@
-{{- /* Home: the three latest appearances from data/<lang>/media.toml (newest
-       first) and a link to the Media page. */ -}}
+{{- /* Home: the outlets of data/<lang>/media.toml as a typographic band, like
+       the institutions, with a link to the Media page. */ -}}
 {{- $h := .h -}}
 {{- with .d.media.media }}
-<section class="s-section" aria-labelledby="h-media">
-  <div class="s-section-head">
-    <h2 id="h-media" class="s-h2">{{ $h.media_label }}</h2>
-    {{- with site.GetPage "/media" }}<a class="s-link" href="{{ .RelPermalink }}">{{ $h.media_more }}</a>{{ end }}
-  </div>
-  <ul class="s-brief">
-    {{- range first 3 . }}
-    <li><span class="s-eyebrow">{{ .outlet_short | default .outlet }} · {{ .type }}</span><a class="t" href="{{ .url }}">{{ .title }}</a><span class="m">{{ .date }}</span></li>
-    {{- end }}
-  </ul>
-</section>
+{{- $seen := slice }}{{ $items := slice }}
+{{- range . }}
+  {{- $o := .outlet_short | default .outlet }}
+  {{- if not (in $seen $o) }}
+    {{- $seen = $seen | append $o }}
+    {{- $items = $items | append (partial "name-unit.html" $o) }}
+  {{- end }}
+{{- end }}
+{{- $link := "" }}{{ with site.GetPage "/media" }}{{ $link = .RelPermalink }}{{ end }}
+{{ partial "band.html" (dict "label" $h.media_label "items" $items "link" $link "more" $h.media_more) }}
 {{- end }}

@@ -1,13 +1,7 @@
-{{- /* Home: the institutions as typographic «logos» — names in the display face,
-       their units in parentheses muted. The grouped list lives in Work with me. */ -}}
+{{- /* Home and Work with me: the institutions as a typographic band, names with
+       their units muted in parentheses (services.toml, home_line). */ -}}
 {{- with .d.services.institutions }}
-<div class="s-inst-band">
-  <span class="s-eyebrow">{{ .home_label }}</span>
-  <ul class="s-inst-row">
-    {{- range split .home_line " · " }}
-    {{- $p := split . " (" }}
-    <li>{{ index $p 0 }}{{ if gt (len $p) 1 }} <span>({{ index $p 1 }}</span>{{ end }}</li>
-    {{- end }}
-  </ul>
-</div>
+{{- $items := slice }}
+{{- range split .home_line " · " }}{{ $items = $items | append (partial "name-unit.html" .) }}{{ end }}
+{{ partial "band.html" (dict "label" .home_label "items" $items) }}
 {{- end }}

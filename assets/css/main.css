@@ -223,19 +223,12 @@
 .s-pillar p:not(.s-eyebrow) { font-size: 15px; color: var(--s-ink2); }
 /* Institutions band: names set in the display face as quiet text «logos» */
 .s-inst-band { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--s-line); display: grid; gap: 14px; }
+.s-inst-band + .s-inst-band { margin-top: 22px; }
+.s-band-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
+.s-band-head .s-go { font-size: 14px; }
 .s-inst-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 34px; margin: 0; padding: 0; list-style: none; }
 .s-inst-row li { font-family: var(--s-text); font-weight: 400; font-size: 16px; color: var(--s-ink); }
 .s-inst-row li span { font-family: var(--s-text); font-weight: 400; font-size: 13px; letter-spacing: 0; color: var(--s-ink2); white-space: nowrap; }
-/* Closing pair of the home page: «In the media» and Debate side by side, each
-   a short list (eyebrow, title, one muted line), apart from the profile above */
-.s-duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
-.s-duo .s-section-head { margin-bottom: 16px; }
-.s-brief-lead { margin-bottom: 14px; font-size: 15.5px; color: var(--s-ink2); max-width: 52ch; }
-.s-brief { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--s-line); }
-.s-brief li { display: grid; gap: 3px; padding-block: 13px; border-bottom: 1px solid var(--s-line); }
-.s-brief .t { font-family: var(--s-display); font-weight: 650; letter-spacing: -.01em; font-size: 17px; line-height: 1.3; color: var(--s-ink); text-decoration: none; }
-.s-brief a.t:hover { color: var(--s-accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-.s-brief .m { font-size: 14px; color: var(--s-ink2); }
 /* Work with me: the closing line that points to the Debate page */
 .s-aside { margin-top: 28px; font-size: 15.5px; color: var(--s-ink2); }
 .s-doors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--s-line); }
@@ -321,16 +314,19 @@
 .s-ruled > .s-section + .s-section { margin-top: 40px; padding-top: 44px; border-top: 1px solid var(--s-line2); }
 .s-ruled .s-list > .s-item:last-child { border-bottom: 0; }
 
-/* Debate: the director role as a band, the two results as cards (acronyms
-   spelled out right below), the track record in four short groups two by two
-   and the services for teams as cards: few blocks, as on the CV page. */
+/* Debate: the director role as a band, the two results as cards (place and
+   year in green, the tournament's full name as title, a thin green rule on
+   top), the track record in four short groups two by two and the services
+   for teams as cards: few blocks, as on the CV page. */
 .s-dir { display: grid; gap: 10px; padding: 28px 32px; background: var(--s-bg2); border-radius: var(--s-radius); }
 .s-dir .s-h2 { font-size: 26px; max-width: 34ch; }
 .s-dir p:not(.s-eyebrow) { font-size: 16px; color: var(--s-ink2); max-width: 72ch; }
 .s-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 20px; }
-.s-result { display: grid; gap: 8px; align-content: start; justify-items: start; padding: 22px; border: 1px solid var(--s-line); border-radius: var(--s-radius); }
-.s-result p:not(.s-eyebrow) { font-size: 15.5px; line-height: 1.5; color: var(--s-ink); }
-.s-gloss { margin-top: 12px; font-size: 13.5px; }
+.s-result { display: grid; grid-template-rows: auto auto 1fr auto; gap: 8px; justify-items: start; padding: 22px 24px 20px; border: 1px solid var(--s-line); border-top: 3px solid var(--s-accent); border-radius: var(--s-radius); }
+.s-result .s-eyebrow { color: var(--s-accent); }
+.s-result .s-h3 { font-size: 19px; line-height: 1.25; }
+.s-result p:not(.s-eyebrow) { font-size: 15px; line-height: 1.55; color: var(--s-ink2); }
+.s-result .s-go { margin-top: 4px; font-size: 14px; }
 .s-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 48px; }
 .s-group { display: grid; align-content: start; border-top: 2px solid var(--s-ink); padding-top: 14px; scroll-margin-top: 16px; }
 .s-group ul { display: grid; margin: 6px 0 0; padding: 0; list-style: none; }
@@ -436,7 +432,7 @@
   .s-h1-statement { font-size: 27px; }
   .s-bio, .s-lead { font-size: 16.5px; }
   .s-section { padding-block: 44px 4px; }
-  .s-questions, .s-pillars, .s-doors, .s-pillcards, .s-cards, .s-projects, .s-duo { grid-template-columns: minmax(0, 1fr); }
+  .s-questions, .s-pillars, .s-doors, .s-pillcards, .s-cards, .s-projects { grid-template-columns: minmax(0, 1fr); }
   .s-pillcards { gap: 14px; }
   .s-pillcard .top { padding: 20px; }
   .s-pillcard ul { grid-auto-flow: row; padding: 0 20px; }

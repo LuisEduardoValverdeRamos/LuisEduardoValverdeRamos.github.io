@@ -21,7 +21,7 @@
       <div class="body">
         <h2 class="s-h3" lang="{{ .lang }}">{{ .name }}</h2>
         {{- with index hugo.Data.cvfiles .lang }}
-        <p class="m">{{ printf $cv.meta .pages (time.AsTime .updated | time.Format (T "footerDateLayout")) }}</p>
+        <p class="m">{{ printf $cv.meta (time.AsTime .updated | time.Format (T "footerDateLayout")) }}</p>
         {{- end }}
         <a class="s-btn primary small" href="{{ $pdf }}" download>{{ .download }}</a>
         <a class="s-link" href="{{ $pdf }}" hreflang="{{ .lang }}">{{ $cv.view }}</a>

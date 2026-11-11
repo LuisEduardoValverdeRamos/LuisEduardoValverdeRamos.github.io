@@ -1,0 +1,6 @@
+{{- /* Splits "Name (unit)" into a dict "name" and "unit" for band.html; a name
+       without parentheses comes back with an empty unit. */ -}}
+{{- $p := split . " (" -}}
+{{- $unit := "" -}}
+{{- if gt (len $p) 1 }}{{ $unit = strings.TrimSuffix ")" (index $p 1) }}{{ end -}}
+{{- return (dict "name" (index $p 0) "unit" $unit) -}}

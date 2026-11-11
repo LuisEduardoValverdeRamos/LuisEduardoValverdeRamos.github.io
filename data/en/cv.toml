@@ -7,7 +7,7 @@
 
 title = "Curriculum vitae"
 lead = "My CV in English and Spanish."
-meta = "%d pages · PDF · updated %s"
+meta = "PDF · updated %s"
 view = "Open in the browser"
 refs = "References on request:"
 

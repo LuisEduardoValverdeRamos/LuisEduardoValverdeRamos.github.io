@@ -1,13 +1,13 @@
 # English home page: the same «media» variant as the Spanish one (Luis's
 # decision, 17 Oct 2026): facts strip, research questions, selected writing,
-# services, institutions, and media and debate side by side, in the same order.
+# services, and the institutions, media and debate bands, in the same order.
 # Research and consulting profile (11 Nov 2026): debate stays out of the hero
-# and the services; it is a single block at the end, next to «In the media» (a
-# list inside `blocks` sets its blocks side by side).
+# and the services. At the end, three one-line bands in the same style:
+# institutions, media and debate.
 # The facts strip ([[proof]]) left `blocks` on 11 Nov 2026: it repeated the bio.
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
-blocks = ["research", "services", "institutions", ["media", "debate"]]
+blocks = ["research", "services", "institutions", "media", "debate"]
 eyebrow = "ESEG–JNE · PUCP"
 statement = "I research electoral behaviour and public policy implementation in Peru and advise institutions on applied research."
 bio = "Political scientist trained at PUCP, where I graduated first in my class. Researcher at the Electoral and Governance School of Peru's National Elections Jury, consultant to the Lima Bar Association and teaching assistant in Political Economy at PUCP."

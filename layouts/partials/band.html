@@ -1,0 +1,15 @@
+{{- /* A typographic band, as for the institutions: a label, the names in one
+       line with their units muted in parentheses, and an optional link.
+       Context: dict "label", "items" (each a dict "name" and optional "unit"),
+       and optional "link" and "more" (the link text). */ -}}
+<div class="s-inst-band">
+  <div class="s-band-head">
+    <span class="s-eyebrow">{{ .label }}</span>
+    {{- with .link }}<a class="s-go" href="{{ . }}">{{ $.more }} →</a>{{ end }}
+  </div>
+  <ul class="s-inst-row">
+    {{- range .items }}
+    <li>{{ .name }}{{ with .unit }} <span>({{ . }})</span>{{ end }}</li>
+    {{- end }}
+  </ul>
+</div>

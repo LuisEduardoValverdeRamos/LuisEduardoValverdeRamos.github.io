@@ -277,7 +277,6 @@
 .s-toc { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; }
 .s-toc a { color: var(--s-ink2); text-decoration: underline; text-decoration-color: var(--s-line2); text-underline-offset: 4px; }
 .s-toc a:hover { color: var(--s-ink); }
-.s-asksub { display: block; margin-top: 2px; font-size: 13.5px; color: var(--s-ink2); }
 .s-lead + .s-note { margin-top: 12px; }
 .s-mail { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .s-mail code { font-family: var(--s-text); font-size: 15px; font-weight: 600; color: var(--s-ink); background: var(--s-bg); border: 1px solid var(--s-line2); border-radius: var(--s-radius); padding: 6px 10px; user-select: all; }

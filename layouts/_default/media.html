@@ -1,35 +1,35 @@
-{{ define "main" }}
-{{- /* Media / Medios: the press note first (what I comment on and how to ask),
-       then every appearance. Data: data/<lang>/media.toml (press_* keys and
-       the [[media]] entries). */ -}}
-{{- $d := index hugo.Data .Language.Lang -}}
-{{- $m := $d.media -}}
-{{- $a := $d.author.author -}}
-<div class="wrap">
-  <header class="s-page-head">
-    <p class="s-eyebrow">{{ .Title }}</p>
-    <h1 class="s-h1">{{ .Params.heading | default .Title }}</h1>
-    {{- with $m.press_intro }}
-    <p class="s-lead">{{ . }}</p>
-    <p class="s-note"><a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" $m.press_subject "body" $m.press_body) }}">{{ $m.press_label }} →</a><span class="s-asksub">{{ $a.email }}</span></p>
-    {{- end }}
-    {{- with .Params.note }}<p class="s-note">{{ . }}</p>{{ end }}
-  </header>
-  <div class="s-list">
-    {{- range $d.media.media }}
-    {{- $it := . }}
-    <div class="s-item{{ with .image }} has-th{{ end }}">
-      <span class="k">{{ .type }}</span>
-      <div>
-        <a class="t" href="{{ .url }}">{{ .title }}</a>
-        <span class="m">{{ .outlet }} · {{ .date }}</span>
-        <p>{{ .description }}</p>
-      </div>
-      {{- with .image }}
-      <a class="th" href="{{ $it.url }}" tabindex="-1" aria-hidden="true">{{ partial "thumb.html" (dict "src" . "size" "480x270") }}</a>
-      {{- end }}
-    </div>
-    {{- end }}
-  </div>
-</div>
-{{ end }}
+{{ define "main" }}
+{{- /* Media / Medios: the press note first (what I comment on and how to ask),
+       then every appearance. Data: data/<lang>/media.toml (press_* keys and
+       the [[media]] entries). */ -}}
+{{- $d := index hugo.Data .Language.Lang -}}
+{{- $m := $d.media -}}
+{{- $a := $d.author.author -}}
+<div class="wrap">
+  <header class="s-page-head">
+    <p class="s-eyebrow">{{ .Title }}</p>
+    <h1 class="s-h1">{{ .Params.heading | default .Title }}</h1>
+    {{- with $m.press_intro }}
+    <p class="s-lead">{{ . }}</p>
+    <div class="s-ctas tight"><a class="s-btn primary small" href="{{ partial "mailto.html" (dict "email" $a.email "subject" $m.press_subject "body" $m.press_body) }}">{{ $m.press_label }}</a><span class="s-note">{{ $a.email }}</span></div>
+    {{- end }}
+    {{- with .Params.note }}<p class="s-note">{{ . }}</p>{{ end }}
+  </header>
+  <div class="s-list">
+    {{- range $d.media.media }}
+    {{- $it := . }}
+    <div class="s-item{{ with .image }} has-th{{ end }}">
+      <span class="k">{{ .type }}</span>
+      <div>
+        <a class="t" href="{{ .url }}">{{ .title }}</a>
+        <span class="m">{{ .outlet }} · {{ .date }}</span>
+        <p>{{ .description }}</p>
+      </div>
+      {{- with .image }}
+      <a class="th" href="{{ $it.url }}" tabindex="-1" aria-hidden="true">{{ partial "thumb.html" (dict "src" . "size" "480x270") }}</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</div>
+{{ end }}

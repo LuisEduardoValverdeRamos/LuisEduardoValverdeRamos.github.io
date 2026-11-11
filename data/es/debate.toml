@@ -23,12 +23,15 @@ glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonat
   text = "Entreno equipos escolares y universitarios, y asesoro en la adjudicación y organización de torneos."
   more = "Ver debate"
 
-[toc]
-  coach = "Dirijo y entreno"
-  judge = "Juzgo"
-  compete = "Compito"
-  lpde = "LPDE"
-  team = "Para tu equipo"
+# Página: el cargo de director va destacado arriba (texto confirmado por Luis el
+# 11-nov-2026); en la lista de entrenamiento no se repite (featured = true).
+[director]
+  label = "Desde 2026"
+  title = "Director general de la Selección Nacional de Debate Escolar del Perú"
+  text = "Dirijo la convocatoria de la selección, coordino con los encargados de las selecciones junior y senior y represento a la selección ante la organización del Mundial de Debate Escolar en Español (MED)."
+
+[labels]
+  trajectory = "Trayectoria"
 
 [[highlights]]
   label = "MED · Panamá 2026"
@@ -41,13 +44,14 @@ glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonat
   text = "Preparé a las duplas dominicanas que llegaron a cuartos y a octavos de final del Campeonato Mundial Universitario de Debate en Español (República Dominicana 2025 y Ecuador 2026)."
 
 [coach]
-  title = "Dirijo y entreno"
-  # home: sale en el bloque de debate de la portada
+  title = "Entreno"
+  # home: sale en el bloque de debate de la portada; featured: va arriba, en [director]
   [[coach.items]]
     period = "2026–"
     role = "Director general"
     org = "Selección Nacional de Debate Escolar del Perú"
     home = true
+    featured = true
   [[coach.items]]
     period = "2025–2026"
     role = "Entrenador"
@@ -102,9 +106,10 @@ glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonat
     org = "CMUDE Madrid 2022"
 
 [lpde]
-  title = "Liga Peruana de Debate Escolar"
+  title = "Investigo"
   period = "Feb.–ago. 2026"
   role = "Consultor de investigación"
+  org = "Liga Peruana de Debate Escolar (LPDE)"
   text = "Preparé el primer informe de la Liga sobre el ecosistema de debate escolar (70 instituciones) y siete policy briefs. Trabajé solo con datos agregados: los debatientes son menores de edad."
   more = "Ver el proyecto en Investigación"
 

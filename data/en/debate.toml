@@ -22,12 +22,15 @@ glossary = "Acronyms: MED, the world schools championship held in Spanish (Mundi
   text = "I coach school and university teams, and advise on tournament adjudication and organisation."
   more = "See debate"
 
-[toc]
-  coach = "Leading and coaching"
-  judge = "Adjudication"
-  compete = "Competing"
-  lpde = "LPDE"
-  team = "For your team"
+# Page: the director role is set apart at the top (wording confirmed by Luis on
+# 11 Nov 2026); the coaching list does not repeat it (featured = true).
+[director]
+  label = "Since 2026"
+  title = "Director General of the Peruvian National Schools Debate Team"
+  text = "I run the team's call for debaters, coordinate with the heads of the junior and senior squads and represent the team before the organisers of the world schools championship held in Spanish (MED)."
+
+[labels]
+  trajectory = "Track record"
 
 [[highlights]]
   label = "MED · Panama 2026"
@@ -40,13 +43,14 @@ glossary = "Acronyms: MED, the world schools championship held in Spanish (Mundi
   text = "I prepared the Dominican pairs that reached the quarterfinals and the round of 16 of the world universities championship held in Spanish (Dominican Republic 2025 and Ecuador 2026)."
 
 [coach]
-  title = "Leading and coaching"
-  # home: shown in the debate block of the home page
+  title = "Coaching"
+  # home: shown in the debate block of the home page; featured: set apart at the top, in [director]
   [[coach.items]]
     period = "2026–"
     role = "Director General"
     org = "Peruvian National Schools Debate Team"
     home = true
+    featured = true
   [[coach.items]]
     period = "2025–2026"
     role = "Coach"
@@ -101,9 +105,10 @@ glossary = "Acronyms: MED, the world schools championship held in Spanish (Mundi
     org = "CMUDE Madrid 2022"
 
 [lpde]
-  title = "Peruvian School Debate League"
+  title = "Research"
   period = "Feb–Aug 2026"
   role = "Research consultant"
+  org = "Peruvian School Debate League (LPDE)"
   text = "I prepared the League's first report on the school debate ecosystem (70 institutions) and seven policy briefs. I worked only with aggregate data: the debaters are minors."
   more = "See the project under Research"
 

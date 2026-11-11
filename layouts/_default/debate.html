@@ -1,75 +1,64 @@
 {{ define "main" }}
-{{- /* Debate: the coaching results side by side (acronyms spelled out right
-       below; debating and adjudication are in their own lists), coaching,
-       adjudication and competing side by side, the LPDE and the debate services,
-       which live only here since debate left Work with me (11 Nov 2026). Data:
-       debate (its [[team.services]]) and the mail label from services. */ -}}
+{{- /* Debate: the director role in a band, the two coaching results as cards
+       (acronyms spelled out right below), the track record in four short
+       groups (coaching, adjudication, competing, research) and the services for
+       teams as cards. Data: debate, and the mail label from services. */ -}}
 {{- $d := index hugo.Data .Language.Lang -}}
 {{- $db := $d.debate -}}
 {{- $sv := $d.services -}}
 {{- $a := $d.author.author -}}
-<div class="wrap s-ruled">
+<div class="wrap">
   <header class="s-page-head">
     <h1 class="s-h1">{{ .Title }}</h1>
     <p class="s-lead">{{ $db.lead }}</p>
-    <nav class="s-toc" aria-label="{{ T "onThisPage" }}">
-      <a href="#coaching">{{ $db.toc.coach }}</a>
-      <a href="#adjudication">{{ $db.toc.judge }}</a>
-      <a href="#competing">{{ $db.toc.compete }}</a>
-      <a href="#lpde">{{ $db.toc.lpde }}</a>
-      <a href="#team">{{ $db.toc.team }}</a>
-    </nav>
   </header>
 
-  <div class="s-proof two">
+  {{- with $db.director }}
+  <section class="s-dir" aria-labelledby="h-dir">
+    <p class="s-eyebrow">{{ .label }}</p>
+    <h2 id="h-dir" class="s-h2">{{ .title }}</h2>
+    <p>{{ .text }}</p>
+  </section>
+  {{- end }}
+
+  <div class="s-results">
     {{- range $db.highlights }}
     {{- $src := .src }}
-    <div>
-      <span class="s-eyebrow">{{ .label }}</span>
-      <span class="fact">{{ .text }}</span>
-      {{- with .url }}<a class="src" href="{{ . }}">{{ $src }}</a>{{ end }}
-    </div>
+    <article class="s-result">
+      <p class="s-eyebrow">{{ .label }}</p>
+      <p>{{ .text }}</p>
+      {{- with .url }}<a class="s-go" href="{{ . }}">{{ $src }}</a>{{ end }}
+    </article>
     {{- end }}
   </div>
   <p class="s-note s-gloss">{{ $db.glossary }}</p>
 
-  <section id="coaching" class="s-section" aria-labelledby="h-coaching">
-    <div class="s-section-head"><h2 id="h-coaching" class="s-h2">{{ $db.coach.title }}</h2></div>
-    {{- template "debate-list" $db.coach.items }}
-  </section>
-
-  <div class="s-section s-pair">
-    {{- range $sec := slice (dict "id" "adjudication" "data" $db.judge) (dict "id" "competing" "data" $db.compete) }}
-    <section id="{{ $sec.id }}" aria-labelledby="h-{{ $sec.id }}">
-      <div class="s-section-head"><h2 id="h-{{ $sec.id }}" class="s-h2">{{ $sec.data.title }}</h2></div>
-      {{- template "debate-list" $sec.data.items }}
-    </section>
-    {{- end }}
-  </div>
-
-  {{- with $db.lpde }}
-  <section id="lpde" class="s-section" aria-labelledby="h-lpde">
-    <div class="s-section-head"><h2 id="h-lpde" class="s-h2">{{ .title }}</h2></div>
-    <div class="s-list">
-      <div class="s-item">
-        <span class="k">{{ .period }}</span>
-        <div><span class="t">{{ .role }}</span><p>{{ .text }}{{ $more := .more }}{{ with site.GetPage "/research" }} <a class="s-go" href="{{ .RelPermalink }}#projects">{{ $more }} →</a>{{ end }}</p></div>
-      </div>
+  <section class="s-section" aria-labelledby="h-record">
+    <div class="s-section-head"><h2 id="h-record" class="s-h2">{{ $db.labels.trajectory }}</h2></div>
+    <div class="s-groups">
+      {{- /* Coaching and competing (four entries each) share the first row,
+             adjudication and research the second, so the columns even out */}}
+      {{- template "debate-group" (dict "id" "coaching" "title" $db.coach.title "items" (where $db.coach.items "featured" "!=" true)) }}
+      {{- template "debate-group" (dict "id" "competing" "title" $db.compete.title "items" $db.compete.items) }}
+      {{- template "debate-group" (dict "id" "adjudication" "title" $db.judge.title "items" $db.judge.items) }}
+      {{- with $db.lpde }}
+      {{- $more := "" }}{{ with site.GetPage "/research" }}{{ $more = printf "%s#projects" .RelPermalink }}{{ end }}
+      {{- template "debate-group" (dict "id" "lpde" "title" .title "notes" true "items" (slice (dict "period" .period "role" .role "org" .org "text" .text "more" .more "link" $more))) }}
+      {{- end }}
     </div>
   </section>
-  {{- end }}
 
   {{- with $db.team }}
   <section id="team" class="s-section" aria-labelledby="h-team">
     <div class="s-section-head"><h2 id="h-team" class="s-h2">{{ .title }}</h2></div>
-    <div class="s-minis">
+    <div class="s-offers">
       {{- range .services }}
       {{- $svc := . }}
-      <div class="s-mini">
-        <b>{{ .title }}</b>
+      <article class="s-offer">
+        <h3 class="s-h3">{{ .title }}</h3>
         {{- with .text }}<p>{{ . }}</p>{{ end }}
         {{- with .subject }}<a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" . "body" $svc.body) }}">{{ $sv.labels.write }} →</a>{{ end }}
-      </div>
+      </article>
       {{- end }}
     </div>
   </section>
@@ -77,15 +66,19 @@
 </div>
 {{ end }}
 
-{{- /* One line per role: the results are in the highlights at the top, and the
-       longer texts of the coaching roles go only in the CV. */}}
-{{- define "debate-list" }}
-    <div class="s-list">
-      {{- range . }}
-      <div class="s-item">
-        <span class="k">{{ .period }}</span>
-        <div><span class="t">{{ .role }} · {{ .org }}</span></div>
+{{- /* One group of the track record: a title and its entries (period, role,
+       organisation). With "notes", each entry also shows its sentence and
+       link; the coaching texts are left for the CV, since the results above
+       already say them. */}}
+{{- define "debate-group" }}
+      <div id="{{ .id }}" class="s-group">
+        <h3 class="s-h3">{{ .title }}</h3>
+        <ul>
+          {{- range .items }}
+          <li><span class="k">{{ .period }}</span><b>{{ .role }}</b><span class="m">{{ .org }}</span>
+            {{- if $.notes }}{{ with .text }}<p>{{ . }}</p>{{ end }}{{ end }}
+            {{- if and .link .more }}<a class="s-go" href="{{ .link }}">{{ .more }} →</a>{{ end }}</li>
+          {{- end }}
+        </ul>
       </div>
-      {{- end }}
-    </div>
 {{- end }}

@@ -5,9 +5,10 @@
 # que remite a esa página. (Talleres de R, prensa, «Cómo trabajo», «Lo que no
 # hago», las filas Entregas y Lo que no prometo y la ficha de revisión
 # metodológica se retiraron el 28-oct-2026.)
-# Cada pilar es una tarjeta (11-nov-2026) y sus servicios, filas cortas: title,
-# text (una línea), subject (asunto del correo) y body (cuerpo del correo). Las
-# instituciones van en una línea, la misma banda de la portada (home_line). Un servicio con
+# Cada pilar es una tarjeta (11-nov-2026): su panel lleva un solo «Escribir
+# sobre esto» con subject (asunto) y body (cuerpo del correo), y sus servicios
+# son columnas con title y text (una línea). Las instituciones van en una
+# línea, la misma banda de la portada (home_line). Un servicio con
 # confirmar = "…" espera el visto bueno de Luis: solo se ve, marcado, en la
 # vista previa local; en producción no se publica.
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
@@ -40,18 +41,16 @@ cv_label = "Ver mi CV"
   home_title = "Colaboración en investigación"
   home_text = "Coautorías, asistencia de investigación, construcción de bases de datos y apoyo metodológico."
   home_cta = "Proponer una colaboración"
+  subject = "Investigación: colaboración o asistencia"
+  body = "Tema y pregunta:\nEstado del proyecto:\nQué necesitas (coautoría o asistencia):\nDatos:\nPlazo o dedicación:\n"
 
   [[pillars.services]]
     title = "Colaboración y coautoría"
     text = "Trabajo en artículos y proyectos desde el diseño hasta la redacción, con roles y autoría acordados al inicio."
-    subject = "Colaboración de investigación"
-    body = "Tema y pregunta:\nEstado del proyecto:\nDatos:\nRol que imaginas para mí:\n"
 
   [[pillars.services]]
     title = "Asistencia de investigación"
     text = "Apoyo la recolección, el procesamiento y el análisis de datos, y la revisión de literatura."
-    subject = "Asistencia de investigación"
-    body = "Proyecto e institución:\nTareas:\nHoras por semana y duración:\n"
 
 # ── 2 · Consultoría ───────────────────────────────────────────────────────────
 [[pillars]]
@@ -62,24 +61,20 @@ cv_label = "Ver mi CV"
   home_title = "Investigación aplicada para instituciones"
   home_text = "Encuestas, registros administrativos y entrevistas, con métodos cuantitativos y cualitativos."
   home_cta = "Escríbeme sobre un proyecto"
+  subject = "Consultoría: investigación aplicada"
+  body = "Organización:\nQué necesitan (análisis electoral, revisión de indicadores, base de datos u otro):\nDatos disponibles:\nPlazo:\n"
 
   [[pillars.services]]
     title = "Análisis electoral y de opinión pública"
     text = "Analizo encuestas, resultados electorales y datos del padrón, desde una consulta puntual hasta un informe completo."
-    subject = "Análisis electoral o de opinión pública"
-    body = "Organización:\nPregunta que quieren responder:\nDatos disponibles (resultados, padrón, encuesta):\nPlazo:\nUso previsto del análisis:\n"
 
   [[pillars.services]]
     title = "Acompañamiento metodológico y validez de indicadores"
     text = "Reviso la calidad de bases de datos e indicadores antes de su publicación."
-    subject = "Acompañamiento metodológico - validez de indicadores"
-    body = "Organización:\nInforme o indicadores en preparación:\nFuente de datos:\nFecha de publicación prevista:\n"
 
   [[pillars.services]]
     title = "Datos y visualización en R"
     text = "Construyo bases de datos con registros administrativos y fuentes públicas, y preparo sus gráficos y tablas."
-    subject = "Análisis de datos y visualización en R"
-    body = "Organización:\nFuentes de datos:\nProducto que necesitan (base, figuras, informe):\nPlazo:\n"
 
 [institutions]
   home_label = "He trabajado con"

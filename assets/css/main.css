@@ -249,23 +249,24 @@
 .s-item p { margin-top: 6px; font-size: 15px; color: var(--s-ink2); max-width: 70ch; }
 
 /* Work with me: one full-width card per pillar, as on the CV page, both with
-   the same layout: a tinted panel on the left (name, title, one line) and the
-   services as equal columns on the right, each ending with its mail link at
-   the same height. */
+   the same layout: a tinted panel on the left (name, title, one line and the
+   pillar's one mail link at its foot) and the services as equal columns on
+   the right. */
 .s-pillcards { display: grid; gap: 20px; }
 .s-pillcard { display: grid; grid-template-columns: 330px minmax(0, 1fr); overflow: hidden; border: 1px solid var(--s-line); border-radius: var(--s-radius); scroll-margin-top: 16px; }
-.s-pillcard .top { display: grid; align-content: start; gap: 10px; padding: 26px 28px; background: var(--s-bg2); border-right: 1px solid var(--s-line); }
+.s-pillcard .top { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 26px 28px; background: var(--s-bg2); border-right: 1px solid var(--s-line); }
+.s-pillcard .head { align-self: stretch; }
+.s-pillcard .top .cta { margin-top: auto; padding-top: 10px; font-size: 15px; }
 .s-pillcard .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
 .s-pillcard .head .s-eyebrow { color: var(--s-accent); }
 .s-pillcard .head .s-go { font-size: 14px; }
 .s-pillcard .s-h2 { font-size: 23px; }
 .s-pillcard .top > p { font-size: 15px; color: var(--s-ink2); }
 .s-pillcard ul { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); margin: 0; padding: 0; list-style: none; }
-.s-pillcard li { display: grid; grid-template-rows: auto auto 1fr; gap: 6px; justify-items: start; padding: 26px 24px; }
+.s-pillcard li { display: grid; align-content: start; gap: 6px; padding: 26px 24px; }
 .s-pillcard li + li { border-left: 1px solid var(--s-line); }
 .s-pillcard li b { font-family: var(--s-display); font-weight: 650; letter-spacing: -.01em; font-size: 18px; line-height: 1.25; color: var(--s-ink); }
 .s-pillcard li p { font-size: 14.5px; color: var(--s-ink2); }
-.s-pillcard li .s-go { align-self: end; margin-top: 8px; font-size: 14px; }
 
 /* Media: entries with a thumbnail of the appearance at the side */
 .s-item.has-th { grid-template-columns: 120px minmax(0, 1fr) 232px; align-items: start; }

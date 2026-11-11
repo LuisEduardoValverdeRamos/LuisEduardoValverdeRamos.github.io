@@ -5,8 +5,9 @@
 # line, pointing to that page, stays here. (R workshops, press, "How I work", "What I don't do", the
 # Deliverables, no-promise and per-service track-record rows and the
 # methods-review card were removed on 28 Oct 2026.) Each pillar is a card
-# (11 Nov 2026) with its services as short rows; the institutions go in one
-# line, the same band as on the home page (home_line). A service or note with
+# (11 Nov 2026): its panel carries one «Email about this» with subject and
+# body, and its services are columns with title and text; the institutions
+# go in one line, the same band as on the home page (home_line). A service or note with
 # confirmar = "…" waits for Luis: it shows
 # only in local previews, marked, and is never published in production.
 # Top-level keys first: in TOML, anything below a table header belongs to it.
@@ -38,18 +39,16 @@ cv_label = "See my CV"
   home_title = "Research collaboration"
   home_text = "Co-authorship, research assistance, dataset building and methods support."
   home_cta = "Propose a collaboration"
+  subject = "Research: collaboration or assistance"
+  body = "Topic and question:\nStage of the project:\nWhat you need (co-authorship or assistance):\nData:\nTimeline or hours:\n"
 
   [[pillars.services]]
     title = "Collaboration and co-authorship"
     text = "I work on papers and projects from design to writing, with roles and authorship agreed at the start."
-    subject = "Research: collaboration or methods support"
-    body = "Topic and question:\nStage of the project:\nData:\nThe role you have in mind for me:\n"
 
   [[pillars.services]]
     title = "Research assistance"
     text = "I support data collection, processing and analysis, and literature reviews."
-    subject = "Research assistance"
-    body = "Project and institution:\nTasks:\nHours per week and duration:\n"
 
 [[pillars]]
   id = "consulting"
@@ -59,24 +58,20 @@ cv_label = "See my CV"
   home_title = "Applied research for institutions"
   home_text = "Surveys, administrative records and interviews, with quantitative and qualitative methods."
   home_cta = "Email me about a project"
+  subject = "Consulting: applied research"
+  body = "Organisation:\nWhat you need (electoral analysis, indicator review, a dataset or other):\nData available:\nDeadline:\n"
 
   [[pillars.services]]
     title = "Electoral and public-opinion analysis"
     text = "I analyse surveys, election results and voter-roll data, from a single question to a full report."
-    subject = "Consulting: data analysis"
-    body = "Organisation:\nWhat you need analysed or assessed:\nData available:\nDeadline:\n"
 
   [[pillars.services]]
     title = "Methods support and indicator validity"
     text = "I review the quality of datasets and indicators before they are published."
-    subject = "Methods support - indicator validity"
-    body = "Organisation:\nReport or indicators in preparation:\nData source:\nPlanned publication date:\n"
 
   [[pillars.services]]
     title = "Data and visualisation in R"
     text = "I build datasets from administrative records and public sources, and prepare their charts and tables."
-    subject = "Data analysis and visualisation in R"
-    body = "Organisation:\nData sources:\nWhat you need (dataset, figures, report):\nDeadline:\n"
 
 [institutions]
   home_label = "I have worked with"

@@ -30,9 +30,6 @@
       {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
       <a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
       {{- end }}{{ end }}
-      {{- with site.GetPage "/media" }}
-      <a href="{{ .RelPermalink }}"{{ if eq . $ }} aria-current="page"{{ end }}>{{ .Title }}</a>
-      {{- end }}
       <div class="s-mobfoot">
         {{- with $cta }}<a href="{{ .URL }}" class="s-btn primary small">{{ .Name }}</a>{{ end }}
         {{ partial "lang-switch.html" (dict "page" . "long" true) }}

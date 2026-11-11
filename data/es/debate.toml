@@ -16,12 +16,12 @@
 lead = "Dirijo la Selección Nacional de Debate Escolar del Perú, entreno equipos escolares y universitarios y he integrado equipos de adjudicación en torneos de Costa Rica, Ecuador, Perú y Venezuela."
 glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonato Mundial Universitario de Debate en Español; TNDE, Torneo Nacional de Debate Escolar."
 
+# Portada: un solo bloque, aparte del perfil de investigación y consultoría
+# (11-nov-2026): esta frase y los cargos de [coach] marcados con home = true.
 [home]
-  eyebrow = "Debate"
-  title = "Entreno equipos escolares y universitarios, y asesoro en la adjudicación y organización de torneos"
-  text = "Director general de la Selección Nacional de Debate Escolar del Perú, coentrenador general de la Sociedad de Debate PUCP y entrenador del Colegio Alpamayo; he integrado equipos de adjudicación en torneos de Costa Rica, Ecuador, Perú y Venezuela."
-  more = "Más sobre debate"
-  cta = "¿Quieres entrenar a tu equipo?"
+  title = "Debate"
+  text = "Entreno equipos escolares y universitarios, y asesoro en la adjudicación y organización de torneos."
+  more = "Ver debate"
 
 [toc]
   coach = "Dirijo y entreno"
@@ -51,11 +51,13 @@ glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonat
 [coach]
   title = "Dirijo y entreno"
   # cv_current: en el CV va en «Cargos actuales» y no se repite en «Debate»
+  # home: sale en el bloque de debate de la portada
   [[coach.items]]
     period = "2026–"
     role = "Director general"
     org = "Selección Nacional de Debate Escolar del Perú"
     cv_current = true
+    home = true
   [[coach.items]]
     period = "2025–2026"
     role = "Entrenador"
@@ -65,6 +67,7 @@ glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonat
     period = "Jul. 2026–"
     role = "Coentrenador general"
     org = "Sociedad de Debate PUCP"
+    home = true
     text = "Planificación de sesiones y preparación competitiva en formato parlamentario británico. Antes, instructor de novatos (ago.–dic. 2025)."
   [[coach.items]]
     period = "Jun. 2026–"
@@ -75,6 +78,7 @@ glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonat
     period = "2024–"
     role = "Entrenador universitario, a distancia"
     org = "República Dominicana"
+    home = true
     text = "Formato parlamentario británico. En 2025 preparé a la primera dupla íntegramente dominicana en llegar a octavos de final del CMUDE; en 2026, mis duplas llegaron a cuartos y a octavos de final (CMUDE Ecuador)."
 
 [judge]
@@ -117,3 +121,21 @@ glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonat
 [team]
   title = "Para tu equipo"
   text = "Programas para colegios, preparación de equipos universitarios y selecciones, asesoría en la adjudicación y organización de torneos, y talleres de 2 horas."
+
+  [[team.services]]
+    title = "Programa de debate para colegios"
+    text = "Programa semestral o anual para empezar un club o preparar torneos, presencial en Lima o remoto."
+    subject = "Programa de debate para colegio"
+    body = "Colegio:\nCiudad:\nGrados y número de estudiantes:\n¿Ya tienen club de debate?:\nTorneos a los que apuntan:\nModalidad (presencial o remota):\nFecha de inicio deseada:\n"
+
+  [[team.services]]
+    title = "Equipos universitarios y talleres de argumentación"
+    text = "Preparación para torneos en formato parlamentario británico o World Schools, y talleres de 2 horas."
+    subject = "Coaching de debate o taller de argumentación"
+    body = "Institución o equipo:\nQué necesitas (preparación para un torneo o taller):\nFormato (BP o World Schools):\nNúmero de participantes y nivel:\nFechas y disponibilidad:\n"
+
+  [[team.services]]
+    title = "Asesoría en adjudicación y organización de torneos"
+    text = "Equipo de jueces, criterios de evaluación y organización de las rondas."
+    subject = "Asesoría de torneo de debate (adjudicación y organización)"
+    body = "Organización o torneo:\nFecha del torneo:\nFormato:\nNúmero de equipos y de jueces (y su experiencia):\n"

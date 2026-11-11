@@ -1,3 +1,14 @@
+# Media page (/media/) and the «In the media» block of the home page, which
+# shows the first three entries: newest first.
+# The press note (press_*) came back here on 11 Nov 2026: it had left with the
+# press pillar of Work with me on 28 Oct (text from then).
+# Top-level keys first: in TOML, anything below a table header belongs to it.
+
+press_intro = "Electoral behaviour, political reform, subnational politics, scholarships and civic education, in Spanish. I speak in a personal capacity, not on behalf of the JNE or PUCP."
+press_label = "Press enquiries"
+press_subject = "Press: interview request"
+press_body = "Outlet and programme:\nTopic:\nFormat (interview, panel or written piece):\nDate and time:\n"
+
 [[media]]
   type = "Press"
   title = "What to Expect from Keiko Fujimori's First Months as President of Peru"

@@ -200,7 +200,7 @@
 .s-mobmenu .s-mobfoot { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; padding-top: 16px; font-size: 15px; color: var(--s-ink2); }
 .s-mobmenu .s-mobfoot a:not(.s-btn) { color: var(--s-ink); padding-block: 10px; }
 
-/* Home: hero, proof strip, questions, debate band, services, lines */
+/* Home: hero, proof strip, questions, services, lines, media and debate */
 .s-hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 56px; align-items: center; padding-block: 60px 48px; }
 .s-photo { margin: 0; }
 .s-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 35%; border-radius: var(--s-radius); filter: var(--s-photo-filter); }
@@ -218,12 +218,8 @@
 .s-q .go { font-size: 14px; font-weight: 600; color: var(--s-accent); }
 .s-q:hover b { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 .s-sub { margin: 40px 0 8px; font-size: 18px; }
-.s-band { margin-top: 64px; background: var(--s-bg2); padding: 36px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 36px; border-radius: var(--s-radius); }
-.s-band-text .s-h2 { margin-top: 8px; }
-.s-band-text p:not(.s-eyebrow) { margin-top: 12px; font-size: 15.5px; color: var(--s-ink2); }
-.s-achv { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-.s-achv li { display: grid; gap: 3px; font-size: 15px; line-height: 1.45; color: var(--s-ink); border-left: 2px solid var(--s-line2); padding-left: 14px; }
-.s-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+/* The pillars named in services.toml (home.pillars): one column each (--n) */
+.s-pillars { display: grid; grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); gap: 20px; }
 .s-pillar { background: var(--s-bg2); padding: 24px; display: grid; gap: 10px; align-content: start; border-radius: var(--s-radius); }
 .s-pillar p:not(.s-eyebrow) { font-size: 15px; color: var(--s-ink2); }
 /* Institutions band: names set in the display face as quiet text «logos» */
@@ -231,9 +227,18 @@
 .s-inst-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 34px; margin: 0; padding: 0; list-style: none; }
 .s-inst-row li { font-family: var(--s-text); font-weight: 400; font-size: 16px; color: var(--s-ink); }
 .s-inst-row li span { font-family: var(--s-text); font-weight: 400; font-size: 13px; letter-spacing: 0; color: var(--s-ink2); white-space: nowrap; }
-.s-media-line .s-eyebrow { margin-right: 8px; }
-.s-media-line { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; font-size: 14.5px; color: var(--s-ink); border-block: 1px solid var(--s-line); padding-block: 14px; }
-.s-media-line .s-link { margin-left: auto; font-size: 14px; }
+/* Closing pair of the home page: «In the media» and Debate side by side, each
+   a short list (eyebrow, title, one muted line), apart from the profile above */
+.s-duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
+.s-duo .s-section-head { margin-bottom: 16px; }
+.s-brief-lead { margin-bottom: 14px; font-size: 15.5px; color: var(--s-ink2); max-width: 52ch; }
+.s-brief { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--s-line); }
+.s-brief li { display: grid; gap: 3px; padding-block: 13px; border-bottom: 1px solid var(--s-line); }
+.s-brief .t { font-family: var(--s-display); font-weight: 650; letter-spacing: -.01em; font-size: 17px; line-height: 1.3; color: var(--s-ink); text-decoration: none; }
+.s-brief a.t:hover { color: var(--s-accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.s-brief .m { font-size: 14px; color: var(--s-ink2); }
+/* Work with me: the closing line that points to the Debate page */
+.s-aside p { font-size: 15.5px; color: var(--s-ink2); }
 .s-doors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--s-line); }
 .s-doors a { display: grid; gap: 8px; align-content: start; padding: 24px 24px 28px 0; text-decoration: none; color: var(--s-ink2); font-size: 15px; }
 .s-doors a + a { padding-left: 24px; border-left: 1px solid var(--s-line); }
@@ -428,7 +433,7 @@
   .s-h1-statement { font-size: 27px; }
   .s-bio, .s-lead { font-size: 16.5px; }
   .s-section { padding-block: 44px 4px; }
-  .s-questions, .s-pillars, .s-doors, .s-minis, .s-cards, .s-projects { grid-template-columns: minmax(0, 1fr); }
+  .s-questions, .s-pillars, .s-doors, .s-minis, .s-cards, .s-projects, .s-duo { grid-template-columns: minmax(0, 1fr); }
   .s-projects > .s-project:first-child:nth-last-child(odd) { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; }
   .s-projects > .s-project:first-child:nth-last-child(odd) img { height: auto; aspect-ratio: 2 / 1; }
   .s-projects > .s-project:first-child:nth-last-child(odd) .body { padding: 18px 20px 20px; }
@@ -441,9 +446,7 @@
   .s-pair .s-item { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .s-questions { gap: 14px; }
   .s-q b { font-size: 19px; }
-  .s-band { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 22px; margin-top: 44px; }
   .s-doors a, .s-doors a + a { padding: 18px 0; border-left: 0; border-bottom: 1px solid var(--s-line); }
-  .s-media-line .s-link { margin-left: 0; }
   .s-item, .s-item.has-th { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .s-item .th { margin-top: 8px; max-width: 420px; }
   .s-page-head { padding-block: 36px 20px; }

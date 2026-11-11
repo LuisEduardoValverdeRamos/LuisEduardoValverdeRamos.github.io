@@ -1,7 +1,8 @@
 {{ define "main" }}
 {{- /* Home page. The hero comes from data/<lang>/home.toml; each block listed in
        `blocks` is a partial in partials/home/ that reads the data of the page it
-       leads to, so the home page shows extracts and never a copy. */ -}}
+       leads to, so the home page shows extracts and never a copy. A list inside
+       `blocks` sets its partials side by side. */ -}}
 {{- $d := index hugo.Data .Language.Lang -}}
 {{- $h := $d.home -}}
 {{- $a := $d.author.author -}}
@@ -20,7 +21,15 @@
     <figure class="s-photo">{{ partial "profile-img.html" (dict "author" $a "alt" $h.photo_alt) }}</figure>
   </section>
   {{- range $h.blocks }}
+  {{- if reflect.IsSlice . }}
+  <div class="s-duo">
+    {{- range . }}
+    {{ partial (printf "home/%s.html" .) (dict "d" $d "h" $h) }}
+    {{- end }}
+  </div>
+  {{- else }}
   {{ partial (printf "home/%s.html" .) (dict "d" $d "h" $h) }}
+  {{- end }}
   {{- end }}
 </div>
 {{ end }}

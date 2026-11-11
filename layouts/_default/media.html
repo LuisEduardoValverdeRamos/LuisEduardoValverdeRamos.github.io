@@ -1,17 +1,17 @@
 {{ define "main" }}
 {{- /* Media / Medios: the press note first (what I comment on and how to ask),
-       then every appearance. Data: media, and the press pillar of services. */ -}}
+       then every appearance. Data: data/<lang>/media.toml (press_* keys and
+       the [[media]] entries). */ -}}
 {{- $d := index hugo.Data .Language.Lang -}}
-{{- $sv := $d.services -}}
+{{- $m := $d.media -}}
 {{- $a := $d.author.author -}}
-{{- $press := index (where $sv.pillars "id" (cond (eq .Language.Lang "es") "prensa" "media")) 0 -}}
 <div class="wrap">
   <header class="s-page-head">
     <p class="s-eyebrow">{{ .Title }}</p>
     <h1 class="s-h1">{{ .Params.heading | default .Title }}</h1>
-    {{- with $press }}
-    <p class="s-lead">{{ .intro }}</p>
-    <p class="s-note"><a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" .subject "body" .body) }}">{{ $sv.labels.press }} →</a><span class="s-asksub">{{ $a.email }}</span></p>
+    {{- with $m.press_intro }}
+    <p class="s-lead">{{ . }}</p>
+    <p class="s-note"><a class="s-go" href="{{ partial "mailto.html" (dict "email" $a.email "subject" $m.press_subject "body" $m.press_body) }}">{{ $m.press_label }} →</a><span class="s-asksub">{{ $a.email }}</span></p>
     {{- end }}
     {{- with .Params.note }}<p class="s-note">{{ . }}</p>{{ end }}
   </header>

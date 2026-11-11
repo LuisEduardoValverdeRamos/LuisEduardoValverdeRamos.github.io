@@ -1,20 +1,16 @@
-{{- /* Home: debate band with three labelled results from data/<lang>/debate.toml. */ -}}
+{{- /* Home: debate in a single block, apart from the research and consulting
+       profile: one sentence, the roles marked home = true in the coaching list
+       and a link to the Debate page. Data: data/<lang>/debate.toml. */ -}}
 {{- $db := .d.debate -}}
-{{- $dp := site.GetPage "/debate" -}}
-{{- $wp := site.GetPage "/work" -}}
-<section class="s-band" aria-labelledby="h-debate">
-  <div class="s-band-text">
-    <p class="s-eyebrow">{{ $db.home.eyebrow }}</p>
+<section class="s-section" aria-labelledby="h-debate">
+  <div class="s-section-head">
     <h2 id="h-debate" class="s-h2">{{ $db.home.title }}</h2>
-    <p>{{ $db.home.text }}</p>
-    <div class="s-ctas tight">
-      {{- with $dp }}<a class="s-link" href="{{ .RelPermalink }}">{{ $db.home.more }}</a>{{ end }}
-      {{- with $wp }}<a class="s-go" href="{{ .RelPermalink }}#debate">{{ $db.home.cta }} →</a>{{ end }}
-    </div>
+    {{- with site.GetPage "/debate" }}<a class="s-link" href="{{ .RelPermalink }}">{{ $db.home.more }}</a>{{ end }}
   </div>
-  <ul class="s-achv">
-    {{- range first 3 $db.highlights }}
-    <li><span class="s-eyebrow">{{ .label }}</span>{{ .text }}</li>
+  <p class="s-brief-lead">{{ $db.home.text }}</p>
+  <ul class="s-brief">
+    {{- range where $db.coach.items "home" true }}
+    <li><span class="s-eyebrow">{{ .period }}</span><span class="t">{{ .role }}</span><span class="m">{{ .org }}</span></li>
     {{- end }}
   </ul>
 </section>

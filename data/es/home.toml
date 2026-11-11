@@ -2,12 +2,15 @@
 # Los bloques se pintan en el orden de `blocks`; cada uno lee su contenido de
 # los datos de la página que le corresponde (research, debate, services, media),
 # de modo que nada se copia: aquí solo hay el héroe y la franja de hechos.
+# Perfil de académico y consultor (11-nov-2026): el debate no va en el héroe ni
+# en los servicios; es un solo bloque al final, junto a «En medios» (una lista
+# dentro de `blocks` pone sus bloques lado a lado).
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
-blocks = ["proof", "research", "debate", "services", "institutions", "media"]
-eyebrow = "ESEG-JNE · PUCP · Selección Nacional de Debate Escolar"
-statement = "Investigo comportamiento electoral e implementación de políticas públicas en el Perú, asesoro a instituciones en el análisis de sus datos y entreno equipos de debate."
-bio = "Politólogo por la PUCP. Investigador en la Escuela Electoral y de Gobernabilidad del JNE, consultor en el Colegio de Abogados de Lima y director general de la Selección Nacional de Debate Escolar del Perú."
+blocks = ["proof", "research", "services", "institutions", ["media", "debate"]]
+eyebrow = "ESEG-JNE · PUCP"
+statement = "Investigo comportamiento electoral e implementación de políticas públicas en el Perú y asesoro a instituciones en investigación aplicada."
+bio = "Politólogo por la PUCP. Investigador en la Escuela Electoral y de Gobernabilidad del JNE, consultor en el Colegio de Abogados de Lima y jefe de práctica de Economía Política en la PUCP."
 photo_alt = "Retrato de Luis Valverde Ramos"
 proof_label = "Hechos verificables"
 media_label = "En medios"
@@ -48,10 +51,11 @@ media_more = "Ver medios"
   anchor = "consultoria"
 
 [[proof]]
-  label = "Medios · 2026"
-  fact = "Entrevistas y paneles en El Salto (España), Radio Exitosa y La República."
-  src = "Ver medios →"
-  page = "/media"
+  label = "PUCP · 2026"
+  fact = "Jefe de práctica de Economía Política en la Facultad de Ciencias Sociales."
+  src = "Ver docencia →"
+  page = "/research"
+  anchor = "teaching"
 
 [research]
   title = "Lo que investigo"

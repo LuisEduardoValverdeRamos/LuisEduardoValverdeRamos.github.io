@@ -1,7 +1,8 @@
 {{ define "main" }}
 {{- /* Work with me / Trabajemos: a router, the pillars as ruled sections (the
        same section language as Research and Debate, with a cross link to the
-       pillar's own page) and the institutions. Data: data/<lang>/services.toml. */ -}}
+       pillar's own page), the institutions and a closing line that points to
+       the Debate page. Data: data/<lang>/services.toml. */ -}}
 {{- $d := index hugo.Data .Language.Lang -}}
 {{- $s := $d.services -}}
 {{- $a := $d.author.author -}}
@@ -61,6 +62,13 @@
       {{- end }}
     </div>
   </section>
+
+  {{- /* Debate is not a pillar here: one line points to the Debate page. */}}
+  {{- with $s.debate }}{{ $dl := . }}{{ with site.GetPage "/debate" }}
+  <section class="s-section s-aside" aria-label="{{ .Title }}">
+    <p>{{ $dl.text }} <a class="s-go" href="{{ .RelPermalink }}#team">{{ $dl.label }} →</a></p>
+  </section>
+  {{- end }}{{ end }}
 
 </div>
 {{ end }}

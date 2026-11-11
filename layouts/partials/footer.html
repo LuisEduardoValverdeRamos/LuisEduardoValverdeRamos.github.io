@@ -23,7 +23,6 @@
     <nav aria-labelledby="footer-more">
       <h3 id="footer-more">{{ T "footerMore" }}</h3>
       <ul>
-        {{- with site.GetPage "/media" }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
         {{- with site.GetPage "/cv" }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
         <li>{{ partial "lang-switch.html" (dict "page" $p "long" true) }}</li>
       </ul>

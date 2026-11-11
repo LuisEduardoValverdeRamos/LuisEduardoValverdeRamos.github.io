@@ -1,8 +1,8 @@
 {{ define "main" }}
 {{- /* Debate: results two by two (acronyms spelled out right below), coaching,
-       adjudication and competing side by side, the LPDE and the debate services
-       (same data as Work with me, so the visitor can write without another
-       click). Data: debate and services. */ -}}
+       adjudication and competing side by side, the LPDE and the debate services,
+       which live only here since debate left Work with me (11 Nov 2026). Data:
+       debate (its [[team.services]]) and the mail label from services. */ -}}
 {{- $d := index hugo.Data .Language.Lang -}}
 {{- $db := $d.debate -}}
 {{- $sv := $d.services -}}
@@ -58,19 +58,12 @@
   </section>
   {{- end }}
 
-  {{- with where $sv.pillars "id" "debate" }}{{ with index . 0 }}
-  {{- $p := . }}
+  {{- with $db.team }}
   <section id="team" class="s-section" aria-labelledby="h-team">
-    <div class="s-section-head">
-      <h2 id="h-team" class="s-h2">{{ $db.team.title }}</h2>
-      {{- with site.GetPage "/work" }}<a class="s-link" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
-    </div>
-    <p class="s-lead">{{ $db.team.text }}</p>
-    {{- with $p.note }}{{ if or (not $p.note_confirmar) (not hugo.IsProduction) }}
-    <p class="s-note{{ with $p.note_confirmar }} tbc{{ end }}"{{ with $p.note_confirmar }} data-tbc="{{ . }}"{{ end }}>{{ . }}</p>
-    {{- end }}{{ end }}
+    <div class="s-section-head"><h2 id="h-team" class="s-h2">{{ .title }}</h2></div>
+    <p class="s-lead">{{ .text }}</p>
     <div class="s-minis" style="margin-top:20px">
-      {{- range $p.services }}
+      {{- range .services }}
       {{- $svc := . }}
       <div class="s-mini">
         <b>{{ .title }}</b>
@@ -80,7 +73,7 @@
       {{- end }}
     </div>
   </section>
-  {{- end }}{{ end }}
+  {{- end }}
 </div>
 {{ end }}
 

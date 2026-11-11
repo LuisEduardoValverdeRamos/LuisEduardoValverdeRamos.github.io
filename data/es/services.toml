@@ -1,7 +1,10 @@
-# Página Trabajemos (/es/trabajemos/) y extractos de la portada y de Debate.
-# Tres pilares, en este orden: investigación, debate y consultoría (talleres de
-# R, prensa, «Cómo trabajo», «Lo que no hago», las filas Entregas y Lo que no
-# prometo y la ficha de revisión metodológica se retiraron el 28-oct-2026).
+# Página Trabajemos (/es/trabajemos/) y extractos de la portada.
+# Dos pilares, en este orden: investigación y consultoría. El de debate salió el
+# 11-nov-2026 (perfil de académico y consultor): sus servicios están en
+# data/es/debate.toml ([[team.services]]) y aquí queda solo la línea [debate],
+# que remite a esa página. (Talleres de R, prensa, «Cómo trabajo», «Lo que no
+# hago», las filas Entregas y Lo que no prometo y la ficha de revisión
+# metodológica se retiraron el 28-oct-2026.)
 # Cada servicio: title, text (una línea), subject (asunto del correo) y body
 # (cuerpo del correo), mostrado como entrada ligera, no tarjeta (el bloque de
 # Instituciones y las páginas enlazadas sustentan). Un servicio con
@@ -10,26 +13,27 @@
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
 title = "Cómo puedo ayudarte"
-lead = "Junto a mi investigación, tomo encargos en tres áreas. Escríbeme con lo que necesitas."
+lead = "Colaboro en investigaciones y hago investigación aplicada para instituciones. Escríbeme con lo que necesitas."
 router_label = "¿Qué necesitas?"
 
 [labels]
   write = "Escribir sobre esto"
-  press = "Escribir como periodista"
 
 [home]
   title = "En qué puedo ayudarte"
   more = "Ver todos los servicios"
-  pillars = ["consultoria", "investigacion", "debate"]
+  pillars = ["consultoria", "investigacion"]
+
+# Línea final de Trabajemos que remite a la página de Debate (#team)
+[debate]
+  text = "¿Buscas entrenamiento de debate o asesoría para un torneo?"
+  label = "Ver en Debate"
 
 [[router]]
   label = "Colaborar en una investigación"
   anchor = "investigacion"
 [[router]]
-  label = "Preparar a un equipo de debate"
-  anchor = "debate"
-[[router]]
-  label = "Analizar datos electorales o de mi institución"
+  label = "Encargar un estudio para mi institución"
   anchor = "consultoria"
 
 # ── 1 · Investigación y papers ────────────────────────────────────────────────
@@ -56,37 +60,7 @@ router_label = "¿Qué necesitas?"
     subject = "Asistencia de investigación"
     body = "Proyecto e institución:\nTareas:\nHoras por semana y duración:\n"
 
-# ── 2 · Debate ────────────────────────────────────────────────────────────────
-[[pillars]]
-  id = "debate"
-  name = "Debate"
-  page = "/debate"
-  page_label = "Mi trayectoria en debate"
-  title = "Entrenamiento de equipos y asesoría de torneos"
-  intro = "Entreno equipos escolares y universitarios en formato World Schools y parlamentario británico, y asesoro en la adjudicación y organización de torneos."
-  home_title = "Entrenamiento de equipos y asesoría de torneos"
-  home_text = "Colegios, universidades y selecciones: preparación de equipos y asesoría en la adjudicación y organización de torneos."
-  home_cta = "Entrenar a mi equipo"
-
-  [[pillars.services]]
-    title = "Programa de debate para colegios"
-    text = "Programa semestral o anual para empezar un club o preparar torneos, presencial en Lima o remoto."
-    subject = "Programa de debate para colegio"
-    body = "Colegio:\nCiudad:\nGrados y número de estudiantes:\n¿Ya tienen club de debate?:\nTorneos a los que apuntan:\nModalidad (presencial o remota):\nFecha de inicio deseada:\n"
-
-  [[pillars.services]]
-    title = "Equipos universitarios y talleres de argumentación"
-    text = "Preparación para torneos en formato parlamentario británico o World Schools, y talleres de 2 horas."
-    subject = "Coaching de debate o taller de argumentación"
-    body = "Institución o equipo:\nQué necesitas (preparación para un torneo o taller):\nFormato (BP o World Schools):\nNúmero de participantes y nivel:\nFechas y disponibilidad:\n"
-
-  [[pillars.services]]
-    title = "Asesoría en adjudicación y organización de torneos"
-    text = "Equipo de jueces, criterios de evaluación y organización de las rondas."
-    subject = "Asesoría de torneo de debate (adjudicación y organización)"
-    body = "Organización o torneo:\nFecha del torneo:\nFormato:\nNúmero de equipos y de jueces (y su experiencia):\n"
-
-# ── 3 · Consultoría y análisis ────────────────────────────────────────────────
+# ── 2 · Consultoría y análisis ────────────────────────────────────────────────
 [[pillars]]
   id = "consultoria"
   name = "Consultoría y análisis"
@@ -117,16 +91,13 @@ router_label = "¿Qué necesitas?"
 [institutions]
   title = "Instituciones con las que he trabajado"
   home_label = "He trabajado con"
-  home_line = "JNE (ESEG) · PUCP (Q-LAB, CISEPA, IDEHPUCP) · ProDiálogo · Colegio de Abogados de Lima (Observatorio de Corrupción) · Liga Peruana de Debate Escolar · Colegio Alpamayo · Roche Pharma Perú (vía Sapienza Consultora)"
+  home_line = "JNE (ESEG) · PUCP (Q-LAB, CISEPA, IDEHPUCP) · ProDiálogo · Colegio de Abogados de Lima (Observatorio de Corrupción) · Liga Peruana de Debate Escolar · Roche Pharma Perú (vía Sapienza Consultora)"
   [[institutions.groups]]
     label = "Empleo y afiliación"
     text = "Jurado Nacional de Elecciones (ESEG) · Pontificia Universidad Católica del Perú (CISEPA, Q-LAB, GIES) · IDEHPUCP"
   [[institutions.groups]]
     label = "Consultoría"
     text = "Observatorio de Corrupción del Colegio de Abogados de Lima · ProDiálogo (encargo del JNE) · Liga Peruana de Debate Escolar · Roche Pharma Perú (vía Sapienza Consultora)"
-  [[institutions.groups]]
-    label = "Debate"
-    text = "Selección Nacional de Debate Escolar del Perú · Sociedad de Debate PUCP · Colegio Alpamayo · equipos universitarios de República Dominicana"
 
 [contact]
   title = "Escríbeme"

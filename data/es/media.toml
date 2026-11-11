@@ -1,3 +1,14 @@
+# Página Medios (/es/medios/) y bloque «En medios» de la portada, que muestra
+# las tres primeras entradas: van de la más reciente a la más antigua.
+# La nota para periodistas (press_*) volvió aquí el 11-nov-2026: se había ido
+# con el pilar de prensa de Trabajemos el 28-oct (texto de entonces).
+# Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
+
+press_intro = "Comportamiento electoral, reformas políticas, política subnacional, becas y educación cívica. Hablo a título personal, no en nombre del JNE ni de la PUCP."
+press_label = "Escribir como periodista"
+press_subject = "Prensa - medio - tema"
+press_body = "Medio y programa:\nTema:\nFormato (en vivo, grabado, escrito):\nFecha y hora:\n"
+
 [[media]]
   type = "Prensa"
   title = "Qué se puede esperar de los primeros meses de Keiko Fujimori como presidenta de Perú"

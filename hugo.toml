@@ -20,8 +20,10 @@ disableKinds = ["taxonomy", "term"]
     weight = 1
     contentDir = "content/en"
     [languages.en.params]
-      description = "Luis Valverde Ramos, political scientist (PUCP). Research on electoral behaviour and policy implementation in Peru; consulting and debate coaching."
-    # Menu: the last item is the call to action (params.cta draws it as a button)
+      description = "Luis Valverde Ramos, political scientist (PUCP). Research on electoral behaviour and policy implementation in Peru, and applied research for institutions."
+    # Menu: the academic and consulting pages first, then Media and Debate, which
+    # stand apart from the profile; the last item is the call to action
+    # (params.cta draws it as a button)
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "about"
@@ -34,20 +36,25 @@ disableKinds = ["taxonomy", "term"]
         pageRef = "/research"
         weight = 2
       [[languages.en.menu.main]]
+        identifier = "media"
+        name = "Media"
+        pageRef = "/media"
+        weight = 3
+      [[languages.en.menu.main]]
         identifier = "debate"
         name = "Debate"
         pageRef = "/debate"
-        weight = 3
+        weight = 4
       [[languages.en.menu.main]]
         identifier = "cv"
         name = "CV"
         pageRef = "/cv"
-        weight = 4
+        weight = 5
       [[languages.en.menu.main]]
         identifier = "work"
         name = "Work with me"
         pageRef = "/work"
-        weight = 5
+        weight = 6
         params = { cta = true }
 
   [languages.es]
@@ -57,7 +64,7 @@ disableKinds = ["taxonomy", "term"]
     weight = 2
     contentDir = "content/es"
     [languages.es.params]
-      description = "Luis Valverde Ramos, politólogo (PUCP). Investigación sobre comportamiento electoral e implementación de políticas públicas en el Perú; consultoría y debate."
+      description = "Luis Valverde Ramos, politólogo (PUCP). Investigación sobre comportamiento electoral e implementación de políticas públicas en el Perú, e investigación aplicada para instituciones."
     [languages.es.menu]
       [[languages.es.menu.main]]
         identifier = "about"
@@ -70,20 +77,25 @@ disableKinds = ["taxonomy", "term"]
         pageRef = "/research"
         weight = 2
       [[languages.es.menu.main]]
+        identifier = "media"
+        name = "Medios"
+        pageRef = "/media"
+        weight = 3
+      [[languages.es.menu.main]]
         identifier = "debate"
         name = "Debate"
         pageRef = "/debate"
-        weight = 3
+        weight = 4
       [[languages.es.menu.main]]
         identifier = "cv"
         name = "CV"
         pageRef = "/cv"
-        weight = 4
+        weight = 5
       [[languages.es.menu.main]]
         identifier = "work"
         name = "Trabajemos"
         pageRef = "/work"
-        weight = 5
+        weight = 6
         params = { cta = true }
 
 # Heading anchors without accents: «Qué investigo» → #que-investigo

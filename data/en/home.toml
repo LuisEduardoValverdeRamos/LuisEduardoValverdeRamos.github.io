@@ -1,12 +1,15 @@
 # English home page: the same «media» variant as the Spanish one (Luis's
 # decision, 17 Oct 2026): facts strip, research questions, selected writing,
-# debate band, services, institutions and media, in the same order.
+# services, institutions, and media and debate side by side, in the same order.
+# Research and consulting profile (11 Nov 2026): debate stays out of the hero
+# and the services; it is a single block at the end, next to «In the media» (a
+# list inside `blocks` sets its blocks side by side).
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
-blocks = ["proof", "research", "debate", "services", "institutions", "media"]
-eyebrow = "ESEG–JNE · PUCP · Peruvian National Schools Debate Team"
-statement = "I research electoral behaviour and public policy implementation in Peru, advise institutions on analysing their data, and coach school and university debate teams."
-bio = "Political scientist trained at PUCP, where I graduated first in my class. Researcher at the Electoral and Governance School of Peru's National Elections Jury, consultant to the Lima Bar Association and Director General of the Peruvian National Schools Debate Team."
+blocks = ["proof", "research", "services", "institutions", ["media", "debate"]]
+eyebrow = "ESEG–JNE · PUCP"
+statement = "I research electoral behaviour and public policy implementation in Peru and advise institutions on applied research."
+bio = "Political scientist trained at PUCP. Researcher at the Electoral and Governance School of Peru's National Elections Jury, consultant to the Lima Bar Association and teaching assistant in Political Economy at PUCP."
 photo_alt = "Portrait of Luis Valverde Ramos"
 proof_label = "Verifiable facts"
 media_label = "In the media"
@@ -47,10 +50,11 @@ media_more = "See media"
   anchor = "consulting"
 
 [[proof]]
-  label = "Media · 2026"
-  fact = "Interviews and panels on El Salto (Spain), Radio Exitosa and La República."
-  src = "See media →"
-  page = "/media"
+  label = "PUCP · 2026"
+  fact = "Teaching assistant in Political Economy at the Faculty of Social Sciences."
+  src = "Teaching →"
+  page = "/research"
+  anchor = "teaching"
 
 [research]
   title = "What I research"

@@ -8,6 +8,7 @@ photo_alt: "Portrait of Luis Valverde Ramos"
 I am a political scientist trained at the Pontificia Universidad Católica del Perú (PUCP). I graduated first in my class, and my licentiate thesis received a distinction (*mención sobresaliente*) in 2025. I studied on a Beca 18 scholarship, Peru's national merit award, and spent an exchange semester at Ghent University (Belgium) with a DARI scholarship. I am from Pedregal Grande (Catacaos, Piura) and work from Lima.
 
 I am currently a researcher at the Electoral and Governance School (ESEG) of Peru's National Elections Jury (JNE), a consultant to the Corruption Observatory of the Lima Bar Association and a teaching assistant in Political Economy at PUCP.
+{.s-current}
 
 ## Research
 

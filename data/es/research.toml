@@ -13,7 +13,8 @@ cta_anchor = "investigacion"
   projects = "Proyectos"
   writing = "Escritos"
   wip = "En curso"
-  teaching = "Docencia y grupos"
+  teaching = "Docencia"
+  civic = "Participación cívica"
 
 [labels]
   method = "Método"
@@ -67,9 +68,26 @@ cta_anchor = "investigacion"
   role = "Asistente docente de Introducción a R para la Investigación Social (dos ediciones) y del módulo de Causal Machine Learning"
   org = "Q-LAB-PUCP"
 
-[[groups]]
-  period = "2025–"
-  role = "Miembro investigador"
-  group = "Grupo de Investigación en Estado y Sociedad (GIES), PUCP"
+# Participación cívica (tarjetas al final de la página): title, org, period,
+# (Hechos y No Palabras: descripción y visitas como en joseincio.com)
+# text y link opcional. Neutral a propósito: nada de «incidencia» (trabaja en
+# el JNE).
+[[civic]]
+  period = "Ene.–mar. 2026"
+  title = "Hechos y No Palabras"
+  org = "Grupo de Investigación en Estado y Sociedad (GIES), PUCP"
+  text = "Portal no partidario que muestra cómo votaron los congresistas y otros actores políticos en las grandes reformas, antes de las elecciones generales de 2026; tuvo cerca de 80,000 visitas. Participé como miembro voluntario: sistematicé votaciones nominales y construí bases de seguimiento legislativo."
   link = "https://hechosynopalabras.pe"
-  description = "Sistematicé votos congresales y construí bases de datos de seguimiento legislativo para el portal cívico hechosynopalabras.pe, documentando reformas de género y educación superior de cara a las elecciones peruanas de 2026."
+  link_label = "Ver el portal ↗"
+
+[[civic]]
+  period = "2021"
+  title = "Observador electoral"
+  org = "Transparencia"
+  text = "Fui observador en las Elecciones Generales 2021, en la primera y la segunda vuelta."
+
+[[civic]]
+  period = "2020–2023"
+  title = "DEJUCA"
+  org = "Organización juvenil"
+  text = "Participé en proyectos sociales de enseñanza en escuelas rurales, reciclaje y participación ciudadana."

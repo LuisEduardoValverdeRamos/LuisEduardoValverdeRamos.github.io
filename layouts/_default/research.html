@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{- /* Research / Investigación: lines as questions, projects, writing, work in
-       progress, teaching and groups. Data: research, projects and blogs. */ -}}
+       progress, teaching and civic engagement. Data: research, projects and
+       blogs. */ -}}
 {{- $d := index hugo.Data .Language.Lang -}}
 {{- $r := $d.research -}}
 {{- $t := $r.toc -}}
@@ -13,6 +14,7 @@
       <a href="#projects">{{ $t.projects }}</a>
       <a href="#writing">{{ $t.writing }}</a>
       <a href="#teaching">{{ $t.teaching }}</a>
+      {{- with $r.civic }}<a href="#civic">{{ $t.civic }}</a>{{ end }}
     </nav>
   </header>
 
@@ -88,11 +90,28 @@
       {{- range $r.teaching }}
       <div class="s-item"><span class="k">{{ .period }}</span><div><span class="t">{{ .role }}</span><span class="m">{{ .org }}</span></div></div>
       {{- end }}
-      {{- range $r.groups }}
-      <div class="s-item"><span class="k">{{ .period }}</span><div><span class="t">{{ .role }} · {{ .group }}</span><p>{{ .description }}{{ with .link }} <a class="s-go" href="{{ . }}">{{ replace . "https://" "" }} ↗</a>{{ end }}</p></div></div>
+    </div>
+  </section>
+
+  {{- with $r.civic }}
+  {{- /* Civic engagement: cards in the style of the line cards (period, title,
+         organisation, one sentence and an optional link). */}}
+  <section id="civic" class="s-section" aria-labelledby="h-civic">
+    <div class="s-section-head"><h2 id="h-civic" class="s-h2">{{ $t.civic }}</h2></div>
+    <div class="s-cards">
+      {{- range . }}
+      {{- $c := . }}
+      <article class="s-card">
+        <p class="s-eyebrow">{{ .period }}</p>
+        <h3 class="q">{{ .title }}</h3>
+        <p class="m">{{ .org }}</p>
+        <p>{{ .text }}</p>
+        {{- with .link }}<a class="s-go" href="{{ . }}">{{ $c.link_label }}</a>{{ end }}
+      </article>
       {{- end }}
     </div>
   </section>
+  {{- end }}
 
   {{- with site.GetPage "/work" }}
   <section class="s-contact">

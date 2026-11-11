@@ -12,7 +12,8 @@ cta_anchor = "research"
   projects = "Projects"
   writing = "Writing"
   wip = "In progress"
-  teaching = "Teaching and groups"
+  teaching = "Teaching"
+  civic = "Civic engagement"
 
 [labels]
   method = "Method"
@@ -66,9 +67,24 @@ cta_anchor = "research"
   role = "Teaching assistant for Introduction to R for Social Research (two editions) and the Causal Machine Learning module"
   org = "Q-LAB-PUCP"
 
-[[groups]]
-  period = "2025–"
-  role = "Research member"
-  group = "State and Society Research Group (GIES), PUCP"
+# Civic engagement (cards at the end of the page): title, org, period, text
+# and an optional link. Neutral on purpose: no «advocacy» (he works at the JNE).
+[[civic]]
+  period = "Jan–Mar 2026"
+  title = "Hechos y No Palabras"
+  org = "State and Society Research Group (GIES), PUCP"
+  text = "A nonpartisan portal that shows how members of Congress and other political actors voted on major reforms ahead of Peru's 2026 general election; it had close to 80,000 visits. I took part as a volunteer member: I systematised roll-call votes and built legislative tracking databases."
   link = "https://hechosynopalabras.pe"
-  description = "Systematised congressional votes and built legislative tracking databases for the civic portal hechosynopalabras.pe, documenting gender and higher education reforms ahead of Peru's 2026 elections."
+  link_label = "Visit the portal ↗"
+
+[[civic]]
+  period = "2021"
+  title = "Electoral observer"
+  org = "Transparencia"
+  text = "I was an observer in Peru's 2021 general election, in the first and second rounds."
+
+[[civic]]
+  period = "2020–2023"
+  title = "DEJUCA"
+  org = "Youth organisation"
+  text = "I took part in social projects on teaching in rural schools, recycling and civic participation."

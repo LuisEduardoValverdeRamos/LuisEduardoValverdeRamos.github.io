@@ -8,6 +8,7 @@ photo_alt: "Retrato de Luis Valverde Ramos"
 Soy politólogo por la Pontificia Universidad Católica del Perú (PUCP). Egresé en el primer puesto de mi promoción y mi tesis de licenciatura fue aprobada con mención sobresaliente en 2025. Estudié la carrera con Beca 18 y pasé un semestre de intercambio en Ghent University (Bélgica) con una beca DARI. Soy de Pedregal Grande (Catacaos, Piura) y trabajo desde Lima.
 
 Hoy soy investigador en la Escuela Electoral y de Gobernabilidad (ESEG) del Jurado Nacional de Elecciones, consultor del Observatorio de Corrupción del Colegio de Abogados de Lima y jefe de práctica de Economía Política en la PUCP.
+{.s-current}
 
 ## Qué investigo
 

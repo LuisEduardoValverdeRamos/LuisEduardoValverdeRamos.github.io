@@ -296,6 +296,11 @@
 .s-card dl { margin: 0; display: grid; gap: 10px; font-size: 14.5px; }
 .s-card dt { font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--s-ink2); }
 .s-card dd { margin: 2px 0 0; color: var(--s-ink); }
+/* Civic engagement cards: the organisation muted under the title, then one
+   sentence and the link at the foot */
+.s-card .m { margin-top: -4px; font-size: 14px; color: var(--s-ink2); }
+.s-card > p:not(.s-eyebrow):not(.m) { font-size: 14.5px; color: var(--s-ink); }
+.s-card > .s-go { justify-self: start; font-size: 14px; }
 .s-projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 /* With an odd number of projects the first one is the featured card: it lies
    across both columns, image beside the text, and the rest pair up below.
@@ -357,10 +362,17 @@
 .s-about-side .s-btn { text-align: center; }
 .s-about-main { display: grid; gap: 14px; align-content: start; max-width: 68ch; }
 .s-prose > * + * { margin-top: 14px; }
-.s-prose h2 { margin-top: 36px; font-family: var(--s-display); font-weight: 650; font-size: 24px; line-height: 1.2; letter-spacing: -.02em; scroll-margin-top: 16px; }
+.s-prose h2 { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--s-line); font-family: var(--s-display); font-weight: 650; font-size: 24px; line-height: 1.2; letter-spacing: -.02em; scroll-margin-top: 16px; }
 .s-prose > p:first-child { font-size: 18px; color: var(--s-ink2); }
 .s-prose ul { display: grid; gap: 7px; padding-left: 18px; list-style: disc; }
+.s-prose li::marker { color: var(--s-accent); }
 .s-prose a { color: var(--s-accent); text-decoration: underline; text-underline-offset: 3px; }
+/* A paragraph that is only a link («Ver debate →»): the site's green link */
+.s-prose p > a:only-child { font-size: 15px; font-weight: 600; text-decoration: none; }
+.s-prose p > a:only-child:hover { text-decoration: underline; }
+/* The current roles, set apart by two hairlines, as a standfirst */
+.s-prose .s-current { padding-block: 14px; border-block: 1px solid var(--s-line2); color: var(--s-ink); }
+.s-prose .s-current + h2 { padding-top: 0; border-top: 0; }
 .s-prose strong { font-weight: 600; }
 .s-prose blockquote { border-left: 3px solid var(--s-line2); padding-left: 16px; font-size: 15.5px; color: var(--s-ink2); }
 .s-lines { display: grid; gap: 4px; }

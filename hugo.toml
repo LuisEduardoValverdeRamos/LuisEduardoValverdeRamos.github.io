@@ -99,10 +99,13 @@ disableKinds = ["taxonomy", "term"]
         weight = 6
         params = { cta = true }
 
-# Heading anchors without accents: «Qué investigo» → #que-investigo
+# Heading anchors without accents: «Qué investigo» → #que-investigo. Block
+# attributes let a paragraph take a class: {.s-current} in about.md.
 [markup]
   [markup.goldmark.parser]
     autoHeadingIDType = "github-ascii"
+    [markup.goldmark.parser.attribute]
+      block = true
 
 [params]
   name = "Luis Valverde Ramos"

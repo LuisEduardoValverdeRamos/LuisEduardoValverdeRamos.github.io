@@ -10,7 +10,7 @@
       {{- with .TableOfContents }}
       <nav aria-label="{{ T "onThisPage" }}">{{ . }}</nav>
       {{- end }}
-      <a class="s-btn" href="{{ partial "cv-pdf.html" . }}">{{ T "seeCV" }}</a>
+      <a class="s-btn primary" href="{{ partial "cv-pdf.html" . }}">{{ T "seeCV" }}</a>
     </aside>
     <div class="s-about-main">
       <p class="s-eyebrow">{{ .Title }}</p>

@@ -4,14 +4,16 @@
 # services live in data/en/debate.toml ([[team.services]]) and only the [debate]
 # line, pointing to that page, stays here. (R workshops, press, "How I work", "What I don't do", the
 # Deliverables, no-promise and per-service track-record rows and the
-# methods-review card were removed on 28 Oct 2026; the institutions block and
-# the linked pages carry the proof). A service or note with
+# methods-review card were removed on 28 Oct 2026.) Each pillar is a card
+# (11 Nov 2026) with its services as short rows; the institutions go in one
+# line, the same band as on the home page (home_line). A service or note with
 # confirmar = "…" waits for Luis: it shows
 # only in local previews, marked, and is never published in production.
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
 title = "How I can help"
 lead = "I collaborate on research and carry out applied research for institutions. Email me with what you need."
+cv_label = "See my CV"
 
 [labels]
   write = "Email about this"
@@ -39,13 +41,13 @@ lead = "I collaborate on research and carry out applied research for institution
 
   [[pillars.services]]
     title = "Collaboration and co-authorship"
-    text = "Roles agreed at the start using the CRediT taxonomy."
+    text = "I work on papers and projects from design to writing, with roles and authorship agreed at the start."
     subject = "Research: collaboration or methods support"
     body = "Topic and question:\nStage of the project:\nData:\nThe role you have in mind for me:\n"
 
   [[pillars.services]]
     title = "Research assistance"
-    text = "Documented datasets, replicable analysis in R and literature reviews, by project and online."
+    text = "I support data collection, processing and analysis, and literature reviews."
     subject = "Research assistance"
     body = "Project and institution:\nTasks:\nHours per week and duration:\n"
 
@@ -60,33 +62,22 @@ lead = "I collaborate on research and carry out applied research for institution
 
   [[pillars.services]]
     title = "Electoral and public-opinion analysis"
-    text = "From a one-off question to a full report, with methods and limitations stated."
+    text = "I analyse surveys, election results and voter-roll data, from a single question to a full report."
     subject = "Consulting: data analysis"
     body = "Organisation:\nWhat you need analysed or assessed:\nData available:\nDeadline:\n"
 
   [[pillars.services]]
     title = "Methods support and indicator validity"
-    text = "An independent review of datasets and indicators before they are published."
+    text = "I review the quality of datasets and indicators before they are published."
     subject = "Methods support - indicator validity"
     body = "Organisation:\nReport or indicators in preparation:\nData source:\nPlanned publication date:\n"
 
   [[pillars.services]]
     title = "Data and visualisation in R"
-    text = "Scattered sources integrated into one documented dataset, with publication-ready figures."
+    text = "I build datasets from administrative records and public sources, and prepare their charts and tables."
     subject = "Data analysis and visualisation in R"
     body = "Organisation:\nData sources:\nWhat you need (dataset, figures, report):\nDeadline:\n"
 
 [institutions]
-  title = "Institutions I have worked with"
   home_label = "I have worked with"
   home_line = "JNE (ESEG) · PUCP (Q-LAB, CISEPA, IDEHPUCP) · ProDiálogo · Lima Bar Association (Corruption Observatory) · Peruvian School Debate League · Roche Pharma Peru (through Sapienza Consultora)"
-  [[institutions.groups]]
-    label = "Employment and affiliation"
-    text = "Jurado Nacional de Elecciones, Peru's National Elections Jury (ESEG) · Pontificia Universidad Católica del Perú (CISEPA, Q-LAB, GIES) · IDEHPUCP"
-  [[institutions.groups]]
-    label = "Consulting"
-    text = "Corruption Observatory of the Lima Bar Association · ProDiálogo (commissioned by the JNE) · Peruvian School Debate League (LPDE) · Roche Pharma Peru (through Sapienza Consultora)"
-
-[contact]
-  title = "Email me"
-  text = "Tell me what you need and when you need it. Write to me in English or Spanish."

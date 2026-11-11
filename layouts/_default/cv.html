@@ -30,12 +30,8 @@
     {{- end }}
   </div>
 
-  <section class="s-cvtoc" aria-labelledby="h-cvtoc">
-    <p id="h-cvtoc" class="s-eyebrow">{{ $cv.contents_label }}</p>
-    <p>{{ delimit $cv.contents " · " }}</p>
-    {{- with $a.email }}
-    <p class="s-note">{{ $cv.refs }} <a href="mailto:{{ . }}">{{ . }}</a></p>
-    {{- end }}
-  </section>
+  {{- with $a.email }}
+  <p class="s-note s-cvrefs">{{ $cv.refs }} <a href="mailto:{{ . }}">{{ . }}</a></p>
+  {{- end }}
 </div>
 {{ end }}

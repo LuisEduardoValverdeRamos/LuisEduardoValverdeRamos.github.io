@@ -6,11 +6,9 @@
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
 title = "Curriculum vitae"
-lead = "My CV in English and Spanish. Both versions have the same content."
+lead = "My CV in English and Spanish."
 meta = "%d pages · PDF · updated %s"
 view = "Open in the browser"
-contents_label = "Contents"
-contents = ["Profile", "Education", "Research experience", "Consulting", "Teaching", "Debate leadership and coaching", "Publications and reports", "Awards and scholarships", "Media and panels", "Courses", "Methods, tools and languages"]
 refs = "References on request:"
 
 # One card per language, in this order

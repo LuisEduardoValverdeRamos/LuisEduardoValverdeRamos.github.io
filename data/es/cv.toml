@@ -6,11 +6,9 @@
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
 title = "Currículum"
-lead = "Mi CV en español y en inglés. Las dos versiones tienen el mismo contenido."
+lead = "Mi CV en español y en inglés."
 meta = "%d páginas · PDF · actualizado en %s"
 view = "Abrir en el navegador"
-contents_label = "Contenido"
-contents = ["Perfil", "Formación", "Experiencia en investigación", "Consultoría", "Docencia", "Dirección y entrenamiento de debate", "Publicaciones e informes", "Reconocimientos y becas", "Medios y paneles", "Cursos", "Métodos, herramientas e idiomas"]
 refs = "Las referencias, a solicitud:"
 
 # Una tarjeta por idioma, en este orden

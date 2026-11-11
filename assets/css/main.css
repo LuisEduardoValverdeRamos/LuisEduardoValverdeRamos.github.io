@@ -237,7 +237,7 @@
 .s-brief a.t:hover { color: var(--s-accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .s-brief .m { font-size: 14px; color: var(--s-ink2); }
 /* Work with me: the closing line that points to the Debate page */
-.s-aside p { font-size: 15.5px; color: var(--s-ink2); }
+.s-aside { margin-top: 28px; font-size: 15.5px; color: var(--s-ink2); }
 .s-doors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--s-line); }
 .s-doors a { display: grid; gap: 8px; align-content: start; padding: 24px 24px 28px 0; text-decoration: none; color: var(--s-ink2); font-size: 15px; }
 .s-doors a + a { padding-left: 24px; border-left: 1px solid var(--s-line); }
@@ -255,11 +255,24 @@
 .s-item .m { display: block; margin-top: 2px; font-size: 14px; color: var(--s-ink2); }
 .s-item p { margin-top: 6px; font-size: 15px; color: var(--s-ink2); max-width: 70ch; }
 
-/* Work: a minimal pillar's services as light top-ruled entries */
-.s-minis { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px 20px; margin-top: 6px; }
-.s-mini { display: grid; gap: 8px; align-content: start; justify-items: start; border-top: 2px solid var(--s-ink); padding-top: 14px; }
-.s-mini b { font-family: var(--s-display); font-weight: 650; letter-spacing: -.02em; font-size: 20px; line-height: 1.25; color: var(--s-ink); }
-.s-mini p { font-size: 14.5px; color: var(--s-ink2); max-width: 48ch; }
+/* Work with me: one full-width card per pillar, as on the CV page, both with
+   the same layout: a tinted panel on the left (name, title, one line) and the
+   services as equal columns on the right, each ending with its mail link at
+   the same height. */
+.s-pillcards { display: grid; gap: 20px; }
+.s-pillcard { display: grid; grid-template-columns: 330px minmax(0, 1fr); overflow: hidden; border: 1px solid var(--s-line); border-radius: var(--s-radius); scroll-margin-top: 16px; }
+.s-pillcard .top { display: grid; align-content: start; gap: 10px; padding: 26px 28px; background: var(--s-bg2); border-right: 1px solid var(--s-line); }
+.s-pillcard .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
+.s-pillcard .head .s-eyebrow { color: var(--s-accent); }
+.s-pillcard .head .s-go { font-size: 14px; }
+.s-pillcard .s-h2 { font-size: 23px; }
+.s-pillcard .top > p { font-size: 15px; color: var(--s-ink2); }
+.s-pillcard ul { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); margin: 0; padding: 0; list-style: none; }
+.s-pillcard li { display: grid; grid-template-rows: auto auto 1fr; gap: 6px; justify-items: start; padding: 26px 24px; }
+.s-pillcard li + li { border-left: 1px solid var(--s-line); }
+.s-pillcard li b { font-family: var(--s-display); font-weight: 650; letter-spacing: -.01em; font-size: 18px; line-height: 1.25; color: var(--s-ink); }
+.s-pillcard li p { font-size: 14.5px; color: var(--s-ink2); }
+.s-pillcard li .s-go { align-self: end; margin-top: 8px; font-size: 14px; }
 
 /* Media: entries with a thumbnail of the appearance at the side */
 .s-item.has-th { grid-template-columns: 120px minmax(0, 1fr) 232px; align-items: start; }
@@ -271,14 +284,7 @@
 .s-toc { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; }
 .s-toc a { color: var(--s-ink2); text-decoration: underline; text-decoration-color: var(--s-line2); text-underline-offset: 4px; }
 .s-toc a:hover { color: var(--s-ink); }
-.s-svc-sec { display: grid; gap: 16px; }
-.s-svc-sec .s-section-head { margin-bottom: 2px; }
-.s-svc-sec .s-section-head > div { display: grid; gap: 8px; }
-.s-svc-sec > p { max-width: 70ch; color: var(--s-ink2); }
-.s-svc-sec .s-svcs { margin-top: 6px; }
 .s-asksub { display: block; margin-top: 2px; font-size: 13.5px; color: var(--s-ink2); }
-.s-inst p { margin-top: 6px; font-size: 14.5px; color: var(--s-ink2); }
-.s-inst b { font-weight: 600; color: var(--s-ink); }
 .s-lead + .s-note { margin-top: 12px; }
 .s-mail { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .s-mail code { font-family: var(--s-text); font-size: 15px; font-weight: 600; color: var(--s-ink); background: var(--s-bg); border: 1px solid var(--s-line2); border-radius: var(--s-radius); padding: 6px 10px; user-select: all; }
@@ -370,10 +376,8 @@
 .s-cvfile .body { display: grid; gap: 10px; justify-items: start; }
 .s-cvfile .m { font-size: 14px; color: var(--s-ink2); }
 .s-cvfile .s-btn { margin-top: 4px; }
-.s-cvtoc { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--s-line); display: grid; gap: 8px; }
-.s-cvtoc p:not(.s-eyebrow) { font-size: 15px; color: var(--s-ink2); max-width: 80ch; }
-.s-cvtoc .s-note { margin-top: 6px; }
-.s-cvtoc a { color: var(--s-accent); text-decoration: underline; text-underline-offset: 3px; }
+.s-cvrefs { margin-top: 28px; }
+.s-cvrefs a { color: var(--s-accent); text-decoration: underline; text-underline-offset: 3px; }
 
 /* Footer: a full-width band at the bottom of the window, closed by a darker
    bar with the colophon (the body is a flex column, so it stays at the bottom
@@ -408,6 +412,9 @@
   .s-footer .top { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .s-footer .top > :first-child { grid-column: 1 / -1; }
   .s-cvfiles { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
+  /* The panel goes on top, so the service columns keep their width */
+  .s-pillcard { grid-template-columns: minmax(0, 1fr); }
+  .s-pillcard .top { border-right: 0; border-bottom: 1px solid var(--s-line); }
 }
 @media (max-width: 860px) {
   .s-nav { display: none; }
@@ -429,7 +436,13 @@
   .s-h1-statement { font-size: 27px; }
   .s-bio, .s-lead { font-size: 16.5px; }
   .s-section { padding-block: 44px 4px; }
-  .s-questions, .s-pillars, .s-doors, .s-minis, .s-cards, .s-projects, .s-duo { grid-template-columns: minmax(0, 1fr); }
+  .s-questions, .s-pillars, .s-doors, .s-pillcards, .s-cards, .s-projects, .s-duo { grid-template-columns: minmax(0, 1fr); }
+  .s-pillcards { gap: 14px; }
+  .s-pillcard .top { padding: 20px; }
+  .s-pillcard ul { grid-auto-flow: row; padding: 0 20px; }
+  .s-pillcard li { padding: 16px 0; }
+  .s-pillcard li + li { border-left: 0; border-top: 1px solid var(--s-line); }
+  .s-pillcard .s-h2 { font-size: 21px; }
   .s-projects > .s-project:first-child:nth-last-child(odd) { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; }
   .s-projects > .s-project:first-child:nth-last-child(odd) img { height: auto; aspect-ratio: 2 / 1; }
   .s-projects > .s-project:first-child:nth-last-child(odd) .body { padding: 18px 20px 20px; }

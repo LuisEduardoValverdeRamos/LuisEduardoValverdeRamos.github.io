@@ -1,7 +1,6 @@
 baseURL = 'https://luiseduardovalverderamos.github.io/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'Luis Valverde Ramos'
-theme = "hugo-noir"
 
 defaultContentLanguage = "en"
 
@@ -14,8 +13,8 @@ disableKinds = ["taxonomy", "term"]
 [languages]
 
   [languages.en]
-    languageName = "English"
-    languageCode = "en"
+    label = "English"
+    locale = "en"
     title = "Luis Valverde Ramos"
     weight = 1
     contentDir = "content/en"
@@ -59,8 +58,8 @@ disableKinds = ["taxonomy", "term"]
         params = { cta = true }
 
   [languages.es]
-    languageName = "Español"
-    languageCode = "es-PE"
+    label = "Español"
+    locale = "es-PE"
     title = "Luis Valverde Ramos"
     weight = 2
     contentDir = "content/es"

@@ -4,7 +4,6 @@
 # Research and consulting profile (11 Nov 2026): debate stays out of the hero
 # and the services. At the end, three one-line bands in the same style:
 # institutions, media and debate.
-# The facts strip ([[proof]]) left `blocks` on 11 Nov 2026: it repeated the bio.
 # Top-level keys first: in TOML, anything below a table header belongs to it.
 
 blocks = ["research", "services", "institutions", "media", "debate"]
@@ -12,7 +11,6 @@ eyebrow = "ESEG–JNE · PUCP"
 statement = "I research electoral behaviour and public policy implementation in Peru and advise institutions on applied research."
 bio = "Political scientist trained at PUCP, where I graduated first in my class. Researcher at the Electoral and Governance School of Peru's National Elections Jury, consultant to the Lima Bar Association and teaching assistant in Political Economy at PUCP."
 photo_alt = "Portrait of Luis Valverde Ramos"
-proof_label = "Verifiable facts"
 media_label = "In the media"
 media_more = "See media"
 
@@ -31,35 +29,8 @@ media_more = "See media"
   url = "/files/cv-en.pdf"
   style = "link"
 
-[[proof]]
-  label = "PUCP · 2024–2025"
-  fact = "First in the graduating class of Political Science and Government; licentiate thesis with distinction."
-  src = "PUCP repository ↗"
-  url = "https://hdl.handle.net/20.500.12404/32370"
-
-[[proof]]
-  label = "JNE · 2026"
-  fact = "Researcher at the Electoral and Governance School of Peru's National Elections Jury."
-  src = "See CV →"
-  url = "/files/cv-en.pdf"
-
-[[proof]]
-  label = "CAL · 2026"
-  fact = "Consultant to the Corruption Observatory of the Lima Bar Association."
-  src = "Consulting →"
-  page = "/work"
-  anchor = "consulting"
-
-[[proof]]
-  label = "PUCP · 2026"
-  fact = "Teaching assistant in Political Economy at the Faculty of Social Sciences."
-  src = "Teaching →"
-  page = "/research"
-  anchor = "teaching"
-
 [research]
   title = "What I research"
   more = "Research"
-  line_cta = "See the line"
   writing_title = "Selected writing"
   writing = ["tesis-2025", "informe-jne-2026", "col-reconstruccion-2023"]

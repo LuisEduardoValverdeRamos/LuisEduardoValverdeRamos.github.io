@@ -45,19 +45,3 @@ other = "On this page"
 
 [seeCV]
 other = "Download CV"
-
-
-[notFoundTitle]
-other = "Page not found"
-
-[notFoundText]
-other = "The address you are looking for does not exist or has moved."
-
-[notFoundHome]
-other = "Go to the home page"
-
-[notFoundAbout]
-other = "About"
-
-[notFoundContact]
-other = "Work with me"

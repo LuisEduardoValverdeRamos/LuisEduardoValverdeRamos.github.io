@@ -85,14 +85,14 @@
   }
 
   /* Piazzolla for headings and the site name */
-  h1, h2, h3, .site-name {
+  h1, h2, h3 {
     font-family: var(--font-serif);
     font-optical-sizing: auto;
     letter-spacing: -0.02em;
     text-wrap: balance;
   }
   h1 { font-weight: 650; }
-  h2, h3, .site-name { font-weight: 600; }
+  h2, h3 { font-weight: 600; }
 
   ::selection {
     background: var(--color-selection-light);
@@ -105,15 +105,6 @@
 }
 
 /* ── Site styles (unlayered) ── */
-/* Labels and data: the text face, no monospace */
-.mono-label {
-  font-family: var(--font-sans);
-  font-size: .78rem;
-  font-weight: 600;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-}
-
 /* Skip link, visible only on keyboard focus */
 .skip-link {
   position: absolute;
@@ -204,12 +195,6 @@
 .s-hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 56px; align-items: center; padding-block: 60px 48px; }
 .s-photo { margin: 0; }
 .s-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 35%; border-radius: var(--s-radius); filter: var(--s-photo-filter); }
-.s-proof { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--s-line); }
-.s-proof > div { padding: 18px 18px 18px 0; display: grid; gap: 4px; align-content: start; }
-.s-proof > div + div { padding-left: 18px; border-left: 1px solid var(--s-line); }
-.s-proof .fact { font-size: 14.5px; line-height: 1.45; color: var(--s-ink); }
-.s-proof .src { font-size: 13px; font-weight: 600; color: var(--s-accent); text-decoration: none; margin-top: 2px; }
-.s-proof .src:hover { text-decoration: underline; }
 .s-section { padding-block: 56px 8px; scroll-margin-top: 16px; }
 .s-section-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 24px; }
 .s-questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
@@ -231,12 +216,6 @@
 .s-inst-row li span { font-family: var(--s-text); font-weight: 400; font-size: 13px; letter-spacing: 0; color: var(--s-ink2); white-space: nowrap; }
 /* Work with me: the closing line that points to the Debate page */
 .s-aside { margin-top: 28px; font-size: 15.5px; color: var(--s-ink2); }
-.s-doors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--s-line); }
-.s-doors a { display: grid; gap: 8px; align-content: start; padding: 24px 24px 28px 0; text-decoration: none; color: var(--s-ink2); font-size: 15px; }
-.s-doors a + a { padding-left: 24px; border-left: 1px solid var(--s-line); }
-.s-doors a b { font-family: var(--s-display); font-weight: 650; font-size: 22px; line-height: 1.2; color: var(--s-ink); }
-.s-doors a .go { color: var(--s-accent); font-weight: 600; font-size: 14px; }
-.s-doors a:hover b { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 /* Lists of entries (writing, media) */
 .s-list { display: grid; }
@@ -408,18 +387,8 @@
 .s-footer-bar .bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: 16px; font-size: 12.5px; color: var(--color-footer-muted-light); }
 .s-footer-bar .bottom a { text-decoration: underline; text-underline-offset: 2px; }
 
-/* Content pending Luis's confirmation: shown only in local previews
-   (hugo server / --environment development), never in production. */
-.tbc { outline: 2px dashed #B7791F; outline-offset: 4px; }
-.tbc::after { content: attr(data-tbc); display: block; width: fit-content; margin-top: 6px; padding: 2px 6px; font: 600 11.5px/1.35 var(--s-text); color: #6B4500; background: #FFF1CC; border-radius: 3px; }
-
 /* Tablet */
 @media (max-width: 960px) {
-  .s-proof { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .s-proof > div { padding: 14px 12px 14px 0; }
-  .s-proof > div + div { padding-left: 0; border-left: 0; }
-  .s-proof > div:nth-child(even) { padding-left: 12px; border-left: 1px solid var(--s-line); }
-  .s-proof > div:nth-child(n+3) { border-top: 1px solid var(--s-line); }
   .s-footer .top { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .s-footer .top > :first-child { grid-column: 1 / -1; }
   .s-cvfiles { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
@@ -447,7 +416,7 @@
   .s-h1-statement { font-size: 27px; }
   .s-bio, .s-lead { font-size: 16.5px; }
   .s-section { padding-block: 44px 4px; }
-  .s-questions, .s-pillars, .s-doors, .s-pillcards, .s-cards, .s-projects { grid-template-columns: minmax(0, 1fr); }
+  .s-questions, .s-pillars, .s-pillcards, .s-cards, .s-projects { grid-template-columns: minmax(0, 1fr); }
   .s-pillcards { gap: 14px; }
   .s-pillcard .top { padding: 20px; }
   .s-pillcard ul { grid-auto-flow: row; padding: 0 20px; }
@@ -468,7 +437,6 @@
   .s-offers { gap: 14px; }
   .s-questions { gap: 14px; }
   .s-q b { font-size: 19px; }
-  .s-doors a, .s-doors a + a { padding: 18px 0; border-left: 0; border-bottom: 1px solid var(--s-line); }
   .s-item, .s-item.has-th { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .s-item .th { margin-top: 8px; max-width: 420px; }
   .s-page-head { padding-block: 36px 20px; }

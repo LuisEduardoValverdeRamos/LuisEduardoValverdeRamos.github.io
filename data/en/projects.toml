@@ -23,7 +23,7 @@
   title = "Youth Vote 2026 — Territorial Concentration of Young Voters"
   description = "Analysis in R of district-level aggregates from the RENIEC voter registry, focused on young voters (18–29): territorial concentration and spatial hot spot analysis for Peru's 2026 elections. The registry lists 6.7 million young voters, 25.7% of the total."
   tech = "R, spatial analysis, Getis-Ord Gi*, RENIEC voter roll"
-  image = "/images/projects/voto-joven.jpg"
+  image = "/images/projects/voto-joven-mapa.jpg"
   link = "https://github.com/LuisEduardoValverdeRamos/voto-joven-peru-2026"
 
 [[projects]]
@@ -31,7 +31,7 @@
   title = "Municipal Public Works Gaps — ML Prediction"
   description = "Project started as a research assistant at Q-LAB-PUCP: a supervised machine learning model (XGBoost, SHAP values) of implementation gaps in municipal public works (2018–2024). The project site reports 40,243 works analysed."
   tech = "R, Python, XGBoost, SHAP, tidymodels, MEF/RENAMU/INEI data"
-  image = "/images/projects/public-works.jpg"
+  image = "/images/projects/obras-shap.jpg"
   link = "https://luiseduardovalverderamos.github.io/public_infrastructure_gaps/"
 
 [[projects]]

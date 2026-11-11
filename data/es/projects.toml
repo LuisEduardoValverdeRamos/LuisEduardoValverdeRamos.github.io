@@ -23,7 +23,7 @@
   title = "Voto Joven 2026: concentración territorial del electorado joven"
   description = "Análisis en R de agregados distritales del padrón RENIEC con foco en el electorado joven (18–29 años): concentración territorial y análisis espacial de hot spots para las elecciones de 2026. El padrón registra 6.7 millones de electores jóvenes, el 25.7% del total."
   tech = "R, análisis espacial, Getis-Ord Gi*, padrón RENIEC"
-  image = "/images/projects/voto-joven.jpg"
+  image = "/images/projects/voto-joven-mapa.jpg"
   link = "https://github.com/LuisEduardoValverdeRamos/voto-joven-peru-2026"
 
 [[projects]]
@@ -31,7 +31,7 @@
   title = "Brechas en obras municipales: predicción con machine learning"
   description = "Proyecto iniciado como asistente de investigación en Q-LAB-PUCP: modelo de machine learning supervisado (XGBoost, valores SHAP) sobre brechas de implementación en obras públicas municipales (2018–2024). El sitio del proyecto reporta 40,243 obras analizadas."
   tech = "R, Python, XGBoost, SHAP, tidymodels, datos MEF/RENAMU/INEI"
-  image = "/images/projects/public-works.jpg"
+  image = "/images/projects/obras-shap.jpg"
   link = "https://luiseduardovalverderamos.github.io/public_infrastructure_gaps/"
 
 [[projects]]

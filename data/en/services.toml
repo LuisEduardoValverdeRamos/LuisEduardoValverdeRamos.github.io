@@ -7,10 +7,7 @@
 # methods-review card were removed on 28 Oct 2026.) Each pillar is a card
 # (11 Nov 2026): its panel carries one «Email about this» with subject and
 # body, and its services are columns with title and text; the institutions
-# go in one line, the same band as on the home page (home_line). A service or note with
-# confirmar = "…" waits for Luis: it shows
-# only in local previews, marked, and is never published in production.
-# Top-level keys first: in TOML, anything below a table header belongs to it.
+# go in one line, the same band as on the home page (home_line). # Top-level keys first: in TOML, anything below a table header belongs to it.
 
 title = "How I can help"
 lead = "I collaborate on research and carry out applied research for institutions. Email me with what you need."

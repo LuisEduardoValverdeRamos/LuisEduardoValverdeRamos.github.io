@@ -1,18 +1,9 @@
 [author]
   name = "Luis Valverde Ramos"
   location = "Lima, Peru"
-  description = "Political Scientist (PUCP) | Mixed Methods | Electoral Politics · Public Policy"
-  current = [
-    "Researcher — Jurado Nacional de Elecciones (ESEG)",
-    "Consultant — Corruption Observatory, Lima Bar Association",
-    "Director General — National Schools Debate Team",
-    "Teaching Assistant — PUCP",
-  ]
 
   profile_image = "/images/profile.jpeg"
 
   email    = "luis.valverde@pucp.edu.pe"
   linkedin = "https://www.linkedin.com/in/luisvalverderamos/"
-  linkedin_username = "luisvalverderamos"
   github   = "https://github.com/LuisEduardoValverdeRamos"
-  github_username = "LuisEduardoValverdeRamos"

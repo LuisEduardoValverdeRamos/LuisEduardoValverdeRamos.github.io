@@ -8,9 +8,7 @@
 # Cada pilar es una tarjeta (11-nov-2026): su panel lleva un solo «Escribir
 # sobre esto» con subject (asunto) y body (cuerpo del correo), y sus servicios
 # son columnas con title y text (una línea). Las instituciones van en una
-# línea, la misma banda de la portada (home_line). Un servicio con
-# confirmar = "…" espera el visto bueno de Luis: solo se ve, marcado, en la
-# vista previa local; en producción no se publica.
+# línea, la misma banda de la portada (home_line).
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
 title = "Cómo puedo ayudarte"

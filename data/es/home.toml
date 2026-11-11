@@ -1,8 +1,7 @@
 # Portada en español: variante «media» (unas tres pantallas).
 # Los bloques se pintan en el orden de `blocks`; cada uno lee su contenido de
 # los datos de la página que le corresponde (research, debate, services, media),
-# de modo que nada se copia: aquí solo hay el héroe y la franja de hechos.
-# La franja ([[proof]]) quedó fuera de `blocks` el 11-nov-2026: repetía la bio.
+# de modo que nada se copia: aquí solo está el héroe.
 # Perfil de académico y consultor (11-nov-2026): el debate no va en el héroe ni
 # en los servicios. Al final, tres bandas de una línea con el mismo estilo:
 # instituciones, medios y debate.
@@ -13,7 +12,6 @@ eyebrow = "ESEG-JNE · PUCP"
 statement = "Investigo comportamiento electoral e implementación de políticas públicas en el Perú y asesoro a instituciones en investigación aplicada."
 bio = "Politólogo por la PUCP, primer puesto de la promoción de egreso. Investigador en la Escuela Electoral y de Gobernabilidad del JNE, consultor en el Colegio de Abogados de Lima y jefe de práctica de Economía Política en la PUCP."
 photo_alt = "Retrato de Luis Valverde Ramos"
-proof_label = "Hechos verificables"
 media_label = "En medios"
 media_more = "Ver medios"
 
@@ -32,35 +30,8 @@ media_more = "Ver medios"
   url = "/files/cv-es.pdf"
   style = "link"
 
-[[proof]]
-  label = "PUCP · 2024–2025"
-  fact = "Primer puesto de la promoción de egreso de Ciencia Política y Gobierno; tesis con mención sobresaliente."
-  src = "Repositorio PUCP ↗"
-  url = "https://hdl.handle.net/20.500.12404/32370"
-
-[[proof]]
-  label = "JNE · 2026"
-  fact = "Investigador en la Escuela Electoral y de Gobernabilidad."
-  src = "Ver CV →"
-  url = "/files/cv-es.pdf"
-
-[[proof]]
-  label = "CAL · 2026"
-  fact = "Consultor del Observatorio de Corrupción del Colegio de Abogados de Lima."
-  src = "Ver consultoría →"
-  page = "/work"
-  anchor = "consultoria"
-
-[[proof]]
-  label = "PUCP · 2026"
-  fact = "Jefe de práctica de Economía Política en la Facultad de Ciencias Sociales."
-  src = "Ver docencia →"
-  page = "/research"
-  anchor = "teaching"
-
 [research]
   title = "Lo que investigo"
   more = "Ver investigación"
-  line_cta = "Ver la línea"
   writing_title = "Escritos seleccionados"
   writing = ["tesis-2025", "informe-jne-2026", "col-reconstruccion-2023"]

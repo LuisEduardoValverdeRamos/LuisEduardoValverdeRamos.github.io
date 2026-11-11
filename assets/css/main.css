@@ -411,6 +411,8 @@
   .s-logo { font-size: 17px; }
   .s-hero { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-block: 32px; }
   .s-photo { order: -1; justify-self: center; width: 88px; }
+  /* The eyebrow goes with the centred photo; the statement and bio stay left */
+  .s-hero > div > .s-eyebrow:first-child { margin-bottom: 12px; text-align: center; }
   .s-photo img { aspect-ratio: 1; border-radius: 50%; object-position: 50% 30%; }
   .s-h1 { font-size: 32px; }
   .s-h1-statement { font-size: 27px; }

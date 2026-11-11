@@ -11,15 +11,13 @@ I am currently a researcher at the Electoral and Governance School (ESEG) of Per
 
 ## Research
 
-I work on three lines, each framed as a question.
-
 {{< research-lines "Research and writing →" >}}
 
-I also teach: I am a teaching assistant in Political Economy at PUCP (since 2026) and, at Q-LAB, I was teaching assistant for Introduction to R for Social Research (two editions) and the Causal Machine Learning module. In 2023 I won first place in the Faculty of Social Sciences Research Competition at PUCP.
+At Q-LAB I was teaching assistant for Introduction to R for Social Research (two editions) and the Causal Machine Learning module. In 2023 I won first place in the Faculty of Social Sciences Research Competition at PUCP.
 
 ## Consulting
 
-I advise public, private and civil-society organisations on applied research, using mixed methods, both quantitative and qualitative: what can be measured with the information available, how to design an instrument, or how to read a set of records. I have worked with the Corruption Observatory of the Lima Bar Association (assessing public procurement indicators, since 2026); with ProDiálogo for the JNE (technical team for the report on the Peruvian voter, 2026); with the LPDE (the League's first report on the school debate ecosystem, covering 70 institutions, and seven policy briefs, 2026); and with Roche Pharma Peru through Sapienza Consultora (administrative health data, 2025).
+I advise public, private and civil-society organisations on applied research, using mixed methods. I have worked with the Corruption Observatory of the Lima Bar Association (assessing public procurement indicators, since 2026); with ProDiálogo for the JNE (technical team for the report on the Peruvian voter, 2026); with the LPDE (the League's first report on the school debate ecosystem, covering 70 institutions, and seven policy briefs, 2026); and with Roche Pharma Peru through Sapienza Consultora (administrative health data, 2025).
 
 I work in person in Lima and online with the rest of Peru and Latin America.
 
@@ -27,11 +25,11 @@ I work in person in Lima and online with the rest of Peru and Latin America.
 
 ## Education
 
-- Licentiate in Political Science and Government, PUCP (2019–2024). First in my graduating class; thesis with distinction (2025). Beca 18 scholar (PRONABEC).
-- Exchange at Ghent University, Belgium (2024), with a DARI–PUCP scholarship and master's-level courses, including Quantitative Methods for Social Research.
+- Licentiate in Political Science and Government, PUCP (2019–2024).
+- Exchange at Ghent University, Belgium (2024), with master's-level courses, including Quantitative Methods for Social Research.
 - International Baccalaureate Diploma, COAR Amazonas (2016–2018).
 
-[Full CV →]({{< relref "/cv" >}})
+[Download the full CV (PDF) →](/files/cv-en.pdf)
 
 ## Debate
 

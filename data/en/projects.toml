@@ -6,7 +6,7 @@
   area = "Policy implementation"
   title = "Disaster Reconstruction and Implementation Gaps in Peru"
   description = "Licentiate thesis with distinction (mención sobresaliente). Examined the reconstruction of school infrastructure in Piura (July 2020 – January 2023) after the 2017 coastal El Niño, analysing the factors behind implementation gaps in post-disaster public works."
-  tech = "R, Process Tracing, Qualitative Comparative Analysis, Public Policy"
+  tech = "R, process tracing"
   image = "/images/projects/disaster-reconstruction.jpg"
   link = "https://hdl.handle.net/20.500.12404/32370"
 
@@ -14,7 +14,7 @@
   area = "Electoral behaviour"
   title = "Electoral Typology of Peruvian Voters — JNE/ProDiálogo"
   description = "As part of the technical team behind the JNE/ProDiálogo report, took part in segmenting the Peruvian electorate with cluster analysis of survey data from three electoral cycles (2011, 2016 and 2021), as input for the JNE's civic education work."
-  tech = "R, Clustering, Survey Experiments, Behavioral Research"
+  tech = "R, cluster analysis"
   image = "/images/projects/electoral-typology.jpg"
   link = ""
 
@@ -22,7 +22,7 @@
   area = "Electoral behaviour"
   title = "Youth Vote 2026 — Territorial Concentration of Young Voters"
   description = "Analysis in R of district-level aggregates from the RENIEC voter registry, focused on young voters (18–29): territorial concentration and spatial hot spot analysis for Peru's 2026 elections. The registry lists 6.7 million young voters, 25.7% of the total."
-  tech = "R, Spatial Analysis, RENIEC Data, Getis-Ord Gi*, Electoral Analysis"
+  tech = "R, spatial analysis, Getis-Ord Gi*, RENIEC voter roll"
   image = "/images/projects/voto-joven.jpg"
   link = "https://github.com/LuisEduardoValverdeRamos/voto-joven-peru-2026"
 
@@ -38,6 +38,6 @@
   area = "School debate"
   title = "Aggregate Analytics of School Debate (LPDE)"
   description = "Analysis of public results from 16 school debate tournaments in Peru (2025 season), with longitudinal analysis of the TNDE 2023–2025. Aggregate findings on gender parity, access gaps between public and private schools, and the geographic concentration of competitive debate."
-  tech = "R, Web Scraping, Tabbycat, Statistical Analysis, Data Pipeline"
+  tech = "R, web scraping, Tabbycat"
   image = "/images/projects/lpde-debate.jpg"
   link = ""

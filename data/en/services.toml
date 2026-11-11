@@ -12,7 +12,6 @@
 
 title = "How I can help"
 lead = "I collaborate on research and carry out applied research for institutions. Email me with what you need."
-router_label = "What do you need?"
 
 [labels]
   write = "Email about this"
@@ -27,16 +26,9 @@ router_label = "What do you need?"
   text = "Looking for debate coaching or advice on a tournament?"
   label = "See Debate"
 
-[[router]]
-  label = "Collaborate on research"
-  anchor = "research"
-[[router]]
-  label = "Commission a study for my institution"
-  anchor = "consulting"
-
 [[pillars]]
   id = "research"
-  name = "Research and papers"
+  name = "Research"
   page = "/research"
   page_label = "My research"
   title = "Collaboration and research assistance"
@@ -59,9 +51,9 @@ router_label = "What do you need?"
 
 [[pillars]]
   id = "consulting"
-  name = "Consulting and data analysis"
+  name = "Consulting"
   title = "Applied research for institutions"
-  intro = "I design and analyse studies for institutions with mixed methods, quantitative and qualitative, documenting every methodological decision."
+  intro = "I design and analyse studies for institutions with mixed methods."
   home_title = "Applied research for institutions"
   home_text = "Surveys, administrative records and interviews, with quantitative and qualitative methods."
   home_cta = "Email me about a project"

@@ -40,14 +40,6 @@ glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonat
   label = "CMUDE · 2025–2026"
   text = "Preparé a las duplas dominicanas que llegaron a cuartos y a octavos de final del Campeonato Mundial Universitario de Debate en Español (República Dominicana 2025 y Ecuador 2026)."
 
-[[highlights]]
-  label = "Como debatiente"
-  text = "Campeón nacional interuniversitario (CNDI 2025) y semifinalista del CMUDE (Madrid 2022)."
-
-[[highlights]]
-  label = "Adjudicación internacional"
-  text = "He integrado equipos de adjudicación de torneos escolares y universitarios en Costa Rica, Ecuador, Perú y Venezuela: juez de la Gran Final del CMUDE 2026 y jefe de adjudicación del TNDE 2025."
-
 [coach]
   title = "Dirijo y entreno"
   # cv_current: en el CV va en «Cargos actuales» y no se repite en «Debate»
@@ -120,7 +112,6 @@ glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonat
 
 [team]
   title = "Para tu equipo"
-  text = "Programas para colegios, preparación de equipos universitarios y selecciones, asesoría en la adjudicación y organización de torneos, y talleres de 2 horas."
 
   [[team.services]]
     title = "Programa de debate para colegios"

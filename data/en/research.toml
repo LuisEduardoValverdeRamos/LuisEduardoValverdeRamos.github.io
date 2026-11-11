@@ -33,7 +33,6 @@ cta_anchor = "research"
   summary = "Post-election surveys, clustering and discrete-choice models. I was part of the technical team behind the JNE/ProDiálogo report on the Peruvian voter (2026)."
   method = "JNE post-election surveys (2011, 2016 and 2021), cluster analysis, discrete-choice models and spatial analysis of the voter register."
   evidence = "JNE/ProDiálogo report (2026), as part of the technical team; Youth Vote 2026 project."
-  status = "Active"
 
 [[lines]]
   id = "implementation"
@@ -42,7 +41,6 @@ cta_anchor = "research"
   summary = "My thesis examined the reconstruction of school infrastructure in Piura after the 2017 coastal El Niño (2020–2023). As a research assistant at Q-LAB-PUCP, I worked on a machine-learning model of delays in municipal public works."
   method = "Case study with comparison and interviews (thesis); a machine-learning model (XGBoost and SHAP) of municipal works, as a research assistant at Q-LAB-PUCP."
   evidence = "Licentiate thesis with distinction (PUCP, 2025); public site and code of the municipal works project."
-  status = "Active"
 
 [[lines]]
   id = "legislative-analysis"

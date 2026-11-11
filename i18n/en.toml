@@ -44,7 +44,10 @@ other = "Copied"
 other = "On this page"
 
 [seeCV]
-other = "See CV"
+other = "Download CV"
+
+[cvPdf]
+other = "CV (PDF)"
 
 [notFoundTitle]
 other = "Page not found"

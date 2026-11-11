@@ -6,7 +6,7 @@
   area = "Implementación de políticas"
   title = "Reconstrucción posdesastre y brechas de implementación en el Perú"
   description = "Tesis de licenciatura (mención sobresaliente). Estudió el proceso de reconstrucción de infraestructura educativa en Piura (jul. 2020 – ene. 2023) tras El Niño Costero de 2017, analizando los factores que explican las brechas de implementación en obras públicas posdesastre."
-  tech = "R, Process Tracing, Análisis Comparativo Cualitativo, Política Pública"
+  tech = "R, process tracing"
   image = "/images/projects/disaster-reconstruction.jpg"
   link = "https://hdl.handle.net/20.500.12404/32370"
 
@@ -14,7 +14,7 @@
   area = "Comportamiento electoral"
   title = "Tipología electoral del votante peruano (JNE y ProDiálogo)"
   description = "Como parte del equipo técnico del informe JNE/ProDiálogo, participé en la segmentación del electorado peruano con análisis de conglomerados sobre encuestas de tres ciclos electorales (2011, 2016 y 2021), como insumo para la educación cívica del JNE."
-  tech = "R, Clustering, Experimentos de Encuesta, Investigación Conductual"
+  tech = "R, análisis de conglomerados"
   image = "/images/projects/electoral-typology.jpg"
   link = ""
 
@@ -22,7 +22,7 @@
   area = "Comportamiento electoral"
   title = "Voto Joven 2026: concentración territorial del electorado joven"
   description = "Análisis en R de agregados distritales del padrón RENIEC con foco en el electorado joven (18–29 años): concentración territorial y análisis espacial de hot spots para las elecciones de 2026. El padrón registra 6.7 millones de electores jóvenes, el 25.7% del total."
-  tech = "R, Análisis Espacial, Datos RENIEC, Getis-Ord Gi*, Análisis Electoral"
+  tech = "R, análisis espacial, Getis-Ord Gi*, padrón RENIEC"
   image = "/images/projects/voto-joven.jpg"
   link = "https://github.com/LuisEduardoValverdeRamos/voto-joven-peru-2026"
 
@@ -38,6 +38,6 @@
   area = "Debate escolar"
   title = "Analítica agregada del debate escolar (LPDE)"
   description = "Análisis de resultados públicos de 16 torneos de debate escolar en Perú (temporada 2025), con análisis longitudinal del TNDE 2023–2025. Hallazgos agregados sobre paridad de género, brechas de acceso entre colegios públicos y privados y concentración geográfica del debate competitivo."
-  tech = "R, Web Scraping, Tabbycat, Análisis Estadístico, Pipeline de Datos"
+  tech = "R, web scraping, Tabbycat"
   image = "/images/projects/lpde-debate.jpg"
   link = ""

@@ -2,15 +2,16 @@
 # Los bloques se pintan en el orden de `blocks`; cada uno lee su contenido de
 # los datos de la página que le corresponde (research, debate, services, media),
 # de modo que nada se copia: aquí solo hay el héroe y la franja de hechos.
+# La franja ([[proof]]) quedó fuera de `blocks` el 11-nov-2026: repetía la bio.
 # Perfil de académico y consultor (11-nov-2026): el debate no va en el héroe ni
 # en los servicios; es un solo bloque al final, junto a «En medios» (una lista
 # dentro de `blocks` pone sus bloques lado a lado).
 # Claves sueltas arriba: en TOML, todo lo que va debajo de una tabla queda dentro de ella.
 
-blocks = ["proof", "research", "services", "institutions", ["media", "debate"]]
+blocks = ["research", "services", "institutions", ["media", "debate"]]
 eyebrow = "ESEG-JNE · PUCP"
 statement = "Investigo comportamiento electoral e implementación de políticas públicas en el Perú y asesoro a instituciones en investigación aplicada."
-bio = "Politólogo por la PUCP. Investigador en la Escuela Electoral y de Gobernabilidad del JNE, consultor en el Colegio de Abogados de Lima y jefe de práctica de Economía Política en la PUCP."
+bio = "Politólogo por la PUCP, primer puesto de la promoción de egreso. Investigador en la Escuela Electoral y de Gobernabilidad del JNE, consultor en el Colegio de Abogados de Lima y jefe de práctica de Economía Política en la PUCP."
 photo_alt = "Retrato de Luis Valverde Ramos"
 proof_label = "Hechos verificables"
 media_label = "En medios"
@@ -27,8 +28,8 @@ media_more = "Ver medios"
   style = "button"
 
 [[ctas]]
-  label = "Ver CV"
-  page = "/cv"
+  label = "Descargar CV"
+  url = "/files/cv-es.pdf"
   style = "link"
 
 [[proof]]
@@ -41,7 +42,7 @@ media_more = "Ver medios"
   label = "JNE · 2026"
   fact = "Investigador en la Escuela Electoral y de Gobernabilidad."
   src = "Ver CV →"
-  page = "/cv"
+  url = "/files/cv-es.pdf"
 
 [[proof]]
   label = "CAL · 2026"

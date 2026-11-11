@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- /* About / Sobre mí: photo, in-page index and the CV link on the side; the
+{{- /* About / Sobre mí: photo, in-page index and the CV PDF link on the side; the
        story in content/<lang>/about.md. The research lines come from data
        through the research-lines shortcode, so they are written only once. */ -}}
 {{- $a := partial "author.html" . -}}
@@ -10,7 +10,7 @@
       {{- with .TableOfContents }}
       <nav aria-label="{{ T "onThisPage" }}">{{ . }}</nav>
       {{- end }}
-      {{- with site.GetPage "/cv" }}<a class="s-btn" href="{{ .RelPermalink }}">{{ T "seeCV" }}</a>{{ end }}
+      <a class="s-btn" href="{{ partial "cv-pdf.html" . }}">{{ T "seeCV" }}</a>
     </aside>
     <div class="s-about-main">
       <p class="s-eyebrow">{{ .Title }}</p>

@@ -215,7 +215,6 @@
 .s-questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .s-q { display: grid; gap: 8px; align-content: start; text-decoration: none; border-top: 2px solid var(--s-ink); padding-top: 14px; }
 .s-q b { font-family: var(--s-display); font-weight: 650; letter-spacing: -.02em; font-size: 21px; line-height: 1.22; color: var(--s-ink); }
-.s-q .go { font-size: 14px; font-weight: 600; color: var(--s-accent); }
 .s-q:hover b { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 .s-sub { margin: 40px 0 8px; font-size: 18px; }
 /* The pillars named in services.toml (home.pillars): one column each (--n) */
@@ -272,11 +271,6 @@
 .s-toc { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; }
 .s-toc a { color: var(--s-ink2); text-decoration: underline; text-decoration-color: var(--s-line2); text-underline-offset: 4px; }
 .s-toc a:hover { color: var(--s-ink); }
-.s-router { display: grid; gap: 12px; padding-bottom: 44px; border-bottom: 1px solid var(--s-line); }
-.s-router .chips { display: flex; flex-wrap: wrap; gap: 10px; }
-.s-router a { font-size: 14.5px; font-weight: 600; text-decoration: none; color: var(--s-accent); background: var(--s-bg); border: 1.5px solid var(--s-accent); border-radius: var(--s-radius); padding: 10px 16px; }
-.s-router a:hover { background: var(--s-accent); color: var(--s-accent-ink); }
-.s-router a b { font-weight: 600; }
 .s-svc-sec { display: grid; gap: 16px; }
 .s-svc-sec .s-section-head { margin-bottom: 2px; }
 .s-svc-sec .s-section-head > div { display: grid; gap: 8px; }

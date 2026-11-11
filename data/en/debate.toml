@@ -39,14 +39,6 @@ glossary = "Acronyms: MED, the world schools championship held in Spanish (Mundi
   label = "CMUDE · 2025–2026"
   text = "I prepared the Dominican pairs that reached the quarterfinals and the round of 16 of the world universities championship held in Spanish (Dominican Republic 2025 and Ecuador 2026)."
 
-[[highlights]]
-  label = "As a debater"
-  text = "National inter-university champion (CNDI 2025) and semifinalist at CMUDE (Madrid 2022)."
-
-[[highlights]]
-  label = "International adjudication"
-  text = "I have served on the adjudication teams of school and university tournaments in Costa Rica, Ecuador, Peru and Venezuela: judge of the CMUDE 2026 grand final and chief adjudicator of TNDE 2025."
-
 [coach]
   title = "Leading and coaching"
   # cv_current: on the CV it goes under «Current positions», not again under «Debate»
@@ -119,7 +111,6 @@ glossary = "Acronyms: MED, the world schools championship held in Spanish (Mundi
 
 [team]
   title = "For your team"
-  text = "Coaching for university teams and national squads, school programmes, advice on tournament adjudication and organisation, and two-hour workshops."
 
   [[team.services]]
     title = "Debate programme for schools"

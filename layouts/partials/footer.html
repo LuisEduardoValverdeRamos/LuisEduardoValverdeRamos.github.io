@@ -23,7 +23,7 @@
     <nav aria-labelledby="footer-more">
       <h3 id="footer-more">{{ T "footerMore" }}</h3>
       <ul>
-        {{- with site.GetPage "/cv" }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+        <li><a href="{{ partial "cv-pdf.html" $p }}">{{ T "cvPdf" }}</a></li>
         <li>{{ partial "lang-switch.html" (dict "page" $p "long" true) }}</li>
       </ul>
     </nav>

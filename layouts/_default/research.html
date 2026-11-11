@@ -25,8 +25,9 @@
         <h3 class="q">{{ .question }}</h3>
         <dl>
           <div><dt>{{ $r.labels.method }}</dt><dd>{{ .method }}</dd></div>
-          <div><dt>{{ $r.labels.evidence }}</dt><dd>{{ .evidence }}</dd></div>
-          <div><dt>{{ $r.labels.status }}</dt><dd>{{ .status }}</dd></div>
+          {{- /* The evidence is the projects below; the status shows only when the
+                 line is not yet active (data: status left out when active). */}}
+          {{- with .status }}<div><dt>{{ $r.labels.status }}</dt><dd>{{ . }}</dd></div>{{ end }}
         </dl>
       </article>
       {{- end }}
@@ -73,7 +74,6 @@
         <div>
           {{- if .link }}<a class="t" href="{{ .link }}">{{ .title }}</a>{{ else }}<span class="t">{{ .title }}</span>{{ end }}
           <span class="m">{{ .authors }} · {{ .outlet }}{{ if ne .date .year }} · {{ .date }}{{ end }}</span>
-          <p>{{ .summary }}</p>
         </div>
       </div>
       {{- end }}

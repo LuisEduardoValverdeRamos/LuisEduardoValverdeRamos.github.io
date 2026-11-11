@@ -14,7 +14,6 @@
 
 title = "Cómo puedo ayudarte"
 lead = "Colaboro en investigaciones y hago investigación aplicada para instituciones. Escríbeme con lo que necesitas."
-router_label = "¿Qué necesitas?"
 
 [labels]
   write = "Escribir sobre esto"
@@ -29,17 +28,10 @@ router_label = "¿Qué necesitas?"
   text = "¿Buscas entrenamiento de debate o asesoría para un torneo?"
   label = "Ver en Debate"
 
-[[router]]
-  label = "Colaborar en una investigación"
-  anchor = "investigacion"
-[[router]]
-  label = "Encargar un estudio para mi institución"
-  anchor = "consultoria"
-
-# ── 1 · Investigación y papers ────────────────────────────────────────────────
+# ── 1 · Investigación ─────────────────────────────────────────────────────────
 [[pillars]]
   id = "investigacion"
-  name = "Investigación y papers"
+  name = "Investigación"
   page = "/research"
   page_label = "Mi investigación"
   title = "Colaboración y asistencia de investigación"
@@ -60,12 +52,12 @@ router_label = "¿Qué necesitas?"
     subject = "Asistencia de investigación"
     body = "Proyecto e institución:\nTareas:\nHoras por semana y duración:\n"
 
-# ── 2 · Consultoría y análisis ────────────────────────────────────────────────
+# ── 2 · Consultoría ───────────────────────────────────────────────────────────
 [[pillars]]
   id = "consultoria"
-  name = "Consultoría y análisis"
+  name = "Consultoría"
   title = "Investigación aplicada para instituciones"
-  intro = "Diseño y analizo estudios para instituciones con métodos mixtos —cuantitativos y cualitativos—, documentando cada decisión metodológica."
+  intro = "Diseño y analizo estudios para instituciones con métodos mixtos."
   home_title = "Investigación aplicada para instituciones"
   home_text = "Encuestas, registros administrativos y entrevistas, con métodos cuantitativos y cualitativos."
   home_cta = "Escríbeme sobre un proyecto"

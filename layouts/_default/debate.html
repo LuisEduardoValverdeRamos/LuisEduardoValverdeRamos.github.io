@@ -1,5 +1,6 @@
 {{ define "main" }}
-{{- /* Debate: results two by two (acronyms spelled out right below), coaching,
+{{- /* Debate: the coaching results side by side (acronyms spelled out right
+       below; debating and adjudication are in their own lists), coaching,
        adjudication and competing side by side, the LPDE and the debate services,
        which live only here since debate left Work with me (11 Nov 2026). Data:
        debate (its [[team.services]]) and the mail label from services. */ -}}
@@ -61,8 +62,7 @@
   {{- with $db.team }}
   <section id="team" class="s-section" aria-labelledby="h-team">
     <div class="s-section-head"><h2 id="h-team" class="s-h2">{{ .title }}</h2></div>
-    <p class="s-lead">{{ .text }}</p>
-    <div class="s-minis" style="margin-top:20px">
+    <div class="s-minis">
       {{- range .services }}
       {{- $svc := . }}
       <div class="s-mini">
@@ -77,12 +77,14 @@
 </div>
 {{ end }}
 
+{{- /* One line per role: the results are in the highlights at the top, and the
+       longer texts of the coaching roles go only in the CV. */}}
 {{- define "debate-list" }}
     <div class="s-list">
       {{- range . }}
       <div class="s-item">
         <span class="k">{{ .period }}</span>
-        <div><span class="t">{{ .role }} · {{ .org }}</span>{{ with .text }}<p>{{ . }}</p>{{ end }}</div>
+        <div><span class="t">{{ .role }} · {{ .org }}</span></div>
       </div>
       {{- end }}
     </div>

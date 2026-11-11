@@ -9,7 +9,7 @@
   </div>
   <div class="s-questions">
     {{- range first 3 $d.research.lines }}
-    <a class="s-q" href="{{ with $rp }}{{ .RelPermalink }}{{ end }}#{{ .id }}"><span class="s-eyebrow">{{ .name }}</span><b>{{ .question }}</b><span class="go">{{ $h.line_cta }} →</span></a>
+    <a class="s-q" href="{{ with $rp }}{{ .RelPermalink }}{{ end }}#{{ .id }}"><span class="s-eyebrow">{{ .name }}</span><b>{{ .question }}</b></a>
     {{- end }}
   </div>
   <h3 class="s-h3 s-sub">{{ $h.writing_title }}</h3>

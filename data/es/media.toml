@@ -16,7 +16,7 @@ press_body = "Medio y programa:\nTema:\nFormato (en vivo, grabado, escrito):\nFe
   date = "22 de julio de 2026"
   url = "https://www.elsaltodiario.com/peru/se-puede-esperar-primeros-meses-keiko-fujimori-presidenta-peru"
   image = "/images/media/elsalto-keiko.jpg"
-  description = "Entrevistado como politólogo por el medio español El Salto sobre el pasivo político de la presidenta electa, los límites del discurso de mano dura y los retos de gobernabilidad de sus primeros 100 días."
+  description = "Sobre el pasivo político de la presidenta electa, los límites del discurso de mano dura y los retos de gobernabilidad de sus primeros 100 días."
 
 [[media]]
   type = "Entrevista"
@@ -25,7 +25,7 @@ press_body = "Medio y programa:\nTema:\nFormato (en vivo, grabado, escrito):\nFe
   date = "4 de julio de 2026"
   url = "https://www.youtube.com/watch?v=M2cBfmLUtGs&t=1690s"
   image = "/images/media/exitosa-keiko-retos.jpg"
-  description = "Análisis de los retos políticos y materiales que enfrenta la presidenta electa: \"El reto más grande de Keiko es realizar una coalición\"."
+  description = "Los retos políticos y materiales de la presidenta electa: «El reto más grande de Keiko es realizar una coalición»."
 
 [[media]]
   type = "Panel"
@@ -35,7 +35,7 @@ press_body = "Medio y programa:\nTema:\nFormato (en vivo, grabado, escrito):\nFe
   date = "julio de 2026"
   url = "https://www.youtube.com/watch?v=m5zQ97rbRJ8&t=1349s"
   image = "/images/media/larepublica-beca18.jpg"
-  description = "Debate sobre el programa bandera de becas del Perú en el programa de La República con Carlos Cornejo — como politólogo y exbecario de Beca 18."
+  description = "Sobre el principal programa de becas del Perú, como politólogo y exbecario de Beca 18."
 
 [[media]]
   type = "Entrevista"
@@ -53,4 +53,4 @@ press_body = "Medio y programa:\nTema:\nFormato (en vivo, grabado, escrito):\nFe
   date = "26 de marzo de 2026"
   url = "https://www.youtube.com/watch?v=dJxkPe9QxE4"
   image = "/images/media/politologos-elecciones.jpg"
-  description = "Panel en vivo de análisis del debate presidencial peruano 2026, organizado por el Colegio de Politólogos del Perú."
+  description = "Análisis en vivo del debate presidencial de 2026."

@@ -4,3 +4,7 @@ node_modules/
 hugo_stats.json
 .hugo_build.lock
 .Rhistory
+
+# CV en LaTeX: compilados y referencias (datos de terceros) fuera del repo
+tools/cv/build/
+tools/cv/privado/

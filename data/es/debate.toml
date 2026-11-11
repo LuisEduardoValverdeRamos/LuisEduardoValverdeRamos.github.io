@@ -42,13 +42,11 @@ glossary = "Siglas: MED, Mundial de Debate Escolar en Español; CMUDE, Campeonat
 
 [coach]
   title = "Dirijo y entreno"
-  # cv_current: en el CV va en «Cargos actuales» y no se repite en «Debate»
   # home: sale en el bloque de debate de la portada
   [[coach.items]]
     period = "2026–"
     role = "Director general"
     org = "Selección Nacional de Debate Escolar del Perú"
-    cv_current = true
     home = true
   [[coach.items]]
     period = "2025–2026"

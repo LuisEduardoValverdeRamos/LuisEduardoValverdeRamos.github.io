@@ -22,9 +22,9 @@ disableKinds = ["taxonomy", "term"]
     [languages.en.params]
       description = "Luis Valverde Ramos, political scientist (PUCP). Research on electoral behaviour and policy implementation in Peru, and applied research for institutions."
     # Menu: the academic and consulting pages first, then Media and Debate, which
-    # stand apart from the profile; CV opens the PDF, as on joseincio.com (the
-    # /cv/ page stays as the source the PDF is printed from); the last item is
-    # the call to action (params.cta draws it as a button)
+    # stand apart from the profile; CV leads to the page with both PDFs (the
+    # hero button downloads the PDF directly, as on joseincio.com); the last
+    # item is the call to action (params.cta draws it as a button)
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "about"
@@ -49,7 +49,7 @@ disableKinds = ["taxonomy", "term"]
       [[languages.en.menu.main]]
         identifier = "cv"
         name = "CV"
-        url = "/files/cv-en.pdf"
+        pageRef = "/cv"
         weight = 5
       [[languages.en.menu.main]]
         identifier = "work"
@@ -90,7 +90,7 @@ disableKinds = ["taxonomy", "term"]
       [[languages.es.menu.main]]
         identifier = "cv"
         name = "CV"
-        url = "/files/cv-es.pdf"
+        pageRef = "/cv"
         weight = 5
       [[languages.es.menu.main]]
         identifier = "work"

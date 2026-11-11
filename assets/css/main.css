@@ -277,7 +277,6 @@
 .s-svc-sec > p { max-width: 70ch; color: var(--s-ink2); }
 .s-svc-sec .s-svcs { margin-top: 6px; }
 .s-asksub { display: block; margin-top: 2px; font-size: 13.5px; color: var(--s-ink2); }
-.s-bullets { margin: 0; padding-left: 18px; list-style: disc; display: grid; gap: 6px; font-size: 14.5px; }
 .s-inst p { margin-top: 6px; font-size: 14.5px; color: var(--s-ink2); }
 .s-inst b { font-weight: 600; color: var(--s-ink); }
 .s-lead + .s-note { margin-top: 12px; }
@@ -351,28 +350,18 @@
 .s-lines > div { padding-block: 12px; border-top: 1px solid var(--s-line); font-size: 15px; color: var(--s-ink2); }
 .s-lines b { display: block; margin-bottom: 4px; font-family: var(--s-display); font-weight: 650; font-size: 18px; color: var(--s-ink); }
 
-/* CV */
-.s-cv { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 48px; padding-bottom: 24px; }
-.s-cv-toc { position: sticky; top: 16px; align-self: start; display: grid; gap: 7px; padding-top: 14px; border-top: 1px solid var(--s-line); font-size: 14px; }
-.s-cv-toc a { color: var(--s-ink2); text-decoration: none; }
-.s-cv-toc a:hover { color: var(--s-ink); }
-.s-cv section { padding-bottom: 28px; scroll-margin-top: 16px; }
-.s-cv section + section { padding-top: 28px; border-top: 1px solid var(--s-line); }
-.s-cv section > .s-h2 { font-size: 22px; margin-bottom: 8px; }
-.s-entry { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 4px 20px; padding-block: 12px; }
-.s-entry + .s-entry { border-top: 1px dashed var(--s-line); }
-.s-entry .when { padding-top: 2px; font-size: 13.5px; color: var(--s-ink2); font-variant-numeric: tabular-nums; }
-.s-entry .what b { font-weight: 600; color: var(--s-ink); }
-.s-entry .what p { margin-top: 4px; font-size: 14.5px; color: var(--s-ink2); }
-.s-entry details { margin-top: 6px; font-size: 14px; color: var(--s-ink2); }
-.s-entry summary { cursor: pointer; font-size: 13.5px; font-weight: 600; color: var(--s-ink); }
-.s-entry details ul { display: grid; gap: 4px; margin-top: 6px; padding-left: 18px; list-style: disc; }
-/* Folded tails of the CV page (opinion columns, debating, civic participation):
-   closed on the web, printed in full in the PDF */
-.s-cv-fold > summary { cursor: pointer; padding-block: 10px; font-size: 14px; font-weight: 600; color: var(--s-accent); }
-.s-cv-fold > summary:hover { text-decoration: underline; text-underline-offset: 4px; }
-.s-cv-fold[open] > summary { color: var(--s-ink2); }
-.s-cv-fold > .s-entry:first-of-type, .s-cv-fold + .s-entry { border-top: 1px dashed var(--s-line); }
+/* CV: one card per language, the first page of the PDF beside its button */
+.s-cvfiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.s-cvfile { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 24px; align-items: center; padding: 22px; border: 1px solid var(--s-line); border-radius: var(--s-radius); background: var(--s-bg); }
+.s-cvfile .th { display: block; }
+.s-cvfile .th img { display: block; width: 100%; height: auto; aspect-ratio: 210 / 297; border: 1px solid var(--s-line2); border-radius: 2px; box-shadow: 0 1px 4px rgb(25 30 27 / .10); }
+.s-cvfile .body { display: grid; gap: 10px; justify-items: start; }
+.s-cvfile .m { font-size: 14px; color: var(--s-ink2); }
+.s-cvfile .s-btn { margin-top: 4px; }
+.s-cvtoc { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--s-line); display: grid; gap: 8px; }
+.s-cvtoc p:not(.s-eyebrow) { font-size: 15px; color: var(--s-ink2); max-width: 80ch; }
+.s-cvtoc .s-note { margin-top: 6px; }
+.s-cvtoc a { color: var(--s-accent); text-decoration: underline; text-underline-offset: 3px; }
 
 /* Footer: a full-width band at the bottom of the window, closed by a darker
    bar with the colophon (the body is a flex column, so it stays at the bottom
@@ -406,6 +395,7 @@
   .s-proof > div:nth-child(n+3) { border-top: 1px solid var(--s-line); }
   .s-footer .top { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .s-footer .top > :first-child { grid-column: 1 / -1; }
+  .s-cvfiles { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
 }
 @media (max-width: 860px) {
   .s-nav { display: none; }
@@ -448,9 +438,8 @@
   .s-about-side { position: static; grid-template-columns: 88px minmax(0, 1fr); align-items: center; }
   .s-about-side img { aspect-ratio: 1; border-radius: 50%; }
   .s-about-side > nav { display: none; }
-  .s-cv { grid-template-columns: minmax(0, 1fr); gap: 8px; }
-  .s-cv-toc { position: static; display: flex; flex-wrap: wrap; gap: 6px 14px; }
-  .s-entry { grid-template-columns: minmax(0, 1fr); }
+  .s-cvfiles { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .s-cvfile { grid-template-columns: 112px minmax(0, 1fr); gap: 18px; padding: 16px; }
   .s-footer { margin-top: 64px; }
   .s-footer .top { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-block: 40px 32px; }
   .s-footer .cta-title { font-size: 26px; }
@@ -462,32 +451,4 @@
 }
 @media (max-width: 339px) {
   .s-mobbar .s-navcta { display: none; }
-}
-
-/* Print (the CV page doubles as the source of the PDF) */
-.s-printonly { display: none; }
-@page { size: A4; margin: 15mm 16mm 16mm; }
-@media print {
-  .s-header, .s-footer, .skip-link, .s-cv-toc, .s-noprint { display: none !important; }
-  .s-printonly { display: block; }
-  body { font-size: 9.5pt; line-height: 1.45; }
-  .wrap { max-width: none; padding-inline: 0; }
-  .s-page-head { padding-block: 0 8px; gap: 6px; max-width: none; }
-  .s-cv-name { font-family: var(--s-display); font-weight: 650; font-size: 22pt; letter-spacing: -.02em; line-height: 1.1; }
-  .s-cv-contact { font-size: 9pt; color: var(--s-ink2); margin-top: 2px; }
-  .s-lead { font-size: 10pt; max-width: none; }
-  .s-cv { display: block; }
-  .s-cv section { padding-bottom: 6px; }
-  .s-cv section + section { padding-top: 8px; }
-  .s-cv section > .s-h2 { font-size: 13pt; margin-bottom: 2px; break-after: avoid; }
-  .s-entry { break-inside: avoid; grid-template-columns: 118px minmax(0, 1fr); gap: 2px 14px; padding-block: 5px; }
-  .s-entry .when { font-size: 8.5pt; }
-  .s-entry .what p, .s-entry .s-bullets { font-size: 9pt; }
-  .s-entry details { display: none; }
-  /* The CV folds print in full: pdf_cv.mjs opens them, and for a browser's own
-     print the ::details-content override reveals closed ones (Chromium 131+) */
-  .s-cv-fold > summary { display: none; }
-  .s-cv-fold::details-content { content-visibility: visible !important; display: block !important; }
-  .s-entry .s-bullets { margin-top: 2px !important; gap: 1px; }
-  a { color: inherit !important; text-decoration: none !important; }
 }

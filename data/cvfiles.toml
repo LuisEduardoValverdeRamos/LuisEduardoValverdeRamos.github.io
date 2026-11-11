@@ -1,0 +1,9 @@
+# Lo escribe tools/cv/build.py: páginas y fecha de cada PDF del CV.
+
+[es]
+  pages = 3
+  updated = "2026-11-11"
+
+[en]
+  pages = 3
+  updated = "2026-11-11"

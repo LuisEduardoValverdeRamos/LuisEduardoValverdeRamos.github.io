@@ -46,8 +46,6 @@ other = "On this page"
 [seeCV]
 other = "Download CV"
 
-[cvPdf]
-other = "CV (PDF)"
 
 [notFoundTitle]
 other = "Page not found"

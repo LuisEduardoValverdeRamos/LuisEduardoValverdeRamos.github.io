@@ -59,17 +59,17 @@ cta_anchor = "investigacion"
 # SUNEDU NO va: está en evaluación a doble ciego.
 [[wip]]
   title = "El mal menor y el voto en blanco: el voto expresivo en el balotaje presidencial peruano de 2021"
-  with = "Examina qué expresa el voto cuando la segunda vuelta reduce la elección a dos candidatos: el apoyo sincero, el voto por el mal menor y el voto en blanco o viciado."
+  with = "En una segunda vuelta solo quedan dos candidatos. ¿Qué expresa el voto cuando no es un voto de apoyo? El artículo estudia el balotaje presidencial de 2021, en el que los dos finalistas habían reunido, juntos, menos de un tercio de los votos válidos de la primera vuelta. Distingue tres formas de votar: por el candidato preferido, por el mal menor, o en blanco o viciado."
   status = "Working paper"
 
 [[wip]]
   title = "Predicción e interpretación de las brechas de implementación en la obra pública municipal del Perú, 2018–2024"
-  with = "Modela el retraso en la ejecución de las obras públicas municipales con aprendizaje automático e identifica, mediante valores SHAP, las características de las obras y de las municipalidades asociadas a esas brechas."
+  with = "¿Puede anticiparse qué obras municipales terminarán después de la fecha programada, y qué características de las obras y de las municipalidades se asocian con ese retraso? El artículo lo estima con modelos de aprendizaje automático por modalidad de ejecución y lo interpreta mediante valores SHAP."
   status = "Working paper"
 
 [[wip]]
   title = "Líneas de investigación para la Escuela Electoral y de Gobernabilidad del JNE: un diseño de métodos mixtos"
-  with = "Propone las líneas de investigación de la Escuela mediante un diseño convergente: análisis computacional de su producción institucional, encuesta a especialistas y entrevistas."
+  with = "Propone las líneas de investigación de la Escuela mediante un diseño convergente: modelos de tópicos aplicados a su producción institucional, encuesta a especialistas y entrevistas."
   status = "En curso"
 
 [[wip]]

@@ -58,17 +58,17 @@ cta_anchor = "research"
 # under double-blind review.
 [[wip]]
   title = "The Lesser Evil and the Empty Ballot: Expressive Voting in Peru's 2021 Presidential Runoff"
-  with = "Examines what a vote expresses when the runoff narrows the choice to two candidates: sincere support, a vote for the lesser evil, and the blank or spoiled ballot."
+  with = "A runoff leaves only two candidates. What does a vote express when it is not a vote of support? The paper studies Peru's 2021 presidential runoff, whose two finalists had together won less than a third of the valid vote in the first round. It distinguishes three ways of voting: for the preferred candidate, for the lesser evil, or a blank or spoiled ballot."
   status = "Working paper"
 
 [[wip]]
   title = "Predicting and Interpreting Implementation Gaps in Peru's Municipal Public Works, 2018–2024"
-  with = "Models delays in the execution of municipal public works with machine learning and uses SHAP values to identify the features of works and municipalities associated with those gaps."
+  with = "Can we anticipate which municipal public works will finish after their scheduled date, and which features of the works and the municipalities are associated with that delay? The paper estimates it with machine learning models by execution modality and interprets it with SHAP values."
   status = "Working paper"
 
 [[wip]]
   title = "Research Lines for the JNE's Electoral and Governance School: A Mixed-Methods Design"
-  with = "Proposes the School's research lines through a convergent design: computational analysis of its institutional output, a survey of specialists and interviews."
+  with = "Proposes the School's research lines through a convergent design: topic models of its institutional output, a survey of specialists and interviews."
   status = "Ongoing"
 
 [[wip]]

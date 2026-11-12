@@ -59,7 +59,7 @@ cta_anchor = "investigacion"
 # SUNEDU NO va: está en evaluación a doble ciego.
 [[wip]]
   title = "El mal menor y el voto en blanco: el voto expresivo en el balotaje presidencial peruano de 2021"
-  with = "En una segunda vuelta solo quedan dos candidatos. ¿Qué expresa el voto cuando no es un voto de apoyo? El artículo estudia el balotaje presidencial de 2021, en el que los dos finalistas habían reunido, juntos, menos de un tercio de los votos válidos de la primera vuelta. Distingue tres formas de votar: por el candidato preferido, por el mal menor, o en blanco o viciado."
+  with = "Este estudio explora qué factores se asocian con el tipo de voto (por convicción, por el mal menor, o en blanco o viciado) en la segunda vuelta presidencial peruana de 2021, cuando dos de cada tres votantes de la primera vuelta ya no tenían a su candidato en carrera."
   status = "Working paper"
 
 [[wip]]

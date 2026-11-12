@@ -57,23 +57,23 @@ cta_anchor = "research"
 # no data source and no coauthors. The SUNEDU article is NOT listed: it is
 # under double-blind review.
 [[wip]]
-  title = "Voting Against: The Expressive Content of Runoff Voting in Peru, 2021"
-  with = "How voters decided in Peru's 2021 presidential runoff: for a candidate, against the other, or for neither."
+  title = "The Lesser Evil and the Empty Ballot: Expressive Voting in Peru's 2021 Presidential Runoff"
+  with = "Examines what a vote expresses when the runoff narrows the choice to two candidates: sincere support, a vote for the lesser evil, and the blank or spoiled ballot."
   status = "Working paper"
 
 [[wip]]
-  title = "Implementation Gaps in Peru's Municipal Public Works, 2018–2024"
-  with = "Which features of public works and municipalities are associated with delays in completion, using machine learning models. Builds on the project started at Q-LAB-PUCP."
+  title = "Predicting and Interpreting Implementation Gaps in Peru's Municipal Public Works, 2018–2024"
+  with = "Models delays in the execution of municipal public works with machine learning and uses SHAP values to identify the features of works and municipalities associated with those gaps."
   status = "Working paper"
 
 [[wip]]
-  title = "A Research Agenda for the Electoral and Governance School"
-  with = "A mixed-methods study to propose the School's research lines: analysis of its institutional output, a survey of specialists and interviews."
+  title = "Research Lines for the JNE's Electoral and Governance School: A Mixed-Methods Design"
+  with = "Proposes the School's research lines through a convergent design: computational analysis of its institutional output, a survey of specialists and interviews."
   status = "Ongoing"
 
 [[wip]]
-  title = "Electoral Studies in Peruvian University Education"
-  with = "A descriptive study of courses on electoral topics in the country's undergraduate degrees and graduate programmes, for the JNE's ESEG."
+  title = "Electoral Studies in Peruvian University Education: A Descriptive Study of Undergraduate and Graduate Programmes"
+  with = "Identifies courses on electoral topics in the curricula of the country's undergraduate degrees and graduate programmes. A study for the JNE's Electoral and Governance School."
   status = "Ongoing"
 
 [[teaching]]

@@ -58,23 +58,23 @@ cta_anchor = "investigacion"
 # Sin resultados, sin fuente de datos y sin coautores. El artículo sobre la
 # SUNEDU NO va: está en evaluación a doble ciego.
 [[wip]]
-  title = "Votar en contra: el contenido expresivo del voto en el balotaje peruano de 2021"
-  with = "Cómo decidieron los electores en la segunda vuelta presidencial de 2021: a favor de un candidato, en contra del otro o por ninguno."
+  title = "El mal menor y el voto en blanco: el voto expresivo en el balotaje presidencial peruano de 2021"
+  with = "Examina qué expresa el voto cuando la segunda vuelta reduce la elección a dos candidatos: el apoyo sincero, el voto por el mal menor y el voto en blanco o viciado."
   status = "Working paper"
 
 [[wip]]
-  title = "Brechas de implementación en la obra pública municipal del Perú, 2018–2024"
-  with = "Qué características de las obras y de las municipalidades se asocian con retrasos en la ejecución, con modelos de machine learning. Retoma el proyecto iniciado en Q-LAB-PUCP."
+  title = "Predicción e interpretación de las brechas de implementación en la obra pública municipal del Perú, 2018–2024"
+  with = "Modela el retraso en la ejecución de las obras públicas municipales con aprendizaje automático e identifica, mediante valores SHAP, las características de las obras y de las municipalidades asociadas a esas brechas."
   status = "Working paper"
 
 [[wip]]
-  title = "Una agenda de investigación para la Escuela Electoral y de Gobernabilidad"
-  with = "Estudio de métodos mixtos para proponer las líneas de investigación de la Escuela: análisis de su producción institucional, consulta a especialistas y entrevistas."
+  title = "Líneas de investigación para la Escuela Electoral y de Gobernabilidad del JNE: un diseño de métodos mixtos"
+  with = "Propone las líneas de investigación de la Escuela mediante un diseño convergente: análisis computacional de su producción institucional, encuesta a especialistas y entrevistas."
   status = "En curso"
 
 [[wip]]
-  title = "La materia electoral en la formación universitaria peruana"
-  with = "Estudio descriptivo de los cursos sobre temas electorales en las carreras de pregrado y los programas de posgrado del país, para la ESEG del JNE."
+  title = "La materia electoral en la formación universitaria peruana: un estudio descriptivo del pregrado y el posgrado"
+  with = "Identifica la presencia de cursos sobre materia electoral en los planes de estudio de las carreras de pregrado y los programas de posgrado del país. Estudio para la Escuela Electoral y de Gobernabilidad del JNE."
   status = "En curso"
 
 [[teaching]]

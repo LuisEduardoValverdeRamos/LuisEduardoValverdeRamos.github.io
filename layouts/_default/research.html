@@ -13,6 +13,7 @@
     <nav class="s-toc" aria-label="{{ T "onThisPage" }}">
       <a href="#lines">{{ $t.lines }}</a>
       <a href="#writing">{{ $t.writing }}</a>
+      {{- with $r.wip }}<a href="#in-progress">{{ $t.wip }}</a>{{ end }}
       <a href="#projects">{{ $t.projects }}</a>
       <a href="#teaching">{{ $t.teaching }}</a>
       {{- with $r.civic }}<a href="#civic">{{ $t.civic }}</a>{{ end }}
@@ -35,14 +36,6 @@
       </article>
       {{- end }}
     </div>
-    {{- with $r.wip }}
-    <div id="in-progress" class="s-now">
-      <span class="s-eyebrow">{{ $t.wip }}</span>
-      {{- range . }}
-      <p><b>{{ .title }}</b> · {{ .with }}</p>
-      {{- end }}
-    </div>
-    {{- end }}
   </section>
 
   <section id="writing" class="s-section" aria-labelledby="h-writing">
@@ -64,6 +57,22 @@
     {{- end }}
     {{- end }}
   </section>
+
+  {{- with $r.wip }}
+  {{- /* Work in progress, after the writing (as an academic page puts it after
+         the publications): status, title and what it is, with no results. */}}
+  <section id="in-progress" class="s-section" aria-labelledby="h-wip">
+    <div class="s-section-head"><h2 id="h-wip" class="s-h2">{{ $t.wip }}</h2></div>
+    <div class="s-list">
+      {{- range . }}
+      <div class="s-item">
+        <span class="k">{{ .status }}</span>
+        <div><span class="t">{{ .title }}</span><span class="m">{{ .with }}</span></div>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
 
   {{- with $d.projects.projects }}
   <section id="projects" class="s-section" aria-labelledby="h-projects">

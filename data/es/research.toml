@@ -53,9 +53,28 @@ cta_anchor = "investigacion"
   evidence = "Portal cívico hechosynopalabras.pe, del Grupo de Investigación en Estado y Sociedad (GIES-PUCP)."
   status = "En desarrollo"
 
+# En curso: proyectos propios en desarrollo (12-nov-2026). Dos etiquetas:
+# «Working paper» para los artículos y «En curso» para los estudios de la ESEG.
+# Sin resultados, sin fuente de datos y sin coautores. El artículo sobre la
+# SUNEDU NO va: está en evaluación a doble ciego.
 [[wip]]
-  title = "Censo de la enseñanza electoral universitaria"
-  with = "Para la Escuela Electoral y de Gobernabilidad (ESEG) del JNE"
+  title = "Votar en contra: el contenido expresivo del voto en el balotaje peruano de 2021"
+  with = "Cómo decidieron los electores en la segunda vuelta presidencial de 2021: a favor de un candidato, en contra del otro o por ninguno."
+  status = "Working paper"
+
+[[wip]]
+  title = "Brechas de implementación en la obra pública municipal del Perú, 2018–2024"
+  with = "Qué características de las obras y de las municipalidades se asocian con retrasos en la ejecución, con modelos de machine learning. Retoma el proyecto iniciado en Q-LAB-PUCP."
+  status = "Working paper"
+
+[[wip]]
+  title = "Una agenda de investigación para la Escuela Electoral y de Gobernabilidad"
+  with = "Estudio de métodos mixtos para proponer las líneas de investigación de la Escuela: análisis de su producción institucional, consulta a especialistas y entrevistas."
+  status = "En curso"
+
+[[wip]]
+  title = "La materia electoral en la formación universitaria peruana"
+  with = "Estudio descriptivo de los cursos sobre temas electorales en las carreras de pregrado y los programas de posgrado del país, para la ESEG del JNE."
   status = "En curso"
 
 [[teaching]]
